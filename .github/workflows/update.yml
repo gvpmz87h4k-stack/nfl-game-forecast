@@ -5,7 +5,7 @@ name: Sunday Desk updater
 on:
   schedule:
     - cron: "0 15 * * *"       # every day 10:00 Chicago (09:00 once daylight time ends)
-    - cron: "0 22 * * 0,1,4"   # Sunday, Monday, Thursday 17:00 Chicago, before the night kickoffs
+    - cron: "0 22 * * *"       # every day 17:00 Chicago, before any night kickoff (Week 1 opens on a Wednesday)
   workflow_dispatch:
 
 permissions:
