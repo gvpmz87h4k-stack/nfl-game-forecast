@@ -1,0 +1,38 @@
+{
+  "version": "2.5",
+  "backtestVersion": "2.0",
+  "trainedSeasons": [
+    2022,
+    2023,
+    2024
+  ],
+  "holdoutSeason": 2025,
+  "marginStandardDeviation": 13.86,
+  "spreadScale": 1.1,
+  "strongFavoriteThreshold": 9.0,
+  "strongFavoriteScale": 1.15,
+  "teamStateDecay": 0.85,
+  "teamStateWeight": 0.1,
+  "restDayWeight": 0.1,
+  "continuityProbabilityWeight": 0.00075,
+  "continuityProbabilityCap": 0.025,
+  "lineMovementProbabilityWeight": 0.00125,
+  "lineMovementProbabilityCap": 0.01,
+  "preparationProbabilityWeight": 0.00075,
+  "preparationProbabilityCap": 0.015,
+  "preparationDailyDecay": 0.65,
+  "travelScoreProbabilityWeight": 0.002,
+  "travelProbabilityCap": 0.02,
+  "latentTeamSigma": 4.5,
+  "trainingMetrics": {
+    "combinedBrier": 0.2092,
+    "meanTeamSeasonWinMae": 1.55,
+    "observedTeamWinStandardDeviation": 3.134,
+    "simulatedTeamWinStandardDeviation": 3.117
+  },
+  "selection": {
+    "primaryMetric": "Brier score",
+    "teamStateRule": "Smallest nonzero state weight that reduced team-season MAE while keeping training Brier within 0.00025 of the best calibrated model",
+    "latentSigmaRule": "Closest simulated cross-team win standard deviation to the 2022-2024 observed average"
+  }
+}

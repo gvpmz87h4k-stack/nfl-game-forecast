@@ -1,0 +1,879 @@
+#!/usr/bin/env python3
+"""Refresh the Sunday Desk snapshot using public NFL data feeds."""
+
+import argparse
+import csv
+import io
+import json
+import os
+import subprocess
+import re
+import time
+from datetime import datetime, timezone
+from pathlib import Path
+from urllib.parse import urlencode
+
+from scorecard import grade_predictions, record_predictions, summarize
+from ratings import rating_view
+from model import load_config, normal_cdf, predict_game, simulate_season, update_team_states
+
+ROOT = Path(__file__).resolve().parent
+DATA_DIR = ROOT / "data"
+SNAPSHOT = DATA_DIR / "snapshot.json"
+LEDGER = DATA_DIR / "ledger.json"
+RATINGS = DATA_DIR / "ratings-current.json"
+RATINGS_REPORT = DATA_DIR / "ratings-walkforward-2025.json"
+CACHE = DATA_DIR / "location-cache.json"
+OVERRIDES = ROOT / "overrides.json"
+PREPARATION_HISTORY = DATA_DIR / "preparation-history.json"
+TRAVEL_OVERRIDES = ROOT / "travel-overrides.json"
+
+SCOREBOARD = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard"
+INJURIES = "https://site.api.espn.com/apis/site/v2/sports/football/nfl/injuries"
+GEOCODE = "https://geocoding-api.open-meteo.com/v1/search"
+FORECAST = "https://api.open-meteo.com/v1/forecast"
+WEEKLY_ROSTERS = "https://github.com/nflverse/nflverse-data/releases/download/weekly_rosters/roster_weekly_{season}.csv"
+
+TEAM_ALIASES = {"LA": "LAR", "WAS": "WSH"}
+
+BASELINES = {
+    "ARI": (4.0, "3-14"), "ATL": (7.0, "8-9"), "BAL": (11.0, "8-9"),
+    "BUF": (11.0, "12-5"), "CAR": (7.0, "8-9"), "CHI": (9.0, "11-6"),
+    "CIN": (10.0, "6-11"), "CLE": (6.0, "5-12"), "DAL": (9.5, "7-9-1"),
+    "DEN": (10.0, "14-3"), "DET": (11.0, "9-8"), "GB": (10.0, "9-7-1"),
+    "HOU": (10.0, "12-5"), "IND": (8.0, "8-9"), "JAX": (9.0, "13-4"),
+    "KC": (10.0, "6-11"), "LV": (6.0, "3-14"), "LAC": (10.0, "11-6"),
+    "LAR": (11.5, "12-5"), "MIA": (4.0, "7-10"), "MIN": (9.0, "9-8"),
+    "NE": (10.0, "14-3"), "NO": (8.0, "6-11"), "NYG": (7.0, "4-13"),
+    "NYJ": (5.5, "3-14"), "PHI": (10.0, "11-6"), "PIT": (8.0, "10-7"),
+    "SF": (10.0, "12-5"), "SEA": (11.0, "14-3"), "TB": (8.0, "8-9"),
+    "TEN": (6.0, "3-14"), "WSH": (7.0, "5-12"), "WAS": (7.0, "5-12")
+}
+
+WEATHER_CODES = {
+    0: "Clear", 1: "Mostly clear", 2: "Partly cloudy", 3: "Cloudy",
+    45: "Fog", 48: "Fog", 51: "Light drizzle", 53: "Drizzle", 55: "Heavy drizzle",
+    61: "Light rain", 63: "Rain", 65: "Heavy rain", 71: "Light snow",
+    73: "Snow", 75: "Heavy snow", 80: "Rain showers", 81: "Rain showers",
+    82: "Heavy showers", 85: "Snow showers", 95: "Thunderstorms", 96: "Storms with hail"
+}
+
+COMMUNICATION_GROUPS = {
+    "Protection unit": {"QB", "C", "G", "OG", "OT", "T", "TE", "RB"},
+    "Coverage unit": {"CB", "DB", "S", "FS", "SS", "NB", "LB", "ILB", "OLB"},
+    "Defensive front": {"DT", "NT", "DE", "DL", "LB", "ILB", "OLB"}
+}
+
+STATUS_WEIGHT = {
+    "out": 1.0, "injured reserve": 1.0, "physically unable to perform": 1.0,
+    "suspension": 1.0, "doubtful": 0.75, "questionable": 0.35,
+    "day-to-day": 0.25, "probable": 0.12
+}
+
+POSITION_WEIGHT = {
+    "QB": 1.8, "C": 1.65, "G": 1.35, "OG": 1.35, "OT": 1.35, "T": 1.35,
+    "S": 1.3, "FS": 1.3, "SS": 1.3, "CB": 1.25, "DB": 1.25, "NB": 1.3,
+    "LB": 1.15, "ILB": 1.15, "OLB": 1.15, "DT": 1.05, "NT": 1.05,
+    "DE": 1.05, "DL": 1.05, "TE": 0.9, "RB": 0.8, "WR": 0.75
+}
+
+PREPARATION_WEIGHT = {
+    "Missed practice": 1.0, "Limited practice": 0.5, "Personal designation": 0.55,
+    "Official leave": 1.0, "Suspended": 1.0, "Game-day inactive": 1.0,
+    "Commissioner exempt": 1.0, "Late activation": 0.45
+}
+
+
+def player_key(team, name):
+    normalized = "".join(character.lower() for character in (name or "unknown") if character.isalnum())
+    return f"{team}|{normalized}"
+
+
+def normalize_preparation_history(history):
+    normalized = {"players": {}, "rosterStatuses": {}, "schemaVersion": 2}
+    for record in history.get("players", {}).values():
+        team, name = record.get("team"), record.get("player")
+        if not team or not name:
+            continue
+        key = player_key(team, name)
+        target = normalized["players"].setdefault(key, {
+            "team": team, "player": name, "position": record.get("position", ""), "observations": []
+        })
+        known = {(item.get("date"), tuple(sorted(item.get("categories", [])))) for item in target["observations"]}
+        for observation in record.get("observations", []):
+            categories = [category for category in observation.get("categories", []) if category != "Official leave"]
+            categories = sorted(categories)
+            signature = (observation.get("date"), tuple(sorted(categories)))
+            if categories and signature not in known:
+                target["observations"].append({"date": observation.get("date"), "categories": categories})
+                known.add(signature)
+    normalized["updatedAt"] = history.get("updatedAt")
+    return normalized
+
+
+def get_json(url, params=None, retries=2):
+    if params:
+        url = f"{url}?{urlencode(params)}"
+    for attempt in range(retries + 1):
+        try:
+            result = subprocess.run(
+                ["curl", "-fsSL", "--max-time", "20", url],
+                check=True, capture_output=True, text=True
+            )
+            return json.loads(result.stdout)
+        except (subprocess.CalledProcessError, json.JSONDecodeError) as exc:
+            if attempt == retries:
+                raise RuntimeError(f"Could not load {url}: {exc}") from exc
+            time.sleep(1 + attempt)
+
+
+def get_text(url, retries=2):
+    for attempt in range(retries + 1):
+        try:
+            result = subprocess.run(
+                ["curl", "-fsSL", "--max-time", "30", url],
+                check=True, capture_output=True, text=True
+            )
+            return result.stdout
+        except subprocess.CalledProcessError as exc:
+            if attempt == retries:
+                raise RuntimeError(f"Could not load {url}: {exc}") from exc
+            time.sleep(1 + attempt)
+
+
+def load_json(path, default):
+    try:
+        with path.open() as handle:
+            return json.load(handle)
+    except (FileNotFoundError, json.JSONDecodeError):
+        return default
+
+
+def team_strength(abbreviation):
+    wins = BASELINES.get(abbreviation, (8.5, "0-0"))[0]
+    return (wins - 8.5) * 1.35
+
+
+def parse_margin(detail, home_abbr, away_abbr):
+    """Return the expected HOME margin of victory: positive means the home team is favored.
+
+    That is the convention the model uses everywhere (normal_cdf(margin / scale) is the
+    home win probability, and the nflverse backtest feeds spread_line the same way).
+    Market text is written from the favorite's side ("SEA -3.5" = Seattle favored by
+    3.5), so a home favorite's negative number becomes a positive home margin, and a
+    bare number is treated as an ESPN home-relative spread (negative = home favored).
+    """
+    if not detail:
+        return None
+    text = detail.replace("−", "-").replace("PK", "0")
+    matcher = re.finditer(r"\b([A-Z]{2,4})\s*([+-]?\d+(?:\.\d+)?)\b", text)
+    for item in matcher:
+        team = item.group(1)
+        if team not in {home_abbr, away_abbr}:
+            continue
+        value = float(item.group(2))
+        return -value if team == home_abbr else value
+    numeric = re.search(r"([-+]?\d+(?:\.\d+)?)", text)
+    if numeric:
+        return -float(numeric.group(1))
+    return None
+
+
+def parse_over_under(value):
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def parse_odds(competition, home_abbr, away_abbr):
+    odds = (competition.get("odds") or [{}])[0]
+    detail = odds.get("details") or ""
+    total = odds.get("overUnder")
+    opening = None
+    if odds.get("open") is not None:
+        opening = parse_margin(str(odds.get("open")), home_abbr, away_abbr)
+    if opening is None and odds.get("opening") is not None:
+        opening = parse_margin(str(odds.get("opening")), home_abbr, away_abbr)
+    if opening is None and odds.get("openingLine") is not None:
+        opening = parse_margin(str(odds.get("openingLine")), home_abbr, away_abbr)
+    if opening is None and isinstance(odds.get("spread"), (int, float)):
+        # ESPN's spread is home-relative and negative when the home team is favored.
+        # With no separate opening line this is the current line, so movement is zero.
+        opening = -float(odds["spread"])
+    current = parse_margin(detail, home_abbr, away_abbr)
+    if current is None and isinstance(odds.get("spread"), (int, float)):
+        current = -float(odds["spread"])
+    line_movement = round(current - opening, 4) if (current is not None and opening is not None) else 0.0
+    return {
+        "detail": detail, "total": total, "homeMargin": current,
+        "openingHomeMargin": opening, "lineMovement": line_movement
+    }
+
+
+def parse_record(record):
+    if not record:
+        return None
+    match = re.match(r"(\d+)\-(\d+)", record)
+    if not match:
+        return None
+    wins = int(match.group(1))
+    losses = int(match.group(2))
+    played = wins + losses
+    if played == 0:
+        return None
+    return wins / played
+
+
+def extract_float(value):
+    try:
+        return float(value)
+    except (TypeError, ValueError):
+        return None
+
+
+def extract_signal_overrides(raw, key):
+    payload = raw.get(key)
+    if payload is None:
+        return None
+    if isinstance(payload, (int, float)):
+        return float(payload)
+    if isinstance(payload, dict):
+        if payload.get("difference") is not None:
+            candidate = extract_float(payload.get("difference"))
+            if candidate is not None:
+                return candidate
+        home_value = payload.get("home")
+        away_value = payload.get("away")
+        if home_value is not None and away_value is not None:
+            home_float = extract_float(home_value)
+            away_float = extract_float(away_value)
+            if home_float is not None and away_float is not None:
+                candidate = home_float - away_float
+                return candidate
+        opening = payload.get("opening")
+        current = payload.get("current")
+        if opening is not None and current is not None:
+            opening_value = extract_float(opening)
+            current_value = extract_float(current)
+            if opening_value is not None and current_value is not None:
+                return current_value - opening_value
+    return None
+
+
+def compute_line_movement_signal(odds, override):
+    difference = extract_signal_overrides(override, "lineMovement")
+    if difference is None:
+        difference = odds.get("lineMovement", 0.0)
+        source = "market line movement" if difference else "no market line movement"
+    else:
+        source = "manual override"
+    return {
+        "difference": float(difference),
+        "probabilityShift": 0.0,
+        "source": source,
+        "available": bool(difference),
+        "applied": False
+    }
+
+
+def active_injuries(raw, team_id_to_abbr):
+    result = {}
+    for team in raw.get("injuries", []):
+        abbr = team_id_to_abbr.get(str(team.get("id")))
+        if not abbr:
+            continue
+        players = []
+        seen = set()
+        for item in team.get("injuries", []):
+            status = item.get("status", "Unknown")
+            if status.lower() in {"active", "healthy"}:
+                continue
+            athlete = item.get("athlete") or {}
+            player_id = athlete.get("id") or athlete.get("displayName")
+            if player_id in seen:
+                continue
+            seen.add(player_id)
+            details = item.get("details") or {}
+            position = (athlete.get("position") or {}).get("abbreviation", "")
+            players.append({
+                "player": athlete.get("displayName", "Unknown player"),
+                "position": position,
+                "status": status,
+                "detail": details.get("type") or details.get("detail") or "",
+                "note": item.get("shortComment", ""),
+                "updated": item.get("date")
+            })
+        priority = {"Out": 0, "Doubtful": 1, "Questionable": 2, "Day-To-Day": 3}
+        players.sort(key=lambda player: (priority.get(player["status"], 9), player["player"]))
+        result[abbr] = players
+    return result
+
+
+def report_preparation_events(raw, team_id_to_abbr):
+    events = []
+    for team in raw.get("injuries", []):
+        abbr = team_id_to_abbr.get(str(team.get("id")))
+        if not abbr:
+            continue
+        for item in team.get("injuries", []):
+            athlete = item.get("athlete") or {}
+            details = item.get("details") or {}
+            text = " ".join(str(value) for value in (
+                item.get("status", ""), item.get("shortComment", ""),
+                details.get("type", ""), details.get("detail", "")
+            ) if value).lower()
+            categories = []
+            if any(phrase in text for phrase in ("did not practice", "didn't practice", "non-participant", " dnp")):
+                categories.append("Missed practice")
+            elif any(phrase in text for phrase in ("limited practice", "limited participant", "limited participation")):
+                categories.append("Limited practice")
+            if any(phrase in text for phrase in ("personal", "not injury related", "non-injury related")):
+                categories.append("Personal designation")
+            if item.get("status", "").lower() in {"leave", "personal leave", "bereavement"}:
+                categories.append("Official leave")
+            if "suspend" in text:
+                categories.append("Suspended")
+            if item.get("status", "").lower() == "inactive":
+                categories.append("Game-day inactive")
+            if not categories:
+                continue
+            events.append({
+                "key": player_key(abbr, athlete.get("displayName")),
+                "team": abbr, "player": athlete.get("displayName", "Unknown player"),
+                "position": (athlete.get("position") or {}).get("abbreviation", ""),
+                "categories": sorted(set(categories)), "updated": item.get("date")
+            })
+    return events
+
+
+def roster_preparation_events(rows, season, week, prior_statuses, now):
+    eligible = [row for row in rows if row.get("season") == str(season) and row.get("game_type") == "REG"]
+    available_weeks = [int(row["week"]) for row in eligible if row.get("week") and int(row["week"]) <= week]
+    if not available_weeks:
+        return [], prior_statuses
+    selected_week = max(available_weeks)
+    current = [row for row in eligible if int(row.get("week") or 0) == selected_week]
+    events = []
+    next_statuses = dict(prior_statuses)
+    roster_categories = {"SUS": "Suspended", "EXE": "Commissioner exempt", "INA": "Game-day inactive"}
+    for row in current:
+        team = TEAM_ALIASES.get(row.get("team"), row.get("team"))
+        key = player_key(team, row.get("full_name"))
+        status = row.get("status", "")
+        categories = []
+        if status in roster_categories:
+            categories.append(roster_categories[status])
+        if status == "ACT" and prior_statuses.get(key) and prior_statuses[key] != "ACT":
+            categories.append("Late activation")
+        if categories:
+            events.append({
+                "key": key, "team": team, "player": row.get("full_name", "Unknown player"),
+                "position": row.get("depth_chart_position") or row.get("position", ""),
+                "categories": categories, "updated": now.isoformat().replace("+00:00", "Z")
+            })
+        next_statuses[key] = status
+    return events, next_statuses
+
+
+def preparation_profiles(events, history, teams, now, config):
+    player_history = history.setdefault("players", {})
+    current = {}
+    for event in events:
+        existing = current.setdefault(event["key"], {**event, "categories": []})
+        existing["categories"] = sorted(set(existing["categories"] + event["categories"]))
+        if event.get("updated"):
+            existing["updated"] = event["updated"]
+
+    today = now.date().isoformat()
+    for key, event in current.items():
+        record = player_history.setdefault(key, {
+            "team": event["team"], "player": event["player"],
+            "position": event["position"], "observations": []
+        })
+        record.update({field: event[field] for field in ("team", "player", "position")})
+        observation_date = (event.get("updated") or today)[:10]
+        signature = (observation_date, tuple(sorted(event["categories"])))
+        known = {(item["date"], tuple(sorted(item["categories"]))) for item in record["observations"]}
+        if signature not in known:
+            record["observations"].append({"date": observation_date, "categories": sorted(event["categories"])})
+        record["observations"] = record["observations"][-20:]
+
+    profiles = {team: {"score": 100, "level": "Stable", "rawRisk": 0.0, "items": [], "clusters": []} for team in teams}
+    for key, record in player_history.items():
+        observations = record.get("observations", [])
+        if not observations or record.get("team") not in profiles:
+            continue
+        latest = max(observations, key=lambda item: item["date"])
+        try:
+            days = max(0, (now.date() - datetime.fromisoformat(latest["date"]).date()).days)
+        except ValueError:
+            days = 0
+        if days > 7:
+            continue
+        categories = sorted(current.get(key, {}).get("categories", latest["categories"]))
+        decay = 1.0 if key in current else config.get("preparationDailyDecay", 0.65) ** days
+        missed = len({item["date"] for item in observations if "Missed practice" in item["categories"]})
+        limited = len({item["date"] for item in observations if "Limited practice" in item["categories"]})
+        severity = max(PREPARATION_WEIGHT.get(category, 0.0) for category in categories)
+        risk = severity * POSITION_WEIGHT.get(record.get("position", ""), 0.65) * (1 + min(3, missed) * 0.15) * decay
+        if risk <= 0:
+            continue
+        profiles[record["team"]]["items"].append({
+            "player": record["player"], "position": record.get("position", ""),
+            "categories": categories, "missedPracticeReports": missed,
+            "limitedPracticeReports": limited, "daysSinceFlag": days,
+            "decay": round(decay, 2), "risk": round(risk, 2)
+        })
+
+    for team, profile in profiles.items():
+        base = sum(item["risk"] for item in profile["items"])
+        interaction = 0.0
+        for name, positions in COMMUNICATION_GROUPS.items():
+            members = [item for item in profile["items"] if item["position"] in positions]
+            if len(members) >= 2:
+                interaction += (len(members) - 1) * sum(item["risk"] for item in members) * 0.35
+                profile["clusters"].append(f"{name}: {len(members)} preparation flags")
+        risk = base + interaction
+        profile["rawRisk"] = round(risk, 2)
+        profile["score"] = max(35, 100 - round(risk * 6))
+        profile["level"] = "High" if profile["score"] < 65 else "Watch" if profile["score"] < 82 else "Stable"
+        profile["items"].sort(key=lambda item: (-item["risk"], item["player"]))
+        profile["items"] = profile["items"][:8]
+    history["updatedAt"] = now.isoformat().replace("+00:00", "Z")
+    return profiles
+
+
+def travel_team_score(team):
+    components = {
+        "sleepCycles": min(6, max(0, float(team.get("localSleepCycles", 0)))),
+        "localPractice": min(4, max(0, float(team.get("plannedLocalPracticeSessions", 0)))) * 0.5,
+        "internationalTeam": min(5, max(0, float(team.get("internationalGames", 0)))) * 0.15,
+        "internationalCoach": min(3, max(0, float(team.get("coachInternationalGames", 0)))) * 0.25,
+        "surfaceFamiliarity": min(1, max(0, float(team.get("surfaceFamiliarity", 0)))),
+        "lateTravel": -min(6, max(0, float(team.get("separateOrLateTravelers", 0)))) * 0.75
+    }
+    return round(sum(components.values()), 2), {key: round(value, 2) for key, value in components.items()}
+
+
+def build_travel_profile(raw):
+    if not raw or not isinstance(raw, dict):
+        return {"available": False, "applied": False, "probabilityShift": 0.0, "uncertaintyMultiplier": 1.0}
+    away_team = raw.get("away") or {}
+    home_team = raw.get("home") or {}
+    away_score, away_components = travel_team_score(away_team)
+    home_score, home_components = travel_team_score(home_team)
+    return {
+        **raw, "available": True, "applied": False, "probabilityShift": 0.0,
+        "uncertaintyProbabilityShift": 0.0,
+        "shared": raw.get("shared", {}),
+        "sources": raw.get("sources", []),
+        "uncertaintyMultiplier": raw.get("uncertaintyMultiplier", 1.0),
+        "away": {**away_team, "acclimationScore": away_score, "scoreComponents": away_components},
+        "home": {**home_team, "acclimationScore": home_score, "scoreComponents": home_components}
+    }
+
+
+def find_location(city, state, country, cache):
+    key = "|".join(filter(None, [city, state, country]))
+    if key in cache:
+        return cache[key]
+    search = get_json(GEOCODE, {"name": city, "count": 8, "language": "en", "format": "json"})
+    choices = search.get("results", [])
+    country_code = "US" if country == "USA" else None
+    match = next((x for x in choices if (not country_code or x.get("country_code") == country_code) and (not state or x.get("admin1") == state)), None)
+    match = match or next((x for x in choices if not country_code or x.get("country_code") == country_code), None)
+    if not match:
+        return None
+    cache[key] = {"latitude": match["latitude"], "longitude": match["longitude"]}
+    return cache[key]
+
+
+def weather_for(game, cache, now):
+    venue = game["venue"]
+    if venue["indoor"]:
+        return None
+    kickoff = datetime.fromisoformat(game["kickoff"].replace("Z", "+00:00"))
+    delta_days = (kickoff.date() - now.date()).days
+    if delta_days < 0 or delta_days > 15:
+        return None
+    location = find_location(venue["city"], venue.get("state"), venue.get("country"), cache)
+    if not location:
+        return None
+    day = kickoff.date().isoformat()
+    raw = get_json(FORECAST, {
+        **location,
+        "daily": "weather_code,temperature_2m_max,temperature_2m_min,precipitation_probability_max,wind_speed_10m_max",
+        "temperature_unit": "fahrenheit", "wind_speed_unit": "mph", "timezone": "auto",
+        "start_date": day, "end_date": day
+    })
+    daily = raw.get("daily") or {}
+    if not daily.get("time"):
+        return None
+    high = round(daily["temperature_2m_max"][0])
+    low = round(daily["temperature_2m_min"][0])
+    rain = daily["precipitation_probability_max"][0]
+    wind = round(daily["wind_speed_10m_max"][0])
+    code = daily["weather_code"][0]
+    return {
+        "summary": WEATHER_CODES.get(code, "Forecast available"),
+        "temperature": f"{low}-{high} F",
+        "precipitation": f"{rain}%",
+        "wind": f"{wind} mph",
+        "source": "Open-Meteo"
+    }
+
+
+def continuity_profile(team, game, side):
+    weighted = []
+    for player in team.get("injuries", []):
+        severity = STATUS_WEIGHT.get(player.get("status", "").lower(), 0.2)
+        position = player.get("position", "")
+        weighted.append({**player, "severity": severity, "positionWeight": POSITION_WEIGHT.get(position, 0.65)})
+
+    base_risk = sum(item["severity"] * item["positionWeight"] * 1.45 for item in weighted)
+    interaction_risk = 0.0
+    clusters = []
+    for name, positions in COMMUNICATION_GROUPS.items():
+        members = [item for item in weighted if item["position"] in positions and item["severity"] >= 0.25]
+        if len(members) < 2:
+            continue
+        severity_sum = sum(item["severity"] * item["positionWeight"] for item in members)
+        cluster_risk = (len(members) - 1) * severity_sum * 0.72
+        interaction_risk += cluster_risk
+        clusters.append(f"{name}: {len(members)} linked flags")
+
+    context_multiplier = 1.0
+    if game["venue"]["neutral"]:
+        context_multiplier += 0.08
+    elif side == "away":
+        context_multiplier += 0.12
+    summary = ((game.get("weather") or {}).get("summary") or "").lower()
+    if any(term in summary for term in ("rain", "snow", "storm", "fog")):
+        context_multiplier += 0.08
+
+    total_risk = (base_risk + interaction_risk) * context_multiplier
+    score = max(35, 100 - round(total_risk * 0.7))
+    level = "High" if score < 65 else "Watch" if score < 82 else "Stable"
+    return {
+        "score": score, "level": level, "clusters": clusters,
+        "interactionRisk": round(interaction_risk * context_multiplier, 2),
+        "totalRisk": round(total_risk, 2)
+    }
+
+
+def add_continuity(game):
+    away = continuity_profile(game["away"], game, "away")
+    home = continuity_profile(game["home"], game, "home")
+    game["continuity"] = {
+        "away": away, "home": home, "probabilityShift": 0.0, "applied": False
+    }
+
+
+def build_game(event, week):
+    competition = event["competitions"][0]
+    competitors = {item["homeAway"]: item for item in competition["competitors"]}
+    home_raw, away_raw = competitors["home"], competitors["away"]
+
+    def team(raw):
+        info = raw["team"]
+        record = next((r["summary"] for r in raw.get("records", []) if r.get("name") == "overall"), "0-0")
+        return {
+            "id": str(info["id"]), "name": info["displayName"], "abbreviation": info["abbreviation"],
+            "logo": info.get("logo", ""), "record": record, "score": int(raw.get("score") or 0), "injuries": []
+        }
+
+    home, away = team(home_raw), team(away_raw)
+    venue_raw = competition.get("venue") or {}
+    address = venue_raw.get("address") or {}
+    odds = parse_odds(competition, home["abbreviation"], away["abbreviation"])
+    neutral = bool(competition.get("neutralSite"))
+    model_margin = team_strength(home["abbreviation"]) - team_strength(away["abbreviation"]) + (0 if neutral else 1.5)
+    margin = odds["homeMargin"] if odds["homeMargin"] is not None else model_margin
+    status = (event.get("status") or {}).get("type") or {}
+    return {
+        "id": str(event["id"]), "week": week, "kickoff": event["date"],
+        "status": status.get("state", "pre"), "completed": bool(status.get("completed")),
+        "home": home, "away": away,
+        "venue": {
+            "name": venue_raw.get("fullName", "Venue pending"), "city": address.get("city", "Location pending"),
+            "state": address.get("state", ""), "country": address.get("country", ""),
+            "indoor": bool(venue_raw.get("indoor")), "neutral": neutral
+        },
+        "odds": {
+            "detail": odds["detail"], "total": odds["total"],
+            "openingHomeMargin": odds["openingHomeMargin"], "lineMovement": odds["lineMovement"]
+        },
+        "lineSource": "Market line" if odds["homeMargin"] is not None else "Preseason team-strength fallback",
+        "marketHomeMargin": round(margin, 2),
+        "homeMargin": round(margin, 2),
+        "homeWinProbability": round(normal_cdf(margin / 13.86), 4),
+        "probabilitySource": "Market line" if odds["homeMargin"] is not None else "Team strength model",
+        "weather": None
+    }
+
+
+def infer_current_week(games, now):
+    upcoming = [g for g in games if datetime.fromisoformat(g["kickoff"].replace("Z", "+00:00")) >= now]
+    return min(upcoming, key=lambda game: game["kickoff"])["week"] if upcoming else max(g["week"] for g in games)
+
+
+def season_table(games, team_meta, simulations):
+    totals = {abbr: 0.0 for abbr in team_meta}
+    market_totals = {abbr: 0.0 for abbr in team_meta}
+    for game in games:
+        home, away = game["home"]["abbreviation"], game["away"]["abbreviation"]
+        if game["completed"]:
+            if game["home"]["score"] > game["away"]["score"]:
+                home_prob = 1.0
+            elif game["home"]["score"] < game["away"]["score"]:
+                home_prob = 0.0
+            else:
+                home_prob = 0.5
+        else:
+            home_prob = game["homeWinProbability"]
+        totals[home] = totals.get(home, 0) + home_prob
+        totals[away] = totals.get(away, 0) + (1 - home_prob)
+        market_home = game.get("marketHomeWinProbability")
+        if market_home is not None:
+            market_totals[home] = market_totals.get(home, 0) + market_home
+            market_totals[away] = market_totals.get(away, 0) + (1 - market_home)
+
+    teams = []
+    for abbr, meta in team_meta.items():
+        baseline, previous = BASELINES.get(abbr, (8.5, "0-0"))
+        projected = totals.get(abbr, baseline)
+        distribution = simulations.get(abbr, {})
+        low, high = distribution.get("p10", 0), distribution.get("p90", 17)
+        teams.append({
+            **meta, "baselineWins": baseline, "previousRecord": previous,
+            "marketProjectedWins": round(market_totals.get(abbr, 0.0), 1),
+            "projectedWins": round(projected, 1), "range": f"{low}-{high}",
+            "simulationMedian": distribution.get("median"),
+            "simulationMean": distribution.get("mean")
+        })
+    return teams
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--season", type=int, default=2026)
+    parser.add_argument("--week", type=int, help="Week to prioritize for weather. Defaults to the next week.")
+    parser.add_argument("--skip-weather", action="store_true", help="Refresh schedule and injuries without weather calls.")
+    args = parser.parse_args()
+    config = load_config()
+
+    now = datetime.now(timezone.utc)
+    games = []
+    team_meta = {}
+    team_id_to_abbr = {}
+    for week in range(1, 19):
+        raw = get_json(SCOREBOARD, {"dates": args.season, "seasontype": 2, "week": week, "limit": 100})
+        for event in raw.get("events", []):
+            game = build_game(event, week)
+            games.append(game)
+            for side in ("away", "home"):
+                team = game[side]
+                team_id_to_abbr[team["id"]] = team["abbreviation"]
+                team_meta[team["abbreviation"]] = {
+                    "id": team["id"], "name": team["name"], "abbreviation": team["abbreviation"], "logo": team["logo"]
+                }
+
+    current_week = args.week or infer_current_week(games, now)
+    raw_injuries = get_json(INJURIES)
+    injury_map = active_injuries(raw_injuries, team_id_to_abbr)
+    for game in games:
+        game["away"]["injuries"] = injury_map.get(game["away"]["abbreviation"], [])
+        game["home"]["injuries"] = injury_map.get(game["home"]["abbreviation"], [])
+
+    cache = load_json(CACHE, {})
+    weather_errors = []
+    if not args.skip_weather:
+        for game in [item for item in games if item["week"] == current_week]:
+            try:
+                game["weather"] = weather_for(game, cache, now)
+            except RuntimeError as exc:
+                weather_errors.append(str(exc))
+
+    preparation_history = load_json(PREPARATION_HISTORY, {"players": {}, "rosterStatuses": {}})
+    if preparation_history.get("schemaVersion") != 2:
+        preparation_history = normalize_preparation_history(preparation_history)
+    preparation_warnings = []
+    preparation_events = report_preparation_events(raw_injuries, team_id_to_abbr)
+    try:
+        roster_rows = list(csv.DictReader(io.StringIO(get_text(WEEKLY_ROSTERS.format(season=args.season)))))
+        roster_events, roster_statuses = roster_preparation_events(
+            roster_rows, args.season, current_week,
+            preparation_history.get("rosterStatuses", {}), now
+        )
+        preparation_events.extend(roster_events)
+        preparation_history["rosterStatuses"] = roster_statuses
+    except RuntimeError as exc:
+        preparation_warnings.append(str(exc))
+    preparation_map = preparation_profiles(preparation_events, preparation_history, team_meta, now, config)
+
+    for game in games:
+        add_continuity(game)
+        game["preparation"] = {
+            "away": preparation_map.get(game["away"]["abbreviation"], {}),
+            "home": preparation_map.get(game["home"]["abbreviation"], {}),
+            "probabilityShift": 0.0, "applied": False,
+            "coverage": "Official roster status and explicit public practice wording only"
+        }
+        game["lineMovement"] = {"difference": 0.0, "probabilityShift": 0.0, "source": "not loaded", "applied": False}
+
+    overrides = load_json(OVERRIDES, {"games": {}}).get("games", {})
+    travel_overrides = load_json(TRAVEL_OVERRIDES, {"games": {}}).get("games", {})
+    for game in games:
+        game["travel"] = build_travel_profile(travel_overrides.get(game["id"]))
+    states = {}
+    last_kickoff = {}
+    for game in sorted(games, key=lambda item: item["kickoff"]):
+        home = game["home"]["abbreviation"]
+        away = game["away"]["abbreviation"]
+        kickoff = datetime.fromisoformat(game["kickoff"].replace("Z", "+00:00"))
+        home_rest = min(14, max(0, (kickoff - last_kickoff[home]).days)) if home in last_kickoff else 7
+        away_rest = min(14, max(0, (kickoff - last_kickoff[away]).days)) if away in last_kickoff else 7
+        override = overrides.get(game["id"], {})
+        home_points = float(override.get("home_points", 0))
+        away_points = float(override.get("away_points", 0))
+        apply_signal = game["week"] == current_week and not game["completed"]
+        continuity_difference = (
+            game["continuity"]["away"]["interactionRisk"] -
+            game["continuity"]["home"]["interactionRisk"]
+        )
+        preparation_difference = (
+            game["preparation"]["away"].get("rawRisk", 0) -
+            game["preparation"]["home"].get("rawRisk", 0)
+        )
+        line_movement = compute_line_movement_signal(game["odds"], override)
+        line_movement["applied"] = apply_signal
+        game["lineMovement"] = line_movement
+        travel_active = game["travel"].get("available", False) and not game["completed"] and game["week"] == current_week
+        travel_score_difference = 0.0
+        if travel_active:
+            travel_score_difference = (
+                game["travel"]["home"]["acclimationScore"] -
+                game["travel"]["away"]["acclimationScore"]
+            )
+        prediction = predict_game(
+            game["marketHomeMargin"], states.get(home, 0.0), states.get(away, 0.0),
+            home_rest, away_rest, continuity_difference, apply_signal,
+            home_points - away_points, config,
+            preparation_difference=preparation_difference,
+            apply_preparation=apply_signal,
+            line_movement_difference=line_movement["difference"],
+            apply_line_movement=apply_signal,
+            travel_score_difference=travel_score_difference,
+            uncertainty_multiplier=game["travel"].get("uncertaintyMultiplier", 1.0),
+            apply_travel=travel_active
+        )
+        game["marketHomeWinProbability"] = prediction["marketOnlyProbability"]
+        game["effectiveMargin"] = prediction["effectiveMargin"]
+        game["homeMargin"] = prediction["effectiveMargin"]
+        game["homeWinProbability"] = prediction["homeWinProbability"]
+        game["modelAdjustments"] = {
+            "teamStatePoints": prediction["statePoints"],
+            "restPoints": prediction["restPoints"],
+            "spreadScale": prediction["spreadScale"],
+            "homeRestDays": home_rest, "awayRestDays": away_rest
+        }
+        game["continuity"]["probabilityShift"] = prediction["continuityProbabilityShift"]
+        game["continuity"]["applied"] = apply_signal
+        game["preparation"]["probabilityShift"] = prediction["preparationProbabilityShift"]
+        game["preparation"]["applied"] = apply_signal
+        game["lineMovement"]["probabilityShift"] = prediction["lineMovementProbabilityShift"]
+        game["travel"]["probabilityShift"] = prediction["travelProbabilityShift"]
+        game["travel"]["uncertaintyProbabilityShift"] = prediction["uncertaintyProbabilityShift"]
+        game["travel"]["uncertaintyMultiplier"] = prediction["uncertaintyMultiplier"]
+        game["travel"]["applied"] = travel_active
+        source_parts = [f"Calibrated {game['lineSource'].lower()}", "rolling team state", "rest"]
+        if apply_signal:
+            source_parts.append("continuity confidence")
+            source_parts.append("preparation disruption")
+            if line_movement["available"]:
+                source_parts.append("line movement")
+        if travel_active:
+            source_parts.append("travel acclimation")
+        if home_points or away_points:
+            source_parts.append("saved override")
+        game["probabilitySource"] = " + ".join(source_parts)
+
+        if game["completed"]:
+            actual_margin = game["home"]["score"] - game["away"]["score"]
+            update_team_states(states, home, away, actual_margin, game["marketHomeMargin"], config)
+        last_kickoff[home] = kickoff
+        last_kickoff[away] = kickoff
+
+    simulations = simulate_season(
+        games, list(team_meta), simulations=5000,
+        seed=args.season * 100 + current_week, config=config
+    )
+
+    ratings = load_json(RATINGS, None)
+    ratings_report = load_json(RATINGS_REPORT, None)
+    starter_overrides = load_json(OVERRIDES, {}).get("starters", {})
+    for game in games:
+        game["ratingModel"] = rating_view(
+            ratings, ratings_report, game["home"]["abbreviation"], game["away"]["abbreviation"],
+            game["marketHomeMargin"] if game["lineSource"] == "Market line" else None, starter_overrides
+        )
+
+    now_iso = now.isoformat().replace("+00:00", "Z")
+    ledger = load_json(LEDGER, {"season": args.season, "games": {}})
+    if ledger.get("season") != args.season:
+        ledger = {"season": args.season, "games": {}}
+    record_predictions(ledger, games, now_iso)
+    grade_predictions(ledger, games)
+    scorecard = summarize(ledger)
+
+    output = {
+        "season": args.season, "currentWeek": current_week,
+        "updatedAt": now.isoformat().replace("+00:00", "Z"),
+        "games": sorted(games, key=lambda game: game["kickoff"]),
+        "teams": season_table(games, team_meta, simulations),
+        "modelVersion": config["version"],
+        "modelTrainingSeasons": config["trainedSeasons"],
+        "modelConfig": {
+            "probabilityCalibration": config["spreadScale"],
+            "teamStateDecay": config["teamStateDecay"],
+            "teamStateWeight": config["teamStateWeight"],
+            "restDayWeight": config["restDayWeight"],
+            "latentTeamSigma": config["latentTeamSigma"],
+            "preparationProbabilityCap": config["preparationProbabilityCap"],
+            "preparationDailyDecay": config["preparationDailyDecay"],
+            "lineMovementProbabilityWeight": config["lineMovementProbabilityWeight"],
+            "lineMovementProbabilityCap": config["lineMovementProbabilityCap"],
+            "travelProbabilityCap": config["travelProbabilityCap"]
+        },
+        "scorecard": scorecard,
+        "warnings": (weather_errors + preparation_warnings)[:5]
+    }
+    DATA_DIR.mkdir(exist_ok=True)
+    temp_path = SNAPSHOT.with_suffix(".tmp")
+    with temp_path.open("w") as handle:
+        json.dump(output, handle, indent=2)
+    os.replace(temp_path, SNAPSHOT)
+    with CACHE.open("w") as handle:
+        json.dump(cache, handle, indent=2, sort_keys=True)
+    preparation_temp = PREPARATION_HISTORY.with_suffix(".tmp")
+    with preparation_temp.open("w") as handle:
+        json.dump(preparation_history, handle, indent=2, sort_keys=True)
+    os.replace(preparation_temp, PREPARATION_HISTORY)
+    ledger_temp = LEDGER.with_suffix(".tmp")
+    with ledger_temp.open("w") as handle:
+        json.dump(ledger, handle, indent=2, sort_keys=True)
+    os.replace(ledger_temp, LEDGER)
+    overall = scorecard["overall"]
+    if overall.get("graded"):
+        print(f"Scorecard: {overall['graded']} graded, model {overall['modelAccuracy']:.1%} vs market {overall['marketAccuracy']:.1%}, "
+              f"Brier {overall['modelBrier']:.4f} vs {overall['marketBrier']:.4f}.")
+    else:
+        print(f"Scorecard: nothing graded yet, {scorecard['open']} forecasts open, {scorecard['pending']} frozen.")
+    print(f"Updated {len(games)} games, {len(output['teams'])} teams, Week {current_week} selected.")
+    if weather_errors:
+        print(f"Weather warnings: {len(weather_errors)}. The rest of the snapshot is usable.")
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,9 @@
+[build]
+  publish = "."
+  command = ""
+
+# The data files change several times a week; never let a browser cache them.
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "no-cache"

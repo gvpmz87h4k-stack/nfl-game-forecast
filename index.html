@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A local NFL game-day forecast desk with live schedule, odds, weather, and player availability.">
+  <title>Sunday Desk</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <a class="brand" href="#top" aria-label="Sunday Desk home">
+      <span class="brand-mark" aria-hidden="true">SD</span>
+      <span>
+        <strong>Sunday Desk</strong>
+        <small>NFL game forecast board</small>
+      </span>
+    </a>
+    <div class="run-status" id="runStatus" aria-live="polite">
+      <span class="status-light"></span>
+      <span>Loading latest snapshot</span>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="control-strip" aria-labelledby="boardTitle">
+      <div>
+        <p class="date-line" id="dateLine">2026 regular season</p>
+        <h1 id="boardTitle">Make the call with the latest evidence.</h1>
+      </div>
+      <div class="week-control">
+        <label for="weekSelect">Week</label>
+        <select id="weekSelect" aria-label="Select NFL week"></select>
+      </div>
+    </section>
+
+    <section class="pulse" aria-label="Snapshot summary">
+      <div><strong id="gameCount">0</strong><span>games</span></div>
+      <div><strong id="weatherCount">0</strong><span>weather reads</span></div>
+      <div><strong id="continuityCount">0</strong><span>high continuity risk</span></div>
+      <div><strong id="closeCount">0</strong><span>one-score calls</span></div>
+    </section>
+
+    <section class="workspace" aria-label="Game forecast workspace">
+      <div class="slate-panel">
+        <div class="section-head">
+          <div>
+            <h2>Game slate</h2>
+            <p>Select a matchup to inspect the variables.</p>
+          </div>
+          <div class="filters" role="group" aria-label="Filter games">
+            <button class="filter is-active" data-filter="all" type="button">All</button>
+            <button class="filter" data-filter="close" type="button">Close</button>
+            <button class="filter" data-filter="weather" type="button">Weather</button>
+            <button class="filter" data-filter="injuries" type="button">Player watch</button>
+          </div>
+        </div>
+        <div class="game-list" id="gameList"></div>
+      </div>
+
+      <aside class="detail-panel" id="detailPanel" aria-label="Matchup detail">
+        <div class="empty-detail" id="emptyDetail">
+          <span aria-hidden="true">48</span>
+          <h2 id="detailTitle">Pick a game</h2>
+          <p>The matchup evidence and adjustment controls will appear here.</p>
+        </div>
+        <div id="gameDetail" hidden></div>
+      </aside>
+    </section>
+
+    <section class="season-panel" aria-labelledby="seasonTitle">
+      <div class="section-head">
+        <div>
+          <h2 id="seasonTitle">Season win board</h2>
+          <p>Expected wins from completed results and remaining game probabilities.</p>
+        </div>
+        <label class="search-field">
+          <span>Find a team</span>
+          <input id="teamSearch" type="search" placeholder="Team name" autocomplete="off">
+        </label>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Team</th>
+              <th scope="col">2025</th>
+              <th scope="col">Baseline</th>
+              <th scope="col">Market implied</th>
+              <th scope="col">Live forecast</th>
+              <th scope="col">80% simulation range</th>
+            </tr>
+          </thead>
+          <tbody id="seasonRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="backtest-panel" aria-labelledby="scorecardTitle">
+      <div class="section-head">
+        <div>
+          <h2 id="scorecardTitle">2026 scorecard</h2>
+          <p>Each game's forecast is frozen at kickoff and graded after the result, next to the market-only probability for the same game.</p>
+        </div>
+        <span class="audit-badge">Frozen at kickoff</span>
+      </div>
+      <div class="backtest-metrics" id="scorecardMetrics"></div>
+      <div class="backtest-explainer" id="scorecardExplainer"></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Week</th>
+              <th scope="col">Graded</th>
+              <th scope="col">Model accuracy</th>
+              <th scope="col">Market accuracy</th>
+              <th scope="col">Model Brier</th>
+              <th scope="col">Market Brier</th>
+              <th scope="col">Edge</th>
+            </tr>
+          </thead>
+          <tbody id="scorecardRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="backtest-panel" aria-labelledby="backtestTitle">
+      <div class="section-head">
+        <div>
+          <h2 id="backtestTitle">2025 blind replay</h2>
+          <p>Each forecast is saved before that game's result is read. Earlier results can inform later weeks.</p>
+        </div>
+        <span class="audit-badge">Current result blocked</span>
+      </div>
+      <div class="backtest-metrics" id="backtestMetrics"></div>
+      <div class="backtest-explainer" id="backtestExplainer"></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Team</th>
+              <th scope="col">Model wins</th>
+              <th scope="col">Real wins</th>
+              <th scope="col">Error</th>
+              <th scope="col">Model effect</th>
+            </tr>
+          </thead>
+          <tbody id="backtestRows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="method-note" aria-labelledby="methodTitle">
+      <h2 id="methodTitle">What the number means</h2>
+      <p>Version 2.4 calibrates the market spread from 2022-2024 games, updates a team's state only after completed games, accounts for rest, and uses continuity, official preparation disruption, line movement, and sourced travel acclimation as capped confidence shifts. The scorecard above is the only evidence about this season: forecasts frozen at kickoff, graded against the market. Season ranges come from 5,000 simulations with persistent team-level uncertainty. Use the controls for late news the displayed inputs have not absorbed.</p>
+      <p class="source-line">Sources: ESPN public score and injury feeds, Open-Meteo weather, nflverse historical schedules and injury reports, and saved preseason win totals. This is an analysis tool, not betting advice.</p>
+    </section>
+  </main>
+
+  <template id="gameTemplate">
+    <button class="game-row" type="button">
+      <span class="kickoff"></span>
+      <span class="matchup"></span>
+      <span class="conditions"></span>
+      <span class="pick"></span>
+    </button>
+  </template>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

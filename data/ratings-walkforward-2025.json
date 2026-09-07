@@ -1,0 +1,523 @@
+{
+  "trainSeasons": [
+    2022,
+    2023,
+    2024
+  ],
+  "testSeason": 2025,
+  "trainGames": 815,
+  "testGames": 272,
+  "params": {
+    "halfLifeGames": 16.0,
+    "seasonDiscount": 0.35,
+    "priorPlays": 700.0,
+    "priorDropbacks": 80.0,
+    "iterations": 4
+  },
+  "train": {
+    "market": {
+      "games": 813,
+      "accuracy": 0.6851,
+      "brier": 0.2109,
+      "marginMae": 9.43
+    },
+    "model": {
+      "games": 813,
+      "accuracy": 0.6433,
+      "brier": 0.2206,
+      "marginMae": 9.75
+    },
+    "blend": {
+      "games": 813,
+      "accuracy": 0.6876,
+      "brier": 0.2106,
+      "marginMae": 9.45
+    },
+    "againstTheSpread": [
+      {
+        "threshold": 0.0,
+        "picks": 787,
+        "pushes": 28,
+        "coverRate": 0.5019
+      },
+      {
+        "threshold": 1.0,
+        "picks": 222,
+        "pushes": 4,
+        "coverRate": 0.5315
+      },
+      {
+        "threshold": 2.0,
+        "picks": 21,
+        "pushes": 0,
+        "coverRate": 0.5714
+      },
+      {
+        "threshold": 3.0,
+        "picks": 1,
+        "pushes": 0,
+        "coverRate": 1.0
+      },
+      {
+        "threshold": 4.0,
+        "picks": 0,
+        "pushes": 0,
+        "coverRate": null
+      }
+    ],
+    "blendCoefficients": {
+      "intercept": 0.291,
+      "market": 0.878,
+      "model": 0.22
+    },
+    "marginCoefficients": [
+      2.106,
+      101.735,
+      41.97,
+      -8.182
+    ]
+  },
+  "test": {
+    "market": {
+      "games": 271,
+      "accuracy": 0.6531,
+      "brier": 0.2124,
+      "marginMae": 9.73
+    },
+    "model": {
+      "games": 271,
+      "accuracy": 0.6089,
+      "brier": 0.2318,
+      "marginMae": 10.47
+    },
+    "blend": {
+      "games": 271,
+      "accuracy": 0.6568,
+      "brier": 0.2145,
+      "marginMae": 9.84
+    },
+    "againstTheSpread": [
+      {
+        "threshold": 0.0,
+        "picks": 271,
+        "pushes": 1,
+        "coverRate": 0.4613
+      },
+      {
+        "threshold": 1.0,
+        "picks": 78,
+        "pushes": 0,
+        "coverRate": 0.3846
+      },
+      {
+        "threshold": 2.0,
+        "picks": 8,
+        "pushes": 0,
+        "coverRate": 0.625
+      },
+      {
+        "threshold": 3.0,
+        "picks": 0,
+        "pushes": 0,
+        "coverRate": null
+      },
+      {
+        "threshold": 4.0,
+        "picks": 0,
+        "pushes": 0,
+        "coverRate": null
+      }
+    ],
+    "blendCoefficients": {
+      "intercept": 0.291,
+      "market": 0.878,
+      "model": 0.22
+    },
+    "marginCoefficients": [
+      2.106,
+      101.735,
+      41.97,
+      -8.182
+    ]
+  },
+  "weekly": [
+    {
+      "week": 1,
+      "market": {
+        "games": 16,
+        "accuracy": 0.8125,
+        "brier": 0.1838,
+        "marginMae": 5.94
+      },
+      "model": {
+        "games": 16,
+        "accuracy": 0.8125,
+        "brier": 0.1986,
+        "marginMae": 6.27
+      },
+      "blend": {
+        "games": 16,
+        "accuracy": 0.8125,
+        "brier": 0.1811,
+        "marginMae": 5.89
+      }
+    },
+    {
+      "week": 2,
+      "market": {
+        "games": 16,
+        "accuracy": 0.6875,
+        "brier": 0.196,
+        "marginMae": 8.19
+      },
+      "model": {
+        "games": 16,
+        "accuracy": 0.8125,
+        "brier": 0.1974,
+        "marginMae": 8.52
+      },
+      "blend": {
+        "games": 16,
+        "accuracy": 0.6875,
+        "brier": 0.1948,
+        "marginMae": 8.23
+      }
+    },
+    {
+      "week": 3,
+      "market": {
+        "games": 16,
+        "accuracy": 0.75,
+        "brier": 0.2137,
+        "marginMae": 12.22
+      },
+      "model": {
+        "games": 16,
+        "accuracy": 0.6875,
+        "brier": 0.2055,
+        "marginMae": 12.18
+      },
+      "blend": {
+        "games": 16,
+        "accuracy": 0.75,
+        "brier": 0.2061,
+        "marginMae": 12.22
+      }
+    },
+    {
+      "week": 4,
+      "market": {
+        "games": 15,
+        "accuracy": 0.6667,
+        "brier": 0.201,
+        "marginMae": 9.17
+      },
+      "model": {
+        "games": 15,
+        "accuracy": 0.5333,
+        "brier": 0.2345,
+        "marginMae": 9.9
+      },
+      "blend": {
+        "games": 15,
+        "accuracy": 0.6667,
+        "brier": 0.2032,
+        "marginMae": 9.13
+      }
+    },
+    {
+      "week": 5,
+      "market": {
+        "games": 14,
+        "accuracy": 0.3571,
+        "brier": 0.3016,
+        "marginMae": 11.68
+      },
+      "model": {
+        "games": 14,
+        "accuracy": 0.4286,
+        "brier": 0.298,
+        "marginMae": 11.66
+      },
+      "blend": {
+        "games": 14,
+        "accuracy": 0.3571,
+        "brier": 0.3099,
+        "marginMae": 11.87
+      }
+    },
+    {
+      "week": 6,
+      "market": {
+        "games": 15,
+        "accuracy": 0.7333,
+        "brier": 0.2028,
+        "marginMae": 7.7
+      },
+      "model": {
+        "games": 15,
+        "accuracy": 0.4667,
+        "brier": 0.2613,
+        "marginMae": 8.52
+      },
+      "blend": {
+        "games": 15,
+        "accuracy": 0.7333,
+        "brier": 0.2104,
+        "marginMae": 7.95
+      }
+    },
+    {
+      "week": 7,
+      "market": {
+        "games": 15,
+        "accuracy": 0.8,
+        "brier": 0.1825,
+        "marginMae": 11.5
+      },
+      "model": {
+        "games": 15,
+        "accuracy": 0.8,
+        "brier": 0.2015,
+        "marginMae": 12.31
+      },
+      "blend": {
+        "games": 15,
+        "accuracy": 0.8,
+        "brier": 0.1803,
+        "marginMae": 11.44
+      }
+    },
+    {
+      "week": 8,
+      "market": {
+        "games": 13,
+        "accuracy": 0.8462,
+        "brier": 0.1745,
+        "marginMae": 14.35
+      },
+      "model": {
+        "games": 13,
+        "accuracy": 0.8462,
+        "brier": 0.1697,
+        "marginMae": 14.19
+      },
+      "blend": {
+        "games": 13,
+        "accuracy": 0.8462,
+        "brier": 0.1696,
+        "marginMae": 13.84
+      }
+    },
+    {
+      "week": 9,
+      "market": {
+        "games": 14,
+        "accuracy": 0.5714,
+        "brier": 0.256,
+        "marginMae": 9.32
+      },
+      "model": {
+        "games": 14,
+        "accuracy": 0.5714,
+        "brier": 0.2651,
+        "marginMae": 9.93
+      },
+      "blend": {
+        "games": 14,
+        "accuracy": 0.5714,
+        "brier": 0.2633,
+        "marginMae": 9.69
+      }
+    },
+    {
+      "week": 10,
+      "market": {
+        "games": 14,
+        "accuracy": 0.5714,
+        "brier": 0.2194,
+        "marginMae": 9.43
+      },
+      "model": {
+        "games": 14,
+        "accuracy": 0.6429,
+        "brier": 0.2108,
+        "marginMae": 10.03
+      },
+      "blend": {
+        "games": 14,
+        "accuracy": 0.6429,
+        "brier": 0.2148,
+        "marginMae": 9.73
+      }
+    },
+    {
+      "week": 11,
+      "market": {
+        "games": 15,
+        "accuracy": 0.7333,
+        "brier": 0.1903,
+        "marginMae": 7.5
+      },
+      "model": {
+        "games": 15,
+        "accuracy": 0.7333,
+        "brier": 0.1925,
+        "marginMae": 8.5
+      },
+      "blend": {
+        "games": 15,
+        "accuracy": 0.7333,
+        "brier": 0.1862,
+        "marginMae": 7.62
+      }
+    },
+    {
+      "week": 12,
+      "market": {
+        "games": 14,
+        "accuracy": 0.7143,
+        "brier": 0.1697,
+        "marginMae": 7.07
+      },
+      "model": {
+        "games": 14,
+        "accuracy": 0.7143,
+        "brier": 0.174,
+        "marginMae": 6.55
+      },
+      "blend": {
+        "games": 14,
+        "accuracy": 0.7143,
+        "brier": 0.1653,
+        "marginMae": 7.06
+      }
+    },
+    {
+      "week": 13,
+      "market": {
+        "games": 16,
+        "accuracy": 0.5625,
+        "brier": 0.2415,
+        "marginMae": 10.47
+      },
+      "model": {
+        "games": 16,
+        "accuracy": 0.5625,
+        "brier": 0.2471,
+        "marginMae": 10.21
+      },
+      "blend": {
+        "games": 16,
+        "accuracy": 0.5625,
+        "brier": 0.245,
+        "marginMae": 10.5
+      }
+    },
+    {
+      "week": 14,
+      "market": {
+        "games": 14,
+        "accuracy": 0.5,
+        "brier": 0.2439,
+        "marginMae": 12.43
+      },
+      "model": {
+        "games": 14,
+        "accuracy": 0.5714,
+        "brier": 0.2508,
+        "marginMae": 13.59
+      },
+      "blend": {
+        "games": 14,
+        "accuracy": 0.5,
+        "brier": 0.2473,
+        "marginMae": 12.89
+      }
+    },
+    {
+      "week": 15,
+      "market": {
+        "games": 16,
+        "accuracy": 0.625,
+        "brier": 0.1979,
+        "marginMae": 10.25
+      },
+      "model": {
+        "games": 16,
+        "accuracy": 0.6875,
+        "brier": 0.2024,
+        "marginMae": 9.41
+      },
+      "blend": {
+        "games": 16,
+        "accuracy": 0.625,
+        "brier": 0.1975,
+        "marginMae": 9.96
+      }
+    },
+    {
+      "week": 16,
+      "market": {
+        "games": 16,
+        "accuracy": 0.625,
+        "brier": 0.2229,
+        "marginMae": 10.62
+      },
+      "model": {
+        "games": 16,
+        "accuracy": 0.25,
+        "brier": 0.2986,
+        "marginMae": 13.62
+      },
+      "blend": {
+        "games": 16,
+        "accuracy": 0.625,
+        "brier": 0.2394,
+        "marginMae": 11.42
+      }
+    },
+    {
+      "week": 17,
+      "market": {
+        "games": 16,
+        "accuracy": 0.5625,
+        "brier": 0.2372,
+        "marginMae": 10.25
+      },
+      "model": {
+        "games": 16,
+        "accuracy": 0.3125,
+        "brier": 0.3036,
+        "marginMae": 12.31
+      },
+      "blend": {
+        "games": 16,
+        "accuracy": 0.5625,
+        "brier": 0.2498,
+        "marginMae": 10.37
+      }
+    },
+    {
+      "week": 18,
+      "market": {
+        "games": 16,
+        "accuracy": 0.625,
+        "brier": 0.1932,
+        "marginMae": 7.94
+      },
+      "model": {
+        "games": 16,
+        "accuracy": 0.5625,
+        "brier": 0.2526,
+        "marginMae": 11.2
+      },
+      "blend": {
+        "games": 16,
+        "accuracy": 0.625,
+        "brier": 0.1996,
+        "marginMae": 8.18
+      }
+    }
+  ]
+}
