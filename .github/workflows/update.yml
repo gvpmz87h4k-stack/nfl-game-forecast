@@ -1,11 +1,21 @@
 name: Sunday Desk updater
 
 # Runs on GitHub's servers, not on a laptop. Each run refreshes lines, injuries, weather,
-# ratings, and the prediction ledger, then commits the data back so Netlify redeploys.
+# starters, ratings, and the prediction ledger, then commits the data back; the page reads
+# it straight from GitHub. Times below are UTC. Minutes sit off the hour on purpose: GitHub
+# delays or drops top-of-the-hour schedules when it is busy, and any run can still land
+# late, so game-day looks are placed after the inactive lists (90 minutes before kickoff)
+# with a second look an hour later for once daylight time ends (Chicago moves one hour).
 on:
   schedule:
-    - cron: "17 15 * * *"      # every day 10:17 Chicago (09:17 once daylight time ends)
-    - cron: "17 22 * * *"      # every day 17:17 Chicago, before any night kickoff (Week 1 opens on a Wednesday)
+    - cron: "17 15 * * *"        # every day, 10:17 AM Chicago
+    - cron: "17 22 * * *"        # every day, 5:17 PM Chicago, before the night games' inactives
+    - cron: "17 13 * * 0"        # Sunday 8:17 AM, for the morning kickoffs played abroad
+    - cron: "47 16 * * 0"        # Sunday 11:47 AM, after the noon games' inactive lists
+    - cron: "47 19 * * 0"        # Sunday 2:47 PM, after the 3:25 games' inactive lists
+    - cron: "47 20 * * 0"        # Sunday 3:47 PM, the same look once daylight time ends
+    - cron: "17 23 * * 0,1,4"    # Sun/Mon/Thu 6:17 PM, after the night game's inactive list
+    - cron: "17 0 * * 1,2,5"     # the same look once daylight time ends (UTC has rolled to the next day)
   workflow_dispatch:
 
 permissions:
