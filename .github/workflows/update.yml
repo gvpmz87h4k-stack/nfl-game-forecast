@@ -4,8 +4,8 @@ name: Sunday Desk updater
 # ratings, and the prediction ledger, then commits the data back so Netlify redeploys.
 on:
   schedule:
-    - cron: "0 15 * * *"       # every day 10:00 Chicago (09:00 once daylight time ends)
-    - cron: "0 22 * * *"       # every day 17:00 Chicago, before any night kickoff (Week 1 opens on a Wednesday)
+    - cron: "17 15 * * *"      # every day 10:17 Chicago (09:17 once daylight time ends)
+    - cron: "17 22 * * *"      # every day 17:17 Chicago, before any night kickoff (Week 1 opens on a Wednesday)
   workflow_dispatch:
 
 permissions:
