@@ -1,6 +1,8 @@
 [build]
-  publish = "."
-  command = ""
+  # Serve only the page and its data. The build copies them into site/; the Python, tests,
+  # and configuration stay in the repository and never reach the public site.
+  publish = "site"
+  command = "rm -rf site && mkdir -p site/data && cp index.html app.js styles.css site/ && cp data/*.json site/data/"
 
 # The data files change several times a week; never let a browser cache them.
 [[headers]]
