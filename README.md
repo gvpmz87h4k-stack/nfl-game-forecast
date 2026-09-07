@@ -37,7 +37,14 @@ The ledger's freezing rule depends on that schedule: a forecast is only frozen i
 
 ## Outside picks
 
-`picks.json` holds picks from any outside source you want graded on the same terms as the model, for example the CBS Sports expert consensus. Enter a pick before kickoff with the week, both team codes as ESPN prints them, the straight-up winner, and optionally the side taken against the spread:
+CBS Sports publishes its expert picks as a plain table, one row per game and one column per writer, on two pages: straight up and against the spread. `cbs_picks.py` reads both for the current week and writes every writer's picks into `picks.json` under their own name, plus a `cbs` consensus that is a strict majority of the writers who have picked (a tie records nothing). The scheduled job runs it before every forecast refresh, so the picks are in the ledger before kickoff without anyone typing them. If the page changes shape and fewer than half the games parse, the file is left alone and the run log says so.
+
+```bash
+python3 cbs_picks.py            # current week from the snapshot
+python3 cbs_picks.py --week 3
+```
+
+`picks.json` also holds picks from any other source you want graded on the same terms as the model, for example the CBS Sports expert consensus. Enter a pick before kickoff with the week, both team codes as ESPN prints them, the straight-up winner, and optionally the side taken against the spread:
 
 ```json
 {"week": 1, "away": "NE", "home": "SEA", "winner": "SEA", "spread": "NE"}
