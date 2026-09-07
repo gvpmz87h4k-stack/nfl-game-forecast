@@ -187,28 +187,65 @@ def parse_over_under(value):
         return None
 
 
+def american_to_probability(odds):
+    """+150 -> 0.4, -180 -> 0.643. Includes the book's fee; pair with devig()."""
+    try:
+        value = float(str(odds).replace("+", ""))
+    except (TypeError, ValueError):
+        return None
+    if value == 0:
+        return None
+    return 100.0 / (value + 100.0) if value > 0 else -value / (-value + 100.0)
+
+
+def devig(home_odds, away_odds):
+    """The market's own home win probability with the book's fee stripped out."""
+    h, a = american_to_probability(home_odds), american_to_probability(away_odds)
+    if h is None or a is None or h + a <= 0:
+        return None
+    return round(h / (h + a), 4)
+
+
 def parse_odds(competition, home_abbr, away_abbr):
+    """Everything ESPN's odds object tells us, in the model's convention (positive = home favored)."""
     odds = (competition.get("odds") or [{}])[0]
     detail = odds.get("details") or ""
     total = odds.get("overUnder")
-    opening = None
-    if odds.get("open") is not None:
-        opening = parse_margin(str(odds.get("open")), home_abbr, away_abbr)
-    if opening is None and odds.get("opening") is not None:
-        opening = parse_margin(str(odds.get("opening")), home_abbr, away_abbr)
-    if opening is None and odds.get("openingLine") is not None:
-        opening = parse_margin(str(odds.get("openingLine")), home_abbr, away_abbr)
-    if opening is None and isinstance(odds.get("spread"), (int, float)):
-        # ESPN's spread is home-relative and negative when the home team is favored.
-        # With no separate opening line this is the current line, so movement is zero.
-        opening = -float(odds["spread"])
+    spread_block = odds.get("pointSpread") or {}
+    money_block = odds.get("moneyline") or {}
+
+    def line_of(side, when):
+        value = ((spread_block.get(side) or {}).get(when) or {}).get("line")
+        try:
+            return float(str(value).replace("+", "")) if value not in (None, "") else None
+        except ValueError:
+            return None
+
+    def price_of(block, side, when):
+        return ((block.get(side) or {}).get(when) or {}).get("odds")
+
     current = parse_margin(detail, home_abbr, away_abbr)
+    home_line_close = line_of("home", "close")
+    if home_line_close is not None:
+        current = -home_line_close                  # ESPN writes the home line from the home side: -3.5 = favored by 3.5
     if current is None and isinstance(odds.get("spread"), (int, float)):
         current = -float(odds["spread"])
+    home_line_open = line_of("home", "open")
+    opening = -home_line_open if home_line_open is not None else current
     line_movement = round(current - opening, 4) if (current is not None and opening is not None) else 0.0
+    moneyline = {
+        "home": price_of(money_block, "home", "close"), "away": price_of(money_block, "away", "close"),
+        "homeOpen": price_of(money_block, "home", "open"), "awayOpen": price_of(money_block, "away", "open"),
+    }
     return {
         "detail": detail, "total": total, "homeMargin": current,
-        "openingHomeMargin": opening, "lineMovement": line_movement
+        "openingHomeMargin": opening, "lineMovement": line_movement,
+        "book": (odds.get("provider") or {}).get("name"),
+        "spreadPrice": {"home": price_of(spread_block, "home", "close"), "away": price_of(spread_block, "away", "close"),
+                        "homeOpen": price_of(spread_block, "home", "open"), "awayOpen": price_of(spread_block, "away", "open")},
+        "moneyline": moneyline,
+        "moneylineHomeProbability": devig(moneyline["home"], moneyline["away"]),
+        "moneylineOpenHomeProbability": devig(moneyline["homeOpen"], moneyline["awayOpen"]),
     }
 
 
@@ -603,7 +640,10 @@ def build_game(event, week):
         },
         "odds": {
             "detail": odds["detail"], "total": odds["total"],
-            "openingHomeMargin": odds["openingHomeMargin"], "lineMovement": odds["lineMovement"]
+            "openingHomeMargin": odds["openingHomeMargin"], "lineMovement": odds["lineMovement"],
+            "book": odds["book"], "spreadPrice": odds["spreadPrice"], "moneyline": odds["moneyline"],
+            "moneylineHomeProbability": odds["moneylineHomeProbability"],
+            "moneylineOpenHomeProbability": odds["moneylineOpenHomeProbability"],
         },
         "lineSource": "Market line" if odds["homeMargin"] is not None else "Preseason team-strength fallback",
         "marketHomeMargin": round(margin, 2),
@@ -654,6 +694,77 @@ def season_table(games, team_meta, simulations):
             "simulationMean": distribution.get("mean")
         })
     return teams
+
+
+def readout(game):
+    """Four to six plain sentences a person can read without knowing the vocabulary."""
+    home, away = game["home"]["abbreviation"], game["away"]["abbreviation"]
+    names = {home: game["home"]["name"], away: game["away"]["name"]}
+    p = game["homeWinProbability"]
+    fav, dog, pf = (home, away, p) if p >= 0.5 else (away, home, 1 - p)
+    lines = []
+    if pf < 0.55:
+        lines.append(f"This one is close to a coin flip; {names[fav]} has the slight edge.")
+    else:
+        lines.append(f"{names[fav]} is expected to win, about {round(pf * 10)} times in 10.")
+    margin = game.get("marketHomeMargin")
+    if game.get("lineSource") == "Market line" and margin is not None:
+        market_fav = home if margin > 0 else away
+        market_dog = away if margin > 0 else home
+        head_start = abs(margin)
+        opening = game["odds"].get("openingHomeMargin")
+        move = game["odds"].get("lineMovement") or 0.0
+        if head_start == 0:
+            sentence = "The betting market has this as a pick-em, no head start either way."
+        else:
+            sentence = f"The betting market gives {names[market_dog]} a {head_start:g}-point head start"
+            if opening is not None and abs(move) >= 0.5:
+                toward = home if move > 0 else away
+                sentence += f", moved from {abs(opening):g} since the line opened, toward {names[toward]}"
+            else:
+                sentence += ", unchanged since the line opened"
+            sentence += "."
+        prices = game["odds"].get("spreadPrice") or {}
+        try:
+            drift = float(str(prices.get("home")).replace("+", "")) - float(str(prices.get("homeOpen")).replace("+", ""))
+        except (TypeError, ValueError):
+            drift = 0.0
+        if abs(move) < 0.5 and abs(drift) >= 8:
+            sentence += f" The price has drifted toward {names[home] if drift > 0 else names[away]} without the number changing."
+        lines.append(sentence)
+    else:
+        lines.append("No betting line yet; the number comes from team strength alone.")
+    shifts = []
+    for key, label in (("continuity", "injury clusters"), ("preparation", "practice and roster status"), ("travel", "travel")):
+        block = game.get(key) or {}
+        value = block.get("probabilityShift") or 0.0
+        if block.get("applied") and abs(value) >= 0.005:
+            shifts.append((label, value))
+    rest = (game.get("modelAdjustments") or {}).get("restPoints") or 0.0
+    if abs(rest) >= 0.3:
+        shifts.append(("rest", rest / 13.86 * 0.4))
+    if shifts:
+        parts = [f"{label} {'tilt' if label == 'injury clusters' else 'tilts'} it toward {names[home] if value > 0 else names[away]}" for label, value in shifts]
+        lines.append("Beyond the line, " + "; ".join(parts) + ", a little.")
+    else:
+        lines.append("Injuries, practice reports, rest, and travel do not change the picture.")
+    rm = game.get("ratingModel")
+    if rm:
+        gap = rm["disagreementPoints"]
+        if abs(gap) < 1.0:
+            lines.append("Our play-by-play ratings agree with the market.")
+        else:
+            lines.append(f"Our play-by-play ratings lean {names[rm['leans']]} by {abs(gap):.1f} points more than the market does"
+                         + ("; last season those disagreements were wrong more often than right." if rm.get("flagged") else "."))
+    experts = [(k, v) for k, v in (game.get("outsidePicks") or {}).items() if k != "cbs" and v.get("winner")]
+    if experts:
+        votes = sum(1 for _, v in experts if v["winner"] == fav)
+        lines.append(f"{votes} of the {len(experts)} CBS writers who have picked take {names[fav]}.")
+    weather = game.get("weather") or {}
+    summary = (weather.get("summary") or "").lower()
+    if not game["venue"].get("indoor") and any(w in summary for w in ("rain", "snow", "storm", "wind")):
+        lines.append(f"Weather could matter: {weather.get('summary')}, wind {weather.get('wind', 'unknown')}.")
+    return lines
 
 
 def main():
@@ -769,7 +880,9 @@ def main():
             uncertainty_multiplier=game["travel"].get("uncertaintyMultiplier", 1.0),
             apply_travel=travel_active
         )
-        game["marketHomeWinProbability"] = prediction["marketOnlyProbability"]
+        game["marketSpreadHomeWinProbability"] = prediction["marketOnlyProbability"]
+        game["marketHomeWinProbability"] = game["odds"].get("moneylineHomeProbability") or prediction["marketOnlyProbability"]
+        game["marketProbabilitySource"] = "moneyline, fee removed" if game["odds"].get("moneylineHomeProbability") else "spread converted"
         game["effectiveMargin"] = prediction["effectiveMargin"]
         game["homeMargin"] = prediction["effectiveMargin"]
         game["homeWinProbability"] = prediction["homeWinProbability"]
@@ -831,6 +944,9 @@ def main():
                         "label": source.get("label", source_key),
                         "winner": pick.get("winner"), "spread": pick.get("spread"),
                     }
+
+    for game in games:
+        game["readout"] = readout(game)
 
     now_iso = now.isoformat().replace("+00:00", "Z")
     ledger = load_json(LEDGER, {"season": args.season, "games": {}})

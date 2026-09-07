@@ -457,3 +457,9 @@ tbody tr:last-child td { border-bottom: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+
+/* Plain-language readout at the top of every matchup */
+.readout p { margin: 0 0 0.55rem; font-size: 1.02rem; line-height: 1.5; }
+.readout p:first-child { font-weight: 700; }
+.evidence-card strong small { display: block; font-weight: 500; opacity: 0.7; font-size: 0.78em; margin-top: 0.15rem; }

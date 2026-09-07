@@ -133,3 +133,22 @@ def test_line_movement_signal_defaults_to_market_difference():
     signal = compute_line_movement_signal(game["odds"], travel_overrides)
     assert signal["difference"] == -1.25
     assert signal["source"] == "market line movement"
+
+
+def test_parse_odds_reads_espn_opening_line_prices_and_moneyline():
+    from update import parse_odds, devig
+    competition = {"odds": [{
+        "details": "SEA -3.5", "overUnder": 44.5, "spread": -3.5, "provider": {"name": "DraftKings"},
+        "pointSpread": {"home": {"open": {"line": "-3.5", "odds": "-110"}, "close": {"line": "-4.5", "odds": "-105"}},
+                        "away": {"open": {"line": "+3.5", "odds": "-110"}, "close": {"line": "+4.5", "odds": "-115"}}},
+        "moneyline": {"home": {"open": {"odds": "-192"}, "close": {"odds": "-180"}},
+                      "away": {"open": {"odds": "+160"}, "close": {"odds": "+150"}}},
+    }]}
+    odds = parse_odds(competition, "SEA", "NE")
+    assert odds["homeMargin"] == 4.5 and odds["openingHomeMargin"] == 3.5
+    assert odds["lineMovement"] == 1.0            # moved one point toward the home side
+    assert odds["book"] == "DraftKings"
+    assert odds["spreadPrice"]["home"] == "-105" and odds["spreadPrice"]["homeOpen"] == "-110"
+    assert odds["moneylineHomeProbability"] == 0.6164   # -180 -> .643, +150 -> .400, fee removed: .643/1.043
+    assert devig("-110", "-110") == 0.5
+    assert devig(None, "+150") is None

@@ -374,11 +374,16 @@ function renderDetail(game) {
           <div class="prob-track"><span style="width:${probability * 100}%"></span></div>
         </div>
       </div>
+      <div class="evidence readout">
+        <h3>In plain words</h3>
+        ${(game.readout || []).map(line => `<p>${line}</p>`).join("")}
+      </div>
       <div class="evidence">
         <h3>Game evidence</h3>
         <div class="evidence-grid">
-          <div class="evidence-card"><span>Line</span><strong>${game.odds.detail || "Model only"}</strong></div>
-          <div class="evidence-card"><span>Total</span><strong>${game.odds.total || "Pending"}</strong></div>
+          <div class="evidence-card"><span>Line, the head start</span><strong>${game.odds.detail || "Model only"}${game.odds.openingHomeMargin != null && Math.abs((game.odds.lineMovement || 0)) >= 0.5 ? ` (opened ${game.odds.openingHomeMargin > 0 ? game.home.abbreviation : game.away.abbreviation} by ${Math.abs(game.odds.openingHomeMargin).toFixed(1)})` : ""}</strong></div>
+          <div class="evidence-card"><span>Market win probability</span><strong>${game.marketHomeWinProbability != null ? `${game.home.abbreviation} ${fmtPct(game.marketHomeWinProbability)}` : "n/a"}<small> ${game.marketProbabilitySource || ""}</small></strong></div>
+          <div class="evidence-card"><span>Total, points both teams together</span><strong>${game.odds.total || "Pending"}</strong></div>
           <div class="evidence-card"><span>Conditions</span><strong>${weather}</strong></div>
           <div class="evidence-card"><span>Forecast source</span><strong>${game.probabilitySource}</strong></div>
           <div class="evidence-card"><span>Rolling team state</span><strong>${adjustmentText(statePoints)}</strong></div>
