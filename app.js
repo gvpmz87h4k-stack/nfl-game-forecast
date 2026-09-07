@@ -636,14 +636,26 @@ document.querySelectorAll(".filter").forEach(button => button.addEventListener("
 
 els.teamSearch.addEventListener("input", renderSeason);
 
-Promise.all([
-  fetch("data/snapshot.json", { cache: "no-store" }),
-  fetch("data/backtest-2025.json", { cache: "no-store" })
-]).then(async ([snapshotResponse, backtestResponse]) => {
-    if (!snapshotResponse.ok) throw new Error(`Snapshot returned ${snapshotResponse.status}`);
-    const snapshot = await snapshotResponse.json();
-    if (backtestResponse.ok) state.backtest = await backtestResponse.json();
-    return snapshot;
+// Data lives in the GitHub repository, where the scheduled job commits it twice a day. Reading it
+// from there means Netlify never has to redeploy for numbers; the copy bundled with the deploy
+// is only the fallback for when GitHub cannot be reached.
+const DATA_ORIGIN = "https://raw.githubusercontent.com/gvpmz87h4k-stack/nfl-game-forecast/main/";
+async function loadData(name) {
+  const stamp = Date.now();
+  try {
+    const fresh = await fetch(`${DATA_ORIGIN}data/${name}?t=${stamp}`, { cache: "no-store" });
+    if (fresh.ok) return { json: await fresh.json(), source: "github" };
+  } catch (error) { /* fall through to the deployed copy */ }
+  const local = await fetch(`data/${name}`, { cache: "no-store" });
+  if (!local.ok) throw new Error(`${name} returned ${local.status}`);
+  return { json: await local.json(), source: "deploy" };
+}
+
+Promise.all([loadData("snapshot.json"), loadData("backtest-2025.json").catch(() => null)])
+  .then(([snapshot, backtest]) => {
+    if (backtest) state.backtest = backtest.json;
+    state.dataSource = snapshot.source;
+    return snapshot.json;
   })
   .then(setup)
   .catch(error => {
