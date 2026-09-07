@@ -4,7 +4,8 @@ const state = {
   week: null,
   filter: "all",
   selectedId: null,
-  adjustments: JSON.parse(localStorage.getItem("sunday-desk-adjustments") || "{}")
+  adjustments: JSON.parse(localStorage.getItem("sunday-desk-adjustments") || "{}"),
+  picks: (() => { try { return JSON.parse(localStorage.getItem("sunday-desk-picks") || "{}"); } catch (e) { return {}; } })()
 };
 
 const els = {
@@ -358,6 +359,9 @@ function renderDetail(game) {
   const startersText = rm ? `${game.away.abbreviation} ${rm.awayStarter || "?"} / ${game.home.abbreviation} ${rm.homeStarter || "?"}` : "n/a";
   const blindText = rm ? `blend ${(rm.blindTest.blendAccuracy * 100).toFixed(1)}% vs market ${(rm.blindTest.marketAccuracy * 100).toFixed(1)}%` : "n/a";
   const ratingChip = rm ? (rm.flagged ? `Disagrees with the line by ${Math.abs(rm.disagreementPoints).toFixed(1)} toward ${rm.leans}` : `Within ${Math.abs(rm.disagreementPoints).toFixed(1)} of the line`) : "No rating";
+  const kickoffPassed = new Date(game.kickoff) <= new Date();
+  const savedPick = state.picks[game.id] || {};
+  const yourPickStatus = kickoffPassed ? "Kickoff has passed" : savedPick.winner || savedPick.spread ? `Saved: ${[savedPick.winner ? `winner ${savedPick.winner}` : "", savedPick.spread ? `spread ${savedPick.spread}` : ""].filter(Boolean).join(", ")}` : "No pick yet";
   els.emptyDetail.hidden = true;
   els.gameDetail.hidden = false;
   els.gameDetail.innerHTML = `
@@ -433,6 +437,18 @@ function renderDetail(game) {
         <h3>${game.home.abbreviation} player watch</h3>
         <ul class="injury-list">${injuryMarkup(game.home)}</ul>
       </div>
+      <div class="evidence yourpick" id="yourPick">
+        <div class="evidence-title-row"><h3>Your pick <small>Frozen at kickoff, graded with everyone else</small></h3><span class="source-chip" id="yourPickStatus">${yourPickStatus}</span></div>
+        <div class="pick-row"><span>Winner</span>
+          <button type="button" class="pick-btn" data-kind="winner" data-team="${game.away.abbreviation}">${game.away.abbreviation}</button>
+          <button type="button" class="pick-btn" data-kind="winner" data-team="${game.home.abbreviation}">${game.home.abbreviation}</button>
+        </div>
+        <div class="pick-row"><span>Against the spread</span>
+          <button type="button" class="pick-btn" data-kind="spread" data-team="${game.away.abbreviation}">${game.away.abbreviation}</button>
+          <button type="button" class="pick-btn" data-kind="spread" data-team="${game.home.abbreviation}">${game.home.abbreviation}</button>
+        </div>
+        <div class="pick-row"><button type="button" class="reset-button" id="sendPick">Save my pick</button><small id="pickNote">Your latest save before kickoff is the one that counts.</small></div>
+      </div>
       <div class="adjuster">
         <label for="adjustmentRange"><span>Late-news adjustment toward ${game.home.abbreviation}</span><output id="adjustmentOutput">${adjustment > 0 ? "+" : ""}${adjustment.toFixed(1)} pts</output>
           <input id="adjustmentRange" type="range" min="-7" max="7" step="0.5" value="${adjustment}">
@@ -441,6 +457,29 @@ function renderDetail(game) {
         <button class="reset-button" id="resetAdjustment" type="button">Reset adjustment</button>
       </div>
     </div>`;
+  const pickState = { winner: savedPick.winner || null, spread: savedPick.spread || null };
+  const paint = () => document.querySelectorAll(".pick-btn").forEach(b => b.classList.toggle("is-on", pickState[b.dataset.kind] === b.dataset.team));
+  paint();
+  document.querySelectorAll(".pick-btn").forEach(b => b.addEventListener("click", () => {
+    pickState[b.dataset.kind] = pickState[b.dataset.kind] === b.dataset.team ? null : b.dataset.team;
+    paint();
+  }));
+  document.querySelector("#sendPick").addEventListener("click", async () => {
+    const note = document.querySelector("#pickNote");
+    if (kickoffPassed) { note.textContent = "Kickoff has passed; this game is frozen."; return; }
+    if (!pickState.winner && !pickState.spread) { note.textContent = "Tap a team first."; return; }
+    const body = new URLSearchParams({ "form-name": "picks", who: "narcisa", week: String(game.week), away: game.away.abbreviation, home: game.home.abbreviation, winner: pickState.winner || "", spread: pickState.spread || "" });
+    try {
+      const res = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body });
+      if (!res.ok) throw new Error(`Netlify answered ${res.status}`);
+      state.picks[game.id] = { ...pickState, savedAt: new Date().toISOString() };
+      localStorage.setItem("sunday-desk-picks", JSON.stringify(state.picks));
+      note.textContent = "Saved. It reaches the ledger on the next run and is frozen at kickoff.";
+      document.querySelector("#yourPickStatus").textContent = `Saved: ${[pickState.winner ? `winner ${pickState.winner}` : "", pickState.spread ? `spread ${pickState.spread}` : ""].filter(Boolean).join(", ")}`;
+    } catch (error) {
+      note.textContent = `Could not save (${error.message}). On the live site this works; locally there is no form service.`;
+    }
+  });
   const range = document.querySelector("#adjustmentRange");
   range.addEventListener("input", event => {
     document.querySelector("#adjustmentOutput").textContent = `${event.target.value > 0 ? "+" : ""}${Number(event.target.value).toFixed(1)} pts`;

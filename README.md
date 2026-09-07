@@ -48,6 +48,8 @@ python3 cbs_picks.py            # current week from the snapshot
 python3 cbs_picks.py --week 3
 ```
 
+You can also enter your pick on the site: every matchup panel has a "Your pick" control with the two teams for the winner and, optionally, the side against the spread. Saving sends it to a Netlify form; the scheduled job collects the submissions (`picks_form.py`, which needs a Netlify personal access token stored as the `NETLIFY_AUTH_TOKEN` repository secret), keeps the latest one per game that arrived before kickoff, and writes it into `picks.json`. Without the secret the step is skipped and the file route still works.
+
 The `narcisa` source is your own gut: add `{"week": 3, "away": "SF", "home": "LAR", "winner": "LAR"}` before kickoff, with `"spread"` too if you want to be graded against the line, and the scorecard grades you next to the writers and the model. The readout on that game says what you took.
 
 `picks.json` also holds picks from any other source you want graded on the same terms as the model, for example the CBS Sports expert consensus. Enter a pick before kickoff with the week, both team codes as ESPN prints them, the straight-up winner, and optionally the side taken against the spread:

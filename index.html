@@ -157,6 +157,12 @@
     </section>
   </main>
 
+  <!-- Netlify detects this form at build time; the app submits to it from the matchup panel. -->
+  <form name="picks" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="picks">
+    <input name="bot-field"><input name="who"><input name="week"><input name="away"><input name="home"><input name="winner"><input name="spread">
+  </form>
+
   <template id="gameTemplate">
     <button class="game-row" type="button">
       <span class="kickoff"></span>

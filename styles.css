@@ -463,3 +463,11 @@ tbody tr:last-child td { border-bottom: 0; }
 .readout p { margin: 0 0 0.55rem; font-size: 1.02rem; line-height: 1.5; }
 .readout p:first-child { font-weight: 700; }
 .evidence-card strong small { display: block; font-weight: 500; opacity: 0.7; font-size: 0.78em; margin-top: 0.15rem; }
+
+
+/* Your pick */
+.pick-row { display: flex; align-items: center; gap: 0.6rem; margin: 0.5rem 0; flex-wrap: wrap; }
+.pick-row > span { min-width: 9.5rem; font-size: 0.9rem; opacity: 0.8; }
+.pick-btn { border: 1px solid rgba(255,255,255,0.25); background: transparent; color: inherit; padding: 0.45rem 0.9rem; border-radius: 999px; font: inherit; cursor: pointer; }
+.pick-btn.is-on { background: #2fb35a; border-color: #2fb35a; color: #0b1220; font-weight: 700; }
+.pick-row small { opacity: 0.75; }
