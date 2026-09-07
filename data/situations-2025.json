@@ -1,0 +1,50 @@
+{
+  "trainGames": 815,
+  "testGames": 272,
+  "factors": {
+    "divisional": {
+      "trainCoefficientPoints": 0.03,
+      "trainAbsMissDivisional": 9.18,
+      "trainAbsMissOther": 9.55,
+      "testAbsMissDivisional": 9.55,
+      "testAbsMissOther": 9.82,
+      "testGamesFlagged": 96
+    },
+    "bye": {
+      "trainCoefficientPoints": 0.14,
+      "trainFlagged": 76,
+      "trainBeatLineRate": 0.453,
+      "testFlagged": 26,
+      "testBeatLineRate": 0.538
+    },
+    "short": {
+      "trainCoefficientPoints": 0.0,
+      "trainFlagged": 0,
+      "trainBeatLineRate": null,
+      "testFlagged": 0,
+      "testBeatLineRate": null
+    },
+    "blowout": {
+      "trainCoefficientPoints": -1.0,
+      "trainFlagged": 159,
+      "trainBeatLineRate": 0.551,
+      "testFlagged": 64,
+      "testBeatLineRate": 0.516
+    },
+    "lookahead": {
+      "trainCoefficientPoints": 0.68,
+      "trainFlagged": 52,
+      "trainBeatLineRate": 0.549,
+      "testFlagged": 29,
+      "testBeatLineRate": 0.483
+    }
+  },
+  "coefficients": {
+    "divisional": 0.03,
+    "bye": 0.139,
+    "short": 0.0,
+    "blowout": -1.003,
+    "lookahead": 0.677
+  },
+  "intercept": 0.542
+}

@@ -35,6 +35,10 @@ The code lives in its own GitHub repository. A scheduled GitHub Actions job (`.g
 
 The ledger's freezing rule depends on that schedule: a forecast is only frozen if a run happened before kickoff. Two runs a day around game days is enough.
 
+## Situational factors, tested and mostly rejected
+
+`situations.py` tests the "human factor" ideas that can be stated as facts on a Tuesday: coming off a bye, a short week, coming off a blowout loss, a lookahead spot, and a divisional game. Each is regressed against the margin left over after the closing line, fitted on 2022-2024 and checked on 2025. Result: bye, blowout, and lookahead did not hold on 2025 (the flagged side beat the line 54%, 52%, and 48% of the time, coin-flip territory), and the model does not use them. Divisional games landed about a third of a point closer to the line than other games in both the fit and the test, which is not a side to bet but is worth a sentence, so the readout mentions it. Run `python3 situations.py --test 2025` to reproduce the table in `data/situations-2025.json`.
+
 ## Outside picks
 
 CBS Sports publishes its expert picks as a plain table, one row per game and one column per writer, on two pages: straight up and against the spread. `cbs_picks.py` reads both for the current week and writes every writer's picks into `picks.json` under their own name, plus a `cbs` consensus that is a strict majority of the writers who have picked (a tie records nothing). The scheduled job runs it before every forecast refresh, so the picks are in the ledger before kickoff without anyone typing them. If the page changes shape and fewer than half the games parse, the file is left alone and the run log says so.
@@ -43,6 +47,8 @@ CBS Sports publishes its expert picks as a plain table, one row per game and one
 python3 cbs_picks.py            # current week from the snapshot
 python3 cbs_picks.py --week 3
 ```
+
+The `narcisa` source is your own gut: add `{"week": 3, "away": "SF", "home": "LAR", "winner": "LAR"}` before kickoff, with `"spread"` too if you want to be graded against the line, and the scorecard grades you next to the writers and the model. The readout on that game says what you took.
 
 `picks.json` also holds picks from any other source you want graded on the same terms as the model, for example the CBS Sports expert consensus. Enter a pick before kickoff with the week, both team codes as ESPN prints them, the straight-up winner, and optionally the side taken against the spread:
 

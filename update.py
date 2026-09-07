@@ -14,7 +14,8 @@ from pathlib import Path
 from urllib.parse import urlencode
 
 from scorecard import grade_predictions, record_predictions, summarize
-from ratings import rating_view
+from ratings import rating_view, ESPN_TO_NFLVERSE
+from situations import load_schedule, flags as situation_flags
 from model import load_config, normal_cdf, predict_game, simulate_season, update_team_states
 
 ROOT = Path(__file__).resolve().parent
@@ -760,6 +761,12 @@ def readout(game):
     if experts:
         votes = sum(1 for _, v in experts if v["winner"] == fav)
         lines.append(f"{votes} of the {len(experts)} CBS writers who have picked take {names[fav]}.")
+    situation = game.get("situation") or {}
+    if situation.get("divisional"):
+        lines.append("This is a divisional game, and those have run a little closer than the line in every season we tested.")
+    mine = (game.get("outsidePicks") or {}).get("narcisa") or {}
+    if mine.get("winner"):
+        lines.append(f"You took {names.get(mine['winner'], mine['winner'])}" + (f", and {names.get(mine['spread'], mine['spread'])} against the spread." if mine.get("spread") else "."))
     weather = game.get("weather") or {}
     summary = (weather.get("summary") or "").lower()
     if not game["venue"].get("indoor") and any(w in summary for w in ("rain", "snow", "storm", "wind")):
@@ -945,7 +952,20 @@ def main():
                         "winner": pick.get("winner"), "spread": pick.get("spread"),
                     }
 
+    try:
+        schedule = {(g["week"], g["home"], g["away"]): g for g in situation_flags(load_schedule({args.season}))}
+    except Exception as exc:
+        schedule = {}
+        preparation_warnings.append(f"situations unavailable: {exc}")
     for game in games:
+        key = (game["week"], ESPN_TO_NFLVERSE.get(game["home"]["abbreviation"], game["home"]["abbreviation"]),
+               ESPN_TO_NFLVERSE.get(game["away"]["abbreviation"], game["away"]["abbreviation"]))
+        sched = schedule.get(key)
+        game["situation"] = {
+            "divisional": bool(sched and sched["divisional"]),
+            "home": (sched or {}).get("homeFlags", {}), "away": (sched or {}).get("awayFlags", {}),
+            "note": "Divisional games have landed a little closer to the line than other games in every season tested; no other schedule factor held up.",
+        } if sched else None
         game["readout"] = readout(game)
 
     now_iso = now.isoformat().replace("+00:00", "Z")

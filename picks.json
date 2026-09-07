@@ -1,6 +1,10 @@
 {
-  "_how": "Outside picks to grade against the market. Enter them before kickoff; the updater freezes them with the forecast. 'winner' is the straight-up pick, 'spread' is the against-the-spread pick (the side they took against the line). Team codes as ESPN prints them (LAR, WSH, JAX). Edit this file on GitHub from any device and the next run picks it up.",
+  "_how": "Outside picks to grade against the market. Enter them before kickoff; the updater freezes them with the forecast. 'winner' is the straight-up pick, 'spread' is the against-the-spread pick (the side they took against the line). Team codes as ESPN prints them (LAR, WSH, JAX). Edit this file on GitHub from any device and the next run picks it up. The 'narcisa' source is your own gut: add {week, away, home, winner} (and 'spread' if you want to be graded against the line) before kickoff and the scorecard grades you like everyone else.",
   "sources": {
+    "narcisa": {
+      "label": "Narcisa",
+      "picks": []
+    },
     "cbs": {
       "label": "CBS Sports experts, consensus",
       "picks": [
