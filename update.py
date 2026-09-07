@@ -15,6 +15,7 @@ from urllib.parse import urlencode
 
 from scorecard import grade_predictions, record_predictions, summarize
 from ratings import rating_view, ESPN_TO_NFLVERSE
+from depth_chart import projected_starters, normalize as normalize_name
 from situations import load_schedule, flags as situation_flags
 from model import load_config, normal_cdf, predict_game, simulate_season, update_team_states
 
@@ -697,6 +698,30 @@ def season_table(games, team_meta, simulations):
     return teams
 
 
+def pretty_short(name):
+    """'K.Cousins' as nflverse prints it -> 'K. Cousins'."""
+    return re.sub(r"^([A-Z])\.(?=\S)", r"\1. ", name or "")
+
+
+def starter_sentences(game):
+    """One sentence per team whose quarterback is not the man last season's plays were built on."""
+    out = []
+    for side in ("away", "home"):
+        entry = (game.get("starters") or {}).get(side) or {}
+        name, rating_name, last = entry.get("name"), entry.get("ratingName"), entry.get("lastSeason")
+        if not name:
+            continue
+        where = "per the depth chart" if entry.get("source", "").startswith("ESPN") else "per your override"
+        team = game[side]["name"]
+        if rating_name is None:
+            out.append(f"{team} starts {name}, {where}; he has no plays in our ratings yet, so the rating uses last season's passing.")
+        elif last and normalize_name(rating_name) != normalize_name(last):
+            out.append(f"{team} starts {name}, {where}, not {pretty_short(last)}, who took most of last season's snaps.")
+        if entry.get("status") and entry["status"].lower() not in ("active", "probable"):
+            out.append(f"{name} is listed {entry['status']} on the injury report.")
+    return out
+
+
 def readout(game):
     """Four to six plain sentences a person can read without knowing the vocabulary."""
     home, away = game["home"]["abbreviation"], game["away"]["abbreviation"]
@@ -749,6 +774,7 @@ def readout(game):
         lines.append("Beyond the line, " + "; ".join(parts) + ", a little.")
     else:
         lines.append("Injuries, practice reports, rest, and travel do not change the picture.")
+    lines.extend(starter_sentences(game))
     rm = game.get("ratingModel")
     if rm:
         gap = rm["disagreementPoints"]
@@ -933,8 +959,21 @@ def main():
 
     ratings = load_json(RATINGS, None)
     ratings_report = load_json(RATINGS_REPORT, None)
-    starter_overrides = load_json(OVERRIDES, {}).get("starters", {})
+    manual_starters = load_json(OVERRIDES, {}).get("starters", {})
+    qb_names = list((ratings or {}).get("qbName", {}).values())
+    starters, starter_problems = projected_starters(team_id_to_abbr, get_json, qb_names, manual_starters)
+    for problem in starter_problems:
+        preparation_warnings.append(f"depth chart {problem}")
+    starter_overrides = {abbr: entry["ratingName"] for abbr, entry in starters.items() if entry.get("ratingName")}
     for game in games:
+        game["starters"] = {}
+        for side in ("home", "away"):
+            abbr = game[side]["abbreviation"]
+            entry = dict(starters.get(abbr) or {})
+            if ratings:
+                last_id = ratings.get("lastStarter", {}).get(ESPN_TO_NFLVERSE.get(abbr, abbr))
+                entry["lastSeason"] = ratings.get("qbName", {}).get(last_id)
+            game["starters"][side] = entry
         game["ratingModel"] = rating_view(
             ratings, ratings_report, game["home"]["abbreviation"], game["away"]["abbreviation"],
             game["marketHomeMargin"] if game["lineSource"] == "Market line" else None, starter_overrides

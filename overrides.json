@@ -1,7 +1,5 @@
 {
   "games": {},
-  "starters": {
-    "KC": "P.Mahomes"
-  },
-  "_starters_note": "Projected starting quarterback by ESPN team abbreviation, for example {\"KC\": \"P.Mahomes\"}, names as nflverse prints them. Used only by the rating model second opinion."
+  "starters": {},
+  "_starters_note": "Manual projected starter by ESPN team abbreviation, for example {\"KC\": \"P.Mahomes\"}. Normally empty: the updater reads every depth chart from ESPN on each run. An entry here wins over the depth chart, for the day the chart is wrong."
 }

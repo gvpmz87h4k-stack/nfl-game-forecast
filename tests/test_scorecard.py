@@ -80,7 +80,9 @@ def test_live_snapshot_board_follows_the_market():
     for game in snapshot["games"]:
         if game.get("lineSource") == "Market line" and not game["completed"]:
             favored_home = game["marketHomeMargin"] > 0
-            assert (game["marketHomeWinProbability"] > 0.5) == favored_home or game["marketHomeMargin"] == 0
+            # the spread-derived probability must agree with the spread's sign; the moneyline-derived one
+            # may sit at exactly one half when the book prices both sides the same on a 1.5-point line
+            assert (game["marketSpreadHomeWinProbability"] > 0.5) == favored_home or game["marketHomeMargin"] == 0
 
 
 def test_closing_line_value_measures_movement_toward_the_early_pick():
