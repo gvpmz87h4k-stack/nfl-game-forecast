@@ -46,5 +46,5 @@ jobs:
         run: |
           git config user.name "sunday-desk-updater"
           git config user.email "updater@users.noreply.github.com"
-          git add picks.json data/snapshot.json data/ledger.json data/ratings-current.json data/location-cache.json data/preparation-history.json
+          git add picks.json data/snapshot.json data/ledger.json data/ratings-current.json data/location-cache.json data/preparation-history.json data/depth-charts.json
           git diff --cached --quiet && echo "no changes" || (git commit -m "Refresh forecasts $(date -u +'%Y-%m-%d %H:%MZ')" && git push)
