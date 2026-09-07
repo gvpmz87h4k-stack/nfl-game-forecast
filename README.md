@@ -35,6 +35,16 @@ The code lives in its own GitHub repository. A scheduled GitHub Actions job (`.g
 
 The ledger's freezing rule depends on that schedule: a forecast is only frozen if a run happened before kickoff. Two runs a day around game days is enough.
 
+## Outside picks
+
+`picks.json` holds picks from any outside source you want graded on the same terms as the model, for example the CBS Sports expert consensus. Enter a pick before kickoff with the week, both team codes as ESPN prints them, the straight-up winner, and optionally the side taken against the spread:
+
+```json
+{"week": 1, "away": "NE", "home": "SEA", "winner": "SEA", "spread": "NE"}
+```
+
+The next updater run attaches it to the game, the ledger freezes it at kickoff with everything else, and after the result it is graded straight up against the winner and, for spread picks, against the closing line. The scorecard reports each source's record. Picks entered after kickoff are ignored by the freeze rule. The file can be edited on GitHub from a phone; the scheduled run picks it up.
+
 ## Refresh the data
 
 From this folder, run:

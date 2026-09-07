@@ -125,3 +125,19 @@ def test_rating_second_opinion_is_recorded_and_graded_against_the_close():
     assert entry["flaggedCovered"] is True     # home won by 7, blend said home by 6 vs a close of 3
     summary = summarize(ledger)["overall"]
     assert summary["ratingGraded"] == 1 and summary["flaggedPicks"] == 1 and summary["flaggedCovered"] == 1
+
+
+def test_outside_picks_are_frozen_and_graded_straight_up_and_against_the_spread():
+    ledger = {"season": 2026, "games": {}}
+    g = game("7", "2026-09-13T17:00Z", 0.60, 0.61)
+    g["marketHomeMargin"] = 3.0
+    g["outsidePicks"] = {"cbs": {"label": "CBS", "winner": "SEA", "spread": "NE"}}
+    record_predictions(ledger, [g], "2026-09-12T12:00Z")
+    record_predictions(ledger, [g], "2026-09-13T18:00Z")
+    done = game("7", "2026-09-13T17:00Z", 0.60, 0.61, completed=True, home_score=21, away_score=20)
+    grade_predictions(ledger, [done])
+    pick = ledger["games"]["7"]["outsidePicks"]["cbs"]
+    assert pick["winnerCorrect"] is True        # SEA won
+    assert pick["spreadCovered"] is True        # NE +3 covered a 1-point loss
+    src = summarize(ledger)["overall"]["outsideSources"]["cbs"]
+    assert src["winnerAccuracy"] == 1.0 and src["spreadCoverRate"] == 1.0 and src["spreadPicks"] == 1

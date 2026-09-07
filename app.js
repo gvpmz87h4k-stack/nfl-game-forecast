@@ -324,6 +324,18 @@ function travelMarkup(game) {
 	    </div>`;
 }
 
+function outsideMarkup(game) {
+  const picks = Object.entries(game.outsidePicks || {});
+  if (!picks.length) return "";
+  const cards = picks.map(([key, pick]) => `
+    <div class="evidence-card"><span>${pick.label || key}</span><strong>${pick.winner ? `Winner: ${pick.winner}` : "No winner pick"}${pick.spread ? ` · Spread: ${pick.spread}` : ""}</strong></div>`).join("");
+  return `
+      <div class="evidence">
+        <div class="evidence-title-row"><h3>Outside picks <small>Entered before kickoff, graded against the close</small></h3></div>
+        <div class="evidence-grid">${cards}</div>
+      </div>`;
+}
+
 function renderDetail(game) {
   const probability = adjustedProbability(game);
   const adjustment = Number(state.adjustments[game.id] || 0);
@@ -396,6 +408,7 @@ function renderDetail(game) {
         </div>
         <p class="continuity-note">Uses official roster states and explicit public practice wording. Personal reasons are never inferred or expanded. Old flags decay after return. Travel disruption appears only when an official inactive or absence status exists.</p>
       </div>
+      ${outsideMarkup(game)}
       <div class="evidence">
         <div class="evidence-title-row"><h3>Rating model <small>Second opinion, graded, never applied</small></h3><span class="source-chip">${ratingChip}</span></div>
         <div class="evidence-grid">
@@ -531,8 +544,9 @@ function renderScorecard() {
   const clvText = clv.games
     ? `Closing line value: on ${clv.games} frozen games the closing line moved an average of ${clv.meanPoints > 0 ? "+" : ""}${clv.meanPoints} points toward the model's first-seen pick (${Math.round((clv.positiveShare || 0) * 100)}% positive); on the ${clv.disagreements} games where the model disagreed with the early line, ${clv.disagreementMeanPoints == null ? "no data" : `${clv.disagreementMeanPoints > 0 ? "+" : ""}${clv.disagreementMeanPoints} points`}.`
     : "Closing line value arrives once frozen games have both a first-seen line and a close.";
+  const outsideText = Object.values(o.outsideSources || {}).map(src => ` ${src.label}: ${src.winnerPicks ? `${pct(src.winnerAccuracy)} straight up on ${src.winnerPicks} picks` : "no straight-up picks graded"}${src.spreadPicks ? `, ${pct(src.spreadCoverRate)} against the spread on ${src.spreadPicks}` : ""}.`).join("");
   const ratingText = o.ratingGraded ? ` Rating model on the same ${o.ratingGraded} games: ${pct(o.ratingAccuracy)} winners, Brier ${o.ratingBrier.toFixed(4)}; flagged disagreements covered ${o.flaggedCovered}/${o.flaggedPicks} against the close.` : "";
-  explainer.textContent = `Every forecast was frozen at kickoff and graded after the result, with the market-only probability scored on the same games. Ties are excluded. ${o.ties || 0} tie${(o.ties || 0) === 1 ? "" : "s"} so far. ${clvText}${ratingText}`;
+  explainer.textContent = `Every forecast was frozen at kickoff and graded after the result, with the market-only probability scored on the same games. Ties are excluded. ${o.ties || 0} tie${(o.ties || 0) === 1 ? "" : "s"} so far. ${clvText}${ratingText}${outsideText}`;
   rows.innerHTML = card.weeks.filter(week => week.graded).map(week => `
     <tr>
       <td>Week ${week.week}</td>

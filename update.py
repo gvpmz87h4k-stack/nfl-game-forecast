@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parent
 DATA_DIR = ROOT / "data"
 SNAPSHOT = DATA_DIR / "snapshot.json"
 LEDGER = DATA_DIR / "ledger.json"
+PICKS = ROOT / "picks.json"
 RATINGS = DATA_DIR / "ratings-current.json"
 RATINGS_REPORT = DATA_DIR / "ratings-walkforward-2025.json"
 CACHE = DATA_DIR / "location-cache.json"
@@ -818,6 +819,18 @@ def main():
             ratings, ratings_report, game["home"]["abbreviation"], game["away"]["abbreviation"],
             game["marketHomeMargin"] if game["lineSource"] == "Market line" else None, starter_overrides
         )
+
+    outside = load_json(PICKS, {"sources": {}}).get("sources", {})
+    for game in games:
+        game["outsidePicks"] = {}
+        for source_key, source in outside.items():
+            for pick in source.get("picks", []):
+                if (pick.get("week") == game["week"] and pick.get("away") == game["away"]["abbreviation"]
+                        and pick.get("home") == game["home"]["abbreviation"]):
+                    game["outsidePicks"][source_key] = {
+                        "label": source.get("label", source_key),
+                        "winner": pick.get("winner"), "spread": pick.get("spread"),
+                    }
 
     now_iso = now.isoformat().replace("+00:00", "Z")
     ledger = load_json(LEDGER, {"season": args.season, "games": {}})

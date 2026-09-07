@@ -53,6 +53,7 @@ def record_predictions(ledger, games, now_iso):
             "ratingHomeWinProbability": (game.get("ratingModel") or {}).get("ratingHomeWinProbability"),
             "ratingBlendHomeMargin": (game.get("ratingModel") or {}).get("blendHomeMargin"),
             "ratingFlagged": bool((game.get("ratingModel") or {}).get("flagged")),
+            "outsidePicks": dict(game.get("outsidePicks") or {}),
         }
         history = list(entry.get("history", [])) if entry else []
         point = {
@@ -131,6 +132,17 @@ def grade_predictions(ledger, games):
         if r is not None:
             entry["ratingCorrect"] = (r > 0.5) == (outcome == 1)
             entry["ratingBrier"] = round((r - outcome) ** 2, 4)
+        winner = entry["home"] if outcome == 1 else entry["away"]
+        actual_margin = home_score - away_score
+        close_for_picks = entry.get("closingHomeMargin")
+        for source_key, pick in (entry.get("outsidePicks") or {}).items():
+            graded_pick = dict(pick)
+            if pick.get("winner") in (entry["home"], entry["away"]):
+                graded_pick["winnerCorrect"] = pick["winner"] == winner
+            if pick.get("spread") in (entry["home"], entry["away"]) and close_for_picks is not None and actual_margin != close_for_picks:
+                home_covered = actual_margin > close_for_picks
+                graded_pick["spreadCovered"] = home_covered if pick["spread"] == entry["home"] else not home_covered
+            entry["outsidePicks"][source_key] = graded_pick
         close = entry.get("closingHomeMargin")
         blend = entry.get("ratingBlendHomeMargin")
         if entry.get("ratingFlagged") and close is not None and blend is not None:
@@ -152,7 +164,21 @@ def _block(entries):
     differ = [e for e in graded if e["modelPick"] != e["marketPick"]]
     rated = [e for e in graded if e.get("ratingBrier") is not None]
     flagged = [e for e in graded if e.get("flaggedCovered") is not None]
+    sources = {}
+    for e in graded:
+        for key, pick in (e.get("outsidePicks") or {}).items():
+            block = sources.setdefault(key, {"label": pick.get("label", key), "winnerPicks": 0, "winnerCorrect": 0, "spreadPicks": 0, "spreadCovered": 0})
+            if "winnerCorrect" in pick:
+                block["winnerPicks"] += 1
+                block["winnerCorrect"] += 1 if pick["winnerCorrect"] else 0
+            if "spreadCovered" in pick:
+                block["spreadPicks"] += 1
+                block["spreadCovered"] += 1 if pick["spreadCovered"] else 0
+    for block in sources.values():
+        block["winnerAccuracy"] = round(block["winnerCorrect"] / block["winnerPicks"], 4) if block["winnerPicks"] else None
+        block["spreadCoverRate"] = round(block["spreadCovered"] / block["spreadPicks"], 4) if block["spreadPicks"] else None
     return {
+        "outsideSources": sources,
         "ratingGraded": len(rated),
         "ratingAccuracy": round(sum(1 for e in rated if e["ratingCorrect"]) / len(rated), 4) if rated else None,
         "ratingBrier": round(sum(e["ratingBrier"] for e in rated) / len(rated), 4) if rated else None,
