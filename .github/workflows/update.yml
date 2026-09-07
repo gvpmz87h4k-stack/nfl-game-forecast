@@ -1,0 +1,44 @@
+name: Sunday Desk updater
+
+# Runs on GitHub's servers, not on a laptop. Each run refreshes lines, injuries, weather,
+# ratings, and the prediction ledger, then commits the data back so Netlify redeploys.
+on:
+  schedule:
+    - cron: "0 15 * * *"       # every day 10:00 Chicago (09:00 once daylight time ends)
+    - cron: "0 22 * * 0,1,4"   # Sunday, Monday, Thursday 17:00 Chicago, before the night kickoffs
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: updater
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Cache play-by-play downloads
+        uses: actions/cache@v4
+        with:
+          path: data/pbp
+          key: pbp-v1-${{ hashFiles('ratings.py') }}
+      - name: Tests
+        run: |
+          pip install pytest
+          python -m pytest -q
+      - name: Refresh forecasts, ledger, and scorecard
+        run: python update.py --season 2026
+      - name: Refresh ratings from play-by-play
+        run: python ratings.py --current 2026
+      - name: Commit the data
+        run: |
+          git config user.name "sunday-desk-updater"
+          git config user.email "updater@users.noreply.github.com"
+          git add data/snapshot.json data/ledger.json data/ratings-current.json data/location-cache.json data/preparation-history.json
+          git diff --cached --quiet && echo "no changes" || (git commit -m "Refresh forecasts $(date -u +'%Y-%m-%d %H:%MZ')" && git push)
