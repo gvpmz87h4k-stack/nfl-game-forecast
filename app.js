@@ -543,7 +543,6 @@ function renderSeason() {
     <tr>
       <td><span class="team-cell"><img src="${team.logo}" alt="">${team.name}</span></td>
       <td>${team.previousRecord}</td>
-      <td>${team.baselineWins.toFixed(1)}</td>
       <td>${(team.marketProjectedWins != null ? team.marketProjectedWins : team.projectedWins).toFixed(1)}</td>
       <td class="forecast-value">${team.projectedWins.toFixed(1)}</td>
       <td>${team.range}</td>

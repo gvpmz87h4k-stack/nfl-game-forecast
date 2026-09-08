@@ -417,8 +417,13 @@ tbody tr:last-child td { border-bottom: 0; }
 .team-cell img { width: 28px; height: 28px; object-fit: contain; }
 .forecast-value { color: var(--blue); font-weight: 800; font-size: 16px; }
 
-.method-note { max-width: 840px; margin: 38px auto 0; text-align: center; }
-.method-note p { color: var(--muted); }
+.guide { max-width: 980px; margin: 38px auto 0; }
+.guide h3 { margin: 26px 0 8px; font-size: 15px; }
+.guide > p { color: var(--ink); line-height: 1.55; }
+.guide .table-wrap { margin: 0; }
+.guide-table th:first-child, .guide-table td:first-child { width: 28%; font-weight: 700; }
+.guide-table td { vertical-align: top; line-height: 1.5; }
+.guide .source-line { margin-top: 26px; color: var(--muted); }
 .source-line { font-size: 12px; }
 .empty-list { padding: 50px 20px; color: var(--muted); text-align: center; }
 

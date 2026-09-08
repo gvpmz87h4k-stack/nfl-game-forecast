@@ -91,7 +91,6 @@
             <tr>
               <th scope="col">Team</th>
               <th scope="col">2025</th>
-              <th scope="col">Baseline</th>
               <th scope="col">Market implied</th>
               <th scope="col">Live forecast</th>
               <th scope="col">80% simulation range</th>
@@ -156,10 +155,90 @@
       </div>
     </section>
 
-    <section class="method-note" aria-labelledby="methodTitle">
-      <h2 id="methodTitle">What the number means</h2>
-      <p>Version 2.4 calibrates the market spread from 2022-2024 games, updates a team's state only after completed games, accounts for rest, and uses continuity, official preparation disruption, line movement, and sourced travel acclimation as capped confidence shifts. The scorecard above is the only evidence about this season: forecasts frozen at kickoff, graded against the market. Season ranges come from 5,000 simulations with persistent team-level uncertainty. Use the controls for late news the displayed inputs have not absorbed.</p>
-      <p class="source-line">Sources: ESPN public score and injury feeds, Open-Meteo weather, nflverse historical schedules and injury reports, and saved preseason win totals. This is an analysis tool, not betting advice.</p>
+    <section class="guide" id="guide" aria-labelledby="guideTitle">
+      <div class="section-head">
+        <div>
+          <h2 id="guideTitle">How to read this page</h2>
+          <p>Written for someone who does not follow football. If you read one thing on a game, read "In plain words."</p>
+        </div>
+      </div>
+
+      <h3>What the app does</h3>
+      <p>Every day it reads what the betting market thinks of every game, writes it down in plain words, freezes that at kickoff, and after the game scores everyone who made a call: the market, the app's own numbers, the CBS writers, and each person who picked here. The point is not to predict games. The point is that after a few weeks you know who is worth listening to.</p>
+
+      <h3>The page, top to bottom</h3>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Section</th><th scope="col">What it is</th><th scope="col">How to use it</th></tr></thead>
+        <tbody>
+          <tr><td>Status light, top right</td><td>When the data was last refreshed and where it came from.</td><td>If it says more than a day ago, something is stuck.</td></tr>
+          <tr><td>Week</td><td>Which week's games you are looking at.</td><td>Defaults to the current week.</td></tr>
+          <tr><td>Game slate</td><td>One row per game: kickoff, teams, weather, and the favorite with its win chance.</td><td>Tap a row to open it.</td></tr>
+          <tr><td>Filters: All, Close, Weather, Player watch</td><td>Close means near a coin flip. Weather means rain, wind, or cold. Player watch means a notable injury.</td><td>Close is where picks are hardest and most interesting.</td></tr>
+          <tr><td>The matchup panel</td><td>Everything about one game.</td><td>Read "In plain words" first, then decide.</td></tr>
+          <tr><td>Season win board</td><td>Every team's expected wins for the whole year.</td><td>Where the app thinks each team ends up.</td></tr>
+          <tr><td>2026 scorecard</td><td>Who has been right so far, graded the same way for everyone.</td><td>Empty until the first games are played.</td></tr>
+          <tr><td>2025 blind replay</td><td>The app's method run on last season as if it had not seen it.</td><td>Proof the method is honest, not a prediction.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>Inside the matchup panel</h3>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Field</th><th scope="col">Plain meaning</th></tr></thead>
+        <tbody>
+          <tr><td>The bar, for example ATL 37% / PIT 63%</td><td>How often each side wins if the game were played many times. Each team's share sits under its own name.</td></tr>
+          <tr><td>In plain words</td><td>A few sentences that say everything below without the vocabulary.</td></tr>
+          <tr><td>Line, the head start</td><td>The market's score prediction. "PIT by 3.5" means Pittsburgh is expected to finish 3.5 points ahead.</td></tr>
+          <tr><td>Total, points both teams together</td><td>How many points the market expects in the whole game. High means a shootout, low means a slog.</td></tr>
+          <tr><td>Market win probability</td><td>The market's own answer to "who wins," taken from the price of the win bet with the book's fee removed.</td></tr>
+          <tr><td>Forecast source</td><td>Whether the number came from the market line or, before a line exists, from team strength alone.</td></tr>
+          <tr><td>Rolling team state</td><td>A small nudge for how a team has done against expectations this season. Zero until games are played.</td></tr>
+          <tr><td>Rest difference</td><td>Who had more days off since their last game. Worth a fraction of a point.</td></tr>
+          <tr><td>Conditions</td><td>The weather at the stadium at kickoff.</td></tr>
+          <tr><td>Win board side-by-side</td><td>Each team's expected wins for the year, market versus app, and what moved it.</td></tr>
+          <tr><td>Communication continuity</td><td>Injuries grouped by the units that have to talk to each other on the field. A lower score means more disruption.</td></tr>
+          <tr><td>Preparation disruption</td><td>Missed practices and roster status this week.</td></tr>
+          <tr><td>Outside picks</td><td>What each CBS writer and their consensus took, straight up and against the spread.</td></tr>
+          <tr><td>Rating model</td><td>The app's second opinion built from last season's plays, with the named starting quarterbacks. Shown and graded, never used in the forecast, because it did not beat the market on the 2025 test.</td></tr>
+          <tr><td>Projected starters</td><td>Who starts at quarterback, per ESPN's depth chart, refreshed every run.</td></tr>
+          <tr><td>Player watch</td><td>Notable injuries per team with their status.</td></tr>
+          <tr><td>Your pick, Picking as</td><td>Choose your name, tap a winner and, if you want, a spread side, then save the week once. Your latest save before each kickoff counts.</td></tr>
+          <tr><td>Late-news adjustment</td><td>A slider for something you know that the line has not absorbed. It changes your screen only, never the ledger.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>Two words you will see everywhere</h3>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Word</th><th scope="col">Plain meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Winner, or straight up</td><td>Who wins the game, by any score.</td></tr>
+          <tr><td>Spread, or against the spread</td><td>Who beats the head start. Take Pittsburgh at 3.5 and they must win by 4 or more. Take Atlanta and they can lose by 3 and you still win.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>The scorecard, once games are graded</h3>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Field</th><th scope="col">Plain meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Graded</td><td>Games with a final score that had a forecast frozen before kickoff.</td></tr>
+          <tr><td>Model accuracy, Market accuracy</td><td>The share of games each one called right, straight up.</td></tr>
+          <tr><td>Brier</td><td>How far the confidence was from what happened. Lower is better. Saying 63% and losing hurts less than saying 90% and losing.</td></tr>
+          <tr><td>Edge</td><td>Model Brier minus market Brier. Negative means the app beat the market. Expect near zero.</td></tr>
+          <tr><td>Per person columns</td><td>The same grades for each picker, straight up and against the spread, next to the CBS writers.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>The season win board</h3>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Field</th><th scope="col">Plain meaning</th></tr></thead>
+        <tbody>
+          <tr><td>2025</td><td>Last season's record.</td></tr>
+          <tr><td>Market implied</td><td>The market's win chances for all 17 games added up.</td></tr>
+          <tr><td>Live forecast</td><td>The same sum with the app's small nudges. It stays within a few tenths of the market.</td></tr>
+          <tr><td>80% simulation range</td><td>The season played out 5,000 times. Eight in ten of those endings fall in this range.</td></tr>
+        </tbody>
+      </table></div>
+
+      <p class="source-line">Sources: ESPN public score, odds, injury, and depth chart feeds; CBS Sports expert picks; Open-Meteo weather; nflverse schedules, injury reports, and play-by-play. This is an analysis tool, not betting advice.</p>
     </section>
   </main>
 
