@@ -478,3 +478,12 @@ tbody tr:last-child td { border-bottom: 0; }
 .pick-btn { border: 1px solid rgba(255,255,255,0.25); background: transparent; color: inherit; padding: 0.45rem 0.9rem; border-radius: 999px; font: inherit; cursor: pointer; }
 .pick-btn.is-on { background: #2fb35a; border-color: #2fb35a; color: #0b1220; font-weight: 700; }
 .pick-row small { opacity: 0.75; }
+
+.guide-link { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
+.guide-link:hover, .guide-link:focus { color: var(--blue); border-bottom-style: solid; }
+.flag-list { margin: 4px 0; }
+.flag-list summary { cursor: pointer; font-size: 12px; }
+.flag-list ul { list-style: none; margin: 4px 0 0; padding: 0 0 0 10px; display: grid; gap: 3px; }
+.flag-list li { display: flex; flex-wrap: wrap; gap: 6px; font-size: 12px; }
+.flag-list li small { color: var(--muted); }
+.flag-list-muted summary { color: var(--muted); }

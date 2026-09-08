@@ -564,24 +564,60 @@ def weather_for(game, cache, now):
     }
 
 
-def continuity_profile(team, game, side):
+ROLE_WEIGHT = {"starter": 1.0, "backup": 0.35, "unlisted": 0.25}
+LONG_TERM_DAYS = 7          # injured reserve older than this: the replacement has settled in
+LONG_TERM_WEIGHT = 0.1
+
+
+def player_role(player, lineup):
+    """starter: first at his slot on the depth chart; backup: on the chart lower; unlisted: not on it."""
+    if not lineup:
+        return "starter"          # no chart read: count everyone, the old behaviour
+    name = player.get("player", "")
+    if name in lineup["starters"]:
+        return "starter"
+    return "backup" if name in lineup["all"] else "unlisted"
+
+
+def continuity_profile(team, game, side, lineup=None, now=None):
+    now = now or datetime.now(timezone.utc)
     weighted = []
     for player in team.get("injuries", []):
-        severity = STATUS_WEIGHT.get(player.get("status", "").lower(), 0.2)
+        status = player.get("status", "").lower()
+        severity = STATUS_WEIGHT.get(status, 0.2)
+        long_term = False
+        if status in ("injured reserve", "physically unable to perform") and player.get("updated"):
+            try:
+                age = (now - datetime.fromisoformat(player["updated"].replace("Z", "+00:00"))).days
+            except ValueError:
+                age = 0
+            if age > LONG_TERM_DAYS:
+                severity, long_term = LONG_TERM_WEIGHT, True
+        role = player_role(player, lineup)
         position = player.get("position", "")
-        weighted.append({**player, "severity": severity, "positionWeight": POSITION_WEIGHT.get(position, 0.65)})
+        weighted.append({**player, "severity": severity, "positionWeight": POSITION_WEIGHT.get(position, 0.65),
+                         "role": role, "roleWeight": ROLE_WEIGHT[role], "longTerm": long_term})
 
-    base_risk = sum(item["severity"] * item["positionWeight"] * 1.45 for item in weighted)
+    base_risk = sum(item["severity"] * item["positionWeight"] * item["roleWeight"] * 1.45 for item in weighted)
     interaction_risk = 0.0
     clusters = []
+    members_by_cluster = {}
     for name, positions in COMMUNICATION_GROUPS.items():
-        members = [item for item in weighted if item["position"] in positions and item["severity"] >= 0.25]
+        # only starters who may actually miss the game make a cluster; backups, unlisted names,
+        # and long-settled absences still count toward the base risk, at their lighter weight
+        members = [item for item in weighted if item["position"] in positions
+                   and item["role"] == "starter" and not item["longTerm"] and item["severity"] >= 0.25]
         if len(members) < 2:
             continue
-        severity_sum = sum(item["severity"] * item["positionWeight"] for item in members)
+        severity_sum = sum(item["severity"] * item["positionWeight"] * item["roleWeight"] for item in members)
         cluster_risk = (len(members) - 1) * severity_sum * 0.72
         interaction_risk += cluster_risk
         clusters.append(f"{name}: {len(members)} linked flags")
+        members_by_cluster[name] = [
+            {"player": item.get("player"), "position": item.get("position"), "status": item.get("status"),
+             "role": item["role"], "weight": round(item["severity"] * item["roleWeight"], 2)}
+            for item in sorted(members, key=lambda item: -item["severity"] * item["roleWeight"])
+        ]
 
     context_multiplier = 1.0
     if game["venue"]["neutral"]:
@@ -595,16 +631,23 @@ def continuity_profile(team, game, side):
     total_risk = (base_risk + interaction_risk) * context_multiplier
     score = max(35, 100 - round(total_risk * 0.7))
     level = "High" if score < 65 else "Watch" if score < 82 else "Stable"
+    setaside = [
+        {"player": item.get("player"), "position": item.get("position"), "status": item.get("status"), "role": item["role"],
+         "why": "long-term absence, replacement settled" if item["longTerm"] else "not a starter on the depth chart"}
+        for item in weighted if item["longTerm"] or item["role"] != "starter"
+    ]
     return {
-        "score": score, "level": level, "clusters": clusters,
+        "score": score, "level": level, "clusters": clusters, "clusterMembers": members_by_cluster,
+        "discounted": setaside, "lineupRead": bool(lineup),
         "interactionRisk": round(interaction_risk * context_multiplier, 2),
         "totalRisk": round(total_risk, 2)
     }
 
 
-def add_continuity(game):
-    away = continuity_profile(game["away"], game, "away")
-    home = continuity_profile(game["home"], game, "home")
+def add_continuity(game, lineups=None):
+    lineups = lineups or {}
+    away = continuity_profile(game["away"], game, "away", lineups.get(game["away"]["abbreviation"]))
+    home = continuity_profile(game["home"], game, "home", lineups.get(game["home"]["abbreviation"]))
     game["continuity"] = {
         "away": away, "home": home, "probabilityShift": 0.0, "applied": False
     }
@@ -857,8 +900,17 @@ def main():
         preparation_warnings.append(str(exc))
     preparation_map = preparation_profiles(preparation_events, preparation_history, team_meta, now, config)
 
+    ratings = load_json(RATINGS, None)
+    manual_starters = load_json(OVERRIDES, {}).get("starters", {})
+    qb_names = list((ratings or {}).get("qbName", {}).values())
+    starters, starter_problems = projected_starters(team_id_to_abbr, get_json, qb_names, manual_starters)
+    for problem in starter_problems:
+        preparation_warnings.append(f"depth chart {problem}")
+    lineups = {abbr: {"starters": set(entry.get("lineup") or []), "all": set(entry.get("lineup") or []) | set(entry.get("chartAll") or [])}
+               for abbr, entry in starters.items() if entry.get("lineup")}
+
     for game in games:
-        add_continuity(game)
+        add_continuity(game, lineups)
         game["preparation"] = {
             "away": preparation_map.get(game["away"]["abbreviation"], {}),
             "home": preparation_map.get(game["home"]["abbreviation"], {}),
@@ -959,11 +1011,6 @@ def main():
 
     ratings = load_json(RATINGS, None)
     ratings_report = load_json(RATINGS_REPORT, None)
-    manual_starters = load_json(OVERRIDES, {}).get("starters", {})
-    qb_names = list((ratings or {}).get("qbName", {}).values())
-    starters, starter_problems = projected_starters(team_id_to_abbr, get_json, qb_names, manual_starters)
-    for problem in starter_problems:
-        preparation_warnings.append(f"depth chart {problem}")
     starter_overrides = {abbr: entry["ratingName"] for abbr, entry in starters.items() if entry.get("ratingName")}
     for game in games:
         game["starters"] = {}

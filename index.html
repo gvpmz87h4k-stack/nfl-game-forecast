@@ -78,7 +78,7 @@
     <section class="season-panel" aria-labelledby="seasonTitle">
       <div class="section-head">
         <div>
-          <h2 id="seasonTitle">Season win board</h2>
+          <h2 id="seasonTitle"><a class="guide-link" href="#guide-board">Season win board</a></h2>
           <p>Expected wins from completed results and remaining game probabilities.</p>
         </div>
         <label class="search-field">
@@ -105,7 +105,7 @@
     <section class="backtest-panel" aria-labelledby="scorecardTitle">
       <div class="section-head">
         <div>
-          <h2 id="scorecardTitle">2026 scorecard</h2>
+          <h2 id="scorecardTitle"><a class="guide-link" href="#guide-scorecard">2026 scorecard</a></h2>
           <p>Each game's forecast is frozen at kickoff and graded after the result, next to the market-only probability for the same game.</p>
         </div>
         <span class="audit-badge">Frozen at kickoff</span>
@@ -167,7 +167,7 @@
       <h3>What the app does</h3>
       <p>Every day it reads what the betting market thinks of every game, writes it down in plain words, freezes that at kickoff, and after the game scores everyone who made a call: the market, the app's own numbers, the CBS writers, and each person who picked here. The point is not to predict games. The point is that after a few weeks you know who is worth listening to.</p>
 
-      <h3>The page, top to bottom</h3>
+      <h3 id="guide-page">The page, top to bottom</h3>
       <div class="table-wrap"><table class="guide-table">
         <thead><tr><th scope="col">Section</th><th scope="col">What it is</th><th scope="col">How to use it</th></tr></thead>
         <tbody>
@@ -182,7 +182,7 @@
         </tbody>
       </table></div>
 
-      <h3>Inside the matchup panel</h3>
+      <h3 id="guide-matchup">Inside the matchup panel</h3>
       <div class="table-wrap"><table class="guide-table">
         <thead><tr><th scope="col">Field</th><th scope="col">Plain meaning</th></tr></thead>
         <tbody>
@@ -207,7 +207,7 @@
         </tbody>
       </table></div>
 
-      <h3>What counts as weather</h3>
+      <h3 id="guide-weather">What counts as weather</h3>
       <p>The forecast for the stadium at kickoff, from Open-Meteo. A game is flagged, and the Weather filter keeps it, when any one of these is true. Indoor stadiums are never flagged.</p>
       <div class="table-wrap"><table class="guide-table">
         <thead><tr><th scope="col">Condition</th><th scope="col">Threshold</th><th scope="col">Why it matters</th></tr></thead>
@@ -218,19 +218,19 @@
         </tbody>
       </table></div>
 
-      <h3>Continuity, the injury score</h3>
+      <h3 id="guide-continuity">Continuity, the injury score</h3>
       <p>Eleven players are on the field, but they work in small groups that have to read the same picture and call the same thing at the same moment. Continuity is the app's injury score with one twist: it cares whether the injured players belong to the same group. Two missing from one group cost more than two missing from different groups, because the replacements have to learn to talk to each other, not only do their own jobs. Those are the "linked flags" on the card.</p>
       <div class="table-wrap"><table class="guide-table">
         <thead><tr><th scope="col">Group</th><th scope="col">Who is in it</th><th scope="col">What they coordinate</th></tr></thead>
         <tbody>
           <tr><td>Protection unit</td><td>quarterback, the five blockers in front of him, tight end, running back</td><td>who blocks whom on every snap, so the quarterback is not hit</td></tr>
-          <tr><td>Coverage unit</td><td>cornerbacks, safeties, linebackers</td><td>who covers which receiver, and the hand-offs when receivers cross</td></tr>
-          <tr><td>Defensive front</td><td>the big men on the defensive line, plus linebackers</td><td>who fills which gap against the run</td></tr>
+          <tr><td>Coverage unit</td><td>cornerbacks, safeties, linebackers: the defenders who guard the players trying to catch passes</td><td>who covers which receiver, and the hand-offs when receivers cross paths. One missed hand-off is a wide-open catch</td></tr>
+          <tr><td>Defensive front</td><td>the big men on the defensive line, plus linebackers: the defenders who meet the run at the line</td><td>who fills which gap when the ball is handed off. One empty gap is a long run</td></tr>
         </tbody>
       </table></div>
-      <p>Every player on the injury list gets a weight for how likely he is to miss the game (out counts fully, doubtful three quarters, questionable about a third) times a weight for how much his position matters. Groups with two or more flagged players add a penalty that grows with the group. Playing away or in rain adds a little. The score runs from 100, nobody missing, down to 35: Stable above 82, Watch from 65 to 82, High below 65. The gap between the two teams nudges the win chance by at most 2.5 percentage points and can never flip the favorite. The weights were chosen by hand, not fitted to results, which is why the cap is low and the card says Experimental; the scorecard decides whether it stays.</p>
+      <p>Every player on the injury list gets a weight for how likely he is to miss the game (out counts fully, doubtful three quarters, questionable about a third) times a weight for how much his position matters, times a weight for his role. A man listed first at his slot on ESPN's depth chart counts fully. A backup counts about a third. A name not on the chart at all counts a quarter. A player on injured reserve for more than a week counts almost nothing, because his replacement has been practicing with the group all along. Groups with two or more flagged players add a penalty that grows with the group. Playing away or in rain adds a little. The score runs from 100, nobody missing, down to 35: Stable above 82, Watch from 65 to 82, High below 65. The gap between the two teams nudges the win chance by at most 2.5 percentage points and can never flip the favorite. Tap a group's flags on the card to see the names behind it, and "counted lightly" to see who was set aside and why. The weights were chosen by hand, not fitted to results, which is why the cap is low and the card says Experimental; the scorecard decides whether it stays.</p>
 
-      <h3>Preparation disruption, the practice-week score</h3>
+      <h3 id="guide-preparation">Preparation disruption, the practice-week score</h3>
       <p>Continuity asks who is missing on game day. Preparation asks who did not get ready this week. Teams practice Wednesday, Thursday, and Friday and must publish, after each session, who practiced fully, limited, or not at all. The app reads the wording ESPN attaches to each name and sorts it into categories.</p>
       <div class="table-wrap"><table class="guide-table">
         <thead><tr><th scope="col">What the report says</th><th scope="col">Weight</th></tr></thead>
@@ -244,7 +244,7 @@
       </table></div>
       <p>Each weight is multiplied by how much the position matters and by a little more for each extra missed day, up to three. A flag that stops appearing fades by about a third a day and is gone after a week. The same group penalty as Continuity applies. The nudge is smaller, at most 1.5 percentage points, and it never flips the favorite. It depends on ESPN's wording: a note phrased differently is not seen. The same player can count in both scores; the two caps together stay under four points.</p>
 
-      <h3>The rating model, the second opinion</h3>
+      <h3 id="guide-rating">The rating model, the second opinion</h3>
       <p>The app's own attempt to rate teams from what happens on the field, without looking at the betting line. It is shown on every card and graded every week, and it is never used in the forecast, because it lost the test below.</p>
       <p>It is built from every play of the 2022 to 2025 seasons. Each play carries a number called expected points added: how much that one play moved the team's chances of scoring. A 40-yard pass is a big positive; a sack on third down is a big negative. Three numbers per team come out of it, computed fresh before each game.</p>
       <div class="table-wrap"><table class="guide-table">
@@ -266,7 +266,7 @@
       </table></div>
       <p>"Our play-by-play ratings agree with the market" means the two are within a point. When they differ by two or more, the card flags it and the readout adds that last season those disagreements were wrong more often than right. That is a warning, not a tip. The ledger grades the model every week so the 2026 scorecard can say whether that changes.</p>
 
-      <h3>Two words you will see everywhere</h3>
+      <h3 id="guide-words">Two words you will see everywhere</h3>
       <div class="table-wrap"><table class="guide-table">
         <thead><tr><th scope="col">Word</th><th scope="col">Plain meaning</th></tr></thead>
         <tbody>
@@ -275,7 +275,7 @@
         </tbody>
       </table></div>
 
-      <h3>The scorecard, once games are graded</h3>
+      <h3 id="guide-scorecard">The scorecard, once games are graded</h3>
       <div class="table-wrap"><table class="guide-table">
         <thead><tr><th scope="col">Field</th><th scope="col">Plain meaning</th></tr></thead>
         <tbody>
@@ -287,7 +287,7 @@
         </tbody>
       </table></div>
 
-      <h3>The season win board</h3>
+      <h3 id="guide-board">The season win board</h3>
       <div class="table-wrap"><table class="guide-table">
         <thead><tr><th scope="col">Field</th><th scope="col">Plain meaning</th></tr></thead>
         <tbody>

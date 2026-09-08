@@ -31,6 +31,28 @@ def normalize(name):
     return parts[0][0] + parts[-1]
 
 
+def starters_on_chart(raw):
+    """Every player listed first at his slot on any formation of the depth chart."""
+    names = set()
+    for group in raw.get("depthchart", []):
+        for slot, position in (group.get("positions") or {}).items():
+            athletes = position.get("athletes") or []
+            if athletes and athletes[0].get("displayName"):
+                names.add(athletes[0]["displayName"])
+    return sorted(names)
+
+
+def everyone_on_chart(raw):
+    """Every name that appears anywhere on the depth chart, any rank."""
+    names = set()
+    for group in raw.get("depthchart", []):
+        for slot, position in (group.get("positions") or {}).items():
+            for athlete in position.get("athletes") or []:
+                if athlete.get("displayName"):
+                    names.add(athlete["displayName"])
+    return sorted(names)
+
+
 def top_quarterback(raw):
     """The first quarterback on a team's depth chart, or None if the feed has no QB slot."""
     for group in raw.get("depthchart", []):
@@ -82,6 +104,8 @@ def fetch_starters(team_id_to_abbr, get_json, qb_names):
             continue
         top["ratingName"] = match_rating_name(top["shortName"], qb_names)
         top["source"] = "ESPN depth chart"
+        top["lineup"] = starters_on_chart(raw)
+        top["chartAll"] = everyone_on_chart(raw)
         starters[abbr] = top
     return starters, problems
 
@@ -116,6 +140,8 @@ def projected_starters(team_id_to_abbr, get_json, qb_names, manual=None):
         starters[abbr] = {
             "name": name, "shortName": name, "espnId": None, "status": None,
             "ratingName": match_rating_name(name, qb_names) or name, "source": "overrides.json",
+            "lineup": (starters.get(abbr) or {}).get("lineup", []),
+            "chartAll": (starters.get(abbr) or {}).get("chartAll", []),
         }
     save(starters, problems)
     return starters, problems

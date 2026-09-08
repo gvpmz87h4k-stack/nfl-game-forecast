@@ -290,11 +290,22 @@ function injuryMarkup(team) {
 }
 
 function continuityMarkup(profile, abbreviation) {
-  const clusters = profile.clusters.length ? profile.clusters.join("; ") : "No multi-player communication cluster";
+  const members = profile.clusterMembers || {};
+  const roleWord = { starter: "starter", backup: "backup", unlisted: "not on the depth chart" };
+  const clusters = profile.clusters.length
+    ? profile.clusters.map(label => {
+        const name = label.split(":")[0];
+        const list = (members[name] || []).map(m => `<li><span>${m.player}</span><small>${m.position}, ${m.status}, ${roleWord[m.role] || m.role}</small></li>`).join("");
+        return list ? `<details class="flag-list"><summary>${label}</summary><ul>${list}</ul></details>` : `<p>${label}</p>`;
+      }).join("")
+    : "<p>No multi-player communication cluster</p>";
+  const setAside = (profile.discounted || []).length
+    ? `<details class="flag-list flag-list-muted"><summary>${profile.discounted.length} name${profile.discounted.length === 1 ? "" : "s"} counted lightly</summary><ul>${profile.discounted.map(m => `<li><span>${m.player}</span><small>${m.position}, ${m.status}: ${m.why}</small></li>`).join("")}</ul></details>`
+    : "";
   return `
     <div class="continuity-card continuity-${profile.level.toLowerCase()}">
       <div class="continuity-score"><strong>${profile.score}</strong><span>${profile.level}</span></div>
-      <div><strong>${abbreviation} continuity</strong><p>${clusters}</p></div>
+      <div><strong>${abbreviation} continuity</strong>${clusters}${setAside}</div>
     </div>`;
 }
 
@@ -429,14 +440,14 @@ function renderDetail(game) {
         </div>
       </div>
       <div class="evidence">
-        <div class="evidence-title-row"><h3>Win board side-by-side</h3><span class="source-chip">Matchup teams</span></div>
+        <div class="evidence-title-row"><h3><a class="guide-link" href="#guide-board">Win board side-by-side</a></h3><span class="source-chip">Matchup teams</span></div>
         <div class="season-breakdown-grid">
           ${renderTeamBreakdownCard(game.away.abbreviation)}
           ${renderTeamBreakdownCard(game.home.abbreviation)}
         </div>
       </div>
       <div class="evidence">
-        <div class="evidence-title-row"><h3>Communication continuity <small>Experimental</small></h3><span class="source-chip">${game.continuity && game.continuity.applied ? shiftDirection : "Signal shown, confidence shift not applied"}</span></div>
+        <div class="evidence-title-row"><h3><a class="guide-link" href="#guide-continuity">Communication continuity</a> <small>Experimental</small></h3><span class="source-chip">${game.continuity && game.continuity.applied ? shiftDirection : "Signal shown, confidence shift not applied"}</span></div>
         <div class="continuity-grid">
           ${continuityMarkup(game.continuity.away, game.away.abbreviation)}
           ${continuityMarkup(game.continuity.home, game.home.abbreviation)}
@@ -444,7 +455,7 @@ function renderDetail(game) {
         <p class="continuity-note">Scores measure public status inside player groups that exchange protections, assignments, and coverage calls. Lower is riskier. The model does not know private health or every starter assignment.</p>
       </div>
       <div class="evidence">
-        <div class="evidence-title-row"><h3>Preparation disruption <small>Experimental</small></h3><span class="source-chip">${game.preparation && game.preparation.applied ? preparationDirection : "Signal shown, confidence shift not applied"}</span></div>
+        <div class="evidence-title-row"><h3><a class="guide-link" href="#guide-preparation">Preparation disruption</a> <small>Experimental</small></h3><span class="source-chip">${game.preparation && game.preparation.applied ? preparationDirection : "Signal shown, confidence shift not applied"}</span></div>
         <div class="preparation-grid">
           ${preparationMarkup(game.preparation.away, game.away.abbreviation)}
           ${preparationMarkup(game.preparation.home, game.home.abbreviation)}
@@ -453,7 +464,7 @@ function renderDetail(game) {
       </div>
       ${outsideMarkup(game)}
       <div class="evidence">
-        <div class="evidence-title-row"><h3>Rating model <small>Second opinion, graded, never applied</small></h3><span class="source-chip">${ratingChip}</span></div>
+        <div class="evidence-title-row"><h3><a class="guide-link" href="#guide-rating">Rating model</a> <small>Second opinion, graded, never applied</small></h3><span class="source-chip">${ratingChip}</span></div>
         <div class="evidence-grid">
           <div class="evidence-card"><span>Play-level rating margin</span><strong>${ratingText}</strong></div>
           <div class="evidence-card"><span>Blend with the line</span><strong>${blendText}</strong></div>
@@ -472,7 +483,7 @@ function renderDetail(game) {
         <ul class="injury-list">${injuryMarkup(game.home)}</ul>
       </div>
       <div class="evidence yourpick" id="yourPick">
-        <div class="evidence-title-row"><h3>Your pick <small>Frozen at kickoff, graded with everyone else</small></h3><span class="source-chip" id="yourPickStatus">${yourPickStatus}</span></div>
+        <div class="evidence-title-row"><h3><a class="guide-link" href="#guide-matchup">Your pick</a> <small>Frozen at kickoff, graded with everyone else</small></h3><span class="source-chip" id="yourPickStatus">${yourPickStatus}</span></div>
         <div class="pick-row"><span>Picking as</span>
           <select id="whoPicks" aria-label="Who is picking">${Object.entries(state.people).map(([key, label]) => `<option value="${key}"${key === state.who ? " selected" : ""}>${label}</option>`).join("")}</select>
         </div>
