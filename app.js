@@ -375,7 +375,7 @@ function renderDetail(game) {
         </div>
         <div class="probability">
           <div class="prob-label"><span>${game.away.abbreviation} ${fmtPct(1 - probability)}</span><span>${game.home.abbreviation} ${fmtPct(probability)}</span></div>
-          <div class="prob-track"><span style="width:${probability * 100}%"></span></div>
+          <div class="prob-track"><span class="away-share" style="width:${(1 - probability) * 100}%"></span><span class="home-share" style="width:${probability * 100}%"></span></div>
         </div>
       </div>
       <div class="evidence readout">

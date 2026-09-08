@@ -264,7 +264,9 @@ select, input {
 .probability { margin-top: 16px; }
 .prob-label { display: flex; justify-content: space-between; font-size: 13px; }
 .prob-track { height: 9px; margin-top: 8px; display: flex; background: rgba(255,255,255,.18); border-radius: 99px; overflow: hidden; }
-.prob-track span { display: block; background: #71a3ff; }
+.prob-track span { display: block; }
+.prob-track .away-share { background: rgba(255,255,255,.28); }
+.prob-track .home-share { background: #71a3ff; }
 
 .evidence { padding: 20px 22px 0; }
 .evidence h3 { margin: 0 0 10px; font-size: 14px; }
