@@ -588,9 +588,12 @@ def continuity_profile(team, game, side, lineup=None, now=None):
         long_term = False
         if status in ("injured reserve", "physically unable to perform") and player.get("updated"):
             try:
-                age = (now - datetime.fromisoformat(player["updated"].replace("Z", "+00:00"))).days
-            except ValueError:
-                age = 0
+                stamp = datetime.fromisoformat(str(player["updated"]).replace("Z", "+00:00"))
+                if stamp.tzinfo is None:
+                    stamp = stamp.replace(tzinfo=timezone.utc)
+                age = (now - stamp).days
+            except (ValueError, TypeError):
+                age = 0                      # unreadable date: treat the absence as fresh, never crash the run
             if age > LONG_TERM_DAYS:
                 severity, long_term = LONG_TERM_WEIGHT, True
         role = player_role(player, lineup)

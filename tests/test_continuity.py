@@ -32,3 +32,11 @@ def test_old_injured_reserve_is_nearly_free_and_fresh_injured_reserve_is_not():
 def test_without_a_depth_chart_everyone_counts_as_before():
     profile = continuity_profile(team(("Anyone", "QB", "Out", "2026-09-08T00:00Z")), GAME, "away", None, NOW)
     assert profile["lineupRead"] is False and profile["discounted"] == [] and profile["score"] < 100
+
+
+def test_unreadable_or_zoneless_dates_never_crash_the_run():
+    lineup = {"starters": {"A Starter"}, "all": {"A Starter"}}
+    zoneless = continuity_profile(team(("A Starter", "OT", "Injured Reserve", "2026-08-01")), GAME, "home", lineup, NOW)
+    assert zoneless["discounted"][0]["why"].startswith("long-term")
+    garbage = continuity_profile(team(("A Starter", "OT", "Injured Reserve", "yesterday")), GAME, "home", lineup, NOW)
+    assert garbage["discounted"] == [] and garbage["score"] < 100
