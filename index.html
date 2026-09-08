@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="manifest" href="site.webmanifest">
   <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
   <meta name="theme-color" content="#173a5e">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Sunday Desk">
@@ -42,7 +43,7 @@
 
     <section class="pulse" aria-label="Snapshot summary">
       <div><strong id="gameCount">0</strong><span>games</span></div>
-      <div><strong id="weatherCount">0</strong><span>weather reads</span></div>
+      <div><strong id="weatherCount">0</strong><span>weather games</span></div>
       <div><strong id="continuityCount">0</strong><span>high continuity risk</span></div>
       <div><strong id="closeCount">0</strong><span>one-score calls</span></div>
     </section>
@@ -173,7 +174,7 @@
           <tr><td>Status light, top right</td><td>When the data was last refreshed and where it came from.</td><td>If it says more than a day ago, something is stuck.</td></tr>
           <tr><td>Week</td><td>Which week's games you are looking at.</td><td>Defaults to the current week.</td></tr>
           <tr><td>Game slate</td><td>One row per game: kickoff, teams, weather, and the favorite with its win chance.</td><td>Tap a row to open it.</td></tr>
-          <tr><td>Filters: All, Close, Weather, Player watch</td><td>Close means near a coin flip. Weather means rain, wind, or cold. Player watch means a notable injury.</td><td>Close is where picks are hardest and most interesting.</td></tr>
+          <tr><td>Filters: All, Close, Weather, Player watch</td><td>Close keeps games where the win chance is between 38 and 62 percent, near a coin flip. Weather keeps outdoor games with weather that can change the game; the thresholds are in the table below. Player watch keeps games where either team has a player on the injury list.</td><td>Close is where picks are hardest and most interesting.</td></tr>
           <tr><td>The matchup panel</td><td>Everything about one game.</td><td>Read "In plain words" first, then decide.</td></tr>
           <tr><td>Season win board</td><td>Every team's expected wins for the whole year.</td><td>Where the app thinks each team ends up.</td></tr>
           <tr><td>2026 scorecard</td><td>Who has been right so far, graded the same way for everyone.</td><td>Empty until the first games are played.</td></tr>
@@ -203,6 +204,17 @@
           <tr><td>Player watch</td><td>Notable injuries per team with their status.</td></tr>
           <tr><td>Your pick, Picking as</td><td>Choose your name, tap a winner and, if you want, a spread side, then save the week once. Your latest save before each kickoff counts.</td></tr>
           <tr><td>Late-news adjustment</td><td>A slider for something you know that the line has not absorbed. It changes your screen only, never the ledger.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3>What counts as weather</h3>
+      <p>The forecast for the stadium at kickoff, from Open-Meteo. A game is flagged, and the Weather filter keeps it, when any one of these is true. Indoor stadiums are never flagged.</p>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Condition</th><th scope="col">Threshold</th><th scope="col">Why it matters</th></tr></thead>
+        <tbody>
+          <tr><td>Wind</td><td>15 mph or more</td><td>Long passes and kicks get harder; scoring drops.</td></tr>
+          <tr><td>Cold</td><td>Low end of the forecast at 35 F or below</td><td>Ball and hands get harder; more fumbles, fewer points.</td></tr>
+          <tr><td>Wet</td><td>Rain, showers, snow, sleet, or a storm in the forecast, or a 50 percent or higher chance of rain</td><td>Footing and grip suffer; running teams gain, passing teams lose. Light drizzle does not count.</td></tr>
         </tbody>
       </table></div>
 

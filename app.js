@@ -186,11 +186,31 @@ function currentGames() {
   return state.data.games.filter(game => game.week === Number(state.week));
 }
 
+// Weather that can change a game, not merely weather. Thresholds are stated in the guide.
+const WEATHER_WIND_MPH = 15;
+const WEATHER_COLD_F = 35;
+const WEATHER_WET_CHANCE = 50;
+const WEATHER_WET_WORDS = /rain|snow|sleet|storm|thunder|shower|blizzard|hail/i;
+
+function badWeather(game) {
+  const w = game.weather;
+  if (!w || game.venue.indoor) return null;
+  const reasons = [];
+  const wind = parseFloat(w.wind);
+  if (Number.isFinite(wind) && wind >= WEATHER_WIND_MPH) reasons.push(`wind ${w.wind}`);
+  const low = parseFloat(String(w.temperature || "").split("-")[0]);
+  if (Number.isFinite(low) && low <= WEATHER_COLD_F) reasons.push(`cold, ${w.temperature}`);
+  const chance = parseFloat(w.precipitation);
+  const wetWord = WEATHER_WET_WORDS.test(w.summary || "");
+  if (wetWord || (Number.isFinite(chance) && chance >= WEATHER_WET_CHANCE)) reasons.push(wetWord ? String(w.summary).toLowerCase() : `${w.precipitation} chance of rain`);
+  return reasons.length ? reasons.join(", ") : null;
+}
+
 function gameFlags(game) {
   const injuries = [...(game.away.injuries || []), ...(game.home.injuries || [])];
   return {
     injuries: injuries.length > 0,
-    weather: Boolean(game.weather && !game.venue.indoor),
+    weather: Boolean(badWeather(game)),
     close: Math.abs(adjustedProbability(game) - 0.5) <= 0.12
   };
 }
