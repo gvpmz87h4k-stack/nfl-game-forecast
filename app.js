@@ -5,7 +5,9 @@ const state = {
   filter: "all",
   selectedId: null,
   adjustments: JSON.parse(localStorage.getItem("sunday-desk-adjustments") || "{}"),
-  picks: (() => { try { return JSON.parse(localStorage.getItem("sunday-desk-picks") || "{}"); } catch (e) { return {}; } })()
+  picks: (() => { try { return JSON.parse(localStorage.getItem("sunday-desk-picks") || "{}"); } catch (e) { return {}; } })(),
+  people: { narcisa: "Narcisa" },
+  who: localStorage.getItem("sunday-desk-who") || "narcisa"
 };
 
 const els = {
@@ -153,7 +155,6 @@ function renderTeamBreakdownCard(abbr) {
   return `<div class="season-breakdown-card">
     <div class="season-breakdown-head"><span>${logo}${abbr}</span><small>${breakdown.previousRecord}</small></div>
     <div class="season-breakdown-stats">
-      <div><span>Baseline</span><strong>${breakdown.baselineWins.toFixed(1)}</strong></div>
       <div><span>Market implied</span><strong>${marketProjected.toFixed(1)}</strong></div>
       <div><span>Live forecast</span><strong>${liveProjected.toFixed(1)}</strong></div>
       <div><span>Net adjustment</span><strong>${formatAdjustmentValue(netVsMarket, 2)}</strong></div>
@@ -216,6 +217,19 @@ function conditionMarkup(game) {
     pieces.push(`<span class="condition-chip ${level}">Prep ${game.preparation.away.score}/${game.preparation.home.score}</span>`);
   }
   return pieces.join("");
+}
+
+function pickStatusText(pick) {
+  const parts = [pick.winner ? `winner ${pick.winner}` : "", pick.spread ? `spread ${pick.spread}` : ""].filter(Boolean);
+  if (!parts.length) return "No pick yet";
+  return `${pick.savedAt ? "Saved" : "Not saved yet"}: ${parts.join(", ")}`;
+}
+
+function weekPickNote(week) {
+  const mine = Object.values(state.picks).filter(p => p.week === week && (p.winner || p.spread));
+  const unsaved = mine.filter(p => !p.savedAt).length;
+  if (!mine.length) return "Tap a team on each game you want to call, then save the week once.";
+  return `${mine.length} game${mine.length === 1 ? "" : "s"} picked this week${unsaved ? `, ${unsaved} not saved yet` : ", all saved"}. One save covers the whole week; your latest save before each kickoff counts.`;
 }
 
 function renderGames() {
@@ -361,7 +375,7 @@ function renderDetail(game) {
   const ratingChip = rm ? (rm.flagged ? `Disagrees with the line by ${Math.abs(rm.disagreementPoints).toFixed(1)} toward ${rm.leans}` : `Within ${Math.abs(rm.disagreementPoints).toFixed(1)} of the line`) : "No rating";
   const kickoffPassed = new Date(game.kickoff) <= new Date();
   const savedPick = state.picks[game.id] || {};
-  const yourPickStatus = kickoffPassed ? "Kickoff has passed" : savedPick.winner || savedPick.spread ? `Saved: ${[savedPick.winner ? `winner ${savedPick.winner}` : "", savedPick.spread ? `spread ${savedPick.spread}` : ""].filter(Boolean).join(", ")}` : "No pick yet";
+  const yourPickStatus = kickoffPassed ? "Kickoff has passed" : pickStatusText(savedPick);
   els.emptyDetail.hidden = true;
   els.gameDetail.hidden = false;
   els.gameDetail.innerHTML = `
@@ -439,6 +453,9 @@ function renderDetail(game) {
       </div>
       <div class="evidence yourpick" id="yourPick">
         <div class="evidence-title-row"><h3>Your pick <small>Frozen at kickoff, graded with everyone else</small></h3><span class="source-chip" id="yourPickStatus">${yourPickStatus}</span></div>
+        <div class="pick-row"><span>Picking as</span>
+          <select id="whoPicks" aria-label="Who is picking">${Object.entries(state.people).map(([key, label]) => `<option value="${key}"${key === state.who ? " selected" : ""}>${label}</option>`).join("")}</select>
+        </div>
         <div class="pick-row"><span>Winner</span>
           <button type="button" class="pick-btn" data-kind="winner" data-team="${game.away.abbreviation}">${game.away.abbreviation}</button>
           <button type="button" class="pick-btn" data-kind="winner" data-team="${game.home.abbreviation}">${game.home.abbreviation}</button>
@@ -447,7 +464,7 @@ function renderDetail(game) {
           <button type="button" class="pick-btn" data-kind="spread" data-team="${game.away.abbreviation}">${game.away.abbreviation}</button>
           <button type="button" class="pick-btn" data-kind="spread" data-team="${game.home.abbreviation}">${game.home.abbreviation}</button>
         </div>
-        <div class="pick-row"><button type="button" class="reset-button" id="sendPick">Save my pick</button><small id="pickNote">Your latest save before kickoff is the one that counts.</small></div>
+        <div class="pick-row"><button type="button" class="reset-button" id="sendPick">Save my Week ${game.week} picks</button><small id="pickNote">${weekPickNote(game.week)}</small></div>
       </div>
       <div class="adjuster">
         <label for="adjustmentRange"><span>Late-news adjustment toward ${game.home.abbreviation}</span><output id="adjustmentOutput">${adjustment > 0 ? "+" : ""}${adjustment.toFixed(1)} pts</output>
@@ -461,21 +478,32 @@ function renderDetail(game) {
   const paint = () => document.querySelectorAll(".pick-btn").forEach(b => b.classList.toggle("is-on", pickState[b.dataset.kind] === b.dataset.team));
   paint();
   document.querySelectorAll(".pick-btn").forEach(b => b.addEventListener("click", () => {
+    if (kickoffPassed) { document.querySelector("#pickNote").textContent = "Kickoff has passed; this game is frozen."; return; }
     pickState[b.dataset.kind] = pickState[b.dataset.kind] === b.dataset.team ? null : b.dataset.team;
     paint();
+    state.picks[game.id] = { winner: pickState.winner, spread: pickState.spread, week: game.week, away: game.away.abbreviation, home: game.home.abbreviation, touchedAt: new Date().toISOString(), savedAt: null };
+    localStorage.setItem("sunday-desk-picks", JSON.stringify(state.picks));
+    document.querySelector("#yourPickStatus").textContent = pickStatusText(state.picks[game.id]);
+    document.querySelector("#pickNote").textContent = weekPickNote(game.week);
   }));
+  document.querySelector("#whoPicks").addEventListener("change", event => {
+    state.who = event.target.value;
+    localStorage.setItem("sunday-desk-who", state.who);
+  });
   document.querySelector("#sendPick").addEventListener("click", async () => {
     const note = document.querySelector("#pickNote");
-    if (kickoffPassed) { note.textContent = "Kickoff has passed; this game is frozen."; return; }
-    if (!pickState.winner && !pickState.spread) { note.textContent = "Tap a team first."; return; }
-    const body = new URLSearchParams({ "form-name": "picks", who: "narcisa", week: String(game.week), away: game.away.abbreviation, home: game.home.abbreviation, winner: pickState.winner || "", spread: pickState.spread || "" });
+    const weekPicks = Object.values(state.picks).filter(p => p.week === game.week && p.away && p.home);
+    if (!weekPicks.length) { note.textContent = "Tap a team on any game this week first."; return; }
+    const payload = weekPicks.map(p => ({ away: p.away, home: p.home, winner: p.winner || "", spread: p.spread || "" }));
+    const body = new URLSearchParams({ "form-name": "picks", who: state.who, week: String(game.week), picks: JSON.stringify(payload) });
     try {
       const res = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body });
       if (!res.ok) throw new Error(`Netlify answered ${res.status}`);
-      state.picks[game.id] = { ...pickState, savedAt: new Date().toISOString() };
+      const stamp = new Date().toISOString();
+      weekPicks.forEach(p => { p.savedAt = stamp; });
       localStorage.setItem("sunday-desk-picks", JSON.stringify(state.picks));
-      note.textContent = "Saved. It reaches the ledger on the next run and is frozen at kickoff.";
-      document.querySelector("#yourPickStatus").textContent = `Saved: ${[pickState.winner ? `winner ${pickState.winner}` : "", pickState.spread ? `spread ${pickState.spread}` : ""].filter(Boolean).join(", ")}`;
+      note.textContent = `Saved ${weekPicks.length} game${weekPicks.length === 1 ? "" : "s"} for Week ${game.week} as ${state.people[state.who] || state.who}. They reach the ledger on the next run; each game freezes at its kickoff.`;
+      document.querySelector("#yourPickStatus").textContent = pickStatusText(state.picks[game.id] || {});
     } catch (error) {
       note.textContent = `Could not save (${error.message}). On the live site this works; locally there is no form service.`;
     }
@@ -651,9 +679,13 @@ async function loadData(name) {
   return { json: await local.json(), source: "deploy" };
 }
 
-Promise.all([loadData("snapshot.json"), loadData("backtest-2025.json").catch(() => null)])
-  .then(([snapshot, backtest]) => {
+Promise.all([loadData("snapshot.json"), loadData("backtest-2025.json").catch(() => null), loadData("people.json").catch(() => null)])
+  .then(([snapshot, backtest, people]) => {
     if (backtest) state.backtest = backtest.json;
+    if (people && people.json && Object.keys(people.json).length) {
+      state.people = people.json;
+      if (!state.people[state.who]) state.who = Object.keys(state.people)[0];
+    }
     state.dataSource = snapshot.source;
     return snapshot.json;
   })

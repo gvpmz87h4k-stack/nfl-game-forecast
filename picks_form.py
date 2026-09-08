@@ -1,12 +1,14 @@
 """Collect picks submitted from the app (a Netlify form named "picks") into picks.json.
 
-The app posts one submission per tap: week, away, home, winner, optional spread side, and
-who is picking. This reads the submissions through Netlify's API, keeps the latest one per
-game and person that arrived before that game's kickoff, and writes them into picks.json
-under the person's source key. Runs in the scheduled job before the forecast refresh.
+The app posts one submission per person per week: who, week, and a "picks" field holding a
+JSON list of {away, home, winner, spread} for every game that person has touched that week.
+An entry with neither a winner nor a spread side clears that game. Older submissions carried
+one game each in plain fields; those still read. For each game the latest submission that
+arrived before kickoff wins, and the result is written into picks.json under the person's
+source key. Runs in the scheduled job before the forecast refresh.
 
-Needs NETLIFY_AUTH_TOKEN in the environment and the site id below. Without the token it
-does nothing and says so, so the rest of the run is unaffected.
+Who may submit is the list in data/people.json ({key: display name}); anything else is
+ignored. Needs NETLIFY_AUTH_TOKEN in the environment; without it this does nothing and says so.
 """
 
 import json
@@ -21,7 +23,15 @@ SNAPSHOT = ROOT / "data" / "snapshot.json"
 SITE_ID = "8e454e87-506e-4897-a477-529240c20fea"
 API = "https://api.netlify.com/api/v1"
 FORM_NAME = "picks"
-PEOPLE = {"narcisa": "Narcisa"}   # who may submit; anything else is ignored
+PEOPLE_FILE = ROOT / "data" / "people.json"
+
+
+def load_people():
+    try:
+        people = json.loads(PEOPLE_FILE.read_text())
+    except (OSError, json.JSONDecodeError):
+        people = {}
+    return {str(k).strip().lower(): str(v) for k, v in people.items()} or {"narcisa": "Narcisa"}
 
 
 def api(path, token):
@@ -46,32 +56,52 @@ def _parse(iso):
     return datetime.fromisoformat(iso.replace("Z", "+00:00"))
 
 
-def merge_submissions(picks, submissions, kickoff_by_game):
-    """Latest pre-kickoff submission per person per game wins; later ones for the same game replace earlier ones."""
+def _entries(data):
+    """The games inside one submission: a weekly batch, or a single legacy game."""
+    raw = data.get("picks")
+    if raw:
+        try:
+            items = json.loads(raw)
+        except (TypeError, ValueError):
+            return []
+        return [item for item in items if isinstance(item, dict)] if isinstance(items, list) else []
+    return [{"away": data.get("away"), "home": data.get("home"), "winner": data.get("winner"), "spread": data.get("spread")}]
+
+
+def merge_submissions(picks, submissions, kickoff_by_game, people=None):
+    """Per person and game, the latest pre-kickoff submission wins; an empty entry clears the game."""
+    people = people or load_people()
     latest = {}
     for sub in submissions:
         data = sub.get("data") or {}
         who = (data.get("who") or "").strip().lower()
-        if who not in PEOPLE:
+        if who not in people:
             continue
         try:
             week = int(data.get("week"))
         except (TypeError, ValueError):
             continue
-        away, home = (data.get("away") or "").upper(), (data.get("home") or "").upper()
-        winner, spread = (data.get("winner") or "").upper() or None, (data.get("spread") or "").upper() or None
-        if winner not in (away, home) and spread not in (away, home):
-            continue
-        kickoff = kickoff_by_game.get((week, away, home))
         created = sub.get("created_at")
-        if not kickoff or not created or _parse(created) >= _parse(kickoff):
+        if not created:
             continue
-        key = (who, week, away, home)
-        if key not in latest or _parse(created) > _parse(latest[key]["created"]):
-            latest[key] = {"created": created, "week": week, "away": away, "home": home, "winner": winner, "spread": spread}
+        for item in _entries(data):
+            away, home = (item.get("away") or "").upper(), (item.get("home") or "").upper()
+            winner, spread = (item.get("winner") or "").upper() or None, (item.get("spread") or "").upper() or None
+            if winner not in (away, home, None) or spread not in (away, home, None):
+                continue
+            kickoff = kickoff_by_game.get((week, away, home))
+            if not kickoff or _parse(created) >= _parse(kickoff):
+                continue
+            key = (who, week, away, home)
+            if key not in latest or _parse(created) > _parse(latest[key]["created"]):
+                latest[key] = {"created": created, "week": week, "away": away, "home": home, "winner": winner, "spread": spread}
+    kept = 0
     for (who, week, away, home), entry in latest.items():
-        src = picks["sources"].setdefault(who, {"label": PEOPLE[who], "picks": []})
+        src = picks["sources"].setdefault(who, {"label": people[who], "picks": []})
+        src["label"] = people[who]
         src["picks"] = [p for p in src["picks"] if not (p["week"] == week and p["away"] == away and p["home"] == home)]
+        if not entry["winner"] and not entry["spread"]:
+            continue
         pick = {"week": week, "away": away, "home": home}
         if entry["winner"]:
             pick["winner"] = entry["winner"]
@@ -80,7 +110,8 @@ def merge_submissions(picks, submissions, kickoff_by_game):
         pick["enteredAt"] = entry["created"]
         src["picks"].append(pick)
         src["picks"].sort(key=lambda p: (p["week"], p["away"], p["home"]))
-    return picks, len(latest)
+        kept += 1
+    return picks, kept
 
 
 def main():
@@ -97,7 +128,7 @@ def main():
     picks = json.loads(PICKS.read_text()) if PICKS.exists() else {"sources": {}}
     picks, count = merge_submissions(picks, submissions, kickoffs(snapshot))
     PICKS.write_text(json.dumps(picks, indent=2) + "\n")
-    print(f"App picks: {len(submissions)} submissions read, {count} picks kept (latest per game, before kickoff).")
+    print(f"App picks: {len(submissions)} submissions read, {count} picks kept (latest per person and game, before kickoff).")
 
 
 if __name__ == "__main__":
