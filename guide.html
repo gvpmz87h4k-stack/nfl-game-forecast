@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="What Sunday Desk does and what every number on it means, in plain words.">
+  <title>How to read Sunday Desk</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="icon" href="icons/icon-192.png" type="image/png">
+  <meta name="theme-color" content="#173a5e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Sunday Desk">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+</head>
+<body class="guide-page">
+  <header class="masthead">
+    <a class="brand" href="index.html" aria-label="Back to Sunday Desk">
+      <span class="brand-mark" aria-hidden="true">SD</span>
+      <span>
+        <strong>Sunday Desk</strong>
+        <small>How to read this page</small>
+      </span>
+    </a>
+    <a class="masthead-link" href="index.html">Back to the board</a>
+  </header>
+  <main>
+    <section class="guide" id="guide" aria-labelledby="guideTitle">
+      <div class="section-head">
+        <div>
+          <h2 id="guideTitle">How to read this page</h2>
+          <p>Written for someone who does not follow football. If you read one thing on a game, read "In plain words."</p>
+        </div>
+      </div>
+
+      <h3>What the app does</h3>
+      <p>Every day it reads what the betting market thinks of every game, writes it down in plain words, freezes that at kickoff, and after the game scores everyone who made a call: the market, the app's own numbers, the CBS writers, and each person who picked here. The point is not to predict games. The point is that after a few weeks you know who is worth listening to.</p>
+
+      <h3 id="guide-page">The page, top to bottom</h3>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Section</th><th scope="col">What it is</th><th scope="col">How to use it</th></tr></thead>
+        <tbody>
+          <tr><td>Status light, top right</td><td>When the data was last refreshed and where it came from.</td><td>If it says more than a day ago, something is stuck.</td></tr>
+          <tr><td>Week</td><td>Which week's games you are looking at.</td><td>Defaults to the current week.</td></tr>
+          <tr><td>Game slate</td><td>One row per game: kickoff, teams, weather, and the favorite with its win chance.</td><td>Tap a row to open it.</td></tr>
+          <tr><td>Filters: All, Close, Weather, Player watch</td><td>Close keeps games where the win chance is between 38 and 62 percent, near a coin flip. Weather keeps outdoor games with weather that can change the game; the thresholds are in the table below. Player watch keeps games where either team has a player on the injury list.</td><td>Close is where picks are hardest and most interesting.</td></tr>
+          <tr><td>The matchup panel</td><td>Everything about one game.</td><td>Read "In plain words" first, then decide.</td></tr>
+          <tr><td>Season win board</td><td>Every team's expected wins for the whole year.</td><td>Where the app thinks each team ends up.</td></tr>
+          <tr><td>2026 scorecard</td><td>Who has been right so far, graded the same way for everyone.</td><td>Empty until the first games are played.</td></tr>
+          <tr><td>2025 blind replay</td><td>The app's method run on last season as if it had not seen it.</td><td>Proof the method is honest, not a prediction.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 id="guide-matchup">Inside the matchup panel</h3>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Field</th><th scope="col">Plain meaning</th></tr></thead>
+        <tbody>
+          <tr><td>The bar, for example ATL 37% / PIT 63%</td><td>How often each side wins if the game were played many times. Each team's share sits under its own name.</td></tr>
+          <tr><td>In plain words</td><td>A few sentences that say everything below without the vocabulary.</td></tr>
+          <tr><td>Line, the head start</td><td>The market's score prediction. "PIT by 3.5" means Pittsburgh is expected to finish 3.5 points ahead.</td></tr>
+          <tr><td>Total, points both teams together</td><td>How many points the market expects in the whole game. High means a shootout, low means a slog.</td></tr>
+          <tr><td>Market win probability</td><td>The market's own answer to "who wins," taken from the price of the win bet with the book's fee removed.</td></tr>
+          <tr><td>Forecast source</td><td>Whether the number came from the market line or, before a line exists, from team strength alone.</td></tr>
+          <tr><td>Rolling team state</td><td>A small nudge for how a team has done against expectations this season. Zero until games are played.</td></tr>
+          <tr><td>Rest difference</td><td>Who had more days off since their last game. Worth a fraction of a point.</td></tr>
+          <tr><td>Conditions</td><td>The weather at the stadium at kickoff.</td></tr>
+          <tr><td>Win board side-by-side</td><td>Each team's expected wins for the year, market versus app, and what moved it.</td></tr>
+          <tr><td>Communication continuity</td><td>Injuries grouped by the units that have to talk to each other on the field. A lower score means more disruption.</td></tr>
+          <tr><td>Preparation disruption</td><td>Missed practices and roster status this week.</td></tr>
+          <tr><td>Outside picks</td><td>What each CBS writer and their consensus took, straight up and against the spread.</td></tr>
+          <tr><td>Rating model</td><td>The app's second opinion built from last season's plays, with the named starting quarterbacks. Shown and graded, never used in the forecast, because it did not beat the market on the 2025 test.</td></tr>
+          <tr><td>Projected starters</td><td>Who starts at quarterback, per ESPN's depth chart, refreshed every run.</td></tr>
+          <tr><td>Player watch</td><td>Notable injuries per team with their status.</td></tr>
+          <tr><td>Your pick, Picking as</td><td>Choose your name, tap a winner and, if you want, a spread side, then save the week once. Your latest save before each kickoff counts.</td></tr>
+          <tr><td>Late-news adjustment</td><td>A slider for something you know that the line has not absorbed. It changes your screen only, never the ledger.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 id="guide-weather">What counts as weather</h3>
+      <p>The forecast for the stadium at kickoff, from Open-Meteo. A game is flagged, and the Weather filter keeps it, when any one of these is true. Indoor stadiums are never flagged.</p>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Condition</th><th scope="col">Threshold</th><th scope="col">Why it matters</th></tr></thead>
+        <tbody>
+          <tr><td>Wind</td><td>15 mph or more</td><td>Long passes and kicks get harder; scoring drops.</td></tr>
+          <tr><td>Cold</td><td>Low end of the forecast at 35 F or below</td><td>Ball and hands get harder; more fumbles, fewer points.</td></tr>
+          <tr><td>Wet</td><td>Rain, showers, snow, sleet, or a storm in the forecast, or a 50 percent or higher chance of rain</td><td>Footing and grip suffer; running teams gain, passing teams lose. Light drizzle does not count.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 id="guide-continuity">Continuity, the injury score</h3>
+      <p>Eleven players are on the field, but they work in small groups that have to read the same picture and call the same thing at the same moment. Continuity is the app's injury score with one twist: it cares whether the injured players belong to the same group. Two missing from one group cost more than two missing from different groups, because the replacements have to learn to talk to each other, not only do their own jobs. Those are the "linked flags" on the card.</p>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Group</th><th scope="col">Who is in it</th><th scope="col">What they coordinate</th></tr></thead>
+        <tbody>
+          <tr><td>Protection unit</td><td>quarterback, the five blockers in front of him, tight end, running back</td><td>who blocks whom on every snap, so the quarterback is not hit</td></tr>
+          <tr><td>Coverage unit</td><td>cornerbacks, safeties, linebackers: the defenders who guard the players trying to catch passes</td><td>who covers which receiver, and the hand-offs when receivers cross paths. One missed hand-off is a wide-open catch</td></tr>
+          <tr><td>Defensive front</td><td>the big men on the defensive line, plus linebackers: the defenders who meet the run at the line</td><td>who fills which gap when the ball is handed off. One empty gap is a long run</td></tr>
+        </tbody>
+      </table></div>
+      <p>Every player on the injury list gets a weight for how likely he is to miss the game (out counts fully, doubtful three quarters, questionable about a third) times a weight for how much his position matters, times a weight for his role. A man listed first at his slot on ESPN's depth chart counts fully. A backup counts about a third. A name not on the chart at all counts a quarter. A player on injured reserve for more than a week counts almost nothing, because his replacement has been practicing with the group all along. Groups with two or more flagged starters add a penalty that grows with the group; backups and long-settled absences never form a group on their own. Playing away or in rain adds a little. The score runs from 100, nobody missing, down to 35: Stable above 82, Watch from 65 to 82, High below 65. The gap between the two teams nudges the win chance by at most 2.5 percentage points and can never flip the favorite. Tap a group's flags on the card to see the names behind it, and "counted lightly" to see who was set aside and why. The weights were chosen by hand, not fitted to results, which is why the cap is low and the card says Experimental; the scorecard decides whether it stays.</p>
+
+      <h3 id="guide-preparation">Preparation disruption, the practice-week score</h3>
+      <p>Continuity asks who is missing on game day. Preparation asks who did not get ready this week. Teams practice Wednesday, Thursday, and Friday and must publish, after each session, who practiced fully, limited, or not at all. The app reads the wording ESPN attaches to each name and sorts it into categories.</p>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">What the report says</th><th scope="col">Weight</th></tr></thead>
+        <tbody>
+          <tr><td>Did not practice</td><td>1.0</td></tr>
+          <tr><td>Suspended, on leave, or inactive for the game</td><td>1.0</td></tr>
+          <tr><td>Away for personal reasons, not an injury</td><td>0.55</td></tr>
+          <tr><td>Limited practice</td><td>0.5</td></tr>
+          <tr><td>Activated late in the week, little time with the team</td><td>0.45</td></tr>
+        </tbody>
+      </table></div>
+      <p>Each weight is multiplied by how much the position matters and by a little more for each extra missed day, up to three. A flag that stops appearing fades by about a third a day and is gone after a week. The same group penalty as Continuity applies. The nudge is smaller, at most 1.5 percentage points, and it never flips the favorite. It depends on ESPN's wording: a note phrased differently is not seen. The same player can count in both scores; the two caps together stay under four points.</p>
+
+      <h3 id="guide-rating">The rating model, the second opinion</h3>
+      <p>The app's own attempt to rate teams from what happens on the field, without looking at the betting line. It is shown on every card and graded every week, and it is never used in the forecast, because it lost the test below.</p>
+      <p>It is built from every play of the 2022 to 2025 seasons. Each play carries a number called expected points added: how much that one play moved the team's chances of scoring. A 40-yard pass is a big positive; a sack on third down is a big negative. Three numbers per team come out of it, computed fresh before each game.</p>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Piece</th><th scope="col">Plain meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Offense</td><td>points added per play, corrected for how good the defenses they faced were</td></tr>
+          <tr><td>Defense</td><td>points allowed per play, corrected the same way, sign flipped so higher is better</td></tr>
+          <tr><td>Quarterback</td><td>how the named starter's own passing compares with the passing his team's rating was built on. Zero when the same man keeps starting; the point is a change at quarterback, which is why the depth chart feeds it</td></tr>
+        </tbody>
+      </table></div>
+      <p>Recent games count more than old ones: a game 16 back counts half as much as the latest, and last season about a third as much as this one. A team with few plays is pulled toward league average so a hot September does not run away. A simple fit on 2022 to 2024 learns how many points those three differences are worth; that is "Play-level rating margin" on the card. A second fit learns how to mix that with the market line; that is "Blend with the line."</p>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Blind test on 2025</th><th scope="col">Market alone</th><th scope="col">Blend</th></tr></thead>
+        <tbody>
+          <tr><td>Games called right</td><td>65.3%</td><td>65.7%</td></tr>
+          <tr><td>Confidence error, lower is better</td><td>0.212</td><td>0.215</td></tr>
+          <tr><td>Where the model disagreed with the line by a point or more, following it covered the spread</td><td colspan="2">38% of the time, worse than a coin</td></tr>
+        </tbody>
+      </table></div>
+      <p>"Our play-by-play ratings agree with the market" means the two are within a point. When they differ by two or more, the card flags it and the readout adds that last season those disagreements were wrong more often than right. That is a warning, not a tip. The ledger grades the model every week so the 2026 scorecard can say whether that changes.</p>
+
+      <h3 id="guide-words">Two words you will see everywhere</h3>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Word</th><th scope="col">Plain meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Winner, or straight up</td><td>Who wins the game, by any score.</td></tr>
+          <tr><td>Spread, or against the spread</td><td>Who beats the head start. Take Pittsburgh at 3.5 and they must win by 4 or more. Take Atlanta and they can lose by 3 and you still win.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 id="guide-scorecard">The scorecard, once games are graded</h3>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Field</th><th scope="col">Plain meaning</th></tr></thead>
+        <tbody>
+          <tr><td>Graded</td><td>Games with a final score that had a forecast frozen before kickoff.</td></tr>
+          <tr><td>Model accuracy, Market accuracy</td><td>The share of games each one called right, straight up.</td></tr>
+          <tr><td>Brier</td><td>How far the confidence was from what happened. Lower is better. Saying 63% and losing hurts less than saying 90% and losing.</td></tr>
+          <tr><td>Edge</td><td>Model Brier minus market Brier. Negative means the app beat the market. Expect near zero.</td></tr>
+          <tr><td>Per person columns</td><td>The same grades for each picker, straight up and against the spread, next to the CBS writers.</td></tr>
+        </tbody>
+      </table></div>
+
+      <h3 id="guide-board">The season win board</h3>
+      <div class="table-wrap"><table class="guide-table">
+        <thead><tr><th scope="col">Field</th><th scope="col">Plain meaning</th></tr></thead>
+        <tbody>
+          <tr><td>2025</td><td>Last season's record.</td></tr>
+          <tr><td>Market implied</td><td>The market's win chances for all 17 games added up.</td></tr>
+          <tr><td>Live forecast</td><td>The same sum with the app's small nudges. It stays within a few tenths of the market.</td></tr>
+          <tr><td>80% simulation range</td><td>The season played out 5,000 times. Eight in ten of those endings fall in this range.</td></tr>
+        </tbody>
+      </table></div>
+
+      <p class="source-line">Sources: ESPN public score, odds, injury, and depth chart feeds; CBS Sports expert picks; Open-Meteo weather; nflverse schedules, injury reports, and play-by-play. This is an analysis tool, not betting advice.</p>
+    </section>
+  </main>
+</body>
+</html>

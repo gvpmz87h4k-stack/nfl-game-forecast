@@ -434,7 +434,8 @@ tbody tr:last-child td { border-bottom: 0; }
 }
 
 @media (max-width: 720px) {
-  .masthead { align-items: flex-start; }
+  .masthead { align-items: flex-start; flex-wrap: wrap; row-gap: 8px; }
+  .masthead-link { order: 3; flex-basis: 100%; margin: 0; }
   .run-status { max-width: 165px; }
   .control-strip { align-items: stretch; flex-direction: column; padding-top: 34px; }
   .week-control { width: 100%; }
@@ -487,3 +488,8 @@ tbody tr:last-child td { border-bottom: 0; }
 .flag-list li { display: flex; flex-wrap: wrap; gap: 6px; font-size: 12px; }
 .flag-list li small { color: var(--muted); }
 .flag-list-muted summary { color: var(--muted); }
+
+.masthead-link { margin-left: auto; margin-right: 14px; font-size: 13px; font-weight: 700; color: var(--blue); text-decoration: none; white-space: nowrap; }
+.masthead-link:hover { text-decoration: underline; }
+.guide-pointer { max-width: 840px; margin: 34px auto 0; text-align: center; color: var(--muted); }
+.guide-page main { padding-bottom: 60px; }

@@ -440,14 +440,14 @@ function renderDetail(game) {
         </div>
       </div>
       <div class="evidence">
-        <div class="evidence-title-row"><h3><a class="guide-link" href="#guide-board">Win board side-by-side</a></h3><span class="source-chip">Matchup teams</span></div>
+        <div class="evidence-title-row"><h3><a class="guide-link" href="guide.html#guide-board">Win board side-by-side</a></h3><span class="source-chip">Matchup teams</span></div>
         <div class="season-breakdown-grid">
           ${renderTeamBreakdownCard(game.away.abbreviation)}
           ${renderTeamBreakdownCard(game.home.abbreviation)}
         </div>
       </div>
       <div class="evidence">
-        <div class="evidence-title-row"><h3><a class="guide-link" href="#guide-continuity">Communication continuity</a> <small>Experimental</small></h3><span class="source-chip">${game.continuity && game.continuity.applied ? shiftDirection : "Signal shown, confidence shift not applied"}</span></div>
+        <div class="evidence-title-row"><h3><a class="guide-link" href="guide.html#guide-continuity">Communication continuity</a> <small>Experimental</small></h3><span class="source-chip">${game.continuity && game.continuity.applied ? shiftDirection : "Signal shown, confidence shift not applied"}</span></div>
         <div class="continuity-grid">
           ${continuityMarkup(game.continuity.away, game.away.abbreviation)}
           ${continuityMarkup(game.continuity.home, game.home.abbreviation)}
@@ -455,7 +455,7 @@ function renderDetail(game) {
         <p class="continuity-note">Scores measure public status inside player groups that exchange protections, assignments, and coverage calls. Lower is riskier. The model does not know private health or every starter assignment.</p>
       </div>
       <div class="evidence">
-        <div class="evidence-title-row"><h3><a class="guide-link" href="#guide-preparation">Preparation disruption</a> <small>Experimental</small></h3><span class="source-chip">${game.preparation && game.preparation.applied ? preparationDirection : "Signal shown, confidence shift not applied"}</span></div>
+        <div class="evidence-title-row"><h3><a class="guide-link" href="guide.html#guide-preparation">Preparation disruption</a> <small>Experimental</small></h3><span class="source-chip">${game.preparation && game.preparation.applied ? preparationDirection : "Signal shown, confidence shift not applied"}</span></div>
         <div class="preparation-grid">
           ${preparationMarkup(game.preparation.away, game.away.abbreviation)}
           ${preparationMarkup(game.preparation.home, game.home.abbreviation)}
@@ -464,7 +464,7 @@ function renderDetail(game) {
       </div>
       ${outsideMarkup(game)}
       <div class="evidence">
-        <div class="evidence-title-row"><h3><a class="guide-link" href="#guide-rating">Rating model</a> <small>Second opinion, graded, never applied</small></h3><span class="source-chip">${ratingChip}</span></div>
+        <div class="evidence-title-row"><h3><a class="guide-link" href="guide.html#guide-rating">Rating model</a> <small>Second opinion, graded, never applied</small></h3><span class="source-chip">${ratingChip}</span></div>
         <div class="evidence-grid">
           <div class="evidence-card"><span>Play-level rating margin</span><strong>${ratingText}</strong></div>
           <div class="evidence-card"><span>Blend with the line</span><strong>${blendText}</strong></div>
@@ -483,7 +483,7 @@ function renderDetail(game) {
         <ul class="injury-list">${injuryMarkup(game.home)}</ul>
       </div>
       <div class="evidence yourpick" id="yourPick">
-        <div class="evidence-title-row"><h3><a class="guide-link" href="#guide-matchup">Your pick</a> <small>Frozen at kickoff, graded with everyone else</small></h3><span class="source-chip" id="yourPickStatus">${yourPickStatus}</span></div>
+        <div class="evidence-title-row"><h3><a class="guide-link" href="guide.html#guide-matchup">Your pick</a> <small>Frozen at kickoff, graded with everyone else</small></h3><span class="source-chip" id="yourPickStatus">${yourPickStatus}</span></div>
         <div class="pick-row"><span>Picking as</span>
           <select id="whoPicks" aria-label="Who is picking">${Object.entries(state.people).map(([key, label]) => `<option value="${key}"${key === state.who ? " selected" : ""}>${label}</option>`).join("")}</select>
         </div>
