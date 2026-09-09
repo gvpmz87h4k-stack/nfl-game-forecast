@@ -5,10 +5,56 @@ const state = {
   filter: "all",
   selectedId: null,
   adjustments: JSON.parse(localStorage.getItem("sunday-desk-adjustments") || "{}"),
-  picks: (() => { try { return JSON.parse(localStorage.getItem("sunday-desk-picks") || "{}"); } catch (e) { return {}; } })(),
+  picks: {},
   people: { narcisa: "Narcisa" },
-  who: localStorage.getItem("sunday-desk-who") || "narcisa"
+  who: localStorage.getItem("sunday-desk-who") || "narcisa",
+  filePicks: null
 };
+
+// Picks live on this phone under the picker's name, and are merged with the saved file on
+// every load, so any phone or browser shows the same picks for the same person.
+function picksKey(who) { return `sunday-desk-picks:${who}`; }
+
+function loadLocalPicks(who) {
+  try {
+    const legacy = localStorage.getItem("sunday-desk-picks");
+    if (legacy && !localStorage.getItem(picksKey(who))) {
+      localStorage.setItem(picksKey(who), legacy);      // picks made before the name picker existed
+      localStorage.removeItem("sunday-desk-picks");
+    }
+    return JSON.parse(localStorage.getItem(picksKey(who)) || "{}");
+  } catch (e) { return {}; }
+}
+
+function saveLocalPicks() {
+  try { localStorage.setItem(picksKey(state.who), JSON.stringify(state.picks)); } catch (e) { /* storage blocked */ }
+}
+
+function mergeFilePicks() {
+  // The saved file wins over an older local copy; a local change not yet saved wins over the file.
+  const source = state.filePicks && state.filePicks[state.who];
+  if (!source || !state.data) return;
+  const byKey = new Map(state.data.games.map(g => [`${g.week}|${g.away.abbreviation}|${g.home.abbreviation}`, g]));
+  source.picks.forEach(pick => {
+    const game = byKey.get(`${pick.week}|${pick.away}|${pick.home}`);
+    if (!game) return;
+    const local = state.picks[game.id];
+    const localUnsaved = local && !local.savedAt && local.touchedAt;
+    const localNewer = local && local.savedAt && pick.enteredAt && local.savedAt > pick.enteredAt;
+    if (localUnsaved || localNewer) return;
+    state.picks[game.id] = { winner: pick.winner || null, spread: pick.spread || null, week: game.week,
+      away: game.away.abbreviation, home: game.home.abbreviation, savedAt: pick.enteredAt || "file" };
+  });
+  saveLocalPicks();
+}
+
+function switchPerson(who) {
+  saveLocalPicks();
+  state.who = who;
+  localStorage.setItem("sunday-desk-who", who);
+  state.picks = loadLocalPicks(who);
+  mergeFilePicks();
+}
 
 const els = {
   runStatus: document.querySelector("#runStatus"),
@@ -526,13 +572,14 @@ function renderDetail(game) {
     pickState[b.dataset.kind] = pickState[b.dataset.kind] === b.dataset.team ? null : b.dataset.team;
     paint();
     state.picks[game.id] = { winner: pickState.winner, spread: pickState.spread, week: game.week, away: game.away.abbreviation, home: game.home.abbreviation, touchedAt: new Date().toISOString(), savedAt: null };
-    localStorage.setItem("sunday-desk-picks", JSON.stringify(state.picks));
+    saveLocalPicks();
     document.querySelector("#yourPickStatus").textContent = pickStatusText(state.picks[game.id]);
     document.querySelector("#pickNote").textContent = weekPickNote(game.week);
   }));
   document.querySelector("#whoPicks").addEventListener("change", event => {
-    state.who = event.target.value;
-    localStorage.setItem("sunday-desk-who", state.who);
+    switchPerson(event.target.value);
+    renderGames();
+    renderDetail(game);
   });
   document.querySelector("#sendPick").addEventListener("click", async () => {
     const note = document.querySelector("#pickNote");
@@ -548,7 +595,7 @@ function renderDetail(game) {
         state.picks[p.game.id] = { ...(state.picks[p.game.id] || {}), winner: p.winner, spread: p.spread, week: p.game.week,
           away: p.game.away.abbreviation, home: p.game.home.abbreviation, savedAt: stamp };
       });
-      localStorage.setItem("sunday-desk-picks", JSON.stringify(state.picks));
+      saveLocalPicks();
       const picked = chosen.filter(p => p.winner || p.spread).length;
       note.textContent = `Saved ${picked} game${picked === 1 ? "" : "s"} for Week ${game.week} as ${state.people[state.who] || state.who}. They reach the ledger on the next run; each game freezes at its kickoff.`;
       document.querySelector("#yourPickStatus").textContent = pickStatusText(state.picks[game.id] || {});
@@ -681,6 +728,8 @@ function renderScorecard() {
 function setup(data) {
   state.data = data;
   state.week = data.currentWeek;
+  state.picks = loadLocalPicks(state.who);
+  mergeFilePicks();
   const weeks = [...new Set(data.games.map(game => game.week))].sort((a, b) => a - b);
   els.weekSelect.innerHTML = weeks.map(week => `<option value="${week}" ${week === state.week ? "selected" : ""}>Week ${week}</option>`).join("");
   const updated = new Date(data.updatedAt);
@@ -726,8 +775,15 @@ async function loadData(name) {
   return { json: await local.json(), source: "deploy" };
 }
 
-Promise.all([loadData("snapshot.json"), loadData("backtest-2025.json").catch(() => null), loadData("people.json").catch(() => null)])
-  .then(([snapshot, backtest, people]) => {
+async function loadPicksFile() {
+  const res = await fetch(`${DATA_ORIGIN}picks.json?t=${Date.now()}`, { cache: "no-store" });
+  if (!res.ok) throw new Error(`picks.json returned ${res.status}`);
+  return (await res.json()).sources || {};
+}
+
+Promise.all([loadData("snapshot.json"), loadData("backtest-2025.json").catch(() => null), loadData("people.json").catch(() => null), loadPicksFile().catch(() => null)])
+  .then(([snapshot, backtest, people, filePicks]) => {
+    state.filePicks = filePicks;
     if (backtest) state.backtest = backtest.json;
     if (people && people.json && Object.keys(people.json).length) {
       state.people = people.json;
