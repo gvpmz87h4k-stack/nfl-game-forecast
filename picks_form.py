@@ -14,7 +14,7 @@ ignored. Needs NETLIFY_AUTH_TOKEN in the environment; without it this does nothi
 import json
 import os
 import urllib.request
-from datetime import datetime
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -68,9 +68,14 @@ def _entries(data):
     return [{"away": data.get("away"), "home": data.get("home"), "winner": data.get("winner"), "spread": data.get("spread")}]
 
 
-def merge_submissions(picks, submissions, kickoff_by_game, people=None):
-    """Per person and game, the latest pre-kickoff submission wins; an empty entry clears the game."""
+def merge_submissions(picks, submissions, kickoff_by_game, people=None, now=None):
+    """Per person and game, the latest pre-kickoff submission wins; an empty entry clears the game.
+
+    A pick is written to picks.json only once its game has kicked off. Until then it stays in
+    Netlify's form store, which needs the key to read, so nobody can see a pick before the game
+    by reading the public file. The run at or after kickoff writes and freezes it."""
     people = people or load_people()
+    now = now or datetime.now(timezone.utc)
     latest = {}
     for sub in submissions:
         data = sub.get("data") or {}
@@ -92,6 +97,8 @@ def merge_submissions(picks, submissions, kickoff_by_game, people=None):
             kickoff = kickoff_by_game.get((week, away, home))
             if not kickoff or _parse(created) >= _parse(kickoff):
                 continue
+            if _parse(kickoff) > now:
+                continue                      # not kicked off yet: stays private until it has
             key = (who, week, away, home)
             if key not in latest or _parse(created) > _parse(latest[key]["created"]):
                 latest[key] = {"created": created, "week": week, "away": away, "home": home, "winner": winner, "spread": spread}
@@ -128,7 +135,7 @@ def main():
     picks = json.loads(PICKS.read_text()) if PICKS.exists() else {"sources": {}}
     picks, count = merge_submissions(picks, submissions, kickoffs(snapshot))
     PICKS.write_text(json.dumps(picks, indent=2) + "\n")
-    print(f"App picks: {len(submissions)} submissions read, {count} picks kept (latest per person and game, before kickoff).")
+    print(f"App picks: {len(submissions)} submissions read, {count} picks written for games that have kicked off (latest per person and game, entered before kickoff).")
 
 
 if __name__ == "__main__":
