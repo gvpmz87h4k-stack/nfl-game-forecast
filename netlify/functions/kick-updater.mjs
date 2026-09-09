@@ -5,7 +5,7 @@
 // works out the time in Chicago (daylight time included, so no twin slots), and when the
 // current quarter hour is one of the wanted looks it asks GitHub to start the workflow.
 //
-// Needs GITHUB_DISPATCH_TOKEN in the site's environment variables: a fine-grained token for
+// Needs GITHUB_DISPATCH_TOKEN in the site environment variables, scope Functions or All: a fine-grained token for
 // this one repository with Actions set to read and write. Without it the function only logs.
 
 const REPO = "gvpmz87h4k-stack/nfl-game-forecast";
