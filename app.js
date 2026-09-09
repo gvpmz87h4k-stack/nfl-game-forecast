@@ -436,11 +436,17 @@ function travelMarkup(game) {
 function outsideMarkup(game) {
   const picks = Object.entries(game.outsidePicks || {});
   if (!picks.length) return "";
-  const cards = picks.map(([key, pick]) => `
-    <div class="evidence-card"><span>${pick.label || key}</span><strong>${pick.winner ? `Winner: ${pick.winner}` : "No winner pick"}${pick.spread ? ` · Spread: ${pick.spread}` : ""}</strong></div>`).join("");
+  const cards = picks.map(([key, pick]) => {
+    const isPerson = key !== "cbs" && !key.startsWith("cbs-");
+    const hidden = isPerson && !game.completed && key !== state.who;
+    const text = hidden
+      ? "Picked. Shown after the game."
+      : `${pick.winner ? `Winner: ${pick.winner}` : "No winner pick"}${pick.spread ? ` · Spread: ${pick.spread}` : ""}`;
+    return `<div class="evidence-card${hidden ? " is-hidden-pick" : ""}"><span>${pick.label || key}</span><strong>${text}</strong></div>`;
+  }).join("");
   return `
       <div class="evidence">
-        <div class="evidence-title-row"><h3>Outside picks <small>Entered before kickoff, graded against the close</small></h3></div>
+        <div class="evidence-title-row"><h3>Outside picks <small>Entered before kickoff, graded against the close; other people&#39;s picks show after the game</small></h3></div>
         <div class="evidence-grid">${cards}</div>
       </div>`;
 }

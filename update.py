@@ -843,7 +843,8 @@ def readout(game):
     if situation.get("divisional"):
         lines.append("This is a divisional game, and those have run a little closer than the line in every season we tested.")
     for key, pick in (game.get("outsidePicks") or {}).items():
-        if key == "cbs" or key.startswith("cbs-") or not (pick.get("winner") or pick.get("spread")):
+        # people's picks are named only once the game is over; the writers are public already
+        if key == "cbs" or key.startswith("cbs-") or not (pick.get("winner") or pick.get("spread")) or not game.get("completed"):
             continue
         who = pick.get("label") or key
         if pick.get("winner"):
