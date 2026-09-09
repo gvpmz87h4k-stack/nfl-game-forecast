@@ -237,20 +237,8 @@ select, input {
 
 .detail-panel { position: sticky; top: 18px; min-height: 530px; overflow: hidden; }
 .empty-detail { min-height: 530px; padding: 60px 34px; display: grid; align-content: center; text-align: center; }
-.empty-detail > span {
-  width: 82px;
-  height: 52px;
-  margin: 0 auto 24px;
-  display: grid;
-  place-items: center;
-  background: var(--soft-blue);
-  border: 2px solid var(--navy);
-  border-radius: 50%;
-  color: var(--navy);
-  font-family: "Arial Narrow", sans-serif;
-  font-size: 24px;
-  font-weight: 800;
-}
+.empty-detail > span { display: block; margin: 0 auto 22px; line-height: 0; }
+.empty-detail > span svg { display: block; margin: 0 auto; transform: rotate(-12deg); }
 .empty-detail p { color: var(--muted); }
 
 .detail-content { padding-bottom: 24px; }
