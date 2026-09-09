@@ -253,10 +253,11 @@ function badWeather(game) {
 }
 
 function gameFlags(game) {
-  const injuries = [...(game.away.injuries || []), ...(game.home.injuries || [])];
+  const c = game.continuity || {};
   return {
-    injuries: injuries.length > 0,
+    all: true,
     weather: Boolean(badWeather(game)),
+    flags: Boolean(((c.away || {}).clusters || []).length || ((c.home || {}).clusters || []).length),
     close: Math.abs(adjustedProbability(game) - 0.5) <= 0.12
   };
 }
@@ -264,7 +265,7 @@ function gameFlags(game) {
 function renderSummary(games) {
   document.querySelector("#gameCount").textContent = games.length;
   document.querySelector("#weatherCount").textContent = games.filter(g => gameFlags(g).weather).length;
-  document.querySelector("#continuityCount").textContent = games.filter(game => game.continuity && ((game.continuity.away.clusters || []).length || (game.continuity.home.clusters || []).length)).length;
+  document.querySelector("#continuityCount").textContent = games.filter(g => gameFlags(g).flags).length;
   document.querySelector("#closeCount").textContent = games.filter(g => gameFlags(g).close).length;
 }
 
@@ -315,7 +316,10 @@ function renderGames() {
   const games = currentGames();
   renderSummary(games);
   els.gameList.innerHTML = "";
-  const visible = games.filter(game => state.filter === "all" || gameFlags(game)[state.filter]);
+  const visible = games.filter(game => gameFlags(game)[state.filter]);
+  const labels = { all: "Tap a tile above to narrow the list. Tap a game to open it.", weather: "Showing games with weather that can change the game.", flags: "Showing games where two or more starters from one unit may be missing.", close: "Showing games near a coin flip, a win chance between 38 and 62 percent." };
+  const note = document.querySelector("#slateNote");
+  if (note) note.textContent = labels[state.filter] || labels.all;
   if (!visible.length) {
     els.gameList.innerHTML = '<p class="empty-list">No games match this filter.</p>';
     return;
@@ -751,10 +755,9 @@ els.weekSelect.addEventListener("change", event => {
   renderGames();
 });
 
-document.querySelectorAll(".filter").forEach(button => button.addEventListener("click", () => {
-  document.querySelectorAll(".filter").forEach(item => item.classList.remove("is-active"));
-  button.classList.add("is-active");
-  state.filter = button.dataset.filter;
+document.querySelectorAll(".pulse-tile").forEach(tile => tile.addEventListener("click", () => {
+  state.filter = tile.dataset.filter;
+  document.querySelectorAll(".pulse-tile").forEach(item => item.setAttribute("aria-pressed", String(item === tile)));
   renderGames();
 }));
 

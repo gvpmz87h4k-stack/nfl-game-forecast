@@ -42,11 +42,11 @@
       </div>
     </section>
 
-    <section class="pulse" aria-label="Snapshot summary">
-      <div><strong id="gameCount">0</strong><span>games</span></div>
-      <div><strong id="weatherCount">0</strong><span>weather games</span></div>
-      <div><strong id="continuityCount">0</strong><span>games with linked flags</span></div>
-      <div><strong id="closeCount">0</strong><span>one-score calls</span></div>
+    <section class="pulse" role="group" aria-label="Filter the game list">
+      <button class="pulse-tile" type="button" data-filter="all" aria-pressed="true"><strong id="gameCount">0</strong><span>games</span></button>
+      <button class="pulse-tile" type="button" data-filter="weather" aria-pressed="false"><strong id="weatherCount">0</strong><span>weather games</span></button>
+      <button class="pulse-tile" type="button" data-filter="flags" aria-pressed="false"><strong id="continuityCount">0</strong><span>games with linked flags</span></button>
+      <button class="pulse-tile" type="button" data-filter="close" aria-pressed="false"><strong id="closeCount">0</strong><span>coin-flip games</span></button>
     </section>
 
     <section class="workspace" aria-label="Game forecast workspace">
@@ -54,13 +54,7 @@
         <div class="section-head">
           <div>
             <h2>Game slate</h2>
-            <p>Select a matchup to inspect the variables.</p>
-          </div>
-          <div class="filters" role="group" aria-label="Filter games">
-            <button class="filter is-active" data-filter="all" type="button">All</button>
-            <button class="filter" data-filter="close" type="button">Close</button>
-            <button class="filter" data-filter="weather" type="button">Weather</button>
-            <button class="filter" data-filter="injuries" type="button">Player watch</button>
+            <p id="slateNote">Tap a tile above to narrow the list. Tap a game to open it.</p>
           </div>
         </div>
         <div class="game-list" id="gameList"></div>
