@@ -19,6 +19,7 @@ import csv
 import gzip
 import json
 import math
+import os
 import urllib.request
 from collections import defaultdict
 from pathlib import Path
@@ -28,6 +29,9 @@ PBP_DIR = ROOT / "data" / "pbp"
 PBP_URL = "https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_{season}.csv.gz"
 GAMES_URL = "https://raw.githubusercontent.com/nflverse/nfldata/master/data/games.csv"
 MARGIN_SD = 13.86
+# Which plays feed the ratings. Regular season only by default; set RATINGS_PLAYOFFS=1 to add
+# playoff plays (nflverse weeks 19 to 22, which sort after the regular season as they should).
+SEASON_TYPES = {"REG", "POST"} if os.environ.get("RATINGS_PLAYOFFS") == "1" else {"REG"}
 
 # ESPN and nflverse do not agree on three abbreviations.
 NFLVERSE_TO_ESPN = {"LA": "LAR", "WAS": "WSH", "JAX": "JAX"}
@@ -66,7 +70,7 @@ def load_team_games(season):
     with gzip.open(path, "rt", newline="") as handle:
         reader = csv.DictReader(handle)
         for row in reader:
-            if row["season_type"] != "REG" or row["play_type"] not in ("pass", "run"):
+            if row["season_type"] not in SEASON_TYPES or row["play_type"] not in ("pass", "run"):
                 continue
             if not row["posteam"] or not row["epa"]:
                 continue
