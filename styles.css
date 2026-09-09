@@ -418,7 +418,8 @@ tbody tr:last-child td { border-bottom: 0; }
 .forecast-value { color: var(--blue); font-weight: 800; font-size: 16px; }
 
 .guide { max-width: 980px; margin: 38px auto 0; }
-.guide h3 { margin: 26px 0 8px; font-size: 15px; }
+.guide h3 { margin: 26px 0 8px; font-size: 15px; scroll-margin-top: 14px; }
+.guide-page { scroll-behavior: auto; }
 .guide > p { color: var(--ink); line-height: 1.55; }
 .guide .table-wrap { margin: 0; }
 .guide-table th:first-child, .guide-table td:first-child { width: 28%; font-weight: 700; }

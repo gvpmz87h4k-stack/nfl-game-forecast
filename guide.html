@@ -171,5 +171,18 @@
       <p class="source-line">Sources: ESPN public score, odds, injury, and depth chart feeds; CBS Sports expert picks; Open-Meteo weather; nflverse schedules, injury reports, and play-by-play. This is an analysis tool, not betting advice.</p>
     </section>
   </main>
+  <script>
+    // Safari on iOS can drop the jump to a named section on page load when smooth scrolling
+    // is on. Do the jump ourselves, after the page has laid out, and again if the hash changes.
+    (function () {
+      function jump() {
+        var id = location.hash.replace("#", "");
+        var target = id && document.getElementById(id);
+        if (target) target.scrollIntoView({ block: "start", behavior: "auto" });
+      }
+      window.addEventListener("load", function () { setTimeout(jump, 0); setTimeout(jump, 250); });
+      window.addEventListener("hashchange", jump);
+    })();
+  </script>
 </body>
 </html>
