@@ -4,7 +4,7 @@
   publish = "site"
   # Netlify charges credits per production deploy, so only build when the page itself changed.
   # The twice-daily data commits do not trigger a build; the page reads fresh data from GitHub.
-  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- index.html guide.html app.js styles.css site.webmanifest icons netlify.toml"
+  ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- index.html guide.html app.js styles.css site.webmanifest icons netlify netlify.toml"
   command = "rm -rf site && mkdir -p site/data && cp index.html guide.html app.js styles.css site.webmanifest site/ && cp -R icons site/icons && cp data/*.json site/data/"
 
 # The data files change several times a week; never let a browser cache them.
@@ -12,3 +12,8 @@
   for = "/data/*"
   [headers.values]
     Cache-Control = "no-cache"
+
+# Netlify's scheduler is punctual where GitHub's is not: this function asks GitHub to start
+# the updater at the wanted Chicago times (see netlify/functions/kick-updater.mjs).
+[functions]
+  directory = "netlify/functions"
