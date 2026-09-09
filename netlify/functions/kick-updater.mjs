@@ -75,3 +75,5 @@ export default async () => {
 };
 
 export const config = { schedule: "*/15 * * * *" };
+
+// Redeploy marker: variables are baked in at build time, so a redeploy follows any change to the key.
