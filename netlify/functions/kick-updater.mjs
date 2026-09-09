@@ -21,8 +21,8 @@ export const SLOTS = [
   { days: ["Sun"], time: "14:45" },                                          // after the 3:25 games' inactive lists
   { days: ["Sun", "Mon", "Thu"], time: "18:15" },                            // after the night game's inactive list
   { days: ["Wed"], time: "18:15" },                                          // Week 1 opener is a Wednesday
-  { days: ["Tue"], time: "20:30" },                                          // one-night proof slot, remove after
-  { days: ["Tue"], time: "21:00" },                                          // one-night proof slot, remove after
+  { days: ["Tue"], time: "19:15" },                                          // one-night proof slot, remove after
+  { days: ["Tue"], time: "19:30" },                                          // one-night proof slot, remove after
 ];
 
 export function chicagoNow(date = new Date()) {
