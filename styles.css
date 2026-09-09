@@ -138,6 +138,7 @@ select, input {
 .pulse {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 1fr;
   background: var(--navy);
   color: white;
   border-radius: var(--radius);
@@ -145,9 +146,9 @@ select, input {
   box-shadow: var(--shadow);
 }
 
-.pulse div { padding: 18px 22px; border-right: 1px solid rgba(255,255,255,.16); }
-.pulse div:last-child { border-right: 0; }
-.pulse strong { display: block; font-family: "Arial Narrow", sans-serif; font-size: 30px; line-height: 1; }
+.pulse > * { padding: 20px 22px 18px; border-right: 1px solid rgba(255,255,255,.16); }
+.pulse > *:last-child { border-right: 0; }
+.pulse strong { display: block; font-family: "Arial Narrow", sans-serif; font-size: 30px; line-height: 1; margin-bottom: 8px; }
 .pulse span { color: #c8d5e3; font-size: 12px; }
 
 .workspace {
@@ -444,8 +445,8 @@ tbody tr:last-child td { border-bottom: 0; }
   .backtest-metrics { grid-template-columns: 1fr 1fr; }
   .backtest-metric:nth-child(2) { border-right: 0; }
   .backtest-metric:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
-  .pulse div:nth-child(2) { border-right: 0; }
-  .pulse div:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.16); }
+  .pulse > *:nth-child(2) { border-right: 0; }
+  .pulse > *:nth-child(-n+2) { border-bottom: 1px solid rgba(255,255,255,.16); }
   .section-head { align-items: stretch; flex-direction: column; }
   .filters { justify-content: flex-start; }
   .game-row { grid-template-columns: 82px 1fr; gap: 10px 12px; }
@@ -495,7 +496,7 @@ tbody tr:last-child td { border-bottom: 0; }
 .guide-pointer { max-width: 840px; margin: 34px auto 0; text-align: center; color: var(--muted); }
 .guide-page main { padding-bottom: 60px; }
 
-.pulse-tile { appearance: none; border: 0; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
+.pulse-tile { appearance: none; border: 0 solid rgba(255,255,255,.16); border-right-width: 1px; background: transparent; color: inherit; font: inherit; text-align: left; cursor: pointer; }
 .pulse-tile[aria-pressed="true"] { background: rgba(255,255,255,.12); box-shadow: inset 0 -3px 0 #71a3ff; }
 .pulse-tile:hover { background: rgba(255,255,255,.08); }
 .pulse-tile:focus-visible { outline: 2px solid #71a3ff; outline-offset: -2px; }
