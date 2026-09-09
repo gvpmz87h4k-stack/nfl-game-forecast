@@ -567,10 +567,13 @@ function renderDetail(game) {
       </div>
       <div class="evidence yourpick" id="yourPick">
         <div class="evidence-title-row"><h3><a class="guide-link" href="guide.html#guide-matchup">Your pick</a> <small>Frozen at kickoff, graded with everyone else</small></h3><span class="source-chip" id="yourPickStatus">${yourPickStatus}</span></div>
-        <div class="pick-row"><span>Picking as</span>
-          <strong id="whoPicks">${state.name ? state.name : "nobody yet"}</strong>
-          <small>${state.name ? "Not you? Open the app from your own link." : "Open the app from your personal link to pick."}</small>
-        </div>
+        ${state.name ? `<div class="pick-row"><span>Picking as</span><strong id="whoPicks">${state.name}</strong><small>Not you? Open the app from your own link, or <button type="button" class="link-button" id="forgetIdentity">change the code</button>.</small></div>`
+        : `<div class="pick-row identity-row"><span>Picking as</span><strong id="whoPicks">nobody yet</strong><small>Open the app from your personal link, or enter the code from it here.</small></div>
+        <div class="pick-row identity-row">
+          <input id="identityCode" type="text" inputmode="text" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="Your code" aria-label="Your personal code">
+          <input id="identityName" type="text" autocomplete="off" placeholder="Your name" aria-label="Your name">
+          <button type="button" class="reset-button" id="useIdentity">Use this code</button>
+        </div>`}
         <div class="pick-row"><span>Winner</span>
           <button type="button" class="pick-btn" data-kind="winner" data-team="${game.away.abbreviation}">${game.away.abbreviation}</button>
           <button type="button" class="pick-btn" data-kind="winner" data-team="${game.home.abbreviation}">${game.home.abbreviation}</button>
@@ -602,6 +605,25 @@ function renderDetail(game) {
     document.querySelector("#yourPickStatus").textContent = pickStatusText(state.picks[game.id]);
     document.querySelector("#pickNote").textContent = weekPickNote(game.week);
   }));
+  const useIdentity = document.querySelector("#useIdentity");
+  if (useIdentity) useIdentity.addEventListener("click", () => {
+    const code = document.querySelector("#identityCode").value.trim();
+    const name = document.querySelector("#identityName").value.trim();
+    if (!code || !name) { document.querySelector("#pickNote").textContent = "Both the code and your name are needed."; return; }
+    try { localStorage.setItem("sunday-desk-code", code); localStorage.setItem("sunday-desk-name", name); } catch (e) { /* storage blocked */ }
+    readIdentity();
+    state.picks = loadLocalPicks(state.who);
+    mergeFilePicks();
+    renderGames();
+    renderDetail(game);
+  });
+  const forget = document.querySelector("#forgetIdentity");
+  if (forget) forget.addEventListener("click", () => {
+    try { localStorage.removeItem("sunday-desk-code"); localStorage.removeItem("sunday-desk-name"); } catch (e) { /* storage blocked */ }
+    state.code = null; state.name = null; state.who = null; state.picks = {};
+    renderGames();
+    renderDetail(game);
+  });
   document.querySelector("#sendPick").addEventListener("click", async () => {
     const note = document.querySelector("#pickNote");
     if (!state.code) { note.textContent = "Open the app from your personal link first, then pick."; return; }
