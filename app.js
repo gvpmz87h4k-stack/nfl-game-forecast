@@ -740,7 +740,7 @@ function setup(data) {
   els.runStatus.classList.add("is-current");
   const stampDate = new Intl.DateTimeFormat("en-US", { month: "numeric", day: "numeric" }).format(updated);
   const stampTime = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit" }).format(updated);
-  els.runStatus.querySelector("span:last-child").innerHTML = `<span class="status-word">Updated </span>${stampDate} ${stampTime}`;
+  els.runStatus.querySelector("span:last-child").innerHTML = `<span class="status-word">Updated </span>${stampDate} @ ${stampTime}`;
   els.dateLine.textContent = `${data.season} regular season, Week ${state.week}`;
   renderGames();
   renderSeason();
