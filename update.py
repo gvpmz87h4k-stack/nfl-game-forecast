@@ -829,16 +829,28 @@ def readout(game):
         else:
             lines.append(f"Our play-by-play ratings lean {names[rm['leans']]} by {abs(gap):.1f} points more than the market does"
                          + ("; last season those disagreements were wrong more often than right." if rm.get("flagged") else "."))
-    experts = [(k, v) for k, v in (game.get("outsidePicks") or {}).items() if k != "cbs" and v.get("winner")]
+    experts = [(k, v) for k, v in (game.get("outsidePicks") or {}).items() if k.startswith("cbs-") and v.get("winner")]
     if experts:
-        votes = sum(1 for _, v in experts if v["winner"] == fav)
-        lines.append(f"{votes} of the {len(experts)} CBS writers who have picked take {names[fav]}.")
+        for_fav = sum(1 for _, v in experts if v["winner"] == fav)
+        for_dog = len(experts) - for_fav
+        if for_fav == for_dog:
+            lines.append(f"The {len(experts)} CBS writers who have picked are split down the middle.")
+        elif for_fav >= for_dog:
+            lines.append(f"{for_fav} of the {len(experts)} CBS writers who have picked take {names[fav]}, the favorite.")
+        else:
+            lines.append(f"{for_dog} of the {len(experts)} CBS writers who have picked take {names[dog]}, the underdog.")
     situation = game.get("situation") or {}
     if situation.get("divisional"):
         lines.append("This is a divisional game, and those have run a little closer than the line in every season we tested.")
-    mine = (game.get("outsidePicks") or {}).get("narcisa") or {}
-    if mine.get("winner"):
-        lines.append(f"You took {names.get(mine['winner'], mine['winner'])}" + (f", and {names.get(mine['spread'], mine['spread'])} against the spread." if mine.get("spread") else "."))
+    for key, pick in (game.get("outsidePicks") or {}).items():
+        if key == "cbs" or key.startswith("cbs-") or not (pick.get("winner") or pick.get("spread")):
+            continue
+        who = pick.get("label") or key
+        if pick.get("winner"):
+            lines.append(f"{who} took {names.get(pick['winner'], pick['winner'])}"
+                         + (f", and {names.get(pick['spread'], pick['spread'])} against the spread." if pick.get("spread") else "."))
+        else:
+            lines.append(f"{who} took {names.get(pick['spread'], pick['spread'])} against the spread.")
     weather = game.get("weather") or {}
     summary = (weather.get("summary") or "").lower()
     if not game["venue"].get("indoor") and any(w in summary for w in ("rain", "snow", "storm", "wind")):
