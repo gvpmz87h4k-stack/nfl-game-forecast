@@ -482,8 +482,9 @@ tbody tr:last-child td { border-bottom: 0; }
 .pick-btn.is-on { background: #2fb35a; border-color: #2fb35a; color: #0b1220; font-weight: 700; }
 .pick-row small { opacity: 0.75; }
 
-.guide-link { color: inherit; text-decoration: none; border-bottom: 1px dotted currentColor; }
-.guide-link:hover, .guide-link:focus { color: var(--blue); border-bottom-style: solid; }
+.guide-link, .guide a, .guide-pointer a, .continuity-note a { color: var(--blue); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; }
+.guide-link:hover, .guide-link:focus, .guide a:hover { color: #174d9e; text-decoration-thickness: 2px; }
+.evidence-title-row h3 a.guide-link { font-weight: 800; }
 .flag-list { margin: 4px 0; }
 .flag-list summary { cursor: pointer; font-size: 12px; }
 .flag-list ul { list-style: none; margin: 4px 0 0; padding: 0 0 0 10px; display: grid; gap: 3px; }
@@ -500,3 +501,18 @@ tbody tr:last-child td { border-bottom: 0; }
 .pulse-tile[aria-pressed="true"] { background: rgba(255,255,255,.12); box-shadow: inset 0 -3px 0 #71a3ff; }
 .pulse-tile:hover { background: rgba(255,255,255,.08); }
 .pulse-tile:focus-visible { outline: 2px solid #71a3ff; outline-offset: -2px; }
+
+/* Phones: nothing under 12px, body-sized notes at 14px. Desktop keeps the compact sizes. */
+@media (max-width: 720px) {
+  .continuity-score span, .evidence-title-row h3 small, .preparation-head small, .travel-facts dd small, .travel-facts dt, .travel-sources,
+  .backtest-metric small, .continuity-card p, .season-breakdown-head small, .season-breakdown-signals li, .season-breakdown-signals strong,
+  .season-breakdown-stats span, .travel-summary { font-size: 12px; }
+  .continuity-note, .preparation-card > p, .adjuster p, .audit-badge, .backtest-metric span, .condition-chip, .source-chip, .evidence-card span,
+  .preparation-list li, .travel-facts dd, th, .backtest-explainer, .brand small, .continuity-card > div > strong, .detail-hero .meta,
+  .flag-list li, .flag-list summary, .kickoff, .preparation-head span, .pulse span, .season-breakdown-stats strong, .source-line,
+  .travel-summary strong, .week-control label, .search-field span { font-size: 13px; }
+  .adjuster label, .injury-list li, .masthead-link, .prob-label, .run-status, .section-head p, table, .guide-table td, .guide-table th,
+  .guide > p, .pick-row, .pick-row small, .evidence-card strong { font-size: 14px; }
+  .pulse strong { font-size: 32px; }
+  small, .flag-list li small, .evidence-card strong small { font-size: 12px; }
+}
