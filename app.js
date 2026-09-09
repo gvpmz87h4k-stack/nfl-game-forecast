@@ -218,7 +218,7 @@ function gameFlags(game) {
 function renderSummary(games) {
   document.querySelector("#gameCount").textContent = games.length;
   document.querySelector("#weatherCount").textContent = games.filter(g => gameFlags(g).weather).length;
-  document.querySelector("#continuityCount").textContent = games.filter(game => game.continuity && (game.continuity.away.level === "High" || game.continuity.home.level === "High")).length;
+  document.querySelector("#continuityCount").textContent = games.filter(game => game.continuity && ((game.continuity.away.clusters || []).length || (game.continuity.home.clusters || []).length)).length;
   document.querySelector("#closeCount").textContent = games.filter(g => gameFlags(g).close).length;
 }
 
