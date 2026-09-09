@@ -21,6 +21,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 PICKS = ROOT / "picks.json"
 SNAPSHOT = ROOT / "data" / "snapshot.json"
+STATUS = ROOT / "data" / "picks-status.json"      # counts only, never names or codes
 SITE_ID = "8e454e87-506e-4897-a477-529240c20fea"
 API = "https://api.netlify.com/api/v1"
 FORM_NAME = "picks"
@@ -146,20 +147,32 @@ def merge_submissions(picks, submissions, kickoff_by_game, pickers=None, now=Non
     return picks, kept
 
 
+def write_status(**fields):
+    STATUS.parent.mkdir(parents=True, exist_ok=True)
+    payload = {"checkedAt": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"), **fields}
+    STATUS.write_text(json.dumps(payload, indent=2) + "\n")
+
+
 def main():
     token = os.environ.get("NETLIFY_AUTH_TOKEN")
+    pickers = load_pickers()
     if not token:
         print("App picks: NETLIFY_AUTH_TOKEN not set, skipping.")
+        write_status(formRead=False, reason="no form key", codesConfigured=len(pickers))
         return
     try:
         submissions = fetch_submissions(token)
     except Exception as exc:
         print(f"App picks: could not read submissions: {exc}")
+        write_status(formRead=False, reason="form unreachable", codesConfigured=len(pickers))
         return
     snapshot = json.loads(SNAPSHOT.read_text())
     picks = json.loads(PICKS.read_text()) if PICKS.exists() else {"sources": {}}
-    picks, count = merge_submissions(picks, submissions, kickoffs(snapshot))
+    picks, count = merge_submissions(picks, submissions, kickoffs(snapshot), pickers)
     PICKS.write_text(json.dumps(picks, indent=2) + "\n")
+    recognised = sum(1 for sub in submissions if identify(sub.get("data") or {}, sub.get("created_at") or "", pickers))
+    write_status(formRead=True, submissionsRead=len(submissions), submissionsRecognised=recognised,
+                 codesConfigured=len(pickers), picksWrittenForKickedOffGames=count)
     print(f"App picks: {len(submissions)} submissions read, {count} picks written for games that have kicked off (latest per person and game, entered before kickoff).")
 
 
