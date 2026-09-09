@@ -482,11 +482,11 @@ function renderDetail(game) {
   const adjustmentText = value => value === 0 ? "Neutral" : `${signedPoints(value)} toward ${value > 0 ? game.home.abbreviation : game.away.abbreviation}`;
   const rm = game.ratingModel;
   const signedMargin = value => `${value > 0 ? game.home.abbreviation : game.away.abbreviation} by ${Math.abs(value).toFixed(1)}`;
-  const ratingText = rm ? signedMargin(rm.modelHomeMargin) : "Ratings not loaded";
-  const blendText = rm ? `${signedMargin(rm.blendHomeMargin)} (line ${signedMargin(game.marketHomeMargin)})` : "n/a";
+  const ratingText = rm ? `${signedMargin(rm.modelHomeMargin)}, from last season's plays alone` : "Ratings not loaded";
+  const blendText = rm ? `${signedMargin(rm.blendHomeMargin)}; the market alone says ${signedMargin(game.marketHomeMargin)}` : "n/a";
   const startersText = rm ? `${game.away.abbreviation} ${rm.awayStarter || "?"} / ${game.home.abbreviation} ${rm.homeStarter || "?"}` : "n/a";
-  const blindText = rm ? `blend ${(rm.blindTest.blendAccuracy * 100).toFixed(1)}% vs market ${(rm.blindTest.marketAccuracy * 100).toFixed(1)}%` : "n/a";
-  const ratingChip = rm ? (rm.flagged ? `Disagrees with the line by ${Math.abs(rm.disagreementPoints).toFixed(1)} toward ${rm.leans}` : `Within ${Math.abs(rm.disagreementPoints).toFixed(1)} of the line`) : "No rating";
+  const blindText = rm ? `mix got ${(rm.blindTest.blendAccuracy * 100).toFixed(1)}% of winners right, market alone ${(rm.blindTest.marketAccuracy * 100).toFixed(1)}%` : "n/a";
+  const ratingChip = rm ? (rm.flagged ? `Disagrees with the market by ${Math.abs(rm.disagreementPoints).toFixed(1)} points, leaning ${rm.leans}` : `Agrees with the market, ${Math.abs(rm.disagreementPoints).toFixed(1)} points apart`) : "No rating";
   const kickoffPassed = new Date(game.kickoff) <= new Date();
   const savedPick = state.picks[game.id] || {};
   const yourPickStatus = kickoffPassed ? "Kickoff has passed" : pickStatusText(savedPick);
@@ -549,10 +549,10 @@ function renderDetail(game) {
       <div class="evidence">
         <div class="evidence-title-row"><h3><a class="guide-link" href="guide.html#guide-rating">Rating model</a> <small>Second opinion, graded, never applied</small></h3><span class="source-chip">${ratingChip}</span></div>
         <div class="evidence-grid">
-          <div class="evidence-card"><span>Play-level rating margin</span><strong>${ratingText}</strong></div>
-          <div class="evidence-card"><span>Blend with the line</span><strong>${blendText}</strong></div>
-          <div class="evidence-card"><span>Projected starters</span><strong>${startersText}</strong></div>
-          <div class="evidence-card"><span>Blind test on ${rm ? rm.blindTest.season : "2025"}</span><strong>${blindText}</strong></div>
+          <div class="evidence-card"><span>The model's own score prediction</span><strong>${ratingText}</strong></div>
+          <div class="evidence-card"><span>Model mixed with the market</span><strong>${blendText}</strong></div>
+          <div class="evidence-card"><span>Starting quarterbacks it assumes</span><strong>${startersText}</strong></div>
+          <div class="evidence-card"><span>How it did on ${rm ? rm.blindTest.season : "2025"}, tested blind</span><strong>${blindText}</strong></div>
         </div>
         <p class="continuity-note">Opponent-adjusted expected points per play from nflverse play-by-play, with the projected starting quarterback as his own component. Fitted on 2022-2024, tested blind on 2025, where it did not beat the closing line. It is shown and graded here so the 2026 scorecard can say whether that changes.</p>
       </div>
