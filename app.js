@@ -738,7 +738,9 @@ function setup(data) {
   els.weekSelect.innerHTML = weeks.map(week => `<option value="${week}" ${week === state.week ? "selected" : ""}>Week ${week}</option>`).join("");
   const updated = new Date(data.updatedAt);
   els.runStatus.classList.add("is-current");
-  els.runStatus.querySelector("span:last-child").textContent = `Updated ${new Intl.DateTimeFormat("en-US", { month: "short", day: "numeric", hour: "numeric", minute: "2-digit" }).format(updated)}`;
+  const stampDate = new Intl.DateTimeFormat("en-US", { month: "numeric", day: "numeric" }).format(updated);
+  const stampTime = new Intl.DateTimeFormat("en-US", { hour: "numeric", minute: "2-digit" }).format(updated);
+  els.runStatus.querySelector("span:last-child").innerHTML = `<span class="status-word">Updated </span>${stampDate} ${stampTime}`;
   els.dateLine.textContent = `${data.season} regular season, Week ${state.week}`;
   renderGames();
   renderSeason();

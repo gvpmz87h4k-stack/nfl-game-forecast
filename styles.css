@@ -80,6 +80,7 @@ button { color: inherit; }
   color: var(--muted);
   font-size: 13px;
   text-align: right;
+  white-space: nowrap;
 }
 
 .status-light {
@@ -436,9 +437,11 @@ tbody tr:last-child td { border-bottom: 0; }
 }
 
 @media (max-width: 720px) {
-  .masthead { align-items: flex-start; flex-wrap: wrap; row-gap: 8px; }
+  .masthead { align-items: center; flex-wrap: wrap; row-gap: 10px; }
+  .brand { order: 1; }
+  .run-status { order: 2; margin-left: auto; align-self: flex-start; margin-top: 4px; }
   .masthead-link { order: 3; flex-basis: 100%; margin: 0; }
-  .run-status { max-width: 165px; }
+  .status-word { display: none; }
   .control-strip { align-items: stretch; flex-direction: column; padding-top: 34px; }
   .week-control { width: 100%; }
   .pulse { grid-template-columns: 1fr 1fr; }
@@ -511,8 +514,9 @@ tbody tr:last-child td { border-bottom: 0; }
   .preparation-list li, .travel-facts dd, th, .backtest-explainer, .brand small, .continuity-card > div > strong, .detail-hero .meta,
   .flag-list li, .flag-list summary, .kickoff, .preparation-head span, .pulse span, .season-breakdown-stats strong, .source-line,
   .travel-summary strong, .week-control label, .search-field span { font-size: 13px; }
-  .adjuster label, .injury-list li, .masthead-link, .prob-label, .run-status, .section-head p, table, .guide-table td, .guide-table th,
+  .adjuster label, .injury-list li, .prob-label, .run-status, .section-head p, table, .guide-table td, .guide-table th,
   .guide > p, .pick-row, .pick-row small, .evidence-card strong { font-size: 14px; }
   .pulse strong { font-size: 32px; }
   small, .flag-list li small, .evidence-card strong small { font-size: 12px; }
+  .masthead-link { font-size: 17px; }
 }
