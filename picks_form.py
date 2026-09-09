@@ -13,6 +13,7 @@ ignored. Needs NETLIFY_AUTH_TOKEN in the environment; without it this does nothi
 
 import json
 import os
+import re
 import urllib.request
 from datetime import datetime, timezone
 from pathlib import Path
@@ -23,15 +24,25 @@ SNAPSHOT = ROOT / "data" / "snapshot.json"
 SITE_ID = "8e454e87-506e-4897-a477-529240c20fea"
 API = "https://api.netlify.com/api/v1"
 FORM_NAME = "picks"
-PEOPLE_FILE = ROOT / "data" / "people.json"
+# Who may pick. The PICKERS secret is JSON: {"<code>": "Display Name", ...}. The code travels in
+# the form's "who" field and never appears in any public file; picks.json is keyed by the slug
+# of the display name. Anyone without a code is ignored, so nobody can pick as someone else.
+LEGACY_KEYS = {"narcisa": "Narcisa"}
+LEGACY_BEFORE = "2026-09-09T05:00:00Z"   # submissions made with the old plain name, before codes existed
 
 
-def load_people():
+def slug(label):
+    return re.sub(r"[^a-z0-9]", "", str(label).lower()) or "picker"
+
+
+def load_pickers():
+    """{code: (slug, label)} from the PICKERS environment variable."""
+    raw = os.environ.get("PICKERS", "")
     try:
-        people = json.loads(PEOPLE_FILE.read_text())
-    except (OSError, json.JSONDecodeError):
-        people = {}
-    return {str(k).strip().lower(): str(v) for k, v in people.items()} or {"narcisa": "Narcisa"}
+        mapping = json.loads(raw) if raw else {}
+    except json.JSONDecodeError:
+        mapping = {}
+    return {str(code).strip(): (slug(label), str(label)) for code, label in mapping.items() if str(code).strip()}
 
 
 def api(path, token):
@@ -68,26 +79,40 @@ def _entries(data):
     return [{"away": data.get("away"), "home": data.get("home"), "winner": data.get("winner"), "spread": data.get("spread")}]
 
 
-def merge_submissions(picks, submissions, kickoff_by_game, people=None, now=None):
+def identify(data, created, pickers):
+    """(slug, label) for a submission, or None if its code is unknown."""
+    who = (data.get("who") or "").strip()
+    if who in pickers:
+        return pickers[who]
+    key = who.lower()
+    if key in LEGACY_KEYS and created < LEGACY_BEFORE:
+        return key, LEGACY_KEYS[key]
+    return None
+
+
+def merge_submissions(picks, submissions, kickoff_by_game, pickers=None, now=None):
     """Per person and game, the latest pre-kickoff submission wins; an empty entry clears the game.
 
     A pick is written to picks.json only once its game has kicked off. Until then it stays in
     Netlify's form store, which needs the key to read, so nobody can see a pick before the game
     by reading the public file. The run at or after kickoff writes and freezes it."""
-    people = people or load_people()
+    pickers = pickers if pickers is not None else load_pickers()
     now = now or datetime.now(timezone.utc)
+    people = {}
     latest = {}
     for sub in submissions:
         data = sub.get("data") or {}
-        who = (data.get("who") or "").strip().lower()
-        if who not in people:
+        created = sub.get("created_at")
+        if not created:
             continue
+        identity = identify(data, created, pickers)
+        if not identity:
+            continue
+        who, label = identity
+        people[who] = label
         try:
             week = int(data.get("week"))
         except (TypeError, ValueError):
-            continue
-        created = sub.get("created_at")
-        if not created:
             continue
         for item in _entries(data):
             away, home = (item.get("away") or "").upper(), (item.get("home") or "").upper()

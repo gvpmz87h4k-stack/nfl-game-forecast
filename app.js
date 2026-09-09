@@ -6,27 +6,48 @@ const state = {
   selectedId: null,
   adjustments: JSON.parse(localStorage.getItem("sunday-desk-adjustments") || "{}"),
   picks: {},
-  people: { narcisa: "Narcisa" },
-  who: localStorage.getItem("sunday-desk-who") || "narcisa",
+  code: null,        // the private code from the personal link; sent with every save, never shown
+  name: null,        // display name from the same link
+  who: null,         // slug of the name: the key used in the public file and in local storage
   filePicks: null
 };
+
+function slugOf(name) { return String(name || "").toLowerCase().replace(/[^a-z0-9]/g, "") || null; }
+
+// A personal link looks like /?as=CODE&name=Narcisa. Opening it once tells this phone who is
+// picking; the code is stored here and stripped from the address bar.
+function readIdentity() {
+  const params = new URLSearchParams(location.search);
+  const code = params.get("as");
+  const name = params.get("name");
+  if (code && name) {
+    try {
+      localStorage.setItem("sunday-desk-code", code.trim());
+      localStorage.setItem("sunday-desk-name", name.trim());
+    } catch (e) { /* storage blocked */ }
+    params.delete("as"); params.delete("name");
+    const rest = params.toString();
+    history.replaceState(null, "", `${location.pathname}${rest ? `?${rest}` : ""}${location.hash}`);
+  }
+  try {
+    state.code = localStorage.getItem("sunday-desk-code");
+    state.name = localStorage.getItem("sunday-desk-name");
+  } catch (e) { /* storage blocked */ }
+  state.who = slugOf(state.name);
+}
+readIdentity();
 
 // Picks live on this phone under the picker's name, and are merged with the saved file on
 // every load, so any phone or browser shows the same picks for the same person.
 function picksKey(who) { return `sunday-desk-picks:${who}`; }
 
 function loadLocalPicks(who) {
-  try {
-    const legacy = localStorage.getItem("sunday-desk-picks");
-    if (legacy && !localStorage.getItem(picksKey(who))) {
-      localStorage.setItem(picksKey(who), legacy);      // picks made before the name picker existed
-      localStorage.removeItem("sunday-desk-picks");
-    }
-    return JSON.parse(localStorage.getItem(picksKey(who)) || "{}");
-  } catch (e) { return {}; }
+  if (!who) return {};
+  try { return JSON.parse(localStorage.getItem(picksKey(who)) || "{}"); } catch (e) { return {}; }
 }
 
 function saveLocalPicks() {
+  if (!state.who) return;
   try { localStorage.setItem(picksKey(state.who), JSON.stringify(state.picks)); } catch (e) { /* storage blocked */ }
 }
 
@@ -48,13 +69,6 @@ function mergeFilePicks() {
   saveLocalPicks();
 }
 
-function switchPerson(who) {
-  saveLocalPicks();
-  state.who = who;
-  localStorage.setItem("sunday-desk-who", who);
-  state.picks = loadLocalPicks(who);
-  mergeFilePicks();
-}
 
 const els = {
   runStatus: document.querySelector("#runStatus"),
@@ -554,7 +568,8 @@ function renderDetail(game) {
       <div class="evidence yourpick" id="yourPick">
         <div class="evidence-title-row"><h3><a class="guide-link" href="guide.html#guide-matchup">Your pick</a> <small>Frozen at kickoff, graded with everyone else</small></h3><span class="source-chip" id="yourPickStatus">${yourPickStatus}</span></div>
         <div class="pick-row"><span>Picking as</span>
-          <select id="whoPicks" aria-label="Who is picking">${Object.entries(state.people).map(([key, label]) => `<option value="${key}"${key === state.who ? " selected" : ""}>${label}</option>`).join("")}</select>
+          <strong id="whoPicks">${state.name ? state.name : "nobody yet"}</strong>
+          <small>${state.name ? "Not you? Open the app from your own link." : "Open the app from your personal link to pick."}</small>
         </div>
         <div class="pick-row"><span>Winner</span>
           <button type="button" class="pick-btn" data-kind="winner" data-team="${game.away.abbreviation}">${game.away.abbreviation}</button>
@@ -578,6 +593,7 @@ function renderDetail(game) {
   const paint = () => document.querySelectorAll(".pick-btn").forEach(b => b.classList.toggle("is-on", pickState[b.dataset.kind] === b.dataset.team));
   paint();
   document.querySelectorAll(".pick-btn").forEach(b => b.addEventListener("click", () => {
+    if (!state.code) { document.querySelector("#pickNote").textContent = "Open the app from your personal link first, then pick."; return; }
     if (kickoffPassed) { document.querySelector("#pickNote").textContent = "Kickoff has passed; this game is frozen."; return; }
     pickState[b.dataset.kind] = pickState[b.dataset.kind] === b.dataset.team ? null : b.dataset.team;
     paint();
@@ -586,17 +602,13 @@ function renderDetail(game) {
     document.querySelector("#yourPickStatus").textContent = pickStatusText(state.picks[game.id]);
     document.querySelector("#pickNote").textContent = weekPickNote(game.week);
   }));
-  document.querySelector("#whoPicks").addEventListener("change", event => {
-    switchPerson(event.target.value);
-    renderGames();
-    renderDetail(game);
-  });
   document.querySelector("#sendPick").addEventListener("click", async () => {
     const note = document.querySelector("#pickNote");
+    if (!state.code) { note.textContent = "Open the app from your personal link first, then pick."; return; }
     const chosen = weekPicks(game.week).filter(p => p.winner || p.spread || state.picks[p.game.id]);
     if (!chosen.length) { note.textContent = "Tap a team on any game this week first."; return; }
     const payload = chosen.map(p => ({ away: p.game.away.abbreviation, home: p.game.home.abbreviation, winner: p.winner || "", spread: p.spread || "" }));
-    const body = new URLSearchParams({ "form-name": "picks", who: state.who, week: String(game.week), picks: JSON.stringify(payload) });
+    const body = new URLSearchParams({ "form-name": "picks", who: state.code, week: String(game.week), picks: JSON.stringify(payload) });
     try {
       const res = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body });
       if (!res.ok) throw new Error(`Netlify answered ${res.status}`);
@@ -607,7 +619,7 @@ function renderDetail(game) {
       });
       saveLocalPicks();
       const picked = chosen.filter(p => p.winner || p.spread).length;
-      note.textContent = `Saved ${picked} game${picked === 1 ? "" : "s"} for Week ${game.week} as ${state.people[state.who] || state.who}. They reach the ledger on the next run; each game freezes at its kickoff.`;
+      note.textContent = `Saved ${picked} game${picked === 1 ? "" : "s"} for Week ${game.week} as ${state.name}. They reach the ledger on the next run; each game freezes at its kickoff.`;
       document.querySelector("#yourPickStatus").textContent = pickStatusText(state.picks[game.id] || {});
     } catch (error) {
       note.textContent = `Could not save (${error.message}). On the live site this works; locally there is no form service.`;
@@ -792,14 +804,10 @@ async function loadPicksFile() {
   return (await res.json()).sources || {};
 }
 
-Promise.all([loadData("snapshot.json"), loadData("backtest-2025.json").catch(() => null), loadData("people.json").catch(() => null), loadPicksFile().catch(() => null)])
-  .then(([snapshot, backtest, people, filePicks]) => {
+Promise.all([loadData("snapshot.json"), loadData("backtest-2025.json").catch(() => null), loadPicksFile().catch(() => null)])
+  .then(([snapshot, backtest, filePicks]) => {
     state.filePicks = filePicks;
     if (backtest) state.backtest = backtest.json;
-    if (people && people.json && Object.keys(people.json).length) {
-      state.people = people.json;
-      if (!state.people[state.who]) state.who = Object.keys(state.people)[0];
-    }
     state.dataSource = snapshot.source;
     return snapshot.json;
   })

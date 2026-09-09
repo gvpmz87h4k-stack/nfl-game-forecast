@@ -5,14 +5,14 @@ from picks_form import merge_submissions
 
 AFTER_ALL = datetime(2026, 9, 20, tzinfo=timezone.utc)   # every test kickoff has passed
 
-PEOPLE = {"narcisa": "Narcisa", "sam": "Sam"}
+PEOPLE = {"code-n": ("narcisa", "Narcisa"), "code-s": ("sam", "Sam")}
 
 
-def sub(created, who="narcisa", **data):
+def sub(created, who="code-n", **data):
     return {"created_at": created, "data": {"who": who, **data}}
 
 
-def batch(created, week, games, who="narcisa"):
+def batch(created, week, games, who="code-n"):
     return sub(created, who=who, week=str(week), picks=json.dumps(games))
 
 
@@ -61,7 +61,7 @@ def test_each_person_gets_their_own_column():
     picks = {"sources": {}}
     subs = [
         batch("2026-09-08T12:00:00Z", 1, [{"away": "NE", "home": "SEA", "winner": "SEA"}], who="narcisa"),
-        batch("2026-09-08T13:00:00Z", 1, [{"away": "NE", "home": "SEA", "winner": "NE"}], who="sam"),
+        batch("2026-09-08T13:00:00Z", 1, [{"away": "NE", "home": "SEA", "winner": "NE"}], who="code-s"),
     ]
     picks, kept = merge_submissions(picks, subs, kick, PEOPLE, AFTER_ALL)
     assert kept == 2
@@ -84,3 +84,17 @@ def test_a_pick_stays_out_of_the_public_file_until_its_game_kicks_off():
     assert kept == 1 and [p["home"] for p in picks["sources"]["narcisa"]["picks"]] == ["SEA"]
     picks, kept = merge_submissions(picks, subs, kick, PEOPLE, AFTER_ALL)
     assert kept == 2
+
+
+def test_only_known_codes_are_accepted_and_the_old_plain_name_only_before_the_cutover():
+    kick = {(1, "NE", "SEA"): "2026-09-10T00:20Z"}
+    picks = {"sources": {}}
+    subs = [
+        batch("2026-09-08T12:00:00Z", 1, [{"away": "NE", "home": "SEA", "winner": "SEA"}], who="narcisa"),   # old name, before codes: kept
+        batch("2026-09-09T12:00:00Z", 1, [{"away": "NE", "home": "SEA", "winner": "NE"}], who="narcisa"),    # old name after the cutover: ignored
+        batch("2026-09-09T12:00:00Z", 1, [{"away": "NE", "home": "SEA", "winner": "NE"}], who="Narcisa"),    # someone typing the display name: ignored
+        batch("2026-09-09T12:00:00Z", 1, [{"away": "NE", "home": "SEA", "winner": "NE"}], who="made-up"),    # unknown code: ignored
+    ]
+    picks, kept = merge_submissions(picks, subs, kick, PEOPLE, AFTER_ALL)
+    assert kept == 1 and picks["sources"]["narcisa"]["picks"][0]["winner"] == "SEA"
+    assert set(picks["sources"]) == {"narcisa"}

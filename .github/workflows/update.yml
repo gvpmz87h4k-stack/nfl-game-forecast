@@ -42,6 +42,7 @@ jobs:
       - name: Collect picks saved in the app
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          PICKERS: ${{ secrets.PICKERS }}
         run: python picks_form.py
       - name: Fetch CBS expert picks for the current week
         run: python cbs_picks.py
