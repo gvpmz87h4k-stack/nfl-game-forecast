@@ -21,9 +21,9 @@ export const SLOTS = [
   { days: ["Sun"], time: "14:45" },                                          // after the 3:25 games' inactive lists
   { days: ["Sun", "Mon", "Thu"], time: "18:15" },                            // after the night game's inactive list
   { days: ["Wed"], time: "18:15" },                                          // Week 1 opener is a Wednesday
-  { days: ["Tue"], time: "19:30" },                                          // one-night proof slot, remove after
-  { days: ["Tue"], time: "19:45" },                                          // one-night proof slot, remove after
   { days: ["Tue"], time: "20:00" },                                          // one-night proof slot, remove after
+  { days: ["Tue"], time: "20:15" },                                          // one-night proof slot, remove after
+  { days: ["Tue"], time: "20:30" },                                          // one-night proof slot, remove after
 ];
 
 export function chicagoNow(date = new Date()) {
@@ -66,9 +66,7 @@ export default async () => {
   }
   const token = process.env.GITHUB_DISPATCH_TOKEN || (globalThis.Netlify?.env?.get?.("GITHUB_DISPATCH_TOKEN") ?? "");
   if (!token) {
-    // Names and lengths only, never values: enough to tell a misspelt key from an empty one.
-    const seen = Object.keys(process.env).filter(k => /GITHUB|TOKEN|DISPATCH/i.test(k)).map(k => `${k} (${(process.env[k] || "").length} chars)`);
-    console.log(`kick-updater: ${day} ${slot.time} Chicago is a look, but GITHUB_DISPATCH_TOKEN is not set. Matching names seen: ${seen.length ? seen.join(", ") : "none"}. Netlify.env present: ${Boolean(globalThis.Netlify?.env)}.`);
+    console.log(`kick-updater: ${day} ${slot.time} Chicago is a look, but GITHUB_DISPATCH_TOKEN is not set.`);
     return new Response("no token", { status: 200 });
   }
   const status = await dispatch(token);
@@ -77,5 +75,3 @@ export default async () => {
 };
 
 export const config = { schedule: "*/15 * * * *" };
-
-// Redeploy marker: variables are baked in at build time, so a redeploy follows any change to the key.
