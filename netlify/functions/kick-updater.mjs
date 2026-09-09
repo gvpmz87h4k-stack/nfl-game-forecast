@@ -64,9 +64,11 @@ export default async () => {
     console.log(`kick-updater: ${day} ${hour}:${String(minute).padStart(2, "0")} Chicago, not a look; nothing to do.`);
     return new Response("idle", { status: 200 });
   }
-  const token = process.env.GITHUB_DISPATCH_TOKEN;
+  const token = process.env.GITHUB_DISPATCH_TOKEN || (globalThis.Netlify?.env?.get?.("GITHUB_DISPATCH_TOKEN") ?? "");
   if (!token) {
-    console.log(`kick-updater: ${day} ${slot.time} Chicago is a look, but GITHUB_DISPATCH_TOKEN is not set.`);
+    // Names and lengths only, never values: enough to tell a misspelt key from an empty one.
+    const seen = Object.keys(process.env).filter(k => /GITHUB|TOKEN|DISPATCH/i.test(k)).map(k => `${k} (${(process.env[k] || "").length} chars)`);
+    console.log(`kick-updater: ${day} ${slot.time} Chicago is a look, but GITHUB_DISPATCH_TOKEN is not set. Matching names seen: ${seen.length ? seen.join(", ") : "none"}. Netlify.env present: ${Boolean(globalThis.Netlify?.env)}.`);
     return new Response("no token", { status: 200 });
   }
   const status = await dispatch(token);
