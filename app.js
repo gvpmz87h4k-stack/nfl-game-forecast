@@ -245,11 +245,24 @@ function pickStatusText(pick) {
   return `${pick.savedAt ? "Saved" : "Not saved yet"}: ${parts.join(", ")}`;
 }
 
+function weekPicks(week) {
+  // Walk the week's games and look each one up by id, so a pick saved in an older shape
+  // (no week on it) still counts and still gets sent.
+  return (state.data ? state.data.games : []).filter(g => g.week === week).map(g => {
+    const p = state.picks[g.id] || {};
+    return { game: g, winner: p.winner || null, spread: p.spread || null, savedAt: p.savedAt || null };
+  });
+}
+
 function weekPickNote(week) {
-  const mine = Object.values(state.picks).filter(p => p.week === week && (p.winner || p.spread));
+  const all = weekPicks(week);
+  const mine = all.filter(p => p.winner || p.spread);
   const unsaved = mine.filter(p => !p.savedAt).length;
   if (!mine.length) return "Tap a team on each game you want to call, then save the week once.";
-  return `${mine.length} game${mine.length === 1 ? "" : "s"} picked this week${unsaved ? `, ${unsaved} not saved yet` : ", all saved"}. One save covers the whole week; your latest save before each kickoff counts.`;
+  const missing = all.filter(p => !p.winner && !p.spread).map(p => `${p.game.away.abbreviation}@${p.game.home.abbreviation}`);
+  return `${mine.length} of ${all.length} games picked this week${unsaved ? `, ${unsaved} not saved yet` : ", all saved"}.`
+    + (missing.length ? ` Not picked: ${missing.join(", ")}.` : "")
+    + " One save covers the whole week; your latest save before each kickoff counts.";
 }
 
 function renderGames() {
@@ -523,17 +536,21 @@ function renderDetail(game) {
   });
   document.querySelector("#sendPick").addEventListener("click", async () => {
     const note = document.querySelector("#pickNote");
-    const weekPicks = Object.values(state.picks).filter(p => p.week === game.week && p.away && p.home);
-    if (!weekPicks.length) { note.textContent = "Tap a team on any game this week first."; return; }
-    const payload = weekPicks.map(p => ({ away: p.away, home: p.home, winner: p.winner || "", spread: p.spread || "" }));
+    const chosen = weekPicks(game.week).filter(p => p.winner || p.spread || state.picks[p.game.id]);
+    if (!chosen.length) { note.textContent = "Tap a team on any game this week first."; return; }
+    const payload = chosen.map(p => ({ away: p.game.away.abbreviation, home: p.game.home.abbreviation, winner: p.winner || "", spread: p.spread || "" }));
     const body = new URLSearchParams({ "form-name": "picks", who: state.who, week: String(game.week), picks: JSON.stringify(payload) });
     try {
       const res = await fetch("/", { method: "POST", headers: { "Content-Type": "application/x-www-form-urlencoded" }, body });
       if (!res.ok) throw new Error(`Netlify answered ${res.status}`);
       const stamp = new Date().toISOString();
-      weekPicks.forEach(p => { p.savedAt = stamp; });
+      chosen.forEach(p => {
+        state.picks[p.game.id] = { ...(state.picks[p.game.id] || {}), winner: p.winner, spread: p.spread, week: p.game.week,
+          away: p.game.away.abbreviation, home: p.game.home.abbreviation, savedAt: stamp };
+      });
       localStorage.setItem("sunday-desk-picks", JSON.stringify(state.picks));
-      note.textContent = `Saved ${weekPicks.length} game${weekPicks.length === 1 ? "" : "s"} for Week ${game.week} as ${state.people[state.who] || state.who}. They reach the ledger on the next run; each game freezes at its kickoff.`;
+      const picked = chosen.filter(p => p.winner || p.spread).length;
+      note.textContent = `Saved ${picked} game${picked === 1 ? "" : "s"} for Week ${game.week} as ${state.people[state.who] || state.who}. They reach the ledger on the next run; each game freezes at its kickoff.`;
       document.querySelector("#yourPickStatus").textContent = pickStatusText(state.picks[game.id] || {});
     } catch (error) {
       note.textContent = `Could not save (${error.message}). On the live site this works; locally there is no form service.`;
