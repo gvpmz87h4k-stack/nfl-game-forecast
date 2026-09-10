@@ -774,6 +774,37 @@ function setup(data) {
   state.week = data.currentWeek;
   state.picks = loadLocalPicks(state.who);
   mergeFilePicks();
+  applyData(data);
+}
+
+// Re-fetch the numbers whenever the app comes back to the front, and every ten minutes while it
+// stays there. A home screen app keeps its last screen alive between uses, so without this the
+// stamp could sit on an old look until the app was closed for good.
+let refreshing = false;
+async function refreshData() {
+  if (refreshing || !state.data || document.visibilityState === "hidden") return;
+  refreshing = true;
+  try {
+    const [snapshot, filePicks] = await Promise.all([loadData("snapshot.json"), loadPicksFile().catch(() => null)]);
+    if (filePicks) state.filePicks = filePicks;
+    if (snapshot.json.updatedAt !== state.data.updatedAt) {
+      state.data = snapshot.json;
+      state.dataSource = snapshot.source;
+      if (!state.data.games.some(g => g.week === state.week)) state.week = state.data.currentWeek;
+      mergeFilePicks();
+      applyData(state.data);
+      const selected = state.selectedId && state.data.games.find(g => g.id === state.selectedId);
+      if (selected) renderDetail(selected);
+    }
+  } catch (error) { /* keep what is on screen; the next wake tries again */ }
+  refreshing = false;
+}
+document.addEventListener("visibilitychange", () => { if (document.visibilityState === "visible") refreshData(); });
+window.addEventListener("focus", refreshData);
+window.addEventListener("pageshow", event => { if (event.persisted) refreshData(); });
+setInterval(refreshData, 10 * 60 * 1000);
+
+function applyData(data) {
   const weeks = [...new Set(data.games.map(game => game.week))].sort((a, b) => a - b);
   els.weekSelect.innerHTML = weeks.map(week => `<option value="${week}" ${week === state.week ? "selected" : ""}>Week ${week}</option>`).join("");
   const updated = new Date(data.updatedAt);
