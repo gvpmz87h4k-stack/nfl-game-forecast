@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "currentWeek": 1,
-  "updatedAt": "2026-09-11T16:49:59.890707Z",
+  "updatedAt": "2026-09-11T17:28:04.963369Z",
   "games": [
     {
       "id": "401872656",
@@ -150,10 +150,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -202,7 +202,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 96,
+          "score": 95,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -273,7 +273,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.85
+          "totalRisk": 6.64
         },
         "home": {
           "score": 93,
@@ -821,48 +821,56 @@
         "cbs": {
           "label": "CBS Sports experts, consensus",
           "spread": "SEA",
+          "spreadPush": true,
           "winner": "SEA",
           "winnerCorrect": true
         },
         "cbs-prisco": {
           "label": "CBS Sports, Pete Prisco",
           "spread": "SEA",
+          "spreadPush": true,
           "winner": "SEA",
           "winnerCorrect": true
         },
         "cbs-dubin": {
           "label": "CBS Sports, Jared Dubin",
           "spread": "SEA",
+          "spreadPush": true,
           "winner": "SEA",
           "winnerCorrect": true
         },
         "cbs-wilson": {
           "label": "CBS Sports, Ryan Wilson",
           "spread": "SEA",
+          "spreadPush": true,
           "winner": "SEA",
           "winnerCorrect": true
         },
         "cbs-breech": {
           "label": "CBS Sports, John Breech",
           "spread": "SEA",
+          "spreadPush": true,
           "winner": "SEA",
           "winnerCorrect": true
         },
         "cbs-sullivan": {
           "label": "CBS Sports, Tyler Sullivan",
           "spread": "SEA",
+          "spreadPush": true,
           "winner": "SEA",
           "winnerCorrect": true
         },
         "cbs-richard": {
           "label": "CBS Sports, Dave Richard",
           "spread": "NE",
+          "spreadPush": true,
           "winner": "NE",
           "winnerCorrect": false
         },
         "cbs-eisenberg": {
           "label": "CBS Sports, Jamey Eisenberg",
           "spread": "NE",
+          "spreadPush": true,
           "winner": "SEA",
           "winnerCorrect": true
         }
@@ -1575,6 +1583,8 @@
         "available": true,
         "applied": false,
         "probabilityShift": 0.0,
+        "nightsGap": -6.0,
+        "restedSide": "away",
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.6094,
@@ -1973,6 +1983,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -1987,14 +2005,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -2138,7 +2148,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 2.14
+          "totalRisk": 2.63
         },
         "home": {
           "score": 99,
@@ -5490,14 +5500,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -5568,8 +5570,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -5669,7 +5671,7 @@
       "lineSource": "Market line",
       "marketHomeMargin": -3.0,
       "homeMargin": -3.3,
-      "homeWinProbability": 0.4059,
+      "homeWinProbability": 0.4058,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Cloudy",
@@ -5788,13 +5790,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -5818,16 +5813,16 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.16
+          "totalRisk": 3.02
         },
         "probabilityShift": 0.0,
         "applied": true
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -5850,8 +5845,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -5876,7 +5871,7 @@
           ],
           "clusters": []
         },
-        "probabilityShift": 0.0006,
+        "probabilityShift": 0.0005,
         "applied": true,
         "coverage": "Official roster status and explicit public practice wording only"
       },
@@ -12674,14 +12669,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -12779,13 +12766,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -12809,7 +12789,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.54
+          "totalRisk": 3.38
         },
         "home": {
           "score": 93,
@@ -13306,8 +13286,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -13660,9 +13640,9 @@
           "clusters": []
         },
         "home": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -13685,8 +13665,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -14665,10 +14645,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -14862,7 +14842,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.22
+          "totalRisk": 5.93
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -16105,6 +16085,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -16119,14 +16107,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -16364,7 +16344,7 @@
           "totalRisk": 4.61
         },
         "home": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -16421,7 +16401,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.91
+          "totalRisk": 2.35
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -24545,14 +24525,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -24650,13 +24622,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -24680,7 +24645,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.54
+          "totalRisk": 3.38
         },
         "home": {
           "score": 97,
@@ -29003,10 +28968,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -29055,7 +29020,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 96,
+          "score": 95,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -29126,7 +29091,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.85
+          "totalRisk": 6.64
         },
         "home": {
           "score": 99,
@@ -30430,6 +30395,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -30444,14 +30417,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -30688,7 +30653,7 @@
           "totalRisk": 1.99
         },
         "home": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -30745,7 +30710,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.91
+          "totalRisk": 2.35
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -33189,8 +33154,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -33504,9 +33469,9 @@
           "clusters": []
         },
         "home": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -33529,8 +33494,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -35241,10 +35206,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -35293,7 +35258,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 96,
+          "score": 95,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -35364,7 +35329,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.85
+          "totalRisk": 6.64
         },
         "home": {
           "score": 98,
@@ -35881,8 +35846,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -36256,9 +36221,9 @@
           "clusters": []
         },
         "home": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -36281,8 +36246,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -38522,6 +38487,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -38536,14 +38509,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -38848,7 +38813,7 @@
           "totalRisk": 8.81
         },
         "home": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -38905,7 +38870,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.91
+          "totalRisk": 2.35
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -43422,14 +43387,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -43668,13 +43625,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -43698,7 +43648,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.16
+          "totalRisk": 3.02
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -44899,6 +44849,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -44913,14 +44871,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -45058,7 +45008,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 2.14
+          "totalRisk": 2.63
         },
         "home": {
           "score": 98,
@@ -47435,10 +47385,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -47692,7 +47642,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.22
+          "totalRisk": 5.93
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -51478,8 +51428,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -51779,9 +51729,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -51804,8 +51754,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -56784,8 +56734,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -57095,9 +57045,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -57120,8 +57070,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -58835,10 +58785,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -59122,7 +59072,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.22
+          "totalRisk": 5.93
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -60235,14 +60185,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -60340,13 +60282,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -60370,7 +60305,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.54
+          "totalRisk": 3.38
         },
         "home": {
           "score": 99,
@@ -60757,6 +60692,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -60771,14 +60714,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -60933,7 +60868,7 @@
           "totalRisk": 2.24
         },
         "home": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -60990,7 +60925,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.91
+          "totalRisk": 2.35
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -65026,8 +64961,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -65170,10 +65105,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -65222,7 +65157,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 96,
+          "score": 95,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -65293,7 +65228,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.85
+          "totalRisk": 6.64
         },
         "home": {
           "score": 97,
@@ -65488,9 +65423,9 @@
           ]
         },
         "home": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -65513,8 +65448,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -69255,14 +69190,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -69305,6 +69232,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -69319,14 +69254,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -69464,7 +69391,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 2.14
+          "totalRisk": 2.63
         },
         "home": {
           "score": 98,
@@ -69494,13 +69421,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -69524,7 +69444,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.16
+          "totalRisk": 3.02
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -74745,14 +74665,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -74850,13 +74762,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -74880,7 +74785,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.54
+          "totalRisk": 3.38
         },
         "home": {
           "score": 94,
@@ -79241,6 +79146,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -79255,14 +79168,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -79585,7 +79490,7 @@
           "totalRisk": 11.33
         },
         "home": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -79642,7 +79547,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.91
+          "totalRisk": 2.35
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -82180,10 +82085,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -82232,7 +82137,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 96,
+          "score": 95,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -82303,7 +82208,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.85
+          "totalRisk": 6.64
         },
         "home": {
           "score": 98,
@@ -83540,8 +83445,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -83789,9 +83694,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -83814,8 +83719,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -89547,14 +89452,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -89778,13 +89675,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -89808,7 +89698,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.16
+          "totalRisk": 3.02
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -91671,10 +91561,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -92018,7 +91908,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.22
+          "totalRisk": 5.93
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -93286,8 +93176,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -93364,6 +93254,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -93378,14 +93276,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -93523,7 +93413,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 2.14
+          "totalRisk": 2.63
         },
         "home": {
           "score": 97,
@@ -93670,9 +93560,9 @@
           ]
         },
         "home": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -93695,8 +93585,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -95405,10 +95295,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -95528,7 +95418,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.64
+          "totalRisk": 6.4
         },
         "home": {
           "score": 97,
@@ -99613,14 +99503,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -99718,13 +99600,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -99748,7 +99623,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.54
+          "totalRisk": 3.38
         },
         "home": {
           "score": 97,
@@ -105617,8 +105492,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -105979,9 +105854,9 @@
           "clusters": []
         },
         "home": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -106004,8 +105879,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -107033,6 +106908,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -107047,14 +106930,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -107192,7 +107067,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 2.14
+          "totalRisk": 2.63
         },
         "home": {
           "score": 97,
@@ -108906,14 +108781,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -109142,13 +109009,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -109172,7 +109032,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.16
+          "totalRisk": 3.02
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -113802,8 +113662,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -114060,9 +113920,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -114085,8 +113945,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -122486,10 +122346,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -122538,7 +122398,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 96,
+          "score": 95,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -122609,7 +122469,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.85
+          "totalRisk": 6.64
         },
         "home": {
           "score": 98,
@@ -123130,6 +122990,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -123144,14 +123012,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -123226,14 +123086,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
           },
           {
             "player": "Patrick Jones II",
@@ -123333,13 +123185,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -123363,10 +123208,10 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.54
+          "totalRisk": 3.38
         },
         "home": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -123423,7 +123268,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.91
+          "totalRisk": 2.35
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -125294,8 +125139,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -125673,9 +125518,9 @@
           ]
         },
         "home": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -125698,8 +125543,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -128762,6 +128607,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -128776,14 +128629,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -129013,7 +128858,7 @@
           "totalRisk": 2.84
         },
         "home": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -129070,7 +128915,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.91
+          "totalRisk": 2.35
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -130837,14 +130682,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -130942,13 +130779,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -130972,7 +130802,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.54
+          "totalRisk": 3.38
         },
         "home": {
           "score": 99,
@@ -131444,10 +131274,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -131701,7 +131531,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.22
+          "totalRisk": 5.93
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -133521,10 +133351,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -133800,7 +133630,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.22
+          "totalRisk": 5.93
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -135734,8 +135564,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -135985,9 +135815,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -136010,8 +135840,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -137776,12 +137606,12 @@
           "awayOpen": "-105"
         },
         "moneyline": {
-          "home": "+105",
-          "away": "-125",
+          "home": "+102",
+          "away": "-122",
           "homeOpen": "+110",
           "awayOpen": "-130"
         },
-        "moneylineHomeProbability": 0.4675,
+        "moneylineHomeProbability": 0.4739,
         "moneylineOpenHomeProbability": 0.4573
       },
       "lineSource": "Market line",
@@ -138021,7 +137851,7 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.4526,
-      "marketHomeWinProbability": 0.4675,
+      "marketHomeWinProbability": 0.4739,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": -1.55,
       "modelAdjustments": {
@@ -138327,14 +138157,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -138596,13 +138418,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -138626,7 +138441,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.16
+          "totalRisk": 3.02
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -139027,6 +138842,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -139041,14 +138864,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -139186,7 +139001,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 2.14
+          "totalRisk": 2.63
         },
         "home": {
           "score": 98,
@@ -145332,8 +145147,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -145583,9 +145398,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -145608,8 +145423,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -148537,6 +148352,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -148551,14 +148374,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -148803,7 +148618,7 @@
           "totalRisk": 4.31
         },
         "home": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -148860,7 +148675,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.91
+          "totalRisk": 2.35
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -150049,14 +149864,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -150228,13 +150035,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -150258,7 +150058,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.16
+          "totalRisk": 3.02
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -154171,10 +153971,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -154223,7 +154023,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 96,
+          "score": 95,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -154294,7 +154094,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.85
+          "totalRisk": 6.64
         },
         "home": {
           "score": 99,
@@ -155417,8 +155217,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -155904,9 +155704,9 @@
           ]
         },
         "home": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -155929,8 +155729,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -157808,6 +157608,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -157822,14 +157630,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -157967,7 +157767,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 2.14
+          "totalRisk": 2.63
         },
         "home": {
           "score": 93,
@@ -159797,14 +159597,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -159902,13 +159694,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -159932,7 +159717,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.54
+          "totalRisk": 3.38
         },
         "home": {
           "score": 99,
@@ -161824,10 +161609,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -161876,7 +161661,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 96,
+          "score": 95,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -161947,7 +161732,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.85
+          "totalRisk": 6.64
         },
         "home": {
           "score": 97,
@@ -166422,10 +166207,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -166671,7 +166456,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.22
+          "totalRisk": 5.93
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -167722,6 +167507,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -167736,14 +167529,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -167981,7 +167766,7 @@
           "totalRisk": 6.51
         },
         "home": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -168038,7 +167823,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.91
+          "totalRisk": 2.35
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -173122,14 +172907,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -173351,13 +173128,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -173381,7 +173151,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.16
+          "totalRisk": 3.02
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -174521,8 +174291,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -174885,9 +174655,9 @@
           "clusters": []
         },
         "home": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -174910,8 +174680,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -181650,8 +181420,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Odunze (calf) was listed as a limited participant for Thursday's practice.",
-            "updated": "2026-09-10T19:31Z"
+            "note": "Odunze (calf) will practice Friday, and the training staff will assess him afterward before deciding next steps, Sean Hammond of The Chicago Tribune reports.",
+            "updated": "2026-09-11T17:05Z"
           },
           {
             "player": "Tyson Bagent",
@@ -181915,9 +181685,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 95,
           "level": "Stable",
-          "rawRisk": 1.03,
+          "rawRisk": 0.89,
           "items": [
             {
               "player": "Xavier Woods",
@@ -181940,8 +181710,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": []
@@ -182322,10 +182092,10 @@
           {
             "player": "A.J. Brown",
             "position": "WR",
-            "status": "Questionable",
+            "status": "Injured Reserve",
             "detail": "Ankle",
-            "note": "Brown is expected to miss four weeks with the ankle injury he suffered in Monday night's loss to the Seahawks, Ian Rapoport of ESPN and NFL Network reports.",
-            "updated": "2026-09-10T23:37Z"
+            "note": "The Patriots are placing Brown (ankle) on injured reserve, ESPN's Adam Schefter reports.",
+            "updated": "2026-09-11T16:51Z"
           },
           {
             "player": "Bryce Baringer",
@@ -182571,7 +182341,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 5.22
+          "totalRisk": 5.93
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -183093,6 +182863,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Jalen McMillan",
+            "position": "WR",
+            "status": "Doubtful",
+            "detail": "Knee",
+            "note": "McMillan (knee) was a limited practice participant Thursday.",
+            "updated": "2026-09-10T21:32Z"
+          },
+          {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
@@ -183107,14 +182885,6 @@
             "detail": "Foot",
             "note": "Rozeboom (foot) was a limited participant at the Buccaneers' practice Thursday.",
             "updated": "2026-09-10T23:26Z"
-          },
-          {
-            "player": "Jalen McMillan",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
           },
           {
             "player": "Justin Skule",
@@ -183252,7 +183022,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 2.14
+          "totalRisk": 2.63
         },
         "home": {
           "score": 97,
@@ -185745,14 +185515,6 @@
             "updated": "2026-08-31T16:12Z"
           },
           {
-            "player": "Jonathon Brooks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Brooks (groin) was in uniform for Friday's practice, his third straight session, Mike Kaye of ESPN.com reports.",
-            "updated": "2026-09-11T15:51Z"
-          },
-          {
             "player": "Patrick Jones II",
             "position": "LB",
             "status": "Questionable",
@@ -186092,13 +185854,6 @@
               "why": "not a starter on the depth chart"
             },
             {
-              "player": "Jonathon Brooks",
-              "position": "RB",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
               "player": "Bam Martin-Scott",
               "position": "LB",
               "status": "Injured Reserve",
@@ -186122,7 +185877,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.16
+          "totalRisk": 3.02
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -188294,6 +188049,25 @@
       "disagreements": 0,
       "disagreementMeanPoints": null,
       "disagreementPositiveShare": null
+    },
+    "acclimation": {
+      "gapNights": 5,
+      "games": 1,
+      "decided": 1,
+      "covered": 1,
+      "pushes": 0,
+      "coverRate": 1.0,
+      "list": [
+        {
+          "week": 1,
+          "away": "SF",
+          "home": "LAR",
+          "gap": -6.0,
+          "restedSide": "SF",
+          "covered": true,
+          "push": false
+        }
+      ]
     },
     "pending": 0,
     "open": 270,

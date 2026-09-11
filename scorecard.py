@@ -19,10 +19,38 @@ def _parse(iso):
     return datetime.fromisoformat(iso.replace("Z", "+00:00"))
 
 
+ACCLIMATION_GAP_NIGHTS = 5     # a long-trip game counts when one side slept this many more nights on local time
+
+
+def travel_fields(game):
+    travel = game.get("travel") or {}
+    if not travel.get("available") or travel.get("nightsGap") is None:
+        return {}
+    return {"travelNightsGap": travel["nightsGap"], "travelRestedSide": travel.get("restedSide")}
+
+
+def grade_acclimation(entry):
+    """For a long-trip game, did the better-rested side beat the closing line?"""
+    gap = entry.get("travelNightsGap")
+    if gap is None or abs(gap) < ACCLIMATION_GAP_NIGHTS or "acclimationCovered" in entry:
+        return
+    home_score, away_score, close = entry.get("homeScore"), entry.get("awayScore"), entry.get("closingHomeMargin")
+    if home_score is None or away_score is None or close is None:
+        return
+    actual = home_score - away_score
+    if actual == close:
+        entry["acclimationPush"] = True
+        return
+    home_covered = actual > close
+    entry["acclimationCovered"] = home_covered if gap > 0 else not home_covered
+
+
 def adopt_outside_picks(entry, game):
     """Add any outside pick the frozen entry does not have yet. Never replaces one it has."""
     if entry.get("late"):
         return
+    if entry.get("travelNightsGap") is None:
+        entry.update(travel_fields(game))
     have = entry.setdefault("outsidePicks", {})
     for key, pick in (game.get("outsidePicks") or {}).items():
         if key not in have and (pick.get("winner") or pick.get("spread")):
@@ -93,6 +121,7 @@ def record_predictions(ledger, games, now_iso):
             "ratingFlagged": bool((game.get("ratingModel") or {}).get("flagged")),
             "outsidePicks": dict(game.get("outsidePicks") or {}),
             "odds": {k: (game.get("odds") or {}).get(k) for k in ("detail", "total", "openingHomeMargin", "spreadPrice", "moneyline", "book")},
+            **travel_fields(game),
         }
         history = list(entry.get("history", [])) if entry else []
         point = {
@@ -146,6 +175,7 @@ def grade_predictions(ledger, games):
             continue
         if entry.get("graded"):
             grade_outside_picks(entry)      # a pick that arrived after the first grading pass
+            grade_acclimation(entry)
             continue
         home_score = game["home"].get("score")
         away_score = game["away"].get("score")
@@ -175,6 +205,7 @@ def grade_predictions(ledger, games):
             entry["ratingCorrect"] = (r > 0.5) == (outcome == 1)
             entry["ratingBrier"] = round((r - outcome) ** 2, 4)
         grade_outside_picks(entry)
+        grade_acclimation(entry)
         close = entry.get("closingHomeMargin")
         blend = entry.get("ratingBlendHomeMargin")
         if entry.get("ratingFlagged") and close is not None and blend is not None:
@@ -267,6 +298,22 @@ def _clv_block(entries):
     }
 
 
+def _acclimation_block(entries):
+    """Long-trip games, one side slept five or more nights longer on local time: did that side cover?"""
+    flagged = [e for e in entries if e.get("travelNightsGap") is not None and abs(e["travelNightsGap"]) >= ACCLIMATION_GAP_NIGHTS and e.get("frozen") and not e.get("late")]
+    decided = [e for e in flagged if "acclimationCovered" in e]
+    covered = sum(1 for e in decided if e["acclimationCovered"])
+    return {
+        "gapNights": ACCLIMATION_GAP_NIGHTS,
+        "games": len(flagged), "decided": len(decided), "covered": covered,
+        "pushes": sum(1 for e in flagged if e.get("acclimationPush")),
+        "coverRate": round(covered / len(decided), 4) if decided else None,
+        "list": [{"week": e["week"], "away": e["away"], "home": e["home"], "gap": e["travelNightsGap"],
+                  "restedSide": e["home"] if e["travelNightsGap"] > 0 else e["away"],
+                  "covered": e.get("acclimationCovered"), "push": e.get("acclimationPush", False)} for e in flagged],
+    }
+
+
 def summarize(ledger):
     """Season and per-week scorecard for the app."""
     entries = list(ledger.get("games", {}).values())
@@ -275,6 +322,7 @@ def summarize(ledger):
         "season": ledger.get("season"),
         "overall": _block(entries),
         "closingLineValue": _clv_block(entries),
+        "acclimation": _acclimation_block(entries),
         "pending": sum(1 for e in entries if e.get("frozen") and not e.get("graded") and not e.get("late")),
         "open": sum(1 for e in entries if not e.get("frozen")),
         "late": sum(1 for e in entries if e.get("late")),

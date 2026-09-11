@@ -784,7 +784,11 @@ function renderScorecard() {
   const clvText = clv.games
     ? `Closing line value: on ${clv.games} frozen games the closing line moved an average of ${clv.meanPoints > 0 ? "+" : ""}${clv.meanPoints} points toward the model's first-seen pick (${Math.round((clv.positiveShare || 0) * 100)}% positive); on the ${clv.disagreements} games where the model disagreed with the early line, ${clv.disagreementMeanPoints == null ? "no data" : `${clv.disagreementMeanPoints > 0 ? "+" : ""}${clv.disagreementMeanPoints} points`}.`
     : "Closing line value arrives once frozen games have both a first-seen line and a close.";
-  explainer.textContent = `Every forecast was frozen at kickoff and graded after the result, with the market-only probability scored on the same games. Ties are excluded; ${o.ties || 0} so far. ${clvText}`;
+  const acc = card.acclimation || {};
+  const accText = acc.games
+    ? ` Long-trip games where one side slept ${acc.gapNights} or more nights longer on local time: the better-rested side covered ${acc.covered} of ${acc.decided}${acc.pushes ? `, ${acc.pushes} push${acc.pushes === 1 ? "" : "es"}` : ""} (${acc.list.map(g => `${g.away}@${g.home}, ${g.restedSide} by ${Math.abs(g.gap)} nights${g.push ? ", push" : g.covered == null ? ", pending" : g.covered ? ", covered" : ", did not"}`).join("; ")}).`
+    : " No long-trip game with a five-night acclimation gap has been played yet.";
+  explainer.textContent = `Every forecast was frozen at kickoff and graded after the result, with the market-only probability scored on the same games. Ties are excluded; ${o.ties || 0} so far. ${clvText}${accText}`;
   renderWhoIsRight(o);
   rows.innerHTML = card.weeks.filter(week => week.graded).map(week => `
     <tr>

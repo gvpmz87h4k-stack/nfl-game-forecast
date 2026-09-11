@@ -180,3 +180,26 @@ def test_a_spread_pick_that_lands_on_the_number_is_a_push_and_counted_as_one():
     assert pick["winnerCorrect"] is True and pick.get("spreadPush") is True and "spreadCovered" not in pick
     src = summarize(ledger)["overall"]["outsideSources"]["cbs"]
     assert src["spreadPicks"] == 0 and src["spreadPushes"] == 1
+
+
+def test_a_long_trip_game_grades_whether_the_better_rested_side_covered():
+    ledger = {"season": 2026, "games": {}}
+    g = game("10", "2026-09-11T00:35Z", 0.59, 0.64)
+    g["marketHomeMargin"] = 3.5
+    g["travel"] = {"available": True, "nightsGap": -6.0, "restedSide": "away"}     # away side slept six more nights on local time
+    record_predictions(ledger, [g], "2026-09-10T12:00Z")
+    record_predictions(ledger, [g], "2026-09-11T01:00Z")
+    done = game("10", "2026-09-11T00:35Z", 0.59, 0.64, completed=True, home_score=7, away_score=27)
+    grade_predictions(ledger, [done])
+    entry = ledger["games"]["10"]
+    assert entry["travelNightsGap"] == -6.0 and entry["acclimationCovered"] is True
+    block = summarize(ledger)["acclimation"]
+    assert block["games"] == 1 and block["covered"] == 1 and block["list"][0]["restedSide"] == "NE"
+    # a short gap is not a long-trip game
+    g2 = game("11", "2026-09-13T17:00Z", 0.6, 0.6)
+    g2["marketHomeMargin"] = 1.0
+    g2["travel"] = {"available": True, "nightsGap": -2.0, "restedSide": "away"}
+    record_predictions(ledger, [g2], "2026-09-12T12:00Z")
+    record_predictions(ledger, [g2], "2026-09-13T18:00Z")
+    grade_predictions(ledger, [game("11", "2026-09-13T17:00Z", 0.6, 0.6, completed=True, home_score=20, away_score=10)])
+    assert "acclimationCovered" not in ledger["games"]["11"] and summarize(ledger)["acclimation"]["games"] == 1

@@ -503,8 +503,12 @@ def build_travel_profile(raw):
     home_team = raw.get("home") or {}
     away_score, away_components = travel_team_score(away_team)
     home_score, home_components = travel_team_score(home_team)
+    away_nights = float(away_team.get("localSleepCycles") or 0)
+    home_nights = float(home_team.get("localSleepCycles") or 0)
     return {
         **raw, "available": True, "applied": False, "probabilityShift": 0.0,
+        "nightsGap": home_nights - away_nights,           # home minus away nights slept on local time
+        "restedSide": "home" if home_nights > away_nights else "away" if away_nights > home_nights else None,
         "uncertaintyProbabilityShift": 0.0,
         "shared": raw.get("shared", {}),
         "sources": raw.get("sources", []),
