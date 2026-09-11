@@ -813,7 +813,7 @@ def travel_worked_out(game, config):
     margin = game.get("marketHomeMargin")
     lines = [
         f"Nights slept on local time before kickoff: {names[away]} {an:g}, {names[home]} {hn:g}. Acclimation scores {as_:g} and {hs:g}, a gap of {abs(hs - as_):g}.",
-        f"The app moves the win chance {abs(shift) * 100:.1f} percentage points toward {names[home] if shift > 0 else names[away]}: {weight:g} per score point, never more than {cap * 100:g} points. On the line that is worth about {abs(shift) / 0.0287:.1f} of a point.",
+        f"What the app did with that: it moved the win chance {abs(shift) * 100:.1f} percentage points toward {names[home] if shift > 0 else names[away]}, the gap times {weight:g}, and it can never move more than {cap * 100:g} points for travel. On the betting line that is worth about {abs(shift) / 0.0287:.1f} of a point.",
     ]
     tz = (travel.get("shared") or {}).get("timeZoneDifferenceHours")
     generous = None
@@ -821,22 +821,24 @@ def travel_worked_out(game, config):
         body = abs(((float(tz) + 12) % 24) - 12)        # 17 hours ahead reads to the body as 7 hours behind
         unadj_h, unadj_a = max(0.0, body - hn), max(0.0, body - an)
         lines.append(
-            f"Jet-lag rule of thumb, about one time zone a day: the venue is {abs(float(tz)):g} hours off, which the body treats as {body:g} zones. "
-            f"At kickoff {names[away]} had about {unadj_a:g} zone{'s' if unadj_a != 1 else ''} left to adjust and {names[home]} about {unadj_h:g}."
+            f"Jet lag, rule of thumb: the body catches up about one hour a day. This venue is {abs(float(tz)):g} hours off, which the body feels as {body:g} hours. "
+            f"So at kickoff {names[away]}'s body clock was about {unadj_a:g} hour{'s' if unadj_a != 1 else ''} off and {names[home]}'s about {unadj_h:g}."
         )
         penalty = UNTESTED_POINTS_PER_ZONE * (unadj_h - unadj_a)
         adjusted = margin - penalty
         p_home = normal_cdf(adjusted * float(config.get("probabilityCalibration", 1.1)) / 13.86)
         fav = home if adjusted > 0 else away
+        lagged = names[home] if unadj_h > unadj_a else names[away]
         lines.append(
-            f"The generous case, charging {UNTESTED_POINTS_PER_ZONE} points per unadjusted zone (a value from the schedule fit that failed its blind test): "
-            f"the line moves about {abs(penalty):.1f} points toward {names[away] if penalty > 0 else names[home]}, to {names[fav]} by {abs(adjusted):.1f}, "
-            f"a {round(max(p_home, 1 - p_home) * 100)} to {round(min(p_home, 1 - p_home) * 100)} game."
+            f"The most generous case: suppose every hour a body clock is still off costs a team {UNTESTED_POINTS_PER_ZONE} of a point on the scoreboard. "
+            f"That is the biggest value our own travel test produced, and the same test showed it does not predict results, so the app does not use it; it is here only to show the ceiling. "
+            f"It would take about {abs(penalty):.1f} points from {lagged}: the line would go from {names[home] if margin > 0 else names[away]} by {abs(margin):g} to {names[fav]} by {abs(adjusted):.1f}, "
+            f"about {round(max(p_home, 1 - p_home) * 100)} to {round(min(p_home, 1 - p_home) * 100)}."
         )
         generous = {"unadjustedZonesHome": unadj_h, "unadjustedZonesAway": unadj_a, "lineShiftPoints": round(penalty, 2), "adjustedHomeMargin": round(adjusted, 2), "homeWinProbability": round(p_home, 4)}
     if game.get("completed") and game["home"].get("score") is not None and margin is not None:
         miss = (game["home"]["score"] - game["away"]["score"]) - margin
-        lines.append(f"Final: {names[home]} {game['home']['score']}, {names[away]} {game['away']['score']}, {abs(miss):.1f} points past the closing line toward {names[home] if miss > 0 else names[away]}. Travel, even in the generous case, accounts for at most {abs(generous['lineShiftPoints']) if generous else 0:.1f} of them.")
+        lines.append(f"Final: {names[home]} {game['home']['score']}, {names[away]} {game['away']['score']}. The result landed {abs(miss):.1f} points past the closing line on {names[home] if miss > 0 else names[away]}'s side. Even the most generous travel math explains at most {abs(generous['lineShiftPoints']) if generous else 0:.1f} of those points; the rest is football.")
     return {"shiftPercentagePoints": round(shift * 100, 2), "generous": generous, "lines": lines}
 
 

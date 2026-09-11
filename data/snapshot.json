@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "currentWeek": 1,
-  "updatedAt": "2026-09-11T18:00:18.372265Z",
+  "updatedAt": "2026-09-11T18:14:03.280218Z",
   "games": [
     {
       "id": "401872656",
@@ -1607,10 +1607,10 @@
           },
           "lines": [
             "Nights slept on local time before kickoff: San Francisco 49ers 7, Los Angeles Rams 1. Acclimation scores 9.85 and 3.7, a gap of 6.15.",
-            "The app moves the win chance 1.2 percentage points toward San Francisco 49ers: 0.002 per score point, never more than 2 points. On the line that is worth about 0.4 of a point.",
-            "Jet-lag rule of thumb, about one time zone a day: the venue is 17 hours off, which the body treats as 7 zones. At kickoff San Francisco 49ers had about 0 zones left to adjust and Los Angeles Rams about 6.",
-            "The generous case, charging 0.74 points per unadjusted zone (a value from the schedule fit that failed its blind test): the line moves about 4.4 points toward San Francisco 49ers, to San Francisco 49ers by 0.9, a 53 to 47 game.",
-            "Final: Los Angeles Rams 7, San Francisco 49ers 27, 23.5 points past the closing line toward San Francisco 49ers. Travel, even in the generous case, accounts for at most 4.4 of them."
+            "What the app did with that: it moved the win chance 1.2 percentage points toward San Francisco 49ers, the gap times 0.002, and it can never move more than 2 points for travel. On the betting line that is worth about 0.4 of a point.",
+            "Jet lag, rule of thumb: the body catches up about one hour a day. This venue is 17 hours off, which the body feels as 7 hours. So at kickoff San Francisco 49ers's body clock was about 0 hours off and Los Angeles Rams's about 6.",
+            "The most generous case: suppose every hour a body clock is still off costs a team 0.74 of a point on the scoreboard. That is the biggest value our own travel test produced, and the same test showed it does not predict results, so the app does not use it; it is here only to show the ceiling. It would take about 4.4 points from Los Angeles Rams: the line would go from Los Angeles Rams by 3.5 to San Francisco 49ers by 0.9, about 53 to 47.",
+            "Final: Los Angeles Rams 7, San Francisco 49ers 27. The result landed 23.5 points past the closing line on San Francisco 49ers's side. Even the most generous travel math explains at most 4.4 of those points; the rest is football."
           ]
         }
       },
@@ -4887,12 +4887,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -4911,60 +4927,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -5024,7 +4992,7 @@
       "lineSource": "Market line",
       "marketHomeMargin": 6.0,
       "homeMargin": 6.6,
-      "homeWinProbability": 0.69,
+      "homeWinProbability": 0.6866,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Drizzle",
@@ -5035,74 +5003,21 @@
       },
       "continuity": {
         "away": {
-          "score": 90,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -5118,13 +5033,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -5151,8 +5059,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 4.34,
-          "totalRisk": 14.18
+          "interactionRisk": 0.0,
+          "totalRisk": 8.87
         },
         "home": {
           "score": 99,
@@ -5186,14 +5094,14 @@
           "interactionRisk": 0.0,
           "totalRisk": 2.0
         },
-        "probabilityShift": 0.0033,
+        "probabilityShift": 0.0,
         "applied": true
       },
       "preparation": {
         "away": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -5204,8 +5112,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -5230,7 +5138,7 @@
           ],
           "clusters": []
         },
-        "probabilityShift": 0.0,
+        "probabilityShift": -0.0002,
         "applied": true,
         "coverage": "Official roster status and explicit public practice wording only"
       },
@@ -5255,15 +5163,10 @@
       "appVsMarket": {
         "marketPct": 70.0,
         "spreadOnlyPct": 68.3,
-        "appPct": 69.0,
-        "gapPoints": -1.0,
+        "appPct": 68.7,
+        "gapPoints": -1.4,
         "leans": "ATL",
         "nudges": [
-          {
-            "label": "injury clusters",
-            "points": 0.3,
-            "toward": "PIT"
-          },
           {
             "label": "line movement",
             "points": 0.4,
@@ -12790,12 +12693,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -12814,60 +12733,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -12971,7 +12842,7 @@
       },
       "odds": {
         "detail": "ATL -1.5",
-        "total": 43.5,
+        "total": 42.5,
         "openingHomeMargin": 1.5,
         "lineMovement": 0.0,
         "book": "DraftKings",
@@ -13051,74 +12922,21 @@
           "totalRisk": 4.6
         },
         "home": {
-          "score": 91,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -13134,13 +12952,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -13167,8 +12978,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.88,
-          "totalRisk": 12.66
+          "interactionRisk": 0.0,
+          "totalRisk": 7.92
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -13195,9 +13006,9 @@
           "clusters": []
         },
         "home": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -13208,8 +13019,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -23401,12 +23212,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -23425,60 +23252,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -23543,74 +23322,21 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 90,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -23626,13 +23352,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -23659,8 +23378,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 4.34,
-          "totalRisk": 14.18
+          "interactionRisk": 0.0,
+          "totalRisk": 8.87
         },
         "home": {
           "score": 94,
@@ -23777,9 +23496,9 @@
       },
       "preparation": {
         "away": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -23790,8 +23509,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -44850,12 +44569,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -44874,60 +44609,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -44992,74 +44679,21 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 90,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -45075,13 +44709,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -45108,8 +44735,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 4.34,
-          "totalRisk": 14.18
+          "interactionRisk": 0.0,
+          "totalRisk": 8.87
         },
         "home": {
           "score": 97,
@@ -45190,9 +44817,9 @@
       },
       "preparation": {
         "away": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -45203,8 +44830,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -54566,12 +54193,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -54590,60 +54233,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -54839,74 +54434,21 @@
           "totalRisk": 2.94
         },
         "home": {
-          "score": 91,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -54922,13 +54464,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -54955,8 +54490,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.88,
-          "totalRisk": 12.66
+          "interactionRisk": 0.0,
+          "totalRisk": 7.92
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -55021,9 +54556,9 @@
           ]
         },
         "home": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -55034,8 +54569,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -57541,12 +57076,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -57565,60 +57116,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -57870,74 +57373,21 @@
           "totalRisk": 4.66
         },
         "home": {
-          "score": 91,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -57953,13 +57403,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -57986,8 +57429,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.88,
-          "totalRisk": 12.66
+          "interactionRisk": 0.0,
+          "totalRisk": 7.92
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -58026,9 +57469,9 @@
           "clusters": []
         },
         "home": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -58039,8 +57482,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -67461,12 +66904,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -67485,60 +66944,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -67752,74 +67163,21 @@
           "totalRisk": 5.24
         },
         "home": {
-          "score": 91,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -67835,13 +67193,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -67868,8 +67219,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.88,
-          "totalRisk": 12.66
+          "interactionRisk": 0.0,
+          "totalRisk": 7.92
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -67984,9 +67335,9 @@
           ]
         },
         "home": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -67997,8 +67348,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -80559,12 +79910,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -80583,60 +79950,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -80701,74 +80020,21 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 90,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -80784,13 +80050,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -80817,8 +80076,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 4.34,
-          "totalRisk": 14.18
+          "interactionRisk": 0.0,
+          "totalRisk": 8.87
         },
         "home": {
           "score": 98,
@@ -80885,9 +80144,9 @@
       },
       "preparation": {
         "away": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -80898,8 +80157,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -86265,12 +85524,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -86289,60 +85564,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -86481,74 +85708,21 @@
           "totalRisk": 1.93
         },
         "home": {
-          "score": 90,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -86564,13 +85738,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -86597,8 +85764,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 4.19,
-          "totalRisk": 13.67
+          "interactionRisk": 0.0,
+          "totalRisk": 8.55
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -86625,9 +85792,9 @@
           "clusters": []
         },
         "home": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -86638,8 +85805,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -97539,12 +96706,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -97563,60 +96746,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -97763,74 +96898,21 @@
           "totalRisk": 2.19
         },
         "home": {
-          "score": 91,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -97846,13 +96928,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -97879,8 +96954,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.88,
-          "totalRisk": 12.66
+          "interactionRisk": 0.0,
+          "totalRisk": 7.92
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -97907,9 +96982,9 @@
           "clusters": []
         },
         "home": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -97920,8 +96995,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -120627,12 +119702,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -120651,60 +119742,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -120769,74 +119812,21 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 90,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -120852,13 +119842,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -120885,8 +119868,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 4.34,
-          "totalRisk": 14.18
+          "interactionRisk": 0.0,
+          "totalRisk": 8.87
         },
         "home": {
           "score": 99,
@@ -120967,9 +119950,9 @@
       },
       "preparation": {
         "away": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -120980,8 +119963,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -126457,12 +125440,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -126481,60 +125480,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -126740,74 +125691,21 @@
           "totalRisk": 4.29
         },
         "home": {
-          "score": 91,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -126823,13 +125721,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -126856,8 +125747,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.88,
-          "totalRisk": 12.66
+          "interactionRisk": 0.0,
+          "totalRisk": 7.92
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -126896,9 +125787,9 @@
           "clusters": []
         },
         "home": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -126909,8 +125800,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -136425,12 +135316,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -136449,60 +135356,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -136567,74 +135426,21 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 90,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -136650,13 +135456,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -136683,8 +135482,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 4.34,
-          "totalRisk": 14.18
+          "interactionRisk": 0.0,
+          "totalRisk": 8.87
         },
         "home": {
           "score": 97,
@@ -136758,9 +135557,9 @@
       },
       "preparation": {
         "away": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -136771,8 +135570,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -151662,12 +150461,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -151686,60 +150501,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -151804,74 +150571,21 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 90,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -151887,13 +150601,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -151920,8 +150627,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 4.34,
-          "totalRisk": 14.18
+          "interactionRisk": 0.0,
+          "totalRisk": 8.87
         },
         "home": {
           "score": 98,
@@ -152000,9 +150707,9 @@
       },
       "preparation": {
         "away": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -152013,8 +150720,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -160165,12 +158872,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -160189,60 +158912,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -160441,74 +159116,21 @@
           "totalRisk": 2.63
         },
         "home": {
-          "score": 91,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -160524,13 +159146,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -160557,8 +159172,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.88,
-          "totalRisk": 12.66
+          "interactionRisk": 0.0,
+          "totalRisk": 7.92
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -160624,9 +159239,9 @@
           ]
         },
         "home": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -160637,8 +159252,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -171856,12 +170471,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -171880,60 +170511,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -172162,74 +170745,21 @@
           "totalRisk": 4.31
         },
         "home": {
-          "score": 91,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -172245,13 +170775,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -172278,8 +170801,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.88,
-          "totalRisk": 12.66
+          "interactionRisk": 0.0,
+          "totalRisk": 7.92
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -172293,9 +170816,9 @@
           "clusters": []
         },
         "home": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -172306,8 +170829,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
@@ -188690,12 +187213,28 @@
             "updated": "2026-08-31T22:48Z"
           },
           {
+            "player": "Billy Bowman Jr.",
+            "position": "CB",
+            "status": "Out",
+            "detail": "Achilles",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
+            "player": "Cameron Williams",
+            "position": "OL",
+            "status": "Out",
+            "detail": "Ankle",
+            "note": "out",
+            "updated": "2026-09-11T17:58Z"
+          },
+          {
             "player": "Michael Penix Jr.",
             "position": "QB",
             "status": "Out",
             "detail": "Knee - ACL",
-            "note": "Falcons head coach Kevin Stefanski said that Penix (knee) will be inactive for Sunday's season opener in Pittsburgh, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-07T15:00Z"
+            "note": "Penix (knee), who won't play Sunday in Pittsburgh, was seen throwing to practice-squad players during the open portion of Friday's practice, Daniel Flick of The Atlanta Journal-Constitution reports.",
+            "updated": "2026-09-11T17:55Z"
           },
           {
             "player": "Storm Norton",
@@ -188714,60 +187253,12 @@
             "updated": "2026-09-11T17:36Z"
           },
           {
-            "player": "Billy Bowman Jr.",
-            "position": "CB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "Bowman (Achilles) was a limited participant in Wednesday's practice, Will McFadden of the Falcons' official site reports.",
-            "updated": "2026-09-10T00:05Z"
-          },
-          {
-            "player": "Brandon Dorlus",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "questionable",
-            "updated": "2026-09-09T23:43Z"
-          },
-          {
-            "player": "Da'Shawn Hand",
-            "position": "DT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:52Z"
-          },
-          {
-            "player": "Jawaan Taylor",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Kendal Daniels",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Achilles",
-            "note": "questionable",
-            "updated": "2026-09-10T19:51Z"
-          },
-          {
             "player": "Za'Darius Smith",
             "position": "DE",
             "status": "Questionable",
             "detail": "Shoulder",
             "note": "questionable",
             "updated": "2026-09-09T23:44Z"
-          },
-          {
-            "player": "Zachariah Branch",
-            "position": "WR",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Branch (hamstring) remained limited at practice Thursday, Tori McElhaney of the Falcons' official site reports.",
-            "updated": "2026-09-10T19:59Z"
           },
           {
             "player": "Beaux Collins",
@@ -188832,74 +187323,21 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 90,
+          "score": 94,
           "level": "Stable",
-          "clusters": [
-            "Protection unit: 2 linked flags",
-            "Coverage unit: 2 linked flags",
-            "Defensive front: 3 linked flags"
-          ],
-          "clusterMembers": {
-            "Protection unit": [
-              {
-                "player": "Tua Tagovailoa",
-                "position": "QB",
-                "status": "Out",
-                "role": "starter",
-                "weight": 1.0
-              },
-              {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Coverage unit": [
-              {
-                "player": "Billy Bowman Jr.",
-                "position": "CB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ],
-            "Defensive front": [
-              {
-                "player": "Brandon Dorlus",
-                "position": "DT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Kendal Daniels",
-                "position": "LB",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
-                "player": "Za'Darius Smith",
-                "position": "DE",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              }
-            ]
-          },
+          "clusters": [],
+          "clusterMembers": {},
           "discounted": [
             {
               "player": "Anterio Thompson",
               "position": "DT",
+              "status": "Out",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
+              "player": "Cameron Williams",
+              "position": "OL",
               "status": "Out",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -188915,13 +187353,6 @@
               "player": "Storm Norton",
               "position": "OT",
               "status": "Out",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Da'Shawn Hand",
-              "position": "DT",
-              "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
             },
@@ -188948,8 +187379,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 4.34,
-          "totalRisk": 14.18
+          "interactionRisk": 0.0,
+          "totalRisk": 8.87
         },
         "home": {
           "score": 97,
@@ -189009,9 +187440,9 @@
       },
       "preparation": {
         "away": {
-          "score": 96,
+          "score": 98,
           "level": "Stable",
-          "rawRisk": 0.62,
+          "rawRisk": 0.41,
           "items": [
             {
               "player": "Billy Bowman Jr.",
@@ -189022,8 +187453,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 1,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.62
+              "decay": 0.65,
+              "risk": 0.41
             }
           ],
           "clusters": []
