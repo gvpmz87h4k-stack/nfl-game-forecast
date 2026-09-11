@@ -15,6 +15,7 @@ import html
 import json
 import re
 import urllib.request
+from datetime import datetime, timezone
 from collections import Counter
 from pathlib import Path
 
@@ -109,15 +110,19 @@ def build_entries(week, tables):
     return {key: src for key, src in sources.items() if src["picks"] or key == "cbs"}
 
 
-def merge(existing, week, sources):
-    """Replace this week's CBS entries; keep other weeks and any non-CBS sources untouched."""
+def merge(existing, week, sources, started=None):
+    """Replace this week's CBS entries for games that have not kicked off; keep other weeks,
+    games already under way (CBS trims those from its page after the fact), and any non-CBS
+    sources untouched. `started` is a set of (away, home) for games that have kicked off."""
+    started = started or set()
     out = dict(existing)
     out.setdefault("sources", {})
     for key, src in sources.items():
         current = out["sources"].get(key, {"label": src["label"], "picks": []})
-        kept = [p for p in current.get("picks", []) if p.get("week") != week]
+        kept = [p for p in current.get("picks", []) if p.get("week") != week or (p.get("away"), p.get("home")) in started]
+        fresh = [p for p in src["picks"] if (p.get("away"), p.get("home")) not in started]
         current["label"] = src["label"]
-        current["picks"] = kept + src["picks"]
+        current["picks"] = kept + fresh
         out["sources"][key] = current
     return out
 
@@ -127,9 +132,12 @@ def main():
     parser.add_argument("--week", type=int, help="Defaults to the snapshot's current week")
     args = parser.parse_args()
     week = args.week
+    snapshot = json.loads(SNAPSHOT.read_text()) if SNAPSHOT.exists() else {}
     if week is None:
-        with SNAPSHOT.open() as handle:
-            week = json.load(handle)["currentWeek"]
+        week = snapshot["currentWeek"]
+    now = datetime.now(timezone.utc)
+    started = {(g["away"]["abbreviation"], g["home"]["abbreviation"]) for g in snapshot.get("games", [])
+               if g.get("week") == week and datetime.fromisoformat(g["kickoff"].replace("Z", "+00:00")) <= now}
     tables = {}
     for kind, url in PAGES.items():
         try:
@@ -144,7 +152,7 @@ def main():
         return
     sources = build_entries(week, tables)
     existing = json.loads(PICKS.read_text()) if PICKS.exists() else {"sources": {}}
-    merged = merge(existing, week, sources)
+    merged = merge(existing, week, sources, started)
     PICKS.write_text(json.dumps(merged, indent=2) + "\n")
     cons = sources["cbs"]["picks"]
     print(f"CBS picks: week {week}, {games} games, {len(tables['winner'][0])} experts, consensus on {len(cons)} games "

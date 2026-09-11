@@ -90,6 +90,7 @@ def record_predictions(ledger, games, now_iso):
             "ratingBlendHomeMargin": (game.get("ratingModel") or {}).get("blendHomeMargin"),
             "ratingFlagged": bool((game.get("ratingModel") or {}).get("flagged")),
             "outsidePicks": dict(game.get("outsidePicks") or {}),
+            "odds": {k: (game.get("odds") or {}).get(k) for k in ("detail", "total", "openingHomeMargin", "spreadPrice", "moneyline", "book")},
         }
         history = list(entry.get("history", [])) if entry else []
         point = {

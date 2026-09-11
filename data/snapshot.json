@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "currentWeek": 1,
-  "updatedAt": "2026-09-11T16:30:04.746333Z",
+  "updatedAt": "2026-09-11T16:34:36.972450Z",
   "games": [
     {
       "id": "401872656",
@@ -191,14 +191,14 @@
           "homeOpen": null,
           "awayOpen": null
         },
-        "moneylineHomeProbability": null,
+        "moneylineHomeProbability": 0.5996,
         "moneylineOpenHomeProbability": null
       },
-      "lineSource": "Preseason team-strength fallback",
-      "marketHomeMargin": 2.85,
-      "homeMargin": 3.135,
-      "homeWinProbability": 0.5895,
-      "probabilitySource": "Calibrated preseason team-strength fallback + rolling team state + rest",
+      "lineSource": "Market line",
+      "marketHomeMargin": 3.0,
+      "homeMargin": 3.3,
+      "homeWinProbability": 0.5941,
+      "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
         "away": {
@@ -562,6 +562,7 @@
         "available": false,
         "applied": false
       },
+      "lineNote": "closing line, kept from kickoff",
       "travel": {
         "available": false,
         "applied": false,
@@ -569,10 +570,10 @@
         "uncertaintyMultiplier": 1.0,
         "uncertaintyProbabilityShift": 0.0
       },
-      "marketSpreadHomeWinProbability": 0.5895,
-      "marketHomeWinProbability": 0.5895,
-      "marketProbabilitySource": "spread converted",
-      "effectiveMargin": 3.135,
+      "marketSpreadHomeWinProbability": 0.5941,
+      "marketHomeWinProbability": 0.5996,
+      "marketProbabilitySource": "moneyline, fee removed",
+      "effectiveMargin": 3.3,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": 0.0,
@@ -784,47 +785,78 @@
           "lastSeason": "D.Maye"
         }
       },
-      "ratingModel": null,
+      "ratingModel": {
+        "modelHomeMargin": 1.83,
+        "blendHomeMargin": 3.33,
+        "ratingHomeWinProbability": 0.5948,
+        "disagreementPoints": 0.33,
+        "flagged": false,
+        "leans": "SEA",
+        "homeStarter": "S.Darnold",
+        "awayStarter": "D.Maye",
+        "features": {
+          "off": -0.0211,
+          "def": 0.0347,
+          "qb": -0.0497
+        },
+        "asOf": {
+          "season": 2026,
+          "week": 2
+        },
+        "blindTest": {
+          "season": 2025,
+          "marketAccuracy": 0.6531,
+          "blendAccuracy": 0.6568,
+          "marketBrier": 0.2124,
+          "blendBrier": 0.2145
+        }
+      },
       "outsidePicks": {
         "narcisa": {
           "label": "Narcisa",
+          "spread": null,
           "winner": "SEA",
-          "spread": null
+          "winnerCorrect": true
         },
         "cbs": {
           "label": "CBS Sports experts, consensus",
-          "winner": "NE",
+          "winner": "SEA",
           "spread": "SEA"
         },
         "cbs-prisco": {
           "label": "CBS Sports, Pete Prisco",
-          "winner": null,
+          "winner": "SEA",
           "spread": "SEA"
         },
         "cbs-dubin": {
           "label": "CBS Sports, Jared Dubin",
-          "winner": null,
+          "winner": "SEA",
           "spread": "SEA"
         },
         "cbs-wilson": {
           "label": "CBS Sports, Ryan Wilson",
-          "winner": null,
+          "winner": "SEA",
           "spread": "SEA"
         },
         "cbs-breech": {
           "label": "CBS Sports, John Breech",
-          "winner": null,
+          "winner": "SEA",
           "spread": "SEA"
         },
         "cbs-sullivan": {
           "label": "CBS Sports, Tyler Sullivan",
-          "winner": null,
+          "winner": "SEA",
           "spread": "SEA"
         },
         "cbs-richard": {
           "label": "CBS Sports, Dave Richard",
           "winner": "NE",
-          "spread": null
+          "spread": "NE"
+        },
+        "cbs-eisenberg": {
+          "label": "CBS Sports, Jamey Eisenberg",
+          "winner": "SEA",
+          "spread": "NE"
         }
       },
       "situation": {
@@ -845,10 +877,11 @@
       },
       "readout": [
         "Seattle Seahawks is expected to win, about 6 times in 10.",
-        "No betting line yet; the number comes from team strength alone.",
+        "The betting market gives New England Patriots a 3-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Sam Darnold is listed Doubtful on the injury report.",
-        "1 of the 1 CBS writers who have picked take New England Patriots, the underdog.",
+        "Our play-by-play ratings agree with the market.",
+        "6 of the 7 CBS writers who have picked take Seattle Seahawks, the favorite.",
         "Narcisa took Seattle Seahawks."
       ]
     },
@@ -1056,14 +1089,14 @@
           "homeOpen": null,
           "awayOpen": null
         },
-        "moneylineHomeProbability": null,
+        "moneylineHomeProbability": 0.6575,
         "moneylineOpenHomeProbability": null
       },
-      "lineSource": "Preseason team-strength fallback",
-      "marketHomeMargin": 2.03,
-      "homeMargin": 2.233,
-      "homeWinProbability": 0.564,
-      "probabilitySource": "Calibrated preseason team-strength fallback + rolling team state + rest",
+      "lineSource": "Market line",
+      "marketHomeMargin": 3.5,
+      "homeMargin": 3.85,
+      "homeWinProbability": 0.6094,
+      "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": {
         "summary": "Cloudy",
         "temperature": "43-59 F",
@@ -1437,6 +1470,7 @@
         "available": false,
         "applied": false
       },
+      "lineNote": "closing line, kept from kickoff",
       "travel": {
         "asOf": "2026-09-06",
         "status": "Verified and scheduled public logistics",
@@ -1535,10 +1569,10 @@
         "probabilityShift": 0.0,
         "uncertaintyProbabilityShift": 0.0
       },
-      "marketSpreadHomeWinProbability": 0.564,
-      "marketHomeWinProbability": 0.564,
-      "marketProbabilitySource": "spread converted",
-      "effectiveMargin": 2.233,
+      "marketSpreadHomeWinProbability": 0.6094,
+      "marketHomeWinProbability": 0.6575,
+      "marketProbabilitySource": "moneyline, fee removed",
+      "effectiveMargin": 3.85,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": 0.0,
@@ -1758,12 +1792,38 @@
           "lastSeason": "B.Purdy"
         }
       },
-      "ratingModel": null,
+      "ratingModel": {
+        "modelHomeMargin": 1.2,
+        "blendHomeMargin": 3.63,
+        "ratingHomeWinProbability": 0.6032,
+        "disagreementPoints": 0.13,
+        "flagged": false,
+        "leans": "LAR",
+        "homeStarter": "M.Stafford",
+        "awayStarter": "B.Purdy",
+        "features": {
+          "off": -0.0131,
+          "def": 0.0088,
+          "qb": -0.0074
+        },
+        "asOf": {
+          "season": 2026,
+          "week": 2
+        },
+        "blindTest": {
+          "season": 2025,
+          "marketAccuracy": 0.6531,
+          "blendAccuracy": 0.6568,
+          "marketBrier": 0.2124,
+          "blendBrier": 0.2145
+        }
+      },
       "outsidePicks": {
         "narcisa": {
           "label": "Narcisa",
+          "spread": null,
           "winner": "SF",
-          "spread": null
+          "winnerCorrect": true
         },
         "cbs": {
           "label": "CBS Sports experts, consensus",
@@ -1773,7 +1833,7 @@
         "cbs-prisco": {
           "label": "CBS Sports, Pete Prisco",
           "winner": "LAR",
-          "spread": null
+          "spread": "SF"
         },
         "cbs-dubin": {
           "label": "CBS Sports, Jared Dubin",
@@ -1789,6 +1849,16 @@
           "label": "CBS Sports, John Breech",
           "winner": "LAR",
           "spread": "LAR"
+        },
+        "cbs-sullivan": {
+          "label": "CBS Sports, Tyler Sullivan",
+          "winner": "SF",
+          "spread": "SF"
+        },
+        "cbs-richard": {
+          "label": "CBS Sports, Dave Richard",
+          "winner": "SF",
+          "spread": "SF"
         },
         "cbs-eisenberg": {
           "label": "CBS Sports, Jamey Eisenberg",
@@ -1814,9 +1884,10 @@
       },
       "readout": [
         "Los Angeles Rams is expected to win, about 6 times in 10.",
-        "No betting line yet; the number comes from team strength alone.",
+        "The betting market gives San Francisco 49ers a 3.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
-        "5 of the 5 CBS writers who have picked take Los Angeles Rams, the favorite.",
+        "Our play-by-play ratings agree with the market.",
+        "5 of the 7 CBS writers who have picked take Los Angeles Rams, the favorite.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested.",
         "Narcisa took San Francisco 49ers."
       ]
@@ -4744,8 +4815,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -6136,8 +6207,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -6319,7 +6390,7 @@
       "lineSource": "Market line",
       "marketHomeMargin": 8.5,
       "homeMargin": 9.35,
-      "homeWinProbability": 0.7505,
+      "homeWinProbability": 0.7506,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Drizzle",
@@ -6468,9 +6539,9 @@
           "clusters": []
         },
         "home": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -6505,15 +6576,15 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
             "Protection unit: 2 preparation flags"
           ]
         },
-        "probabilityShift": -0.0014,
+        "probabilityShift": -0.0013,
         "applied": true,
         "coverage": "Official roster status and explicit public practice wording only"
       },
@@ -12501,8 +12572,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -14658,8 +14729,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 4.5,
-      "homeMargin": 5.248,
-      "homeWinProbability": 0.6475,
+      "homeMargin": 5.25,
+      "homeWinProbability": 0.6476,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -14921,9 +14992,9 @@
       "marketSpreadHomeWinProbability": 0.6395,
       "marketHomeWinProbability": 0.6447,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 5.248,
+      "effectiveMargin": 5.25,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": 0.3,
         "spreadScale": 1.1,
         "homeRestDays": 10,
@@ -18063,8 +18134,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -18285,9 +18356,9 @@
       },
       "preparation": {
         "away": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -18322,8 +18393,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -20183,8 +20254,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -10.0,
-      "homeMargin": -12.952,
-      "homeWinProbability": 0.175,
+      "homeMargin": -12.95,
+      "homeWinProbability": 0.1751,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -20489,9 +20560,9 @@
       "marketSpreadHomeWinProbability": 0.1807,
       "marketHomeWinProbability": 0.1881,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -12.952,
+      "effectiveMargin": -12.95,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": -0.3,
         "spreadScale": 1.265,
         "homeRestDays": 7,
@@ -20937,8 +21008,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 10.5,
-      "homeMargin": 13.813,
-      "homeWinProbability": 0.8405,
+      "homeMargin": 13.835,
+      "homeWinProbability": 0.8409,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -21222,9 +21293,9 @@
       "marketSpreadHomeWinProbability": 0.8311,
       "marketHomeWinProbability": 0.8371,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 13.813,
+      "effectiveMargin": 13.835,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": 0.2,
         "spreadScale": 1.265,
         "homeRestDays": 9,
@@ -22248,8 +22319,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 9.5,
-      "homeMargin": 11.987,
-      "homeWinProbability": 0.8064,
+      "homeMargin": 11.965,
+      "homeWinProbability": 0.806,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -22499,9 +22570,9 @@
       "marketSpreadHomeWinProbability": 0.807,
       "marketHomeWinProbability": 0.7958,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 11.987,
+      "effectiveMargin": 11.965,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": 0.3,
         "spreadScale": 1.265,
         "homeRestDays": 10,
@@ -22955,8 +23026,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -28170,8 +28241,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -3.5,
-      "homeMargin": -3.852,
-      "homeWinProbability": 0.3905,
+      "homeMargin": -3.85,
+      "homeWinProbability": 0.3906,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -28484,9 +28555,9 @@
       "marketSpreadHomeWinProbability": 0.3906,
       "marketHomeWinProbability": 0.3775,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -3.852,
+      "effectiveMargin": -3.85,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 6,
@@ -28772,8 +28843,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -28954,8 +29025,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 1.5,
-      "homeMargin": 1.552,
-      "homeWinProbability": 0.5446,
+      "homeMargin": 1.55,
+      "homeWinProbability": 0.5445,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -29205,9 +29276,9 @@
           ]
         },
         "home": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -29242,8 +29313,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -29271,7 +29342,7 @@
       "marketSpreadHomeWinProbability": 0.5474,
       "marketHomeWinProbability": 0.5174,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 1.552,
+      "effectiveMargin": 1.55,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": -0.1,
@@ -29732,8 +29803,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 11.5,
-      "homeMargin": 14.878,
-      "homeWinProbability": 0.8585,
+      "homeMargin": 14.9,
+      "homeWinProbability": 0.8588,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -30048,9 +30119,9 @@
       "marketSpreadHomeWinProbability": 0.853,
       "marketHomeWinProbability": 0.8316,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 14.878,
+      "effectiveMargin": 14.9,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": 0.0,
         "spreadScale": 1.265,
         "homeRestDays": 6,
@@ -32508,8 +32579,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -3.0,
-      "homeMargin": -2.87,
-      "homeWinProbability": 0.418,
+      "homeMargin": -2.848,
+      "homeWinProbability": 0.4186,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -32793,9 +32864,9 @@
       "marketSpreadHomeWinProbability": 0.4059,
       "marketHomeWinProbability": 0.417,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -2.87,
+      "effectiveMargin": -2.848,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": 0.1,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -35192,8 +35263,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 3.0,
-      "homeMargin": 3.302,
-      "homeWinProbability": 0.5942,
+      "homeMargin": 3.3,
+      "homeWinProbability": 0.5941,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -35483,7 +35554,7 @@
       "marketSpreadHomeWinProbability": 0.5941,
       "marketHomeWinProbability": 0.5934,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 3.302,
+      "effectiveMargin": 3.3,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": 0.0,
@@ -36548,8 +36619,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -36742,9 +36813,9 @@
       },
       "preparation": {
         "away": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -36779,8 +36850,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -37883,8 +37954,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -1.5,
-      "homeMargin": -1.42,
-      "homeWinProbability": 0.4592,
+      "homeMargin": -1.398,
+      "homeWinProbability": 0.4598,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -38154,9 +38225,9 @@
       "marketSpreadHomeWinProbability": 0.4526,
       "marketHomeWinProbability": 0.4739,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -1.42,
+      "effectiveMargin": -1.398,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": -0.1,
         "spreadScale": 1.1,
         "homeRestDays": 5,
@@ -41984,8 +42055,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 2.5,
-      "homeMargin": 3.18,
-      "homeWinProbability": 0.5907,
+      "homeMargin": 3.203,
+      "homeWinProbability": 0.5914,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -42269,9 +42340,9 @@
       "marketSpreadHomeWinProbability": 0.5786,
       "marketHomeWinProbability": 0.5635,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 3.18,
+      "effectiveMargin": 3.203,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": 0.1,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -42722,8 +42793,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 3.0,
-      "homeMargin": 3.302,
-      "homeWinProbability": 0.5942,
+      "homeMargin": 3.3,
+      "homeWinProbability": 0.5941,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -43028,7 +43099,7 @@
       "marketSpreadHomeWinProbability": 0.5941,
       "marketHomeWinProbability": 0.6092,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 3.302,
+      "effectiveMargin": 3.3,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": 0.0,
@@ -44118,8 +44189,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -45421,8 +45492,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -45707,9 +45778,9 @@
           "clusters": []
         },
         "home": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -45744,8 +45815,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -47460,7 +47531,7 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 8.5,
-      "homeMargin": 9.448,
+      "homeMargin": 9.45,
       "homeWinProbability": 0.7523,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
@@ -47751,9 +47822,9 @@
       "marketSpreadHomeWinProbability": 0.75,
       "marketHomeWinProbability": 0.7659,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 9.448,
+      "effectiveMargin": 9.45,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": 0.1,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -52957,8 +53028,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 3.5,
-      "homeMargin": 3.522,
-      "homeWinProbability": 0.6003,
+      "homeMargin": 3.498,
+      "homeWinProbability": 0.5996,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -53327,9 +53398,9 @@
       "marketSpreadHomeWinProbability": 0.6094,
       "marketHomeWinProbability": 0.6447,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 3.522,
+      "effectiveMargin": 3.498,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -53682,8 +53753,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -54582,8 +54653,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 3.0,
-      "homeMargin": 2.97,
-      "homeWinProbability": 0.5848,
+      "homeMargin": 2.948,
+      "homeWinProbability": 0.5842,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -54867,9 +54938,9 @@
       "marketSpreadHomeWinProbability": 0.5941,
       "marketHomeWinProbability": 0.6038,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 2.97,
+      "effectiveMargin": 2.948,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 8,
@@ -55293,7 +55364,7 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -1.5,
-      "homeMargin": -1.652,
+      "homeMargin": -1.65,
       "homeWinProbability": 0.4526,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
@@ -55568,9 +55639,9 @@
       "marketSpreadHomeWinProbability": 0.4526,
       "marketHomeWinProbability": 0.4573,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -1.652,
+      "effectiveMargin": -1.65,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 4,
@@ -55854,8 +55925,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -56194,9 +56265,9 @@
           "clusters": []
         },
         "home": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -56231,8 +56302,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -56607,8 +56678,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -58876,7 +58947,7 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 9.5,
-      "homeMargin": 12.015,
+      "homeMargin": 12.018,
       "homeWinProbability": 0.807,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
@@ -59181,9 +59252,9 @@
       "marketSpreadHomeWinProbability": 0.807,
       "marketHomeWinProbability": 0.7819,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 12.015,
+      "effectiveMargin": 12.018,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": 0.0,
         "spreadScale": 1.265,
         "homeRestDays": 7,
@@ -61467,8 +61538,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 13.5,
-      "homeMargin": 16.647,
-      "homeWinProbability": 0.8851,
+      "homeMargin": 16.625,
+      "homeWinProbability": 0.8848,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -61783,9 +61854,9 @@
       "marketSpreadHomeWinProbability": 0.8911,
       "marketHomeWinProbability": 0.8465,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 16.647,
+      "effectiveMargin": 16.625,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": -0.1,
         "spreadScale": 1.265,
         "homeRestDays": 5,
@@ -64294,8 +64365,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 5.5,
-      "homeMargin": 6.38,
-      "homeWinProbability": 0.6774,
+      "homeMargin": 6.403,
+      "homeWinProbability": 0.6779,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -64618,9 +64689,9 @@
       "marketSpreadHomeWinProbability": 0.6688,
       "marketHomeWinProbability": 0.6854,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 6.38,
+      "effectiveMargin": 6.403,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 8,
@@ -65121,7 +65192,7 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 1.5,
-      "homeMargin": 1.652,
+      "homeMargin": 1.65,
       "homeWinProbability": 0.5474,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
@@ -65445,7 +65516,7 @@
       "marketSpreadHomeWinProbability": 0.5474,
       "marketHomeWinProbability": 0.5261,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 1.652,
+      "effectiveMargin": 1.65,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": 0.0,
@@ -66390,8 +66461,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -66548,8 +66619,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -4.5,
-      "homeMargin": -5.08,
-      "homeWinProbability": 0.357,
+      "homeMargin": -5.103,
+      "homeWinProbability": 0.3564,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -66893,9 +66964,9 @@
       "marketSpreadHomeWinProbability": 0.3605,
       "marketHomeWinProbability": 0.331,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -5.08,
+      "effectiveMargin": -5.103,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": 0.2,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -72673,8 +72744,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -7.5,
-      "homeMargin": -7.92,
-      "homeWinProbability": 0.2839,
+      "homeMargin": -7.897,
+      "homeWinProbability": 0.2844,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -72958,9 +73029,9 @@
       "marketSpreadHomeWinProbability": 0.2758,
       "marketHomeWinProbability": 0.2559,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -7.92,
+      "effectiveMargin": -7.897,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -73377,7 +73448,7 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 3.0,
-      "homeMargin": 3.602,
+      "homeMargin": 3.6,
       "homeWinProbability": 0.6025,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
@@ -73624,7 +73695,7 @@
       "marketSpreadHomeWinProbability": 0.5941,
       "marketHomeWinProbability": 0.6038,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 3.602,
+      "effectiveMargin": 3.6,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": 0.3,
@@ -79288,8 +79359,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -79943,8 +80014,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -80256,9 +80327,9 @@
           "clusters": []
         },
         "home": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -80293,8 +80364,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -80789,8 +80860,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 4.5,
-      "homeMargin": 3.92,
-      "homeWinProbability": 0.6113,
+      "homeMargin": 3.897,
+      "homeWinProbability": 0.6107,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -81105,9 +81176,9 @@
       "marketSpreadHomeWinProbability": 0.6395,
       "marketHomeWinProbability": 0.6369,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 3.92,
+      "effectiveMargin": 3.897,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": -0.7,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -82131,8 +82202,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -7.0,
-      "homeMargin": -7.898,
-      "homeWinProbability": 0.2844,
+      "homeMargin": -7.9,
+      "homeWinProbability": 0.2843,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -82422,7 +82493,7 @@
       "marketSpreadHomeWinProbability": 0.2893,
       "marketHomeWinProbability": 0.2522,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -7.898,
+      "effectiveMargin": -7.9,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": -0.2,
@@ -83545,7 +83616,7 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 4.5,
-      "homeMargin": 4.652,
+      "homeMargin": 4.65,
       "homeWinProbability": 0.6314,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
@@ -83853,7 +83924,7 @@
       "marketSpreadHomeWinProbability": 0.6395,
       "marketHomeWinProbability": 0.6636,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 4.652,
+      "effectiveMargin": 4.65,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": -0.3,
@@ -84211,8 +84282,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -84438,9 +84509,9 @@
       },
       "preparation": {
         "away": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -84475,8 +84546,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -84902,8 +84973,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -88829,8 +88900,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -5.5,
-      "homeMargin": -5.72,
-      "homeWinProbability": 0.3399,
+      "homeMargin": -5.698,
+      "homeWinProbability": 0.3405,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -89153,9 +89224,9 @@
       "marketSpreadHomeWinProbability": 0.3312,
       "marketHomeWinProbability": 0.3364,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -5.72,
+      "effectiveMargin": -5.698,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 6,
@@ -90934,8 +91005,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 8.5,
-      "homeMargin": 10.38,
-      "homeWinProbability": 0.7731,
+      "homeMargin": 10.402,
+      "homeWinProbability": 0.7735,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -91219,9 +91290,9 @@
       "marketSpreadHomeWinProbability": 0.75,
       "marketHomeWinProbability": 0.7768,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 10.38,
+      "effectiveMargin": 10.402,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": 0.7,
         "spreadScale": 1.1,
         "homeRestDays": 14,
@@ -91736,8 +91807,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 1.5,
-      "homeMargin": 1.448,
-      "homeWinProbability": 0.5416,
+      "homeMargin": 1.45,
+      "homeWinProbability": 0.5417,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -92129,9 +92200,9 @@
       "marketSpreadHomeWinProbability": 0.5474,
       "marketHomeWinProbability": 0.5325,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 1.448,
+      "effectiveMargin": 1.45,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": -0.2,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -92579,8 +92650,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 13.5,
-      "homeMargin": 16.88,
-      "homeWinProbability": 0.8884,
+      "homeMargin": 16.878,
+      "homeWinProbability": 0.8883,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -92885,7 +92956,7 @@
       "marketSpreadHomeWinProbability": 0.8911,
       "marketHomeWinProbability": 0.8525,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 16.88,
+      "effectiveMargin": 16.878,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": -0.2,
@@ -95356,7 +95427,7 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 1.5,
-      "homeMargin": 1.652,
+      "homeMargin": 1.65,
       "homeWinProbability": 0.5474,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
@@ -95666,7 +95737,7 @@
       "marketSpreadHomeWinProbability": 0.5474,
       "marketHomeWinProbability": 0.5325,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 1.652,
+      "effectiveMargin": 1.65,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": 0.0,
@@ -96013,8 +96084,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -98205,8 +98276,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -98434,9 +98505,9 @@
       },
       "preparation": {
         "away": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -98471,8 +98542,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -100889,7 +100960,7 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -7.0,
-      "homeMargin": -7.602,
+      "homeMargin": -7.6,
       "homeWinProbability": 0.2917,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
@@ -101164,9 +101235,9 @@
       "marketSpreadHomeWinProbability": 0.2893,
       "marketHomeWinProbability": 0.2665,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -7.602,
+      "effectiveMargin": -7.6,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": 0.1,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -101640,8 +101711,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -10.5,
-      "homeMargin": -13.052,
-      "homeWinProbability": 0.1732,
+      "homeMargin": -13.03,
+      "homeWinProbability": 0.1736,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -101956,9 +102027,9 @@
       "marketSpreadHomeWinProbability": 0.1689,
       "marketHomeWinProbability": 0.2086,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -13.052,
+      "effectiveMargin": -13.03,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": -0.1,
         "spreadScale": 1.265,
         "homeRestDays": 6,
@@ -102411,8 +102482,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 1.5,
-      "homeMargin": 1.32,
-      "homeWinProbability": 0.5379,
+      "homeMargin": 1.298,
+      "homeWinProbability": 0.5373,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -102703,9 +102774,9 @@
       "marketSpreadHomeWinProbability": 0.5474,
       "marketHomeWinProbability": 0.5217,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 1.32,
+      "effectiveMargin": 1.298,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -108241,8 +108312,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -108442,9 +108513,9 @@
       },
       "preparation": {
         "away": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -108479,8 +108550,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -111523,8 +111594,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 3.5,
-      "homeMargin": 4.18,
-      "homeWinProbability": 0.6185,
+      "homeMargin": 4.203,
+      "homeWinProbability": 0.6191,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -111809,9 +111880,9 @@
       "marketSpreadHomeWinProbability": 0.6094,
       "marketHomeWinProbability": 0.6309,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 4.18,
+      "effectiveMargin": 4.203,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -112940,8 +113011,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 4.5,
-      "homeMargin": 4.62,
-      "homeWinProbability": 0.6305,
+      "homeMargin": 4.598,
+      "homeWinProbability": 0.6299,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -113327,9 +113398,9 @@
       "marketSpreadHomeWinProbability": 0.6395,
       "marketHomeWinProbability": 0.6636,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 4.62,
+      "effectiveMargin": 4.598,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 10,
@@ -118717,8 +118788,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -120036,8 +120107,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -120354,9 +120425,9 @@
           "clusters": []
         },
         "home": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -120391,8 +120462,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -121586,8 +121657,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -1.5,
-      "homeMargin": -2.022,
-      "homeWinProbability": 0.442,
+      "homeMargin": -1.998,
+      "homeWinProbability": 0.4427,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -121956,9 +122027,9 @@
       "marketSpreadHomeWinProbability": 0.4526,
       "marketHomeWinProbability": 0.5,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -2.022,
+      "effectiveMargin": -1.998,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": -0.7,
         "spreadScale": 1.1,
         "homeRestDays": 6,
@@ -122437,8 +122508,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 1.5,
-      "homeMargin": 0.952,
-      "homeWinProbability": 0.5274,
+      "homeMargin": 0.95,
+      "homeWinProbability": 0.5273,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -122759,7 +122830,7 @@
       "marketSpreadHomeWinProbability": 0.5474,
       "marketHomeWinProbability": 0.5325,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 0.952,
+      "effectiveMargin": 0.95,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": -0.7,
@@ -123870,8 +123941,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 3.5,
-      "homeMargin": 3.72,
-      "homeWinProbability": 0.6058,
+      "homeMargin": 3.698,
+      "homeWinProbability": 0.6052,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -124127,9 +124198,9 @@
       "marketSpreadHomeWinProbability": 0.6094,
       "marketHomeWinProbability": 0.6447,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 3.72,
+      "effectiveMargin": 3.698,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": 0.2,
         "spreadScale": 1.1,
         "homeRestDays": 8,
@@ -124470,8 +124541,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -125289,8 +125360,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -125532,9 +125603,9 @@
       },
       "preparation": {
         "away": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -125569,8 +125640,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -128132,8 +128203,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -3.0,
-      "homeMargin": -3.53,
-      "homeWinProbability": 0.3995,
+      "homeMargin": -3.553,
+      "homeWinProbability": 0.3989,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -128383,9 +128454,9 @@
       "marketSpreadHomeWinProbability": 0.4059,
       "marketHomeWinProbability": 0.4004,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -3.53,
+      "effectiveMargin": -3.553,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": 0.1,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -131469,8 +131540,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 1.5,
-      "homeMargin": 1.348,
-      "homeWinProbability": 0.5387,
+      "homeMargin": 1.35,
+      "homeWinProbability": 0.5388,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -131760,9 +131831,9 @@
       "marketSpreadHomeWinProbability": 0.5474,
       "marketHomeWinProbability": 0.5261,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 1.348,
+      "effectiveMargin": 1.35,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": -0.3,
         "spreadScale": 1.1,
         "homeRestDays": 6,
@@ -132801,7 +132872,7 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 4.5,
-      "homeMargin": 4.652,
+      "homeMargin": 4.65,
       "homeWinProbability": 0.6314,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
@@ -133083,7 +133154,7 @@
       "marketSpreadHomeWinProbability": 0.6395,
       "marketHomeWinProbability": 0.6636,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 4.652,
+      "effectiveMargin": 4.65,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": -0.3,
@@ -133554,8 +133625,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 4.5,
-      "homeMargin": 4.948,
-      "homeWinProbability": 0.6394,
+      "homeMargin": 4.95,
+      "homeWinProbability": 0.6395,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -133846,9 +133917,9 @@
       "marketSpreadHomeWinProbability": 0.6395,
       "marketHomeWinProbability": 0.6575,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 4.948,
+      "effectiveMargin": 4.95,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 4,
@@ -134283,8 +134354,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -140964,8 +141035,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -1.5,
-      "homeMargin": -1.189,
-      "homeWinProbability": 0.4658,
+      "homeMargin": -1.145,
+      "homeWinProbability": 0.4671,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -141344,9 +141415,9 @@
       "marketSpreadHomeWinProbability": 0.4526,
       "marketHomeWinProbability": 0.4573,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -1.189,
+      "effectiveMargin": -1.145,
       "modelAdjustments": {
-        "teamStatePoints": 0.66,
+        "teamStatePoints": 0.71,
         "restPoints": -0.2,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -141768,8 +141839,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 7.5,
-      "homeMargin": 8.052,
-      "homeWinProbability": 0.7194,
+      "homeMargin": 8.05,
+      "homeWinProbability": 0.7193,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -142009,7 +142080,7 @@
       "marketSpreadHomeWinProbability": 0.7242,
       "marketHomeWinProbability": 0.7572,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 8.052,
+      "effectiveMargin": 8.05,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": -0.2,
@@ -143073,8 +143144,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -143329,9 +143400,9 @@
           "clusters": []
         },
         "home": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -143366,8 +143437,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -143854,8 +143925,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 2.5,
-      "homeMargin": 2.42,
-      "homeWinProbability": 0.5693,
+      "homeMargin": 2.397,
+      "homeWinProbability": 0.5687,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -144170,9 +144241,9 @@
       "marketSpreadHomeWinProbability": 0.5786,
       "marketHomeWinProbability": 0.5635,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 2.42,
+      "effectiveMargin": 2.397,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 4,
@@ -144600,8 +144671,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 1.5,
-      "homeMargin": 1.648,
-      "homeWinProbability": 0.5473,
+      "homeMargin": 1.65,
+      "homeWinProbability": 0.5474,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -144861,9 +144932,9 @@
       "marketSpreadHomeWinProbability": 0.5474,
       "marketHomeWinProbability": 0.5325,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 1.648,
+      "effectiveMargin": 1.65,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 6,
@@ -149285,8 +149356,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -150604,8 +150675,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -150847,9 +150918,9 @@
       },
       "preparation": {
         "away": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -150884,8 +150955,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -152724,8 +152795,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 6.0,
-      "homeMargin": 5.77,
-      "homeWinProbability": 0.6614,
+      "homeMargin": 5.748,
+      "homeWinProbability": 0.6608,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -153016,9 +153087,9 @@
       "marketSpreadHomeWinProbability": 0.683,
       "marketHomeWinProbability": 0.6806,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 5.77,
+      "effectiveMargin": 5.748,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": -0.5,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -154122,7 +154193,7 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 2.5,
-      "homeMargin": 2.452,
+      "homeMargin": 2.45,
       "homeWinProbability": 0.5702,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
@@ -154385,7 +154456,7 @@
       "marketSpreadHomeWinProbability": 0.5786,
       "marketHomeWinProbability": 0.5635,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 2.452,
+      "effectiveMargin": 2.45,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": -0.3,
@@ -156944,8 +157015,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 1.5,
-      "homeMargin": 2.083,
-      "homeWinProbability": 0.5597,
+      "homeMargin": 2.103,
+      "homeWinProbability": 0.5603,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -157314,9 +157385,9 @@
       "marketSpreadHomeWinProbability": 0.5474,
       "marketHomeWinProbability": 0.5427,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 2.083,
+      "effectiveMargin": 2.103,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": 0.1,
         "spreadScale": 1.1,
         "homeRestDays": 6,
@@ -157659,8 +157730,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -161775,8 +161846,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -6.5,
-      "homeMargin": -7.048,
-      "homeWinProbability": 0.3056,
+      "homeMargin": -7.05,
+      "homeWinProbability": 0.3055,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -162080,7 +162151,7 @@
       "marketSpreadHomeWinProbability": 0.303,
       "marketHomeWinProbability": 0.2998,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -7.048,
+      "effectiveMargin": -7.05,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": 0.1,
@@ -163841,8 +163912,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 3.0,
-      "homeMargin": 2.57,
-      "homeWinProbability": 0.5735,
+      "homeMargin": 2.548,
+      "homeWinProbability": 0.5729,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -164098,9 +164169,9 @@
       "marketSpreadHomeWinProbability": 0.5941,
       "marketHomeWinProbability": 0.583,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 2.57,
+      "effectiveMargin": 2.548,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": -0.4,
         "spreadScale": 1.1,
         "homeRestDays": 5,
@@ -164469,8 +164540,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -164698,9 +164769,9 @@
       },
       "preparation": {
         "away": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -164735,8 +164806,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -166439,8 +166510,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 2.5,
-      "homeMargin": 2.548,
-      "homeWinProbability": 0.5729,
+      "homeMargin": 2.55,
+      "homeWinProbability": 0.573,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -166730,9 +166801,9 @@
       "marketSpreadHomeWinProbability": 0.5786,
       "marketHomeWinProbability": 0.5514,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 2.548,
+      "effectiveMargin": 2.55,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": -0.2,
         "spreadScale": 1.1,
         "homeRestDays": 6,
@@ -167813,8 +167884,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -4.5,
-      "homeMargin": -4.72,
-      "homeWinProbability": 0.3667,
+      "homeMargin": -4.697,
+      "homeWinProbability": 0.3673,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -168137,9 +168208,9 @@
       "marketSpreadHomeWinProbability": 0.3605,
       "marketHomeWinProbability": 0.3553,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -4.72,
+      "effectiveMargin": -4.697,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": -0.1,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -168421,8 +168492,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -168784,9 +168855,9 @@
           ]
         },
         "home": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -168821,8 +168892,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -169191,8 +169262,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -173165,7 +173236,7 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -5.5,
-      "homeMargin": -6.152,
+      "homeMargin": -6.15,
       "homeWinProbability": 0.3286,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
@@ -173440,9 +173511,9 @@
       "marketSpreadHomeWinProbability": 0.3312,
       "marketHomeWinProbability": 0.3194,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -6.152,
+      "effectiveMargin": -6.15,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": -0.1,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -175286,8 +175357,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 1.5,
-      "homeMargin": 1.68,
-      "homeWinProbability": 0.5483,
+      "homeMargin": 1.703,
+      "homeWinProbability": 0.5489,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -175557,9 +175628,9 @@
       "marketSpreadHomeWinProbability": 0.5474,
       "marketHomeWinProbability": 0.5325,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 1.68,
+      "effectiveMargin": 1.703,
       "modelAdjustments": {
-        "teamStatePoints": 0.33,
+        "teamStatePoints": 0.35,
         "restPoints": -0.3,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -179444,8 +179515,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Thumb",
-            "note": "Meyers (thumb) was a limited participant in Thursday's practice.",
-            "updated": "2026-09-10T21:25Z"
+            "note": "Meyers (thumb) is practicing without a non-contact jersey Friday, Ryan O'Halloran of The Florida Times-Union reports.",
+            "updated": "2026-09-11T16:21Z"
           },
           {
             "player": "LeQuint Allen Jr.",
@@ -179659,9 +179730,9 @@
       },
       "preparation": {
         "away": {
-          "score": 88,
+          "score": 89,
           "level": "Stable",
-          "rawRisk": 1.92,
+          "rawRisk": 1.78,
           "items": [
             {
               "player": "Cole Van Lanen",
@@ -179696,8 +179767,8 @@
               "missedPracticeReports": 0,
               "limitedPracticeReports": 2,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -180798,8 +180869,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 3.0,
-      "homeMargin": 3.067,
-      "homeWinProbability": 0.5876,
+      "homeMargin": 3.048,
+      "homeWinProbability": 0.587,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -181168,9 +181239,9 @@
       "marketSpreadHomeWinProbability": 0.5941,
       "marketHomeWinProbability": 0.5934,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 3.067,
+      "effectiveMargin": 3.048,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": 0.1,
         "spreadScale": 1.1,
         "homeRestDays": 7,
@@ -182339,8 +182410,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": 10.5,
-      "homeMargin": 13.38,
-      "homeWinProbability": 0.8328,
+      "homeMargin": 13.383,
+      "homeWinProbability": 0.8329,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -182630,9 +182701,9 @@
       "marketSpreadHomeWinProbability": 0.8311,
       "marketHomeWinProbability": 0.8173,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 13.38,
+      "effectiveMargin": 13.383,
       "modelAdjustments": {
-        "teamStatePoints": -0.0,
+        "teamStatePoints": 0.0,
         "restPoints": 0.1,
         "spreadScale": 1.265,
         "homeRestDays": 7,
@@ -184332,8 +184403,8 @@
       },
       "lineSource": "Market line",
       "marketHomeMargin": -8.5,
-      "homeMargin": -9.68,
-      "homeWinProbability": 0.2424,
+      "homeMargin": -9.703,
+      "homeWinProbability": 0.242,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -184648,9 +184719,9 @@
       "marketSpreadHomeWinProbability": 0.25,
       "marketHomeWinProbability": 0.2285,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -9.68,
+      "effectiveMargin": -9.703,
       "modelAdjustments": {
-        "teamStatePoints": -0.33,
+        "teamStatePoints": -0.35,
         "restPoints": 0.0,
         "spreadScale": 1.1,
         "homeRestDays": 6,
@@ -185768,8 +185839,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Oblique",
-            "note": "Tagovailoa was limited at Thursday's practice by an oblique injury, according to the Falcons' official site.",
-            "updated": "2026-09-10T20:00Z"
+            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
+            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -187673,7 +187744,7 @@
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/sf.png",
       "baselineWins": 10.0,
       "previousRecord": "12-5",
-      "marketProjectedWins": 10.0,
+      "marketProjectedWins": 9.9,
       "projectedWins": 10.5,
       "range": "7-14",
       "simulationMedian": 10,
@@ -187686,7 +187757,7 @@
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/lar.png",
       "baselineWins": 11.5,
       "previousRecord": "12-5",
-      "marketProjectedWins": 11.0,
+      "marketProjectedWins": 11.1,
       "projectedWins": 10.3,
       "range": "7-13",
       "simulationMedian": 10,

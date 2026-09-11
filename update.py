@@ -768,6 +768,26 @@ def starter_sentences(game):
     return out
 
 
+def restore_frozen_market(games, ledger):
+    """After kickoff the book drops the line from the feed and the readout would fall back to
+    team strength. The ledger froze the closing line and prices, so put those back on the card."""
+    for game in games:
+        entry = ledger.get("games", {}).get(str(game["id"])) or {}
+        if not entry.get("frozen") or entry.get("late") or entry.get("closingHomeMargin") is None:
+            continue
+        kept = entry.get("odds") or {}
+        game["marketHomeMargin"] = entry["closingHomeMargin"]
+        game["homeMargin"] = entry["closingHomeMargin"]
+        game["lineSource"] = "Market line"
+        game["lineNote"] = "closing line, kept from kickoff"
+        game["probabilitySource"] = "Closing market line, frozen at kickoff"
+        for key in ("detail", "total", "openingHomeMargin", "spreadPrice", "moneyline", "book"):
+            if game["odds"].get(key) in (None, "", {}) and kept.get(key) not in (None, ""):
+                game["odds"][key] = kept[key]
+        if entry.get("closingHomeWinProbability") is not None:
+            game["odds"]["moneylineHomeProbability"] = entry["closingHomeWinProbability"]
+
+
 def readout(game):
     """Four to six plain sentences a person can read without knowing the vocabulary."""
     home, away = game["home"]["abbreviation"], game["away"]["abbreviation"]
@@ -935,6 +955,10 @@ def main():
         }
         game["lineMovement"] = {"difference": 0.0, "probabilityShift": 0.0, "source": "not loaded", "applied": False}
 
+    ledger = load_json(LEDGER, {"season": args.season, "games": {}})
+    if ledger.get("season") != args.season:
+        ledger = {"season": args.season, "games": {}}
+    restore_frozen_market(games, ledger)
     overrides = load_json(OVERRIDES, {"games": {}}).get("games", {})
     travel_overrides = load_json(TRAVEL_OVERRIDES, {"games": {}}).get("games", {})
     for game in games:
@@ -1071,9 +1095,10 @@ def main():
         game["readout"] = readout(game)
 
     now_iso = now.isoformat().replace("+00:00", "Z")
-    ledger = load_json(LEDGER, {"season": args.season, "games": {}})
-    if ledger.get("season") != args.season:
-        ledger = {"season": args.season, "games": {}}
+    for game in games:                     # frozen picks stay as frozen; new ones may still join
+        entry = ledger.get("games", {}).get(str(game["id"])) or {}
+        if entry.get("frozen") and not entry.get("late"):
+            game["outsidePicks"] = {**(game.get("outsidePicks") or {}), **(entry.get("outsidePicks") or {})}
     record_predictions(ledger, games, now_iso)
     grade_predictions(ledger, games)
     scorecard = summarize(ledger)

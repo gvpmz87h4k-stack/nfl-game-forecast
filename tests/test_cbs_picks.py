@@ -48,3 +48,18 @@ def test_merge_replaces_only_this_week_and_keeps_other_sources():
     assert [p["week"] for p in merged["sources"]["cbs"]["picks"]] == [1, 2]
     assert merged["sources"]["cbs"]["picks"][1]["winner"] == "D"
     assert merged["sources"]["friend"]["picks"][0]["winner"] == "D"
+
+
+def test_merge_leaves_games_that_have_kicked_off_alone():
+    existing = {"sources": {"cbs": {"label": "CBS", "picks": [
+        {"week": 1, "away": "NE", "home": "SEA", "winner": "NE", "spread": "SEA"},
+        {"week": 1, "away": "ATL", "home": "PIT", "winner": "PIT"},
+    ]}}}
+    fresh = {"cbs": {"label": "CBS Sports experts, consensus", "picks": [
+        {"week": 1, "away": "NE", "home": "SEA", "spread": "SEA"},          # CBS trimmed the finished game to spread only
+        {"week": 1, "away": "ATL", "home": "PIT", "winner": "ATL"},         # a writer changed his mind before kickoff
+    ]}}
+    merged = merge(existing, 1, fresh, started={("NE", "SEA")})
+    by_game = {(p["away"], p["home"]): p for p in merged["sources"]["cbs"]["picks"]}
+    assert by_game[("NE", "SEA")]["winner"] == "NE"        # kept as it was before kickoff
+    assert by_game[("ATL", "PIT")]["winner"] == "ATL"      # still open, so refreshed
