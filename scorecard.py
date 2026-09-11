@@ -19,6 +19,36 @@ def _parse(iso):
     return datetime.fromisoformat(iso.replace("Z", "+00:00"))
 
 
+def adopt_outside_picks(entry, game):
+    """Add any outside pick the frozen entry does not have yet. Never replaces one it has."""
+    if entry.get("late"):
+        return
+    have = entry.setdefault("outsidePicks", {})
+    for key, pick in (game.get("outsidePicks") or {}).items():
+        if key not in have and (pick.get("winner") or pick.get("spread")):
+            have[key] = dict(pick)
+
+
+def grade_outside_picks(entry):
+    """Grade every outside pick on a scored entry that is not graded yet."""
+    home_score, away_score = entry.get("homeScore"), entry.get("awayScore")
+    if home_score is None or away_score is None or home_score == away_score:
+        return
+    winner = entry["home"] if home_score > away_score else entry["away"]
+    actual_margin = home_score - away_score
+    close = entry.get("closingHomeMargin")
+    for source_key, pick in (entry.get("outsidePicks") or {}).items():
+        if "winnerCorrect" in pick or "spreadCovered" in pick:
+            continue
+        graded_pick = dict(pick)
+        if pick.get("winner") in (entry["home"], entry["away"]):
+            graded_pick["winnerCorrect"] = pick["winner"] == winner
+        if pick.get("spread") in (entry["home"], entry["away"]) and close is not None and actual_margin != close:
+            home_covered = actual_margin > close
+            graded_pick["spreadCovered"] = home_covered if pick["spread"] == entry["home"] else not home_covered
+        entry["outsidePicks"][source_key] = graded_pick
+
+
 def record_predictions(ledger, games, now_iso):
     """Store or refresh the pre-kickoff forecast for every game; freeze at kickoff."""
     entries = ledger.setdefault("games", {})
@@ -28,6 +58,11 @@ def record_predictions(ledger, games, now_iso):
         kickoff = _parse(game["kickoff"])
         entry = entries.get(game_id)
         if entry and entry.get("frozen"):
+            # People's picks reach the public file only once the game has kicked off (the
+            # collector keeps them private before that, and accepts only picks entered before
+            # kickoff), so they can land at or after the freeze. Take them in; they are graded
+            # on the next pass if the game is already scored.
+            adopt_outside_picks(entry, game)
             continue
         if now >= kickoff:
             if entry:
@@ -35,6 +70,7 @@ def record_predictions(ledger, games, now_iso):
                 entry["frozenAt"] = now_iso
                 entry["closingHomeMargin"] = entry.get("marketHomeMargin")
                 entry["closingHomeWinProbability"] = entry.get("marketHomeWinProbability")
+                adopt_outside_picks(entry, game)
             else:
                 entries[game_id] = {
                     "week": game["week"], "kickoff": game["kickoff"],
@@ -103,7 +139,10 @@ def grade_predictions(ledger, games):
         if not game.get("completed"):
             continue
         entry = entries.get(str(game["id"]))
-        if not entry or entry.get("late") or entry.get("graded") or not entry.get("frozen"):
+        if not entry or entry.get("late") or not entry.get("frozen"):
+            continue
+        if entry.get("graded"):
+            grade_outside_picks(entry)      # a pick that arrived after the first grading pass
             continue
         home_score = game["home"].get("score")
         away_score = game["away"].get("score")
@@ -132,17 +171,7 @@ def grade_predictions(ledger, games):
         if r is not None:
             entry["ratingCorrect"] = (r > 0.5) == (outcome == 1)
             entry["ratingBrier"] = round((r - outcome) ** 2, 4)
-        winner = entry["home"] if outcome == 1 else entry["away"]
-        actual_margin = home_score - away_score
-        close_for_picks = entry.get("closingHomeMargin")
-        for source_key, pick in (entry.get("outsidePicks") or {}).items():
-            graded_pick = dict(pick)
-            if pick.get("winner") in (entry["home"], entry["away"]):
-                graded_pick["winnerCorrect"] = pick["winner"] == winner
-            if pick.get("spread") in (entry["home"], entry["away"]) and close_for_picks is not None and actual_margin != close_for_picks:
-                home_covered = actual_margin > close_for_picks
-                graded_pick["spreadCovered"] = home_covered if pick["spread"] == entry["home"] else not home_covered
-            entry["outsidePicks"][source_key] = graded_pick
+        grade_outside_picks(entry)
         close = entry.get("closingHomeMargin")
         blend = entry.get("ratingBlendHomeMargin")
         if entry.get("ratingFlagged") and close is not None and blend is not None:

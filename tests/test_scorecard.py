@@ -143,3 +143,25 @@ def test_outside_picks_are_frozen_and_graded_straight_up_and_against_the_spread(
     assert pick["spreadCovered"] is True        # NE +3 covered a 1-point loss
     src = summarize(ledger)["overall"]["outsideSources"]["cbs"]
     assert src["winnerAccuracy"] == 1.0 and src["spreadCoverRate"] == 1.0 and src["spreadPicks"] == 1
+
+
+def test_a_persons_pick_that_arrives_at_or_after_the_freeze_is_still_graded():
+    ledger = {"season": 2026, "games": {}}
+    g = game("8", "2026-09-10T00:20Z", 0.60, 0.61)
+    g["marketHomeMargin"] = 3.0
+    record_predictions(ledger, [g], "2026-09-09T12:00Z")                       # before kickoff: no person pick visible
+    g_at_freeze = dict(g, outsidePicks={"cbs": {"label": "CBS", "winner": "NE"}})
+    record_predictions(ledger, [g_at_freeze], "2026-09-10T03:00Z")             # freeze: the writers' pick is there
+    entry = ledger["games"]["8"]
+    assert entry["frozen"] and set(entry["outsidePicks"]) == {"cbs"}
+    done = game("8", "2026-09-10T00:20Z", 0.60, 0.61, completed=True, home_score=14, away_score=10)
+    done["outsidePicks"] = {"cbs": {"label": "CBS", "winner": "NE"}}
+    grade_predictions(ledger, [done])
+    assert entry["graded"] and entry["outsidePicks"]["cbs"]["winnerCorrect"] is False
+    # the person's pick reaches the public file one run later; it is adopted and graded, nothing else changes
+    later = dict(done, outsidePicks={"cbs": {"label": "CBS", "winner": "SEA"}, "narcisa": {"label": "Narcisa", "winner": "SEA", "spread": "NE"}})
+    record_predictions(ledger, [later], "2026-09-11T15:00Z")
+    grade_predictions(ledger, [later])
+    assert entry["outsidePicks"]["cbs"]["winner"] == "NE"                       # the frozen writers' pick was not replaced
+    assert entry["outsidePicks"]["narcisa"]["winnerCorrect"] is True
+    assert entry["outsidePicks"]["narcisa"]["spreadCovered"] is False            # NE +3 did not cover a 4-point loss
