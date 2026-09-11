@@ -442,7 +442,8 @@ function travelMarkup(game) {
         ${travelTeamMarkup(game.travel.away, game.away.abbreviation)}
         ${travelTeamMarkup(game.travel.home, game.home.abbreviation)}
       </div>
-      <p class="continuity-note">The acclimation score rewards verified local sleep opportunities, local practice, international experience, and surface familiarity. A player traveling separately changes the score only after a reliable report. The 1.08x shared uncertainty pulls confidence toward 50%, rather than awarding either team points.</p>
+      ${game.travel.workedOut ? `<div class="worked-out"><h4>How the app worked it out</h4><ol>${game.travel.workedOut.lines.map(l => `<li>${l}</li>`).join("")}</ol></div>` : ""}
+      <p class="continuity-note">The acclimation score rewards verified local sleep opportunities, local practice, international experience, and surface familiarity. A player traveling separately changes the score only after a reliable report. The shared uncertainty pulls confidence toward 50%, rather than awarding either team points.</p>
 	      <p class="travel-sources">${travelSources}</p>
 	    </div>`;
 }

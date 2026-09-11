@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "currentWeek": 1,
-  "updatedAt": "2026-09-11T17:46:17.188498Z",
+  "updatedAt": "2026-09-11T17:53:08.429102Z",
   "games": [
     {
       "id": "401872656",
@@ -1586,7 +1586,24 @@
         "probabilityShift": 0.0,
         "nightsGap": -6.0,
         "restedSide": "away",
-        "uncertaintyProbabilityShift": 0.0
+        "uncertaintyProbabilityShift": 0.0,
+        "workedOut": {
+          "shiftPercentagePoints": -1.23,
+          "generous": {
+            "unadjustedZonesHome": 6.0,
+            "unadjustedZonesAway": 0.0,
+            "lineShiftPoints": 4.44,
+            "adjustedHomeMargin": -0.94,
+            "homeWinProbability": 0.4703
+          },
+          "lines": [
+            "Nights slept on local time before kickoff: San Francisco 49ers 7, Los Angeles Rams 1. Acclimation scores 9.85 and 3.7, a gap of 6.15.",
+            "The app moves the win chance 1.2 percentage points toward San Francisco 49ers: 0.002 per score point, never more than 2 points. On the line that is worth about 0.4 of a point.",
+            "Jet-lag rule of thumb, about one time zone a day: the venue is 17 hours off, which the body treats as 7 zones. At kickoff San Francisco 49ers had about 0 zones left to adjust and Los Angeles Rams about 6.",
+            "The generous case, charging 0.74 points per unadjusted zone (a value from the schedule fit that failed its blind test): the line moves about 4.4 points toward San Francisco 49ers, to San Francisco 49ers by 0.9, a 53 to 47 game.",
+            "Final: Los Angeles Rams 7, San Francisco 49ers 27, 23.5 points past the closing line toward San Francisco 49ers. Travel, even in the generous case, accounts for at most 4.4 of them."
+          ]
+        }
       },
       "marketSpreadHomeWinProbability": 0.6094,
       "marketHomeWinProbability": 0.6575,
@@ -1989,16 +2006,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -2082,13 +2099,13 @@
       "lineSource": "Market line",
       "marketHomeMargin": 3.5,
       "homeMargin": 3.85,
-      "homeWinProbability": 0.6108,
+      "homeWinProbability": 0.6107,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption",
       "weather": {
-        "summary": "Light drizzle",
-        "temperature": "66-90 F",
+        "summary": "Heavy drizzle",
+        "temperature": "67-90 F",
         "precipitation": "25%",
-        "wind": "11 mph",
+        "wind": "8 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -2189,9 +2206,9 @@
       },
       "preparation": {
         "away": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -2218,18 +2235,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -2240,6 +2245,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -2267,7 +2284,7 @@
           ],
           "clusters": []
         },
-        "probabilityShift": 0.0014,
+        "probabilityShift": 0.0013,
         "applied": true,
         "coverage": "Official roster status and explicit public practice wording only"
       },
@@ -3518,7 +3535,7 @@
         "summary": "Cloudy",
         "temperature": "70-97 F",
         "precipitation": "8%",
-        "wind": "4 mph",
+        "wind": "5 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -4807,6 +4824,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -4845,14 +4870,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -4928,18 +4945,18 @@
       "lineSource": "Market line",
       "marketHomeMargin": 6.0,
       "homeMargin": 6.6,
-      "homeWinProbability": 0.6895,
+      "homeWinProbability": 0.69,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
-        "summary": "Rain showers",
-        "temperature": "68-78 F",
+        "summary": "Drizzle",
+        "temperature": "68-83 F",
         "precipitation": "78%",
         "wind": "8 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
         "away": {
-          "score": 91,
+          "score": 90,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -4949,15 +4966,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -5055,11 +5072,11 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.64,
-          "totalRisk": 12.14
+          "interactionRisk": 4.34,
+          "totalRisk": 14.18
         },
         "home": {
-          "score": 98,
+          "score": 99,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -5088,9 +5105,9 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 2.16
+          "totalRisk": 2.0
         },
-        "probabilityShift": 0.0027,
+        "probabilityShift": 0.0033,
         "applied": true
       },
       "preparation": {
@@ -5459,8 +5476,7 @@
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
         "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market.",
-        "7 of the 7 CBS writers who have picked take Pittsburgh Steelers, the favorite.",
-        "Weather could matter: Rain showers, wind 8 mph."
+        "7 of the 7 CBS writers who have picked take Pittsburgh Steelers, the favorite."
       ]
     },
     {
@@ -5677,9 +5693,9 @@
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Cloudy",
-        "temperature": "72-94 F",
+        "temperature": "72-96 F",
         "precipitation": "68%",
-        "wind": "6 mph",
+        "wind": "7 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -6415,9 +6431,9 @@
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Drizzle",
-        "temperature": "76-100 F",
+        "temperature": "76-97 F",
         "precipitation": "46%",
-        "wind": "11 mph",
+        "wind": "9 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -9316,7 +9332,7 @@
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Heavy showers",
-        "temperature": "71-83 F",
+        "temperature": "72-84 F",
         "precipitation": "83%",
         "wind": "8 mph",
         "source": "Open-Meteo"
@@ -10039,7 +10055,7 @@
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Clear",
-        "temperature": "65-80 F",
+        "temperature": "65-79 F",
         "precipitation": "0%",
         "wind": "12 mph",
         "source": "Open-Meteo"
@@ -10759,10 +10775,10 @@
       "homeWinProbability": 0.4056,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
-        "summary": "Light drizzle",
-        "temperature": "64-76 F",
+        "summary": "Drizzle",
+        "temperature": "65-77 F",
         "precipitation": "5%",
-        "wind": "16 mph",
+        "wind": "13 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -11384,8 +11400,8 @@
       "homeWinProbability": 0.5788,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption",
       "weather": {
-        "summary": "Light drizzle",
-        "temperature": "75-92 F",
+        "summary": "Heavy drizzle",
+        "temperature": "81-100 F",
         "precipitation": "54%",
         "wind": "15 mph",
         "source": "Open-Meteo"
@@ -12541,6 +12557,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -12579,14 +12603,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -12786,7 +12802,7 @@
           "totalRisk": 4.6
         },
         "home": {
-          "score": 93,
+          "score": 91,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -12796,15 +12812,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -12902,8 +12918,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.04,
-          "totalRisk": 10.12
+          "interactionRisk": 3.88,
+          "totalRisk": 12.66
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -16083,16 +16099,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -16409,9 +16425,9 @@
           "clusters": []
         },
         "home": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -16438,18 +16454,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -16460,6 +16464,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -22972,6 +22988,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -23010,14 +23034,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -23098,7 +23114,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 92,
+          "score": 90,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -23108,15 +23124,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -23214,8 +23230,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.4,
-          "totalRisk": 11.33
+          "interactionRisk": 4.34,
+          "totalRisk": 14.18
         },
         "home": {
           "score": 94,
@@ -30377,16 +30393,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -30702,9 +30718,9 @@
           "clusters": []
         },
         "home": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -30731,18 +30747,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -30753,6 +30757,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -38461,16 +38477,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -38919,9 +38935,9 @@
           ]
         },
         "home": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -38948,18 +38964,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -38970,6 +38974,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -44089,6 +44105,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -44127,14 +44151,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -44215,7 +44231,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 92,
+          "score": 90,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -44225,15 +44241,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -44331,8 +44347,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.4,
-          "totalRisk": 11.33
+          "interactionRisk": 4.34,
+          "totalRisk": 14.18
         },
         "home": {
           "score": 97,
@@ -44823,16 +44839,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -45052,9 +45068,9 @@
       },
       "preparation": {
         "away": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -45081,18 +45097,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -45103,6 +45107,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -53645,6 +53661,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -53683,14 +53707,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -53902,7 +53918,7 @@
           "totalRisk": 2.94
         },
         "home": {
-          "score": 93,
+          "score": 91,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -53912,15 +53928,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -54018,8 +54034,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.04,
-          "totalRisk": 10.12
+          "interactionRisk": 3.88,
+          "totalRisk": 12.66
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -56570,6 +56586,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -56608,14 +56632,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -56883,7 +56899,7 @@
           "totalRisk": 4.66
         },
         "home": {
-          "score": 93,
+          "score": 91,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -56893,15 +56909,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -56999,8 +57015,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.04,
-          "totalRisk": 10.12
+          "interactionRisk": 3.88,
+          "totalRisk": 12.66
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -60658,16 +60674,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -60914,9 +60930,9 @@
           "clusters": []
         },
         "home": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -60943,18 +60959,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -60965,6 +60969,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -66330,6 +66346,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -66368,14 +66392,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -66605,7 +66621,7 @@
           "totalRisk": 5.24
         },
         "home": {
-          "score": 93,
+          "score": 91,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -66615,15 +66631,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -66721,8 +66737,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.04,
-          "totalRisk": 10.12
+          "interactionRisk": 3.88,
+          "totalRisk": 12.66
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -69190,16 +69206,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -69405,9 +69421,9 @@
       },
       "preparation": {
         "away": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -69434,18 +69450,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -69456,6 +69460,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -79104,16 +79120,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -79198,6 +79214,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -79236,14 +79260,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -79324,7 +79340,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 92,
+          "score": 90,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -79334,15 +79350,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -79440,8 +79456,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.4,
-          "totalRisk": 11.33
+          "interactionRisk": 4.34,
+          "totalRisk": 14.18
         },
         "home": {
           "score": 98,
@@ -79528,9 +79544,9 @@
           "clusters": []
         },
         "home": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -79557,18 +79573,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -79579,6 +79583,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -84804,6 +84820,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -84842,14 +84866,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -85004,7 +85020,7 @@
           "totalRisk": 1.93
         },
         "home": {
-          "score": 92,
+          "score": 90,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -85014,15 +85030,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -85120,8 +85136,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.28,
-          "totalRisk": 10.93
+          "interactionRisk": 4.19,
+          "totalRisk": 13.67
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -93196,16 +93212,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -93439,9 +93455,9 @@
       },
       "preparation": {
         "away": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -93468,18 +93484,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -93490,6 +93494,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -95884,6 +95900,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -95922,14 +95946,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -96092,7 +96108,7 @@
           "totalRisk": 2.19
         },
         "home": {
-          "score": 93,
+          "score": 91,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -96102,15 +96118,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -96208,8 +96224,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.04,
-          "totalRisk": 10.12
+          "interactionRisk": 3.88,
+          "totalRisk": 12.66
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -106842,16 +106858,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -107071,9 +107087,9 @@
       },
       "preparation": {
         "away": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -107100,18 +107116,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -107122,6 +107126,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -118550,6 +118566,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -118588,14 +118612,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -118676,7 +118692,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 92,
+          "score": 90,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -118686,15 +118702,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -118792,8 +118808,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.4,
-          "totalRisk": 11.33
+          "interactionRisk": 4.34,
+          "totalRisk": 14.18
         },
         "home": {
           "score": 99,
@@ -122908,16 +122924,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -123209,9 +123225,9 @@
           "clusters": []
         },
         "home": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -123238,18 +123254,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -123260,6 +123264,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -124280,6 +124296,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -124318,14 +124342,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -124547,7 +124563,7 @@
           "totalRisk": 4.29
         },
         "home": {
-          "score": 93,
+          "score": 91,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -124557,15 +124573,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -124663,8 +124679,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.04,
-          "totalRisk": 10.12
+          "interactionRisk": 3.88,
+          "totalRisk": 12.66
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -128517,16 +128533,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -128872,9 +128888,9 @@
           "clusters": []
         },
         "home": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -128901,18 +128917,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -128923,6 +128927,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -134070,6 +134086,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -134108,14 +134132,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -134196,7 +134212,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 92,
+          "score": 90,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -134206,15 +134222,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -134312,8 +134328,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.4,
-          "totalRisk": 11.33
+          "interactionRisk": 4.34,
+          "totalRisk": 14.18
         },
         "home": {
           "score": 97,
@@ -138744,16 +138760,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -138971,9 +138987,9 @@
       },
       "preparation": {
         "away": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -139000,18 +139016,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -139022,6 +139026,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -148254,16 +148270,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -148587,9 +148603,9 @@
           "clusters": []
         },
         "home": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -148616,18 +148632,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -148638,6 +148642,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -149041,6 +149057,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -149079,14 +149103,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -149167,7 +149183,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 92,
+          "score": 90,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -149177,15 +149193,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -149283,8 +149299,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.4,
-          "totalRisk": 11.33
+          "interactionRisk": 4.34,
+          "totalRisk": 14.18
         },
         "home": {
           "score": 98,
@@ -157400,6 +157416,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -157438,14 +157462,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -157502,16 +157518,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -157660,7 +157676,7 @@
           "totalRisk": 2.63
         },
         "home": {
-          "score": 93,
+          "score": 91,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -157670,15 +157686,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -157776,17 +157792,17 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.04,
-          "totalRisk": 10.12
+          "interactionRisk": 3.88,
+          "totalRisk": 12.66
         },
         "probabilityShift": 0.0,
         "applied": false
       },
       "preparation": {
         "away": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -157813,18 +157829,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -157835,6 +157839,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -167393,16 +167409,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -167820,9 +167836,9 @@
           ]
         },
         "home": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -167849,18 +167865,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -167871,6 +167875,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -168901,6 +168917,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -168939,14 +168963,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -169191,7 +169207,7 @@
           "totalRisk": 4.31
         },
         "home": {
-          "score": 93,
+          "score": 91,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -169201,15 +169217,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -169307,8 +169323,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.04,
-          "totalRisk": 10.12
+          "interactionRisk": 3.88,
+          "totalRisk": 12.66
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -182741,16 +182757,16 @@
             "position": "WR",
             "status": "Doubtful",
             "detail": "Knee",
-            "note": "McMillan (knee) was a limited practice participant Thursday.",
-            "updated": "2026-09-10T21:32Z"
+            "note": "McMillan (knee) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:35Z"
           },
           {
             "player": "Sean Tucker",
             "position": "RB",
             "status": "Doubtful",
             "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
+            "note": "Tucker (hamstring) is doubtful for Sunday's game at Cincinnati, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-09-11T17:33Z"
           },
           {
             "player": "Christian Rozeboom",
@@ -182977,9 +182993,9 @@
       },
       "preparation": {
         "away": {
-          "score": 85,
+          "score": 86,
           "level": "Stable",
-          "rawRisk": 2.42,
+          "rawRisk": 2.28,
           "items": [
             {
               "player": "Christian Rozeboom",
@@ -183006,18 +183022,6 @@
               "risk": 0.44
             },
             {
-              "player": "Jalen McMillan",
-              "position": "WR",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.38
-            },
-            {
               "player": "Rueben Bain Jr.",
               "position": "LB",
               "categories": [
@@ -183028,6 +183032,18 @@
               "daysSinceFlag": 1,
               "decay": 0.65,
               "risk": 0.37
+            },
+            {
+              "player": "Jalen McMillan",
+              "position": "WR",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
+              "risk": 0.24
             }
           ],
           "clusters": [
@@ -185447,6 +185463,14 @@
             "updated": "2026-09-08T20:42Z"
           },
           {
+            "player": "Tua Tagovailoa",
+            "position": "QB",
+            "status": "Out",
+            "detail": "Oblique",
+            "note": "Tagovailoa (oblique) has been ruled out for Sunday's game at Pittsburgh, Tori McElhaney of the Falcons' official site reports.",
+            "updated": "2026-09-11T17:36Z"
+          },
+          {
             "player": "Billy Bowman Jr.",
             "position": "CB",
             "status": "Questionable",
@@ -185485,14 +185509,6 @@
             "detail": "Achilles",
             "note": "questionable",
             "updated": "2026-09-10T19:51Z"
-          },
-          {
-            "player": "Tua Tagovailoa",
-            "position": "QB",
-            "status": "Questionable",
-            "detail": "Oblique",
-            "note": "Tagovailoa (oblique) wasn't on the field for the media-access portion of Friday's practice, Marc Raimondi of ESPN.com reports.",
-            "updated": "2026-09-11T16:28Z"
           },
           {
             "player": "Za'Darius Smith",
@@ -185573,7 +185589,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 92,
+          "score": 90,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -185583,15 +185599,15 @@
           "clusterMembers": {
             "Protection unit": [
               {
-                "player": "Jawaan Taylor",
-                "position": "OT",
-                "status": "Questionable",
-                "role": "starter",
-                "weight": 0.35
-              },
-              {
                 "player": "Tua Tagovailoa",
                 "position": "QB",
+                "status": "Out",
+                "role": "starter",
+                "weight": 1.0
+              },
+              {
+                "player": "Jawaan Taylor",
+                "position": "OT",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -185689,8 +185705,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.4,
-          "totalRisk": 11.33
+          "interactionRisk": 4.34,
+          "totalRisk": 14.18
         },
         "home": {
           "score": 97,

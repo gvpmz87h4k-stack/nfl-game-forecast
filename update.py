@@ -792,6 +792,54 @@ def restore_frozen_market(games, ledger):
             game["odds"]["moneylineHomeProbability"] = entry["closingHomeWinProbability"]
 
 
+UNTESTED_POINTS_PER_ZONE = 0.74   # the schedule fit's value; it failed the blind test and is shown only as the generous case
+
+
+def travel_worked_out(game, config):
+    """Plain sentences showing exactly what the app did with a long trip, and what the generous
+    jet-lag arithmetic would do instead, so nobody has to take the nudge on faith."""
+    travel = game.get("travel") or {}
+    if not travel.get("available"):
+        return None
+    home, away = game["home"]["abbreviation"], game["away"]["abbreviation"]
+    names = {home: game["home"]["name"], away: game["away"]["name"]}
+    h, a = travel.get("home") or {}, travel.get("away") or {}
+    hn, an = float(h.get("localSleepCycles") or 0), float(a.get("localSleepCycles") or 0)
+    hs, as_ = float(h.get("acclimationScore") or 0), float(a.get("acclimationScore") or 0)
+    weight = float(config.get("travelScoreProbabilityWeight", 0.002))
+    cap = float(config.get("travelProbabilityCap", 0.02))
+    raw = (hs - as_) * weight
+    shift = max(-cap, min(cap, raw))
+    margin = game.get("marketHomeMargin")
+    lines = [
+        f"Nights slept on local time before kickoff: {names[away]} {an:g}, {names[home]} {hn:g}. Acclimation scores {as_:g} and {hs:g}, a gap of {abs(hs - as_):g}.",
+        f"The app moves the win chance {abs(shift) * 100:.1f} percentage points toward {names[home] if shift > 0 else names[away]}: {weight:g} per score point, never more than {cap * 100:g} points. On the line that is worth about {abs(shift) / 0.0287:.1f} of a point.",
+    ]
+    tz = (travel.get("shared") or {}).get("timeZoneDifferenceHours")
+    generous = None
+    if tz is not None and margin is not None:
+        body = abs(((float(tz) + 12) % 24) - 12)        # 17 hours ahead reads to the body as 7 hours behind
+        unadj_h, unadj_a = max(0.0, body - hn), max(0.0, body - an)
+        lines.append(
+            f"Jet-lag rule of thumb, about one time zone a day: the venue is {abs(float(tz)):g} hours off, which the body treats as {body:g} zones. "
+            f"At kickoff {names[away]} had about {unadj_a:g} zone{'s' if unadj_a != 1 else ''} left to adjust and {names[home]} about {unadj_h:g}."
+        )
+        penalty = UNTESTED_POINTS_PER_ZONE * (unadj_h - unadj_a)
+        adjusted = margin - penalty
+        p_home = normal_cdf(adjusted * float(config.get("probabilityCalibration", 1.1)) / 13.86)
+        fav = home if adjusted > 0 else away
+        lines.append(
+            f"The generous case, charging {UNTESTED_POINTS_PER_ZONE} points per unadjusted zone (a value from the schedule fit that failed its blind test): "
+            f"the line moves about {abs(penalty):.1f} points toward {names[away] if penalty > 0 else names[home]}, to {names[fav]} by {abs(adjusted):.1f}, "
+            f"a {round(max(p_home, 1 - p_home) * 100)} to {round(min(p_home, 1 - p_home) * 100)} game."
+        )
+        generous = {"unadjustedZonesHome": unadj_h, "unadjustedZonesAway": unadj_a, "lineShiftPoints": round(penalty, 2), "adjustedHomeMargin": round(adjusted, 2), "homeWinProbability": round(p_home, 4)}
+    if game.get("completed") and game["home"].get("score") is not None and margin is not None:
+        miss = (game["home"]["score"] - game["away"]["score"]) - margin
+        lines.append(f"Final: {names[home]} {game['home']['score']}, {names[away]} {game['away']['score']}, {abs(miss):.1f} points past the closing line toward {names[home] if miss > 0 else names[away]}. Travel, even in the generous case, accounts for at most {abs(generous['lineShiftPoints']) if generous else 0:.1f} of them.")
+    return {"shiftPercentagePoints": round(shift * 100, 2), "generous": generous, "lines": lines}
+
+
 def readout(game):
     """Four to six plain sentences a person can read without knowing the vocabulary."""
     home, away = game["home"]["abbreviation"], game["away"]["abbreviation"]
@@ -1021,6 +1069,8 @@ def main():
             # made after the nudges switched off; the ledger graded this exact number
             game["homeWinProbability"] = frozen["homeWinProbability"]
             game["forecastNote"] = "frozen at kickoff"
+        if game.get("travel", {}).get("available"):
+            game["travel"]["workedOut"] = travel_worked_out(game, config)
         game["modelAdjustments"] = {
             "teamStatePoints": prediction["statePoints"],
             "restPoints": prediction["restPoints"],

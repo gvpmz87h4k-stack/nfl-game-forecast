@@ -522,3 +522,8 @@ tbody tr:last-child td { border-bottom: 0; }
 .who-table small { color: var(--muted); font-size: 12px; }
 .who-table tr.is-market td, .who-table tr.is-app td { background: var(--soft-blue); }
 .who-table tr.is-person td:first-child { color: var(--blue); }
+
+.worked-out { margin: 12px 0 4px; padding: 12px 14px; background: var(--soft-blue); border-radius: 10px; }
+.worked-out h4 { margin: 0 0 6px; font-size: 13px; }
+.worked-out ol { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.5; }
+.worked-out li + li { margin-top: 5px; }
