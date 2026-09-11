@@ -78,13 +78,7 @@ Weather is only requested for outdoor games within the provider's forecast windo
 
 ## Open the dashboard
 
-Run a local server:
-
-```bash
-python3 -m http.server 8765
-```
-
-Then open [http://localhost:8765](http://localhost:8765).
+Serve the folder with any static file server and open it in a browser; the page reads its data from GitHub, so no build step is needed.
 
 ## Rebuild the blind historical replay
 
