@@ -427,7 +427,7 @@ function travelMarkup(game) {
   const differential = Number(game.travel.probabilityShift || 0);
   const uncertainty = Number(game.travel.uncertaintyProbabilityShift || 0);
   const total = differential + uncertainty;
-  const direction = Math.abs(total) < 0.0005 ? "No net probability adjustment" : `${total > 0 ? "+" : ""}${(total * 100).toFixed(1)} pp toward ${total > 0 ? game.home.abbreviation : game.away.abbreviation}`;
+  const direction = (Math.abs(total) < 0.0005 ? "No net probability adjustment" : `${total > 0 ? "+" : ""}${(total * 100).toFixed(1)} pp toward ${total > 0 ? game.home.abbreviation : game.away.abbreviation}`) + (game.travel.frozenNote ? `, ${game.travel.frozenNote}` : "");
   const sources = (game.travel.sources || []).map(source => `<a href="${source.url}" target="_blank" rel="noreferrer">${source.label}</a>`).join(" | ");
   const travelSources = sources ? sources : "Sources pending";
   return `

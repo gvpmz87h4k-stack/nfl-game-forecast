@@ -1132,6 +1132,20 @@ def main():
         game["travel"]["uncertaintyProbabilityShift"] = prediction["uncertaintyProbabilityShift"]
         game["travel"]["uncertaintyMultiplier"] = prediction["uncertaintyMultiplier"]
         game["travel"]["applied"] = travel_active
+        frozen_travel = (ledger.get("games", {}).get(str(game["id"])) or {})
+        if frozen_travel.get("frozen") and not frozen_travel.get("late") and game["travel"].get("available"):
+            # a finished game shows the travel nudge that was frozen with its forecast, not the switched-off one
+            kept = frozen_travel.get("travelApplied")
+            if kept and kept.get("probabilityShift") is not None:
+                game["travel"].update({k: v for k, v in kept.items() if v is not None})
+            else:
+                worked = game["travel"].get("workedOut") or {}
+                shift_pp = worked.get("shiftPercentagePoints")
+                if shift_pp is not None:
+                    game["travel"]["probabilityShift"] = round(shift_pp / 100, 4)
+                game["travel"]["uncertaintyMultiplier"] = float((travel_overrides.get(game["id"]) or {}).get("uncertaintyMultiplier", game["travel"].get("uncertaintyMultiplier", 1.0)))
+                game["travel"]["applied"] = True
+            game["travel"]["frozenNote"] = "as frozen at kickoff"
         source_parts = [f"Calibrated {game['lineSource'].lower()}", "rolling team state", "rest"]
         if apply_signal:
             source_parts.append("continuity confidence")

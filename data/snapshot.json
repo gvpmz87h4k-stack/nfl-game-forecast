@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "currentWeek": 1,
-  "updatedAt": "2026-09-11T18:14:03.280218Z",
+  "updatedAt": "2026-09-11T18:16:45.041550Z",
   "games": [
     {
       "id": "401872656",
@@ -1500,7 +1500,7 @@
       "travel": {
         "asOf": "2026-09-06",
         "status": "Verified and scheduled public logistics",
-        "uncertaintyMultiplier": 1.0,
+        "uncertaintyMultiplier": 1.08,
         "shared": {
           "kickoffLocal": "2026-09-11 10:35 AEST",
           "timeZoneDifferenceHours": 17,
@@ -1591,8 +1591,8 @@
           }
         ],
         "available": true,
-        "applied": false,
-        "probabilityShift": 0.0,
+        "applied": true,
+        "probabilityShift": -0.0123,
         "nightsGap": -6.0,
         "restedSide": "away",
         "uncertaintyProbabilityShift": 0.0,
@@ -1612,7 +1612,8 @@
             "The most generous case: suppose every hour a body clock is still off costs a team 0.74 of a point on the scoreboard. That is the biggest value our own travel test produced, and the same test showed it does not predict results, so the app does not use it; it is here only to show the ceiling. It would take about 4.4 points from Los Angeles Rams: the line would go from Los Angeles Rams by 3.5 to San Francisco 49ers by 0.9, about 53 to 47.",
             "Final: Los Angeles Rams 7, San Francisco 49ers 27. The result landed 23.5 points past the closing line on San Francisco 49ers's side. Even the most generous travel math explains at most 4.4 of those points; the rest is football."
           ]
-        }
+        },
+        "frozenNote": "as frozen at kickoff"
       },
       "marketSpreadHomeWinProbability": 0.6094,
       "marketHomeWinProbability": 0.6575,
@@ -1956,7 +1957,7 @@
       "readout": [
         "Los Angeles Rams is expected to win, about 6 times in 10.",
         "The betting market gives San Francisco 49ers a 3.5-point head start, unchanged since the line opened.",
-        "Injuries, practice reports, rest, and travel do not change the picture.",
+        "Beyond the line, travel tilts it toward San Francisco 49ers, a little.",
         "Our play-by-play ratings agree with the market.",
         "5 of the 7 CBS writers who have picked take Los Angeles Rams, the favorite.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested.",
@@ -4981,12 +4982,12 @@
           "awayOpen": "+100"
         },
         "moneyline": {
-          "home": "-270",
-          "away": "+220",
+          "home": "-265",
+          "away": "+215",
           "homeOpen": "-175",
           "awayOpen": "+145"
         },
-        "moneylineHomeProbability": 0.7002,
+        "moneylineHomeProbability": 0.6958,
         "moneylineOpenHomeProbability": 0.6092
       },
       "lineSource": "Market line",
@@ -5157,14 +5158,14 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.683,
-      "marketHomeWinProbability": 0.7002,
+      "marketHomeWinProbability": 0.6958,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 6.6,
       "appVsMarket": {
-        "marketPct": 70.0,
+        "marketPct": 69.6,
         "spreadOnlyPct": 68.3,
         "appPct": 68.7,
-        "gapPoints": -1.4,
+        "gapPoints": -0.9,
         "leans": "ATL",
         "nudges": [
           {

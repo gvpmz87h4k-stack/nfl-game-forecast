@@ -123,6 +123,7 @@ def record_predictions(ledger, games, now_iso):
             "odds": {k: (game.get("odds") or {}).get(k) for k in ("detail", "total", "openingHomeMargin", "spreadPrice", "moneyline", "book")},
             **travel_fields(game),
             "appVsMarket": game.get("appVsMarket"),
+            "travelApplied": {k: (game.get("travel") or {}).get(k) for k in ("probabilityShift", "uncertaintyProbabilityShift", "uncertaintyMultiplier", "applied")} if (game.get("travel") or {}).get("available") else None,
         }
         history = list(entry.get("history", [])) if entry else []
         point = {
