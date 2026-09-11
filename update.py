@@ -860,12 +860,16 @@ def app_vs_market(game, prediction):
     parts.append(("rest and team form", app - spread_only - named))
     nudges = [{"label": label, "points": round(v * 100, 1), "toward": home if v > 0 else away} for label, v in parts if abs(v) >= 0.0005]
     gap = None if market is None else round((app - market) * 100, 1)
+    nudge_gap = round((app - spread_only) * 100, 1)          # the app's own lean: what the nudges did to the line's number
+    price_gap = None if market is None else round((market - spread_only) * 100, 1)   # win price versus spread, not an opinion
     return {
         "marketPct": None if market is None else round(market * 100, 1),
         "spreadOnlyPct": round(spread_only * 100, 1),
         "appPct": round(app * 100, 1),
         "gapPoints": gap,                                   # app minus market, toward home when positive
-        "leans": None if gap is None or abs(gap) < 0.05 else (home if gap > 0 else away),
+        "nudgeGapPoints": nudge_gap,
+        "priceGapPoints": price_gap,
+        "leans": None if abs(nudge_gap) < 0.05 else (home if nudge_gap > 0 else away),
         "nudges": nudges,
     }
 
@@ -882,10 +886,10 @@ def readout(game):
     else:
         lines.append(f"{names[fav]} is expected to win, about {round(pf * 10)} times in 10.")
     versus = game.get("appVsMarket") or {}
-    if versus.get("gapPoints") is not None and abs(versus["gapPoints"]) >= 3 and versus.get("leans"):
+    if versus.get("nudgeGapPoints") is not None and abs(versus["nudgeGapPoints"]) >= 1 and versus.get("leans"):
         nudges = sorted(versus.get("nudges") or [], key=lambda n: -abs(n["points"]))
         why = f", mostly because of {nudges[0]['label']}" if nudges else (", mostly because of travel" if (game.get("travel") or {}).get("workedOut") else "")
-        lines.append(f"The app is {abs(versus['gapPoints']):.1f} points closer to {names[versus['leans']]} than the market is{why}.")
+        lines.append(f"The app leans {abs(versus['nudgeGapPoints']):.1f} points toward {names[versus['leans']]} beyond what the line says{why}.")
     margin = game.get("marketHomeMargin")
     if game.get("lineSource") == "Market line" and margin is not None:
         market_fav = home if margin > 0 else away
@@ -1113,11 +1117,14 @@ def main():
                 spread_only = normal_cdf(close * float(config.get("probabilityCalibration", 1.1)) / 13.86) if close is not None else None
                 market = frozen.get("closingHomeWinProbability")
                 gap = None if market is None else round((frozen["homeWinProbability"] - market) * 100, 1)
+                nudge_gap = None if spread_only is None else round((frozen["homeWinProbability"] - spread_only) * 100, 1)
                 game["appVsMarket"] = {
                     "marketPct": None if market is None else round(market * 100, 1),
                     "spreadOnlyPct": None if spread_only is None else round(spread_only * 100, 1),
                     "appPct": round(frozen["homeWinProbability"] * 100, 1), "gapPoints": gap,
-                    "leans": None if gap is None or abs(gap) < 0.05 else (home if gap > 0 else away),
+                    "nudgeGapPoints": nudge_gap,
+                    "priceGapPoints": None if market is None or spread_only is None else round((market - spread_only) * 100, 1),
+                    "leans": None if nudge_gap is None or abs(nudge_gap) < 0.05 else (home if nudge_gap > 0 else away),
                     "nudges": [], "breakdownKept": False,
                 }
         if game.get("travel", {}).get("available"):

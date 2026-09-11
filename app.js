@@ -453,8 +453,12 @@ function versusStripMarkup(game) {
   if (!v || v.marketPct == null) return "";
   const names = { [game.home.abbreviation]: game.home.name, [game.away.abbreviation]: game.away.name };
   const home = game.home.abbreviation, away = game.away.abbreviation;
-  const gap = Math.abs(v.gapPoints);
+  const gap = Math.abs(v.nudgeGapPoints != null ? v.nudgeGapPoints : 0);      // the app's own lean, from its nudges
   const tier = gap >= 3 ? "is-big" : gap >= 1 ? "is-lean" : "is-agree";
+  const priceGap = v.priceGapPoints != null ? Math.abs(v.priceGapPoints) : 0;
+  const priceNote = priceGap >= 2
+    ? ` The win bet is priced at ${v.marketPct >= 50 ? v.marketPct.toFixed(0) : (100 - v.marketPct).toFixed(0)} while the spread implies ${v.marketPct >= 50 ? v.spreadOnlyPct.toFixed(0) : (100 - v.spreadOnlyPct).toFixed(0)}; the app starts from the spread.`
+    : "";
   // show both numbers for the market's favorite, so the two tiles read the same way
   const favHome = v.marketPct >= 50;
   const fav = favHome ? home : away;
@@ -466,9 +470,9 @@ function versusStripMarkup(game) {
   const why = reason ? `mostly because of ${reason.label}, ${Math.abs(reason.points).toFixed(1)} points toward ${reason.toward}`
     : v.breakdownKept === false && game.travel?.workedOut ? "mostly because of travel; the travel note below shows the arithmetic"
     : "";
-  const verdict = gap < 1
-    ? "The app and the market agree on this one."
-    : `The app is ${gap.toFixed(1)} points closer to ${names[v.leans]} than the market${why ? `, ${why}` : ""}.`;
+  const verdict = (gap < 1
+    ? "The app adds nothing to the line on this one."
+    : `The app leans ${gap.toFixed(1)} points toward ${names[v.leans]} beyond what the line says${why ? `, ${why}` : ""}.`) + priceNote;
   return `<div class="versus ${tier}">
     <div class="versus-tiles">
       <div><span>Market says</span><strong>${fav} ${marketFav.toFixed(0)}%</strong><small>from the price of the win bet</small></div>
