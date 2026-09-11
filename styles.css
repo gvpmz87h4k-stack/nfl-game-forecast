@@ -528,8 +528,14 @@ tbody tr:last-child td { border-bottom: 0; }
 .worked-out ol { margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.5; }
 .worked-out li + li { margin-top: 5px; }
 
-.app-vs-market { margin: 0 0 10px; padding: 10px 12px; border: 1px solid var(--line); border-radius: 10px; font-size: 13px; }
-.app-vs-market strong { display: block; margin-bottom: 4px; }
-.app-vs-market p { margin: 0; color: var(--muted); line-height: 1.5; }
-.app-vs-market.is-big { border-color: var(--blue); background: var(--soft-blue); }
-.app-vs-market.is-big strong { color: #174d9e; }
+.versus { margin: 0 22px 6px; padding: 12px 14px 10px; border: 1px solid var(--line); border-radius: 12px; background: var(--white); }
+.versus-tiles { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.versus-tiles > div { padding: 8px 10px; border-radius: 9px; background: var(--paper); }
+.versus-tiles span { display: block; font-size: 12px; color: var(--muted); }
+.versus-tiles strong { display: block; font-family: "Arial Narrow", sans-serif; font-size: 26px; line-height: 1.1; margin: 2px 0; }
+.versus-tiles small { color: var(--muted); font-size: 12px; }
+.versus p { margin: 8px 0 0; font-size: 14px; font-weight: 700; }
+.versus.is-agree p { color: var(--muted); font-weight: 600; }
+.versus.is-lean { background: #f6f8fd; }
+.versus.is-big { border-color: var(--blue); background: var(--soft-blue); }
+.versus.is-big p { color: #174d9e; }

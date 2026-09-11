@@ -881,6 +881,11 @@ def readout(game):
         lines.append(f"This one is close to a coin flip; {names[fav]} has the slight edge.")
     else:
         lines.append(f"{names[fav]} is expected to win, about {round(pf * 10)} times in 10.")
+    versus = game.get("appVsMarket") or {}
+    if versus.get("gapPoints") is not None and abs(versus["gapPoints"]) >= 3 and versus.get("leans"):
+        nudges = sorted(versus.get("nudges") or [], key=lambda n: -abs(n["points"]))
+        why = f", mostly because of {nudges[0]['label']}" if nudges else (", mostly because of travel" if (game.get("travel") or {}).get("workedOut") else "")
+        lines.append(f"The app is {abs(versus['gapPoints']):.1f} points closer to {names[versus['leans']]} than the market is{why}.")
     margin = game.get("marketHomeMargin")
     if game.get("lineSource") == "Market line" and margin is not None:
         market_fav = home if margin > 0 else away

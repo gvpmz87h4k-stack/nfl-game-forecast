@@ -448,19 +448,33 @@ function travelMarkup(game) {
 	    </div>`;
 }
 
-function appVsMarketMarkup(game) {
+function versusStripMarkup(game) {
   const v = game.appVsMarket;
   if (!v || v.marketPct == null) return "";
   const names = { [game.home.abbreviation]: game.home.name, [game.away.abbreviation]: game.away.name };
-  const home = game.home.abbreviation;
-  const big = Math.abs(v.gapPoints) >= 3;
-  const nudges = v.nudges.map(n => `${n.label} ${Math.abs(n.points).toFixed(1)} toward ${n.toward}`).join(", ");
-  const headline = v.leans
-    ? `The app leans ${names[v.leans]} by ${Math.abs(v.gapPoints).toFixed(1)} points more than the market does.`
-    : "The app and the market agree on this one.";
-  return `<div class="app-vs-market${big ? " is-big" : ""}">
-    <strong>${headline}</strong>
-    <p>Market win price ${v.marketPct.toFixed(0)} for ${home}.${v.spreadOnlyPct != null ? ` From the spread alone ${v.spreadOnlyPct.toFixed(0)}.` : ""} ${v.breakdownKept === false ? "The nudges at kickoff were not itemised for this game; the travel note below shows the largest one." : nudges ? `Nudges: ${nudges}.` : "No nudges applied."} The app: ${v.appPct.toFixed(0)} for ${home}.${game.forecastNote ? " Frozen at kickoff." : ""}</p>
+  const home = game.home.abbreviation, away = game.away.abbreviation;
+  const gap = Math.abs(v.gapPoints);
+  const tier = gap >= 3 ? "is-big" : gap >= 1 ? "is-lean" : "is-agree";
+  // show both numbers for the market's favorite, so the two tiles read the same way
+  const favHome = v.marketPct >= 50;
+  const fav = favHome ? home : away;
+  const marketFav = favHome ? v.marketPct : 100 - v.marketPct;
+  const appFav = favHome ? v.appPct : 100 - v.appPct;
+  const reason = v.nudges && v.nudges.length
+    ? [...v.nudges].sort((a, b) => Math.abs(b.points) - Math.abs(a.points))[0]
+    : null;
+  const why = reason ? `mostly ${reason.label}, ${Math.abs(reason.points).toFixed(1)} toward ${reason.toward}`
+    : v.breakdownKept === false && game.travel?.workedOut ? "mostly travel; see the travel note below"
+    : "";
+  const verdict = gap < 1
+    ? "The app and the market agree on this one."
+    : `The app is ${gap.toFixed(1)} points closer to ${names[v.leans]} than the market${why ? `, ${why}` : ""}.`;
+  return `<div class="versus ${tier}">
+    <div class="versus-tiles">
+      <div><span>Market says</span><strong>${fav} ${marketFav.toFixed(0)}%</strong><small>from the price of the win bet</small></div>
+      <div><span>The app says</span><strong>${fav} ${appFav.toFixed(0)}%</strong><small>${game.forecastNote ? "frozen at kickoff" : "line plus capped nudges"}</small></div>
+    </div>
+    <p>${verdict}</p>
   </div>`;
 }
 
@@ -503,7 +517,7 @@ function renderDetail(game) {
   const blendText = rm ? `${signedMargin(rm.blendHomeMargin)}; the market alone says ${signedMargin(game.marketHomeMargin)}` : "n/a";
   const startersText = rm ? `${game.away.abbreviation} ${rm.awayStarter || "?"} / ${game.home.abbreviation} ${rm.homeStarter || "?"}` : "n/a";
   const blindText = rm ? `mix got ${(rm.blindTest.blendAccuracy * 100).toFixed(1)}% of winners right, market alone ${(rm.blindTest.marketAccuracy * 100).toFixed(1)}%` : "n/a";
-  const ratingChip = rm ? (rm.flagged ? `Disagrees with the market by ${Math.abs(rm.disagreementPoints).toFixed(1)} points, leaning ${rm.leans}` : `Agrees with the market, ${Math.abs(rm.disagreementPoints).toFixed(1)} points apart`) : "No rating";
+  const ratingChip = rm ? (rm.flagged ? `Play-by-play opinion disagrees with the market by ${Math.abs(rm.disagreementPoints).toFixed(1)} points, leaning ${rm.leans}` : `Play-by-play opinion agrees with the market, ${Math.abs(rm.disagreementPoints).toFixed(1)} points apart`) : "No rating";
   const kickoffPassed = new Date(game.kickoff) <= new Date();
   const savedPick = state.picks[game.id] || {};
   const yourPickStatus = kickoffPassed ? "Kickoff has passed" : pickStatusText(savedPick);
@@ -523,6 +537,7 @@ function renderDetail(game) {
           <div class="prob-track"><span class="away-share" style="width:${(1 - probability) * 100}%"></span><span class="home-share" style="width:${probability * 100}%"></span></div>
         </div>
       </div>
+      ${versusStripMarkup(game)}
       <div class="evidence readout">
         <h3>In plain words</h3>
         ${(game.readout || []).map(line => `<p>${line}</p>`).join("")}
@@ -565,7 +580,6 @@ function renderDetail(game) {
       ${outsideMarkup(game)}
       <div class="evidence">
         <div class="evidence-title-row"><h3><a class="guide-link" href="guide.html#guide-rating">Rating model</a> <small>Second opinion, graded, never applied</small></h3><span class="source-chip">${ratingChip}</span></div>
-        ${appVsMarketMarkup(game)}
         <div class="evidence-grid">
           <div class="evidence-card"><span>The model's own score prediction</span><strong>${ratingText}</strong></div>
           <div class="evidence-card"><span>Model mixed with the market</span><strong>${blendText}</strong></div>
