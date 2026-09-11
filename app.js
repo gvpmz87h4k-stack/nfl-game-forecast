@@ -448,6 +448,22 @@ function travelMarkup(game) {
 	    </div>`;
 }
 
+function appVsMarketMarkup(game) {
+  const v = game.appVsMarket;
+  if (!v || v.marketPct == null) return "";
+  const names = { [game.home.abbreviation]: game.home.name, [game.away.abbreviation]: game.away.name };
+  const home = game.home.abbreviation;
+  const big = Math.abs(v.gapPoints) >= 3;
+  const nudges = v.nudges.map(n => `${n.label} ${Math.abs(n.points).toFixed(1)} toward ${n.toward}`).join(", ");
+  const headline = v.leans
+    ? `The app leans ${names[v.leans]} by ${Math.abs(v.gapPoints).toFixed(1)} points more than the market does.`
+    : "The app and the market agree on this one.";
+  return `<div class="app-vs-market${big ? " is-big" : ""}">
+    <strong>${headline}</strong>
+    <p>Market win price ${v.marketPct.toFixed(0)} for ${home}. From the spread alone ${v.spreadOnlyPct.toFixed(0)}. ${nudges ? `Nudges: ${nudges}.` : "No nudges applied."} The app: ${v.appPct.toFixed(0)} for ${home}.${game.forecastNote ? " Frozen at kickoff." : ""}</p>
+  </div>`;
+}
+
 function outsideMarkup(game) {
   const picks = Object.entries(game.outsidePicks || {});
   if (!picks.length) return "";
@@ -549,6 +565,7 @@ function renderDetail(game) {
       ${outsideMarkup(game)}
       <div class="evidence">
         <div class="evidence-title-row"><h3><a class="guide-link" href="guide.html#guide-rating">Rating model</a> <small>Second opinion, graded, never applied</small></h3><span class="source-chip">${ratingChip}</span></div>
+        ${appVsMarketMarkup(game)}
         <div class="evidence-grid">
           <div class="evidence-card"><span>The model's own score prediction</span><strong>${ratingText}</strong></div>
           <div class="evidence-card"><span>Model mixed with the market</span><strong>${blendText}</strong></div>

@@ -122,6 +122,7 @@ def record_predictions(ledger, games, now_iso):
             "outsidePicks": dict(game.get("outsidePicks") or {}),
             "odds": {k: (game.get("odds") or {}).get(k) for k in ("detail", "total", "openingHomeMargin", "spreadPrice", "moneyline", "book")},
             **travel_fields(game),
+            "appVsMarket": game.get("appVsMarket"),
         }
         history = list(entry.get("history", [])) if entry else []
         point = {

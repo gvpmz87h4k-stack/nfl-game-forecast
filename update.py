@@ -840,6 +840,34 @@ def travel_worked_out(game, config):
     return {"shiftPercentagePoints": round(shift * 100, 2), "generous": generous, "lines": lines}
 
 
+def app_vs_market(game, prediction):
+    """Where the app's number differs from the market's, and why, in percentage points of the
+    home side's win chance. Positive means toward the home team."""
+    home, away = game["home"]["abbreviation"], game["away"]["abbreviation"]
+    market = game.get("marketHomeWinProbability")
+    spread_only = prediction["marketOnlyProbability"]
+    app = prediction["homeWinProbability"]
+    parts = [
+        ("travel", prediction.get("travelProbabilityShift", 0.0)),
+        ("injury clusters", prediction.get("continuityProbabilityShift", 0.0)),
+        ("practice and roster status", prediction.get("preparationProbabilityShift", 0.0)),
+        ("line movement", prediction.get("lineMovementProbabilityShift", 0.0)),
+        ("shared uncertainty", prediction.get("uncertaintyProbabilityShift", 0.0)),
+    ]
+    named = sum(v for _, v in parts)
+    parts.append(("rest and team form", app - spread_only - named))
+    nudges = [{"label": label, "points": round(v * 100, 1), "toward": home if v > 0 else away} for label, v in parts if abs(v) >= 0.0005]
+    gap = None if market is None else round((app - market) * 100, 1)
+    return {
+        "marketPct": None if market is None else round(market * 100, 1),
+        "spreadOnlyPct": round(spread_only * 100, 1),
+        "appPct": round(app * 100, 1),
+        "gapPoints": gap,                                   # app minus market, toward home when positive
+        "leans": None if gap is None or abs(gap) < 0.05 else (home if gap > 0 else away),
+        "nudges": nudges,
+    }
+
+
 def readout(game):
     """Four to six plain sentences a person can read without knowing the vocabulary."""
     home, away = game["home"]["abbreviation"], game["away"]["abbreviation"]
@@ -1063,12 +1091,15 @@ def main():
         game["effectiveMargin"] = prediction["effectiveMargin"]
         game["homeMargin"] = prediction["effectiveMargin"]
         game["homeWinProbability"] = prediction["homeWinProbability"]
+        game["appVsMarket"] = app_vs_market(game, prediction)
         frozen = ledger.get("games", {}).get(str(game["id"])) or {}
         if frozen.get("frozen") and not frozen.get("late") and frozen.get("homeWinProbability") is not None:
             # once a game has kicked off the card shows the forecast that was frozen, not a recompute
             # made after the nudges switched off; the ledger graded this exact number
             game["homeWinProbability"] = frozen["homeWinProbability"]
             game["forecastNote"] = "frozen at kickoff"
+            if frozen.get("appVsMarket"):
+                game["appVsMarket"] = frozen["appVsMarket"]
         if game.get("travel", {}).get("available"):
             game["travel"]["workedOut"] = travel_worked_out(game, config)
         game["modelAdjustments"] = {
