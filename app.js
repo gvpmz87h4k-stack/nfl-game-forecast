@@ -463,8 +463,8 @@ function versusStripMarkup(game) {
   const reason = v.nudges && v.nudges.length
     ? [...v.nudges].sort((a, b) => Math.abs(b.points) - Math.abs(a.points))[0]
     : null;
-  const why = reason ? `mostly ${reason.label}, ${Math.abs(reason.points).toFixed(1)} toward ${reason.toward}`
-    : v.breakdownKept === false && game.travel?.workedOut ? "mostly travel; see the travel note below"
+  const why = reason ? `mostly because of ${reason.label}, ${Math.abs(reason.points).toFixed(1)} points toward ${reason.toward}`
+    : v.breakdownKept === false && game.travel?.workedOut ? "mostly because of travel; the travel note below shows the arithmetic"
     : "";
   const verdict = gap < 1
     ? "The app and the market agree on this one."
