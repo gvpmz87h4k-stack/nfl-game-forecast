@@ -460,7 +460,7 @@ function appVsMarketMarkup(game) {
     : "The app and the market agree on this one.";
   return `<div class="app-vs-market${big ? " is-big" : ""}">
     <strong>${headline}</strong>
-    <p>Market win price ${v.marketPct.toFixed(0)} for ${home}. From the spread alone ${v.spreadOnlyPct.toFixed(0)}. ${nudges ? `Nudges: ${nudges}.` : "No nudges applied."} The app: ${v.appPct.toFixed(0)} for ${home}.${game.forecastNote ? " Frozen at kickoff." : ""}</p>
+    <p>Market win price ${v.marketPct.toFixed(0)} for ${home}.${v.spreadOnlyPct != null ? ` From the spread alone ${v.spreadOnlyPct.toFixed(0)}.` : ""} ${v.breakdownKept === false ? "The nudges at kickoff were not itemised for this game; the travel note below shows the largest one." : nudges ? `Nudges: ${nudges}.` : "No nudges applied."} The app: ${v.appPct.toFixed(0)} for ${home}.${game.forecastNote ? " Frozen at kickoff." : ""}</p>
   </div>`;
 }
 

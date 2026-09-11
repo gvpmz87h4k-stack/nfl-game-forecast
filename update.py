@@ -1100,6 +1100,19 @@ def main():
             game["forecastNote"] = "frozen at kickoff"
             if frozen.get("appVsMarket"):
                 game["appVsMarket"] = frozen["appVsMarket"]
+            else:
+                # frozen before the breakdown existed: the numbers are the frozen ones, the itemised nudges are not kept
+                close = frozen.get("closingHomeMargin")
+                spread_only = normal_cdf(close * float(config.get("probabilityCalibration", 1.1)) / 13.86) if close is not None else None
+                market = frozen.get("closingHomeWinProbability")
+                gap = None if market is None else round((frozen["homeWinProbability"] - market) * 100, 1)
+                game["appVsMarket"] = {
+                    "marketPct": None if market is None else round(market * 100, 1),
+                    "spreadOnlyPct": None if spread_only is None else round(spread_only * 100, 1),
+                    "appPct": round(frozen["homeWinProbability"] * 100, 1), "gapPoints": gap,
+                    "leans": None if gap is None or abs(gap) < 0.05 else (home if gap > 0 else away),
+                    "nudges": [], "breakdownKept": False,
+                }
         if game.get("travel", {}).get("available"):
             game["travel"]["workedOut"] = travel_worked_out(game, config)
         game["modelAdjustments"] = {
