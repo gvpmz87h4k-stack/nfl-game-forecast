@@ -38,14 +38,16 @@ def grade_outside_picks(entry):
     actual_margin = home_score - away_score
     close = entry.get("closingHomeMargin")
     for source_key, pick in (entry.get("outsidePicks") or {}).items():
-        if "winnerCorrect" in pick or "spreadCovered" in pick:
-            continue
         graded_pick = dict(pick)
-        if pick.get("winner") in (entry["home"], entry["away"]):
+        if pick.get("winner") in (entry["home"], entry["away"]) and "winnerCorrect" not in pick:
             graded_pick["winnerCorrect"] = pick["winner"] == winner
-        if pick.get("spread") in (entry["home"], entry["away"]) and close is not None and actual_margin != close:
-            home_covered = actual_margin > close
-            graded_pick["spreadCovered"] = home_covered if pick["spread"] == entry["home"] else not home_covered
+        if pick.get("spread") in (entry["home"], entry["away"]) and close is not None \
+                and "spreadCovered" not in pick and "spreadPush" not in pick:
+            if actual_margin == close:
+                graded_pick["spreadPush"] = True        # landed exactly on the number: no win, no loss
+            else:
+                home_covered = actual_margin > close
+                graded_pick["spreadCovered"] = home_covered if pick["spread"] == entry["home"] else not home_covered
         entry["outsidePicks"][source_key] = graded_pick
 
 
@@ -197,7 +199,9 @@ def _block(entries):
     sources = {}
     for e in graded:
         for key, pick in (e.get("outsidePicks") or {}).items():
-            block = sources.setdefault(key, {"label": pick.get("label", key), "winnerPicks": 0, "winnerCorrect": 0, "spreadPicks": 0, "spreadCovered": 0})
+            block = sources.setdefault(key, {"label": pick.get("label", key), "winnerPicks": 0, "winnerCorrect": 0, "spreadPicks": 0, "spreadCovered": 0, "spreadPushes": 0})
+            if pick.get("spreadPush"):
+                block["spreadPushes"] += 1
             if "winnerCorrect" in pick:
                 block["winnerPicks"] += 1
                 block["winnerCorrect"] += 1 if pick["winnerCorrect"] else 0

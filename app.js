@@ -728,7 +728,10 @@ function renderBacktest() {
 function renderWhoIsRight(o) {
   const box = document.querySelector("#whoIsRight");
   if (!box) return;
-  const cell = (right, picks) => picks ? `<strong>${right} of ${picks}</strong><small> ${Math.round((right / picks) * 100)}%</small>` : `<small>none yet</small>`;
+  const cell = (right, picks, pushes = 0) => {
+    const pushText = pushes ? `<small>, ${pushes} push${pushes === 1 ? "" : "es"}</small>` : "";
+    return picks ? `<strong>${right} of ${picks}</strong><small> ${Math.round((right / picks) * 100)}%</small>${pushText}` : (pushes ? `<small>no decision yet</small>${pushText}` : `<small>none yet</small>`);
+  };
   const rows = [];
   rows.push({ label: "The betting market", winners: cell(o.marketCorrect, o.graded), spread: "<small>does not pick</small>", cls: "is-market" });
   rows.push({ label: "The app", winners: cell(o.modelCorrect, o.graded), spread: "<small>does not pick</small>", cls: "is-app" });
@@ -739,7 +742,7 @@ function renderWhoIsRight(o) {
   const writers = sources.filter(([k]) => k.startsWith("cbs-")).sort((a, b) => a[1].label.localeCompare(b[1].label));
   [...people, ...consensus, ...writers].forEach(([key, src]) => rows.push({
     label: src.label.replace("CBS Sports experts, consensus", "CBS writers, consensus").replace("CBS Sports, ", ""),
-    winners: cell(src.winnerCorrect, src.winnerPicks), spread: cell(src.spreadCovered, src.spreadPicks),
+    winners: cell(src.winnerCorrect, src.winnerPicks), spread: cell(src.spreadCovered, src.spreadPicks, src.spreadPushes),
     cls: key.startsWith("cbs") ? "is-writer" : "is-person",
   }));
   box.innerHTML = `<table class="who-table">

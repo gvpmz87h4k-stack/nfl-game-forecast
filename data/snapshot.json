@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "currentWeek": 1,
-  "updatedAt": "2026-09-11T16:34:36.972450Z",
+  "updatedAt": "2026-09-11T16:49:59.890707Z",
   "games": [
     {
       "id": "401872656",
@@ -820,43 +820,51 @@
         },
         "cbs": {
           "label": "CBS Sports experts, consensus",
+          "spread": "SEA",
           "winner": "SEA",
-          "spread": "SEA"
+          "winnerCorrect": true
         },
         "cbs-prisco": {
           "label": "CBS Sports, Pete Prisco",
+          "spread": "SEA",
           "winner": "SEA",
-          "spread": "SEA"
+          "winnerCorrect": true
         },
         "cbs-dubin": {
           "label": "CBS Sports, Jared Dubin",
+          "spread": "SEA",
           "winner": "SEA",
-          "spread": "SEA"
+          "winnerCorrect": true
         },
         "cbs-wilson": {
           "label": "CBS Sports, Ryan Wilson",
+          "spread": "SEA",
           "winner": "SEA",
-          "spread": "SEA"
+          "winnerCorrect": true
         },
         "cbs-breech": {
           "label": "CBS Sports, John Breech",
+          "spread": "SEA",
           "winner": "SEA",
-          "spread": "SEA"
+          "winnerCorrect": true
         },
         "cbs-sullivan": {
           "label": "CBS Sports, Tyler Sullivan",
+          "spread": "SEA",
           "winner": "SEA",
-          "spread": "SEA"
+          "winnerCorrect": true
         },
         "cbs-richard": {
           "label": "CBS Sports, Dave Richard",
+          "spread": "NE",
           "winner": "NE",
-          "spread": "NE"
+          "winnerCorrect": false
         },
         "cbs-eisenberg": {
           "label": "CBS Sports, Jamey Eisenberg",
+          "spread": "NE",
           "winner": "SEA",
-          "spread": "NE"
+          "winnerCorrect": true
         }
       },
       "situation": {
@@ -1827,43 +1835,59 @@
         },
         "cbs": {
           "label": "CBS Sports experts, consensus",
+          "spread": "LAR",
+          "spreadCovered": false,
           "winner": "LAR",
-          "spread": "LAR"
+          "winnerCorrect": false
         },
         "cbs-prisco": {
           "label": "CBS Sports, Pete Prisco",
+          "spread": "SF",
+          "spreadCovered": true,
           "winner": "LAR",
-          "spread": "SF"
+          "winnerCorrect": false
         },
         "cbs-dubin": {
           "label": "CBS Sports, Jared Dubin",
+          "spread": "LAR",
+          "spreadCovered": false,
           "winner": "LAR",
-          "spread": "LAR"
+          "winnerCorrect": false
         },
         "cbs-wilson": {
           "label": "CBS Sports, Ryan Wilson",
+          "spread": "LAR",
+          "spreadCovered": false,
           "winner": "LAR",
-          "spread": "LAR"
+          "winnerCorrect": false
         },
         "cbs-breech": {
           "label": "CBS Sports, John Breech",
+          "spread": "LAR",
+          "spreadCovered": false,
           "winner": "LAR",
-          "spread": "LAR"
+          "winnerCorrect": false
         },
         "cbs-sullivan": {
           "label": "CBS Sports, Tyler Sullivan",
+          "spread": "SF",
+          "spreadCovered": true,
           "winner": "SF",
-          "spread": "SF"
+          "winnerCorrect": true
         },
         "cbs-richard": {
           "label": "CBS Sports, Dave Richard",
+          "spread": "SF",
+          "spreadCovered": true,
           "winner": "SF",
-          "spread": "SF"
+          "winnerCorrect": true
         },
         "cbs-eisenberg": {
           "label": "CBS Sports, Jamey Eisenberg",
+          "spread": "LAR",
+          "spreadCovered": false,
           "winner": "LAR",
-          "spread": "LAR"
+          "winnerCorrect": false
         }
       },
       "situation": {
@@ -1949,6 +1973,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -1971,14 +2003,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -2057,11 +2081,18 @@
       },
       "continuity": {
         "away": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
           "discounted": [
+            {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
             {
               "player": "Christian Rozeboom",
               "position": "LB",
@@ -2072,13 +2103,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -2114,7 +2138,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.96
+          "totalRisk": 2.14
         },
         "home": {
           "score": 99,
@@ -7729,7 +7753,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -8504,18 +8528,18 @@
         "lineMovement": 3.0,
         "book": "DraftKings",
         "spreadPrice": {
-          "home": "-108",
-          "away": "-112",
+          "home": "-112",
+          "away": "-108",
           "homeOpen": "-110",
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-122",
-          "away": "+102",
+          "home": "-125",
+          "away": "+105",
           "homeOpen": "+105",
           "awayOpen": "-125"
         },
-        "moneylineHomeProbability": 0.5261,
+        "moneylineHomeProbability": 0.5325,
         "moneylineOpenHomeProbability": 0.4675
       },
       "lineSource": "Market line",
@@ -8811,7 +8835,7 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.5474,
-      "marketHomeWinProbability": 0.5261,
+      "marketHomeWinProbability": 0.5325,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 1.65,
       "modelAdjustments": {
@@ -9214,8 +9238,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -16081,6 +16105,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -16103,14 +16135,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -16346,6 +16370,13 @@
           "clusterMembers": {},
           "discounted": [
             {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
               "player": "Christian Rozeboom",
               "position": "LB",
               "status": "Questionable",
@@ -16355,13 +16386,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -16397,7 +16421,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.75
+          "totalRisk": 1.91
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -19487,8 +19511,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -20948,7 +20972,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -26434,7 +26458,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -28091,8 +28115,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -30406,6 +30430,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -30428,14 +30460,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -30670,6 +30694,13 @@
           "clusterMembers": {},
           "discounted": [
             {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
               "player": "Christian Rozeboom",
               "position": "LB",
               "status": "Questionable",
@@ -30679,13 +30710,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -30721,7 +30745,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.75
+          "totalRisk": 1.91
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -34419,8 +34443,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -38498,6 +38522,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -38520,14 +38552,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -38830,6 +38854,13 @@
           "clusterMembers": {},
           "discounted": [
             {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
               "player": "Christian Rozeboom",
               "position": "LB",
               "status": "Questionable",
@@ -38839,13 +38870,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -38881,7 +38905,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.75
+          "totalRisk": 1.91
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -40767,7 +40791,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -44875,6 +44899,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -44897,14 +44929,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -44977,11 +45001,18 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
           "discounted": [
+            {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
             {
               "player": "Christian Rozeboom",
               "position": "LB",
@@ -44992,13 +45023,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -45034,7 +45058,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.96
+          "totalRisk": 2.14
         },
         "home": {
           "score": 98,
@@ -46810,7 +46834,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -50044,8 +50068,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -60733,6 +60757,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -60755,14 +60787,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -60915,6 +60939,13 @@
           "clusterMembers": {},
           "discounted": [
             {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
               "player": "Christian Rozeboom",
               "position": "LB",
               "status": "Questionable",
@@ -60924,13 +60955,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -60966,7 +60990,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.75
+          "totalRisk": 1.91
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -64281,8 +64305,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -68665,7 +68689,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -69281,6 +69305,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -69303,14 +69335,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -69383,11 +69407,18 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
           "discounted": [
+            {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
             {
               "player": "Christian Rozeboom",
               "position": "LB",
@@ -69398,13 +69429,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -69440,7 +69464,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.96
+          "totalRisk": 2.14
         },
         "home": {
           "score": 98,
@@ -79217,6 +79241,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -79239,14 +79271,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -79567,6 +79591,13 @@
           "clusterMembers": {},
           "discounted": [
             {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
               "player": "Christian Rozeboom",
               "position": "LB",
               "status": "Questionable",
@@ -79576,13 +79607,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -79618,7 +79642,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.75
+          "totalRisk": 1.91
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -82052,7 +82076,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -82791,8 +82815,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -86871,7 +86895,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -88726,8 +88750,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -93340,6 +93364,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -93362,14 +93394,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -93442,11 +93466,18 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
           "discounted": [
+            {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
             {
               "player": "Christian Rozeboom",
               "position": "LB",
@@ -93457,13 +93488,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -93499,7 +93523,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.96
+          "totalRisk": 2.14
         },
         "home": {
           "score": 97,
@@ -94687,8 +94711,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -98946,7 +98970,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -105042,7 +105066,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -107009,6 +107033,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -107031,14 +107063,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -107111,11 +107135,18 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
           "discounted": [
+            {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
             {
               "player": "Christian Rozeboom",
               "position": "LB",
@@ -107126,13 +107157,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -107168,7 +107192,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.96
+          "totalRisk": 2.14
         },
         "home": {
           "score": 97,
@@ -112187,8 +112211,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -118006,7 +118030,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -120867,8 +120891,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -123106,6 +123130,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -123128,14 +123160,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -123266,12 +123290,12 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-192",
-          "away": "+160",
+          "home": "-198",
+          "away": "+164",
           "homeOpen": "-192",
           "awayOpen": "+160"
         },
-        "moneylineHomeProbability": 0.6309,
+        "moneylineHomeProbability": 0.6369,
         "moneylineOpenHomeProbability": 0.6309
       },
       "lineSource": "Market line",
@@ -123348,6 +123372,13 @@
           "clusterMembers": {},
           "discounted": [
             {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
               "player": "Christian Rozeboom",
               "position": "LB",
               "status": "Questionable",
@@ -123357,13 +123388,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -123399,7 +123423,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.75
+          "totalRisk": 1.91
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -123503,7 +123527,7 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.6094,
-      "marketHomeWinProbability": 0.6309,
+      "marketHomeWinProbability": 0.6369,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 3.85,
       "modelAdjustments": {
@@ -126666,8 +126690,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -128738,6 +128762,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -128760,14 +128792,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -128995,6 +129019,13 @@
           "clusterMembers": {},
           "discounted": [
             {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
               "player": "Christian Rozeboom",
               "position": "LB",
               "status": "Questionable",
@@ -129004,13 +129035,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -129046,7 +129070,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.75
+          "totalRisk": 1.91
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -129541,7 +129565,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -135644,7 +135668,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -137588,8 +137612,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -139003,6 +139027,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -139025,14 +139057,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -139105,11 +139129,18 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
           "discounted": [
+            {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
             {
               "player": "Christian Rozeboom",
               "position": "LB",
@@ -139120,13 +139151,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -139162,7 +139186,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.96
+          "totalRisk": 2.14
         },
         "home": {
           "score": 98,
@@ -146049,7 +146073,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -148513,6 +148537,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -148535,14 +148567,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -148785,6 +148809,13 @@
           "clusterMembers": {},
           "discounted": [
             {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
               "player": "Christian Rozeboom",
               "position": "LB",
               "status": "Questionable",
@@ -148794,13 +148825,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -148836,7 +148860,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.75
+          "totalRisk": 1.91
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -149226,8 +149250,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -157784,6 +157808,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -157806,14 +157838,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -157886,11 +157910,18 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
           "discounted": [
+            {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
             {
               "player": "Christian Rozeboom",
               "position": "LB",
@@ -157901,13 +157932,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -157943,7 +157967,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.96
+          "totalRisk": 2.14
         },
         "home": {
           "score": 93,
@@ -159116,8 +159140,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -160311,7 +160335,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -167698,6 +167722,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -167720,14 +167752,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -167963,6 +167987,13 @@
           "clusterMembers": {},
           "discounted": [
             {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
+            {
               "player": "Christian Rozeboom",
               "position": "LB",
               "status": "Questionable",
@@ -167972,13 +168003,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -168014,7 +168038,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.75
+          "totalRisk": 1.91
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -168582,8 +168606,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -171799,7 +171823,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -182350,7 +182374,7 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Calf",
-            "note": "Kacmarek (calf) was a limited participant in practice for the second day in a row Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
+            "note": "Kacmarek (calf) was a limited participant in practice for the second consecutive day Thursday, C. Isaiah Smalls II of the Miami Herald reports.",
             "updated": "2026-09-11T00:11Z"
           },
           {
@@ -183069,6 +183093,14 @@
         "score": 0,
         "injuries": [
           {
+            "player": "Sean Tucker",
+            "position": "RB",
+            "status": "Doubtful",
+            "detail": "Hamstring",
+            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
+            "updated": "2026-09-11T15:40Z"
+          },
+          {
             "player": "Christian Rozeboom",
             "position": "LB",
             "status": "Questionable",
@@ -183091,14 +183123,6 @@
             "detail": "Oblique",
             "note": "questionable",
             "updated": "2026-09-10T01:17Z"
-          },
-          {
-            "player": "Sean Tucker",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Hamstring",
-            "note": "Tucker (hamstring) is practicing Friday, Greg Auman of Fox Sports reports.",
-            "updated": "2026-09-11T15:40Z"
           },
           {
             "player": "David Sills V",
@@ -183155,12 +183179,12 @@
           "awayOpen": "-105"
         },
         "moneyline": {
-          "home": "+105",
-          "away": "-125",
+          "home": "+102",
+          "away": "-122",
           "homeOpen": "+100",
           "awayOpen": "-120"
         },
-        "moneylineHomeProbability": 0.4675,
+        "moneylineHomeProbability": 0.4739,
         "moneylineOpenHomeProbability": 0.4783
       },
       "lineSource": "Market line",
@@ -183171,11 +183195,18 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 99,
+          "score": 98,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
           "discounted": [
+            {
+              "player": "Sean Tucker",
+              "position": "RB",
+              "status": "Doubtful",
+              "role": "backup",
+              "why": "not a starter on the depth chart"
+            },
             {
               "player": "Christian Rozeboom",
               "position": "LB",
@@ -183186,13 +183217,6 @@
             {
               "player": "Justin Skule",
               "position": "OT",
-              "status": "Questionable",
-              "role": "backup",
-              "why": "not a starter on the depth chart"
-            },
-            {
-              "player": "Sean Tucker",
-              "position": "RB",
               "status": "Questionable",
               "role": "backup",
               "why": "not a starter on the depth chart"
@@ -183228,7 +183252,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 1.96
+          "totalRisk": 2.14
         },
         "home": {
           "score": 97,
@@ -183393,7 +183417,7 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.4526,
-      "marketHomeWinProbability": 0.4675,
+      "marketHomeWinProbability": 0.4739,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": -1.75,
       "modelAdjustments": {
@@ -185026,8 +185050,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Groin",
-            "note": "Croskey-Merritt (groin) practiced in a limited capacity Thursday.",
-            "updated": "2026-09-10T21:41Z"
+            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
+            "updated": "2026-09-11T16:43Z"
           },
           {
             "player": "K'Lavon Chaisson",
@@ -188156,6 +188180,7 @@
           "winnerCorrect": 1,
           "spreadPicks": 1,
           "spreadCovered": 0,
+          "spreadPushes": 1,
           "winnerAccuracy": 0.5,
           "spreadCoverRate": 0.0
         },
@@ -188165,6 +188190,7 @@
           "winnerCorrect": 1,
           "spreadPicks": 1,
           "spreadCovered": 0,
+          "spreadPushes": 1,
           "winnerAccuracy": 0.5,
           "spreadCoverRate": 0.0
         },
@@ -188174,6 +188200,7 @@
           "winnerCorrect": 1,
           "spreadPicks": 1,
           "spreadCovered": 0,
+          "spreadPushes": 1,
           "winnerAccuracy": 0.5,
           "spreadCoverRate": 0.0
         },
@@ -188183,6 +188210,7 @@
           "winnerCorrect": 1,
           "spreadPicks": 1,
           "spreadCovered": 0,
+          "spreadPushes": 1,
           "winnerAccuracy": 0.5,
           "spreadCoverRate": 0.0
         },
@@ -188192,6 +188220,7 @@
           "winnerCorrect": 1,
           "spreadPicks": 1,
           "spreadCovered": 1,
+          "spreadPushes": 1,
           "winnerAccuracy": 0.5,
           "spreadCoverRate": 1.0
         },
@@ -188201,6 +188230,7 @@
           "winnerCorrect": 1,
           "spreadPicks": 1,
           "spreadCovered": 1,
+          "spreadPushes": 1,
           "winnerAccuracy": 0.5,
           "spreadCoverRate": 1.0
         },
@@ -188210,6 +188240,7 @@
           "winnerCorrect": 2,
           "spreadPicks": 1,
           "spreadCovered": 1,
+          "spreadPushes": 1,
           "winnerAccuracy": 1.0,
           "spreadCoverRate": 1.0
         },
@@ -188219,6 +188250,7 @@
           "winnerCorrect": 1,
           "spreadPicks": 1,
           "spreadCovered": 0,
+          "spreadPushes": 1,
           "winnerAccuracy": 0.5,
           "spreadCoverRate": 0.0
         },
@@ -188228,6 +188260,7 @@
           "winnerCorrect": 2,
           "spreadPicks": 0,
           "spreadCovered": 0,
+          "spreadPushes": 0,
           "winnerAccuracy": 1.0,
           "spreadCoverRate": null
         }
@@ -188275,6 +188308,7 @@
             "winnerCorrect": 1,
             "spreadPicks": 1,
             "spreadCovered": 0,
+            "spreadPushes": 1,
             "winnerAccuracy": 0.5,
             "spreadCoverRate": 0.0
           },
@@ -188284,6 +188318,7 @@
             "winnerCorrect": 1,
             "spreadPicks": 1,
             "spreadCovered": 0,
+            "spreadPushes": 1,
             "winnerAccuracy": 0.5,
             "spreadCoverRate": 0.0
           },
@@ -188293,6 +188328,7 @@
             "winnerCorrect": 1,
             "spreadPicks": 1,
             "spreadCovered": 0,
+            "spreadPushes": 1,
             "winnerAccuracy": 0.5,
             "spreadCoverRate": 0.0
           },
@@ -188302,6 +188338,7 @@
             "winnerCorrect": 1,
             "spreadPicks": 1,
             "spreadCovered": 0,
+            "spreadPushes": 1,
             "winnerAccuracy": 0.5,
             "spreadCoverRate": 0.0
           },
@@ -188311,6 +188348,7 @@
             "winnerCorrect": 1,
             "spreadPicks": 1,
             "spreadCovered": 1,
+            "spreadPushes": 1,
             "winnerAccuracy": 0.5,
             "spreadCoverRate": 1.0
           },
@@ -188320,6 +188358,7 @@
             "winnerCorrect": 1,
             "spreadPicks": 1,
             "spreadCovered": 1,
+            "spreadPushes": 1,
             "winnerAccuracy": 0.5,
             "spreadCoverRate": 1.0
           },
@@ -188329,6 +188368,7 @@
             "winnerCorrect": 2,
             "spreadPicks": 1,
             "spreadCovered": 1,
+            "spreadPushes": 1,
             "winnerAccuracy": 1.0,
             "spreadCoverRate": 1.0
           },
@@ -188338,6 +188378,7 @@
             "winnerCorrect": 1,
             "spreadPicks": 1,
             "spreadCovered": 0,
+            "spreadPushes": 1,
             "winnerAccuracy": 0.5,
             "spreadCoverRate": 0.0
           },
@@ -188347,6 +188388,7 @@
             "winnerCorrect": 2,
             "spreadPicks": 0,
             "spreadCovered": 0,
+            "spreadPushes": 0,
             "winnerAccuracy": 1.0,
             "spreadCoverRate": null
           }

@@ -165,3 +165,18 @@ def test_a_persons_pick_that_arrives_at_or_after_the_freeze_is_still_graded():
     assert entry["outsidePicks"]["cbs"]["winner"] == "NE"                       # the frozen writers' pick was not replaced
     assert entry["outsidePicks"]["narcisa"]["winnerCorrect"] is True
     assert entry["outsidePicks"]["narcisa"]["spreadCovered"] is False            # NE +3 did not cover a 4-point loss
+
+
+def test_a_spread_pick_that_lands_on_the_number_is_a_push_and_counted_as_one():
+    ledger = {"season": 2026, "games": {}}
+    g = game("9", "2026-09-13T17:00Z", 0.60, 0.61)
+    g["marketHomeMargin"] = 3.0
+    g["outsidePicks"] = {"cbs": {"label": "CBS", "winner": "SEA", "spread": "SEA"}}
+    record_predictions(ledger, [g], "2026-09-12T12:00Z")
+    record_predictions(ledger, [g], "2026-09-13T18:00Z")
+    done = game("9", "2026-09-13T17:00Z", 0.60, 0.61, completed=True, home_score=13, away_score=10)
+    grade_predictions(ledger, [done])
+    pick = ledger["games"]["9"]["outsidePicks"]["cbs"]
+    assert pick["winnerCorrect"] is True and pick.get("spreadPush") is True and "spreadCovered" not in pick
+    src = summarize(ledger)["overall"]["outsideSources"]["cbs"]
+    assert src["spreadPicks"] == 0 and src["spreadPushes"] == 1
