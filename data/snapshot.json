@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "currentWeek": 1,
-  "updatedAt": "2026-09-11T17:28:04.963369Z",
+  "updatedAt": "2026-09-11T17:46:17.188498Z",
   "games": [
     {
       "id": "401872656",
@@ -197,7 +197,7 @@
       "lineSource": "Market line",
       "marketHomeMargin": 3.0,
       "homeMargin": 3.3,
-      "homeWinProbability": 0.5941,
+      "homeWinProbability": 0.5909,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": null,
       "continuity": {
@@ -574,6 +574,7 @@
       "marketHomeWinProbability": 0.5996,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 3.3,
+      "forecastNote": "frozen at kickoff",
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": 0.0,
@@ -1111,7 +1112,7 @@
       "lineSource": "Market line",
       "marketHomeMargin": 3.5,
       "homeMargin": 3.85,
-      "homeWinProbability": 0.6094,
+      "homeWinProbability": 0.5896,
       "probabilitySource": "Calibrated market line + rolling team state + rest",
       "weather": {
         "summary": "Cloudy",
@@ -1591,6 +1592,7 @@
       "marketHomeWinProbability": 0.6575,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 3.85,
+      "forecastNote": "frozen at kickoff",
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": 0.0,
@@ -4903,30 +4905,30 @@
         "neutral": false
       },
       "odds": {
-        "detail": "PIT -5.5",
+        "detail": "PIT -6",
         "total": 41.5,
         "openingHomeMargin": 3.0,
-        "lineMovement": 2.5,
+        "lineMovement": 3.0,
         "book": "DraftKings",
         "spreadPrice": {
-          "home": "-105",
-          "away": "-115",
+          "home": "-110",
+          "away": "-110",
           "homeOpen": "-120",
           "awayOpen": "+100"
         },
         "moneyline": {
-          "home": "-225",
-          "away": "+185",
+          "home": "-265",
+          "away": "+215",
           "homeOpen": "-175",
           "awayOpen": "+145"
         },
-        "moneylineHomeProbability": 0.6636,
+        "moneylineHomeProbability": 0.6958,
         "moneylineOpenHomeProbability": 0.6092
       },
       "lineSource": "Market line",
-      "marketHomeMargin": 5.5,
-      "homeMargin": 6.05,
-      "homeWinProbability": 0.6746,
+      "marketHomeMargin": 6.0,
+      "homeMargin": 6.6,
+      "homeWinProbability": 0.6895,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Rain showers",
@@ -5137,8 +5139,8 @@
         "coverage": "Official roster status and explicit public practice wording only"
       },
       "lineMovement": {
-        "difference": 2.5,
-        "probabilityShift": 0.0031,
+        "difference": 3.0,
+        "probabilityShift": 0.0037,
         "source": "market line movement",
         "available": true,
         "applied": true
@@ -5150,10 +5152,10 @@
         "uncertaintyMultiplier": 1.0,
         "uncertaintyProbabilityShift": 0.0
       },
-      "marketSpreadHomeWinProbability": 0.6688,
-      "marketHomeWinProbability": 0.6636,
+      "marketSpreadHomeWinProbability": 0.683,
+      "marketHomeWinProbability": 0.6958,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 6.05,
+      "effectiveMargin": 6.6,
       "modelAdjustments": {
         "teamStatePoints": 0.0,
         "restPoints": 0.0,
@@ -5266,7 +5268,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -5368,9 +5370,9 @@
       },
       "ratingModel": {
         "modelHomeMargin": 3.22,
-        "blendHomeMargin": 5.83,
-        "ratingHomeWinProbability": 0.663,
-        "disagreementPoints": 0.33,
+        "blendHomeMargin": 6.27,
+        "ratingHomeWinProbability": 0.6745,
+        "disagreementPoints": 0.27,
         "flagged": false,
         "leans": "PIT",
         "homeStarter": "A.Rodgers",
@@ -5452,10 +5454,10 @@
       },
       "readout": [
         "Pittsburgh Steelers is expected to win, about 7 times in 10.",
-        "The betting market gives Atlanta Falcons a 5.5-point head start, moved from 3 since the line opened, toward Pittsburgh Steelers.",
+        "The betting market gives Atlanta Falcons a 6-point head start, moved from 3 since the line opened, toward Pittsburgh Steelers.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "7 of the 7 CBS writers who have picked take Pittsburgh Steelers, the favorite.",
         "Weather could matter: Rain showers, wind 8 mph."
@@ -5484,6 +5486,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -5498,14 +5508,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -5763,7 +5765,7 @@
           "totalRisk": 4.66
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -5813,7 +5815,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.02
+          "totalRisk": 4.1
         },
         "probabilityShift": 0.0,
         "applied": true
@@ -7077,8 +7079,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -7130,7 +7132,7 @@
       "lineSource": "Market line",
       "marketHomeMargin": -1.5,
       "homeMargin": -1.65,
-      "homeWinProbability": 0.4533,
+      "homeWinProbability": 0.4531,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption",
       "weather": null,
       "continuity": {
@@ -7280,9 +7282,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -7293,8 +7295,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -7306,7 +7308,7 @@
           "items": [],
           "clusters": []
         },
-        "probabilityShift": 0.0007,
+        "probabilityShift": 0.0004,
         "applied": true,
         "coverage": "Official roster status and explicit public practice wording only"
       },
@@ -9229,14 +9231,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -9398,7 +9392,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.62,
-          "totalRisk": 3.4
+          "totalRisk": 2.95
         },
         "home": {
           "score": 99,
@@ -11914,8 +11908,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -12209,9 +12203,9 @@
           "clusters": []
         },
         "home": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -12222,8 +12216,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -12653,6 +12647,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -12667,14 +12669,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -12739,7 +12733,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -12789,7 +12783,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.38
+          "totalRisk": 4.6
         },
         "home": {
           "score": 93,
@@ -12989,7 +12983,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -13238,7 +13232,7 @@
         "The betting market gives Carolina Panthers a 1.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested."
       ]
@@ -19487,14 +19481,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -19650,7 +19636,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.62,
-          "totalRisk": 3.4
+          "totalRisk": 2.95
         },
         "home": {
           "score": 98,
@@ -23574,7 +23560,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -23722,7 +23708,7 @@
         "The betting market gives Atlanta Falcons a 7.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market."
       ]
     },
@@ -23785,8 +23771,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -24100,9 +24086,9 @@
           "clusters": []
         },
         "home": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -24113,8 +24099,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -24509,6 +24495,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -24523,14 +24517,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -24595,7 +24581,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -24645,7 +24631,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.38
+          "totalRisk": 4.6
         },
         "home": {
           "score": 97,
@@ -28076,14 +28062,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -28363,7 +28341,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.55,
-          "totalRisk": 3.04
+          "totalRisk": 2.63
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -34404,14 +34382,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -34686,7 +34656,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.6,
-          "totalRisk": 3.28
+          "totalRisk": 2.84
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -35110,8 +35080,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -35503,9 +35473,9 @@
           ]
         },
         "home": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -35516,8 +35486,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -43371,6 +43341,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -43385,14 +43363,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -43598,7 +43568,7 @@
           "totalRisk": 4.29
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -43648,7 +43618,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.02
+          "totalRisk": 4.1
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -44607,7 +44577,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -44755,7 +44725,7 @@
         "The betting market gives Atlanta Falcons a 2.5-point head start, unchanged since the line opened.",
         "Beyond the line, rest tilts it toward Atlanta Falcons, a little.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested."
       ]
@@ -50014,14 +49984,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -50266,7 +50228,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.55,
-          "totalRisk": 3.04
+          "totalRisk": 2.63
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -53859,12 +53821,12 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "+164",
-          "away": "-198",
+          "home": "+170",
+          "away": "-205",
           "homeOpen": "+180",
           "awayOpen": "-218"
         },
-        "moneylineHomeProbability": 0.3631,
+        "moneylineHomeProbability": 0.3553,
         "moneylineOpenHomeProbability": 0.3425
       },
       "lineSource": "Market line",
@@ -54160,7 +54122,7 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.3605,
-      "marketHomeWinProbability": 0.3631,
+      "marketHomeWinProbability": 0.3553,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": -5.05,
       "modelAdjustments": {
@@ -54175,7 +54137,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -54422,7 +54384,7 @@
         "The betting market gives Atlanta Falcons a 4.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market."
       ]
     },
@@ -54575,8 +54537,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -54764,9 +54726,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -54777,8 +54739,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -57130,7 +57092,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -57382,7 +57344,7 @@
         "The betting market gives Atlanta Falcons a 3-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market."
       ]
     },
@@ -60169,6 +60131,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -60183,14 +60153,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -60255,7 +60217,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -60305,7 +60267,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.38
+          "totalRisk": 4.6
         },
         "home": {
           "score": 99,
@@ -62830,8 +62792,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -63012,9 +62974,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -63025,8 +62987,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -64236,14 +64198,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -64399,7 +64353,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.62,
-          "totalRisk": 3.4
+          "totalRisk": 2.95
         },
         "home": {
           "score": 97,
@@ -66936,7 +66890,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -67194,7 +67148,7 @@
         "The betting market gives Atlanta Falcons a 4.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market."
       ]
     },
@@ -69174,6 +69128,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -69188,14 +69150,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -69394,7 +69348,7 @@
           "totalRisk": 2.63
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -69444,7 +69398,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.02
+          "totalRisk": 4.1
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -74649,6 +74603,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -74663,14 +74625,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -74735,7 +74689,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -74785,7 +74739,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.38
+          "totalRisk": 4.6
         },
         "home": {
           "score": 94,
@@ -75337,8 +75291,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -75648,9 +75602,9 @@
           ]
         },
         "home": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -75661,8 +75615,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -79763,7 +79717,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -79911,7 +79865,7 @@
         "The betting market gives Atlanta Falcons a 4.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested."
       ]
@@ -82716,14 +82670,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -82983,7 +82929,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.55,
-          "totalRisk": 3.04
+          "totalRisk": 2.63
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -85255,7 +85201,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -85499,7 +85445,7 @@
         "The betting market gives Atlanta Falcons a 5.5-point head start, moved from 4.5 since the line opened, toward Cincinnati Bengals.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings lean Atlanta Falcons by 1.5 points more than the market does."
       ]
     },
@@ -88651,14 +88597,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -88971,7 +88909,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.55,
-          "totalRisk": 3.04
+          "totalRisk": 2.63
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -89436,6 +89374,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -89450,14 +89396,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -89648,7 +89586,7 @@
           "totalRisk": 1.77
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -89698,7 +89636,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.02
+          "totalRisk": 4.1
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -94014,8 +93952,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -94210,9 +94148,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -94223,8 +94161,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -94597,14 +94535,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -94675,12 +94605,12 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-125",
-          "away": "+105",
+          "home": "-122",
+          "away": "+102",
           "homeOpen": "-125",
           "awayOpen": "+105"
         },
-        "moneylineHomeProbability": 0.5325,
+        "moneylineHomeProbability": 0.5261,
         "moneylineOpenHomeProbability": 0.5325
       },
       "lineSource": "Market line",
@@ -94760,7 +94690,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.62,
-          "totalRisk": 3.4
+          "totalRisk": 2.95
         },
         "home": {
           "score": 99,
@@ -94878,7 +94808,7 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.5474,
-      "marketHomeWinProbability": 0.5325,
+      "marketHomeWinProbability": 0.5261,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 1.65,
       "modelAdjustments": {
@@ -96359,7 +96289,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -96607,7 +96537,7 @@
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Kansas City Chiefs starts Patrick Mahomes, per the depth chart, not C. Oladokun, who took most of last season's snaps.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings lean Atlanta Falcons by 1.1 points more than the market does."
       ]
     },
@@ -99487,6 +99417,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -99501,14 +99439,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -99573,7 +99503,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -99623,7 +99553,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.38
+          "totalRisk": 4.6
         },
         "home": {
           "score": 97,
@@ -100166,8 +100096,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -100362,9 +100292,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -100375,8 +100305,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -104883,8 +104813,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -105151,9 +105081,9 @@
           "clusters": []
         },
         "home": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -105164,8 +105094,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -108765,6 +108695,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -108779,14 +108717,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -108982,7 +108912,7 @@
           "totalRisk": 2.94
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -109032,7 +108962,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.02
+          "totalRisk": 4.1
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -112067,14 +111997,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -112304,7 +112226,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.55,
-          "totalRisk": 3.04
+          "totalRisk": 2.63
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -114942,8 +114864,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -115166,9 +115088,9 @@
           "clusters": []
         },
         "home": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -115179,8 +115101,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -119113,7 +119035,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -119261,7 +119183,7 @@
         "The betting market gives Atlanta Falcons a 4.5-point head start, unchanged since the line opened.",
         "Beyond the line, rest tilts it toward Atlanta Falcons, a little.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Minnesota Vikings starts Kyler Murray, per the depth chart, not J. McCarthy, who took most of last season's snaps.",
         "Our play-by-play ratings agree with the market."
       ]
@@ -120747,14 +120669,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -120910,7 +120824,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.62,
-          "totalRisk": 3.4
+          "totalRisk": 2.95
         },
         "home": {
           "score": 98,
@@ -123072,6 +122986,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -123086,14 +123008,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -123158,7 +123072,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -123208,7 +123122,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.38
+          "totalRisk": 4.6
         },
         "home": {
           "score": 98,
@@ -124842,7 +124756,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -125092,7 +125006,7 @@
         "The betting market gives Atlanta Falcons a 3.5-point head start, unchanged since the line opened.",
         "Beyond the line, rest tilts it toward Detroit Lions, a little.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market."
       ]
     },
@@ -126531,14 +126445,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -126694,7 +126600,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.62,
-          "totalRisk": 3.4
+          "totalRisk": 2.95
         },
         "home": {
           "score": 98,
@@ -130666,6 +130572,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -130680,14 +130594,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -130752,7 +130658,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -130802,7 +130708,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.38
+          "totalRisk": 4.6
         },
         "home": {
           "score": 99,
@@ -131342,8 +131248,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -131538,9 +131444,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -131551,8 +131457,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -134274,12 +134180,12 @@
           "awayOpen": "-115"
         },
         "moneyline": {
-          "home": "-125",
-          "away": "+105",
+          "home": "-122",
+          "away": "+102",
           "homeOpen": "-118",
           "awayOpen": "-102"
         },
-        "moneylineHomeProbability": 0.5325,
+        "moneylineHomeProbability": 0.5261,
         "moneylineOpenHomeProbability": 0.5174
       },
       "lineSource": "Market line",
@@ -134526,7 +134432,7 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.5474,
-      "marketHomeWinProbability": 0.5325,
+      "marketHomeWinProbability": 0.5261,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 1.65,
       "modelAdjustments": {
@@ -134644,7 +134550,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -134792,7 +134698,7 @@
         "The betting market gives Atlanta Falcons a 1.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Cleveland Browns starts Deshaun Watson, per the depth chart, not S. Sanders, who took most of last season's snaps.",
         "Our play-by-play ratings agree with the market."
       ]
@@ -137438,14 +137344,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -137772,7 +137670,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.55,
-          "totalRisk": 3.04
+          "totalRisk": 2.63
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -138141,6 +138039,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -138155,14 +138061,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -138391,7 +138289,7 @@
           "totalRisk": 4.31
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -138441,7 +138339,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.02
+          "totalRisk": 4.1
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -142352,8 +142250,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -142584,9 +142482,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -142597,8 +142495,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -145089,8 +144987,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -145430,9 +145328,9 @@
           "clusters": []
         },
         "home": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -145443,8 +145341,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -149061,14 +148959,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -149261,12 +149151,12 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-180",
-          "away": "+150",
+          "home": "-185",
+          "away": "+154",
           "homeOpen": "-185",
           "awayOpen": "+154"
         },
-        "moneylineHomeProbability": 0.6164,
+        "moneylineHomeProbability": 0.6225,
         "moneylineOpenHomeProbability": 0.6225
       },
       "lineSource": "Market line",
@@ -149466,7 +149356,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.55,
-          "totalRisk": 3.04
+          "totalRisk": 2.63
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -149558,7 +149448,7 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.6094,
-      "marketHomeWinProbability": 0.6164,
+      "marketHomeWinProbability": 0.6225,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 3.85,
       "modelAdjustments": {
@@ -149672,7 +149562,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -149820,7 +149710,7 @@
         "The betting market gives Atlanta Falcons a 3.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Washington Commanders starts Jayden Daniels, per the depth chart, not J. Johnson, who took most of last season's snaps.",
         "Our play-by-play ratings agree with the market."
       ]
@@ -149848,6 +149738,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -149862,14 +149760,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -150008,7 +149898,7 @@
           "totalRisk": 2.0
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -150058,7 +149948,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.02
+          "totalRisk": 4.1
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -156149,8 +156039,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -156331,9 +156221,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -156344,8 +156234,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -158006,7 +157896,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -158251,7 +158141,7 @@
         "The betting market gives Atlanta Falcons a 1.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested."
       ]
@@ -158936,14 +158826,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -159099,7 +158981,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.62,
-          "totalRisk": 3.4
+          "totalRisk": 2.95
         },
         "home": {
           "score": 99,
@@ -159581,6 +159463,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -159595,14 +159485,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -159667,7 +159549,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -159717,7 +159599,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.38
+          "totalRisk": 4.6
         },
         "home": {
           "score": 99,
@@ -168387,14 +168269,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -168550,7 +168424,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.62,
-          "totalRisk": 3.4
+          "totalRisk": 2.95
         },
         "home": {
           "score": 99,
@@ -169227,12 +169101,12 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-125",
-          "away": "+105",
+          "home": "-122",
+          "away": "+102",
           "homeOpen": "-125",
           "awayOpen": "+105"
         },
-        "moneylineHomeProbability": 0.5325,
+        "moneylineHomeProbability": 0.5261,
         "moneylineOpenHomeProbability": 0.5325
       },
       "lineSource": "Market line",
@@ -169486,7 +169360,7 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.5474,
-      "marketHomeWinProbability": 0.5325,
+      "marketHomeWinProbability": 0.5261,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 1.65,
       "modelAdjustments": {
@@ -169501,7 +169375,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -169753,7 +169627,7 @@
         "The betting market gives New Orleans Saints a 1.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested."
       ]
@@ -171690,8 +171564,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -171872,9 +171746,9 @@
       },
       "preparation": {
         "away": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -171885,8 +171759,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -172891,6 +172765,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -172905,14 +172787,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -173101,7 +172975,7 @@
           "totalRisk": 11.33
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -173151,7 +173025,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.02
+          "totalRisk": 4.1
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -176558,8 +176432,8 @@
             "position": "RB",
             "status": "Questionable",
             "detail": "Hamstring",
-            "note": "Johnson (hamstring) didn't practice Thursday, Matt Parrino of The Syracuse Post-Standard reports.",
-            "updated": "2026-09-10T18:51Z"
+            "note": "Johnson (hamstring) is practicing Friday, but Alex Brasky of SI.com believes the running back is unlikely to play Sunday in Houston.",
+            "updated": "2026-09-11T17:38Z"
           },
           {
             "player": "Phidarian Mathis",
@@ -176864,9 +176738,9 @@
           "clusters": []
         },
         "home": {
-          "score": 94,
+          "score": 96,
           "level": "Stable",
-          "rawRisk": 0.92,
+          "rawRisk": 0.6,
           "items": [
             {
               "player": "Ty Johnson",
@@ -176877,8 +176751,8 @@
               "missedPracticeReports": 1,
               "limitedPracticeReports": 0,
               "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.92
+              "decay": 0.65,
+              "risk": 0.6
             }
           ],
           "clusters": []
@@ -184816,14 +184690,6 @@
             "updated": "2026-09-10T23:50Z"
           },
           {
-            "player": "Jacory Croskey-Merritt",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Groin",
-            "note": "Croskey-Merritt (groin) will play in Sunday's game against the Eagles, Tashan Reed reports after Commanders coach Dan Quinn's update Friday.",
-            "updated": "2026-09-11T16:43Z"
-          },
-          {
             "player": "K'Lavon Chaisson",
             "position": "LB",
             "status": "Questionable",
@@ -185120,7 +184986,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.55,
-          "totalRisk": 3.04
+          "totalRisk": 2.63
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -185499,6 +185365,14 @@
             "updated": "2026-08-31T22:52Z"
           },
           {
+            "player": "Patrick Jones II",
+            "position": "LB",
+            "status": "Out",
+            "detail": "Back",
+            "note": "out",
+            "updated": "2026-09-11T17:20Z"
+          },
+          {
             "player": "Taylor Moton",
             "position": "OT",
             "status": "Out",
@@ -185513,14 +185387,6 @@
             "detail": "Neck",
             "note": "Wharton (neck) was moved to the reserve/PUP list by the Panthers on Sunday, Darin Gantt of the team's official website reports.",
             "updated": "2026-08-31T16:12Z"
-          },
-          {
-            "player": "Patrick Jones II",
-            "position": "LB",
-            "status": "Questionable",
-            "detail": "Back",
-            "note": "Jones (back) is not expected to play in Sunday's regular-season opener against the Bears, Joe Person of The Athletic reports.",
-            "updated": "2026-09-10T23:09Z"
           },
           {
             "player": "Bam Martin-Scott",
@@ -185827,7 +185693,7 @@
           "totalRisk": 11.33
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -185877,7 +185743,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 3.02
+          "totalRisk": 4.1
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -186058,7 +185924,7 @@
           "espnId": "4241479",
           "name": "Tua Tagovailoa",
           "shortName": "T. Tagovailoa",
-          "status": "Questionable",
+          "status": "Out",
           "ratingName": "T.Tagovailoa",
           "source": "ESPN depth chart",
           "lineup": [
@@ -186206,7 +186072,7 @@
         "The betting market gives Atlanta Falcons a 2.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Atlanta Falcons starts Tua Tagovailoa, per the depth chart, not K. Cousins, who took most of last season's snaps.",
-        "Tua Tagovailoa is listed Questionable on the injury report.",
+        "Tua Tagovailoa is listed Out on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested."
       ]
@@ -187653,11 +187519,11 @@
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png",
       "baselineWins": 7.0,
       "previousRecord": "8-9",
-      "marketProjectedWins": 6.7,
+      "marketProjectedWins": 6.6,
       "projectedWins": 6.8,
       "range": "3-10",
       "simulationMedian": 7,
-      "simulationMean": 6.9
+      "simulationMean": 6.8
     },
     {
       "id": "23",
@@ -187809,7 +187675,7 @@
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/wsh.png",
       "baselineWins": 7.0,
       "previousRecord": "5-12",
-      "marketProjectedWins": 7.7,
+      "marketProjectedWins": 7.8,
       "projectedWins": 7.8,
       "range": "4-11",
       "simulationMedian": 8,

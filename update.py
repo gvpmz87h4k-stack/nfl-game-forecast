@@ -1015,6 +1015,12 @@ def main():
         game["effectiveMargin"] = prediction["effectiveMargin"]
         game["homeMargin"] = prediction["effectiveMargin"]
         game["homeWinProbability"] = prediction["homeWinProbability"]
+        frozen = ledger.get("games", {}).get(str(game["id"])) or {}
+        if frozen.get("frozen") and not frozen.get("late") and frozen.get("homeWinProbability") is not None:
+            # once a game has kicked off the card shows the forecast that was frozen, not a recompute
+            # made after the nudges switched off; the ledger graded this exact number
+            game["homeWinProbability"] = frozen["homeWinProbability"]
+            game["forecastNote"] = "frozen at kickoff"
         game["modelAdjustments"] = {
             "teamStatePoints": prediction["statePoints"],
             "restPoints": prediction["restPoints"],
