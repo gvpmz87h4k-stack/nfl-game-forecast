@@ -889,7 +889,7 @@ def readout(game):
     if versus.get("nudgeGapPoints") is not None and abs(versus["nudgeGapPoints"]) >= 1 and versus.get("leans"):
         nudges = sorted(versus.get("nudges") or [], key=lambda n: -abs(n["points"]))
         why = f", mostly because of {nudges[0]['label']}" if nudges else (", mostly because of travel" if (game.get("travel") or {}).get("workedOut") else "")
-        lines.append(f"The app leans {abs(versus['nudgeGapPoints']):.1f} points toward {names[versus['leans']]} beyond what the line says{why}.")
+        lines.append(f"The app moves the line's number {abs(versus['nudgeGapPoints']):.1f} points toward {names[versus['leans']]}{why}.")
     margin = game.get("marketHomeMargin")
     if game.get("lineSource") == "Market line" and margin is not None:
         market_fav = home if margin > 0 else away

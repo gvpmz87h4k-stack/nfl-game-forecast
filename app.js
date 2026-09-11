@@ -456,22 +456,23 @@ function versusStripMarkup(game) {
   const gap = Math.abs(v.nudgeGapPoints != null ? v.nudgeGapPoints : (v.gapPoints || 0));   // the app's own lean; older data falls back to the full gap
   const tier = gap >= 3 ? "is-big" : gap >= 1 ? "is-lean" : "is-agree";
   const priceGap = v.priceGapPoints != null ? Math.abs(v.priceGapPoints) : 0;
-  const priceNote = priceGap >= 2
-    ? ` The win bet is priced at ${v.marketPct >= 50 ? v.marketPct.toFixed(0) : (100 - v.marketPct).toFixed(0)} while the spread implies ${v.marketPct >= 50 ? v.spreadOnlyPct.toFixed(0) : (100 - v.spreadOnlyPct).toFixed(0)}; the app starts from the spread.`
-    : "";
-  // show both numbers for the market's favorite, so the two tiles read the same way
-  const favHome = v.marketPct >= 50;
-  const fav = favHome ? home : away;
-  const marketFav = favHome ? v.marketPct : 100 - v.marketPct;
-  const appFav = favHome ? v.appPct : 100 - v.appPct;
+  const spreadFav = v.spreadOnlyPct != null ? (favHome ? v.spreadOnlyPct : 100 - v.spreadOnlyPct) : null;
+  const line = game.marketHomeMargin != null ? `${Math.abs(game.marketHomeMargin) === 0 ? "a pick-em" : `${game.marketHomeMargin > 0 ? home : away} by ${Math.abs(game.marketHomeMargin)}`}` : "the line";
   const reason = v.nudges && v.nudges.length
     ? [...v.nudges].sort((a, b) => Math.abs(b.points) - Math.abs(a.points))[0]
     : null;
-  const why = reason ? `mostly because of ${reason.label}, ${Math.abs(reason.points).toFixed(1)} points toward ${reason.toward}`
-    : v.breakdownKept === false && game.travel?.workedOut ? "mostly because of travel; the travel note below shows the arithmetic"
-    : "";
+  const why = reason ? reason.label
+    : v.breakdownKept === false && game.travel?.workedOut ? "travel"
+    : "its nudges";
   const leanTeam = names[v.leans] || (v.gapPoints > 0 ? names[home] : names[away]);
-  const verdict = ((gap < 1 ? "" : `The app leans ${gap.toFixed(1)} points toward ${leanTeam} beyond what the line says${why ? `, ${why}` : ""}.`) + priceNote).trim();
+  const sentences = [];
+  if (gap >= 1 && spreadFav != null) {
+    sentences.push(`The spread, ${line}, works out to about ${spreadFav.toFixed(0)} in 100 for ${fav}. The app moves that ${gap.toFixed(1)} points toward ${leanTeam} for ${why}, landing at ${appFav.toFixed(0)}.${why === "travel" && game.travel?.workedOut ? " The travel note below shows the arithmetic." : ""}`);
+  }
+  if (priceGap >= 2 && spreadFav != null) {
+    sentences.push(`The win bet is priced as if ${fav} wins ${marketFav.toFixed(0)} in 100, ${marketFav > spreadFav ? "steeper" : "flatter"} than the spread's ${spreadFav.toFixed(0)}; the app builds from the spread, so that ${priceGap.toFixed(1)}-point gap is the book's, not the app's.`);
+  }
+  const verdict = sentences.join(" ");
   return `<div class="versus ${tier}">
     <div class="versus-tiles">
       <div><span>Market says</span><strong>${fav} ${marketFav.toFixed(0)}%</strong><small>from the price of the win bet</small></div>
