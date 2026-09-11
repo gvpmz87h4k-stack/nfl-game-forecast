@@ -1,0 +1,38 @@
+{
+  "trainGames": 815,
+  "testGames": 272,
+  "factors": {
+    "miles": {
+      "coefficientPoints": 0.004,
+      "threshold": 1.0,
+      "trainFlagged": 301,
+      "trainBeatLineRate": 0.478,
+      "testFlagged": 107,
+      "testBeatLineRate": 0.486
+    },
+    "zones": {
+      "coefficientPoints": 0.736,
+      "threshold": 2.0,
+      "trainFlagged": 196,
+      "trainBeatLineRate": 0.49,
+      "testFlagged": 75,
+      "testBeatLineRate": 0.48
+    },
+    "bodyClock": {
+      "coefficientPoints": -0.078,
+      "threshold": 2.0,
+      "trainFlagged": 192,
+      "trainBeatLineRate": 0.516,
+      "testFlagged": 70,
+      "testBeatLineRate": 0.586
+    },
+    "abroad": {
+      "coefficientPoints": 0.0,
+      "threshold": 0.5,
+      "trainFlagged": 0,
+      "trainBeatLineRate": null,
+      "testFlagged": 0,
+      "testBeatLineRate": null
+    }
+  }
+}
