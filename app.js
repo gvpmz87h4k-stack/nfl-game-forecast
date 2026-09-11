@@ -456,6 +456,11 @@ function versusStripMarkup(game) {
   const gap = Math.abs(v.nudgeGapPoints != null ? v.nudgeGapPoints : (v.gapPoints || 0));   // the app's own lean; older data falls back to the full gap
   const tier = gap >= 3 ? "is-big" : gap >= 1 ? "is-lean" : "is-agree";
   const priceGap = v.priceGapPoints != null ? Math.abs(v.priceGapPoints) : 0;
+  // show every number for the market's favorite, so the tiles and the sentences read the same way
+  const favHome = v.marketPct >= 50;
+  const fav = favHome ? home : away;
+  const marketFav = favHome ? v.marketPct : 100 - v.marketPct;
+  const appFav = favHome ? v.appPct : 100 - v.appPct;
   const spreadFav = v.spreadOnlyPct != null ? (favHome ? v.spreadOnlyPct : 100 - v.spreadOnlyPct) : null;
   const line = game.marketHomeMargin != null ? `${Math.abs(game.marketHomeMargin) === 0 ? "a pick-em" : `${game.marketHomeMargin > 0 ? home : away} by ${Math.abs(game.marketHomeMargin)}`}` : "the line";
   const reason = v.nudges && v.nudges.length
