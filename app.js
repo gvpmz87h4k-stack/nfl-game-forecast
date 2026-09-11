@@ -474,7 +474,7 @@ function versusStripMarkup(game) {
   if (gap >= 1 && spreadFav != null) {
     sentences.push(`The spread, ${line}, works out to about ${spreadFav.toFixed(0)} in 100 for ${fav}. The app moves that ${gap.toFixed(1)} points toward ${leanTeam} for ${why}, landing at ${appFav.toFixed(0)}.${why === "travel" && game.travel?.workedOut ? " The travel note below shows the arithmetic." : ""}`);
   }
-  if (priceGap >= 2 && spreadFav != null) {
+  if (priceGap >= 3 && spreadFav != null) {
     sentences.push(`The win bet is priced as if ${fav} wins ${marketFav.toFixed(0)} in 100, ${marketFav > spreadFav ? "steeper" : "flatter"} than the spread's ${spreadFav.toFixed(0)}; the app builds from the spread, so that ${priceGap.toFixed(1)}-point gap is the book's, not the app's.`);
   }
   const verdict = sentences.join(" ");
