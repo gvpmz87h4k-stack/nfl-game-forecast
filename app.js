@@ -470,15 +470,13 @@ function versusStripMarkup(game) {
   const why = reason ? `mostly because of ${reason.label}, ${Math.abs(reason.points).toFixed(1)} points toward ${reason.toward}`
     : v.breakdownKept === false && game.travel?.workedOut ? "mostly because of travel; the travel note below shows the arithmetic"
     : "";
-  const verdict = (gap < 1
-    ? "The app adds nothing to the line on this one."
-    : `The app leans ${gap.toFixed(1)} points toward ${names[v.leans]} beyond what the line says${why ? `, ${why}` : ""}.`) + priceNote;
+  const verdict = ((gap < 1 ? "" : `The app leans ${gap.toFixed(1)} points toward ${names[v.leans]} beyond what the line says${why ? `, ${why}` : ""}.`) + priceNote).trim();
   return `<div class="versus ${tier}">
     <div class="versus-tiles">
       <div><span>Market says</span><strong>${fav} ${marketFav.toFixed(0)}%</strong><small>from the price of the win bet</small></div>
       <div><span>The app says</span><strong>${fav} ${appFav.toFixed(0)}%</strong><small>${game.forecastNote ? "frozen at kickoff" : "line plus capped nudges"}</small></div>
     </div>
-    <p>${verdict}</p>
+    ${verdict ? `<p>${verdict}</p>` : ""}
   </div>`;
 }
 
