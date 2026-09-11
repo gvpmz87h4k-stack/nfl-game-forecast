@@ -723,6 +723,31 @@ function renderBacktest() {
     }).join("");
 }
 
+// One row per voice, graded the same way: the market, the app, the rating model, each person,
+// the CBS consensus, then each writer. Winners straight up and picks against the spread.
+function renderWhoIsRight(o) {
+  const box = document.querySelector("#whoIsRight");
+  if (!box) return;
+  const cell = (right, picks) => picks ? `<strong>${right} of ${picks}</strong><small> ${Math.round((right / picks) * 100)}%</small>` : `<small>none yet</small>`;
+  const rows = [];
+  rows.push({ label: "The betting market", winners: cell(o.marketCorrect, o.graded), spread: "<small>does not pick</small>", cls: "is-market" });
+  rows.push({ label: "The app", winners: cell(o.modelCorrect, o.graded), spread: "<small>does not pick</small>", cls: "is-app" });
+  if (o.ratingGraded) rows.push({ label: "Rating model, second opinion", winners: cell(o.ratingCorrect, o.ratingGraded), spread: o.flaggedPicks ? cell(o.flaggedCovered, o.flaggedPicks) : "<small>no flagged games yet</small>", cls: "" });
+  const sources = Object.entries(o.outsideSources || {});
+  const people = sources.filter(([k]) => k !== "cbs" && !k.startsWith("cbs-"));
+  const consensus = sources.filter(([k]) => k === "cbs");
+  const writers = sources.filter(([k]) => k.startsWith("cbs-")).sort((a, b) => a[1].label.localeCompare(b[1].label));
+  [...people, ...consensus, ...writers].forEach(([key, src]) => rows.push({
+    label: src.label.replace("CBS Sports experts, consensus", "CBS writers, consensus").replace("CBS Sports, ", ""),
+    winners: cell(src.winnerCorrect, src.winnerPicks), spread: cell(src.spreadCovered, src.spreadPicks),
+    cls: key.startsWith("cbs") ? "is-writer" : "is-person",
+  }));
+  box.innerHTML = `<table class="who-table">
+    <thead><tr><th scope="col">Who</th><th scope="col">Winners right</th><th scope="col">Against the spread</th></tr></thead>
+    <tbody>${rows.map(r => `<tr class="${r.cls}"><td>${r.label}</td><td>${r.winners}</td><td>${r.spread}</td></tr>`).join("")}</tbody>
+  </table>`;
+}
+
 function renderScorecard() {
   const card = state.data?.scorecard;
   const metrics = document.querySelector("#scorecardMetrics");
@@ -745,6 +770,8 @@ function renderScorecard() {
   const accuracyDelta = (o.modelAccuracy - o.marketAccuracy) * 100;
   const accuracyText = Math.abs(accuracyDelta) < 0.05 ? "Same as the market" : `${accuracyDelta > 0 ? "Better" : "Worse"} than the market by ${Math.abs(accuracyDelta).toFixed(1)} points`;
   const brierText = Math.abs(o.brierEdge) < 0.0001 ? "Same as the market" : `${o.brierEdge > 0 ? "Better" : "Worse"} than the market by ${Math.abs(o.brierEdge).toFixed(4)}`;
+  if (o.modelCorrect == null) o.modelCorrect = Math.round((o.modelAccuracy || 0) * o.graded);
+  if (o.ratingCorrect == null && o.ratingGraded) o.ratingCorrect = Math.round((o.ratingAccuracy || 0) * o.ratingGraded);
   metrics.innerHTML = `
     <div class="backtest-metric"><strong>${pct(o.modelAccuracy)}</strong><span>model winner accuracy, ${o.graded} graded</span><small class="${accuracyDelta < 0 ? "worse" : ""}">${accuracyText}</small></div>
     <div class="backtest-metric"><strong>${pct(o.marketAccuracy)}</strong><span>market-only accuracy</span><small>${o.marketCorrect}/${o.graded} picks</small></div>
@@ -754,9 +781,8 @@ function renderScorecard() {
   const clvText = clv.games
     ? `Closing line value: on ${clv.games} frozen games the closing line moved an average of ${clv.meanPoints > 0 ? "+" : ""}${clv.meanPoints} points toward the model's first-seen pick (${Math.round((clv.positiveShare || 0) * 100)}% positive); on the ${clv.disagreements} games where the model disagreed with the early line, ${clv.disagreementMeanPoints == null ? "no data" : `${clv.disagreementMeanPoints > 0 ? "+" : ""}${clv.disagreementMeanPoints} points`}.`
     : "Closing line value arrives once frozen games have both a first-seen line and a close.";
-  const outsideText = Object.values(o.outsideSources || {}).map(src => ` ${src.label}: ${src.winnerPicks ? `${pct(src.winnerAccuracy)} straight up on ${src.winnerPicks} picks` : "no straight-up picks graded"}${src.spreadPicks ? `, ${pct(src.spreadCoverRate)} against the spread on ${src.spreadPicks}` : ""}.`).join("");
-  const ratingText = o.ratingGraded ? ` Rating model on the same ${o.ratingGraded} games: ${pct(o.ratingAccuracy)} winners, Brier ${o.ratingBrier.toFixed(4)}; flagged disagreements covered ${o.flaggedCovered}/${o.flaggedPicks} against the close.` : "";
-  explainer.textContent = `Every forecast was frozen at kickoff and graded after the result, with the market-only probability scored on the same games. Ties are excluded. ${o.ties || 0} tie${(o.ties || 0) === 1 ? "" : "s"} so far. ${clvText}${ratingText}${outsideText}`;
+  explainer.textContent = `Every forecast was frozen at kickoff and graded after the result, with the market-only probability scored on the same games. Ties are excluded; ${o.ties || 0} so far. ${clvText}`;
+  renderWhoIsRight(o);
   rows.innerHTML = card.weeks.filter(week => week.graded).map(week => `
     <tr>
       <td>Week ${week.week}</td>
