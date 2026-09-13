@@ -203,3 +203,21 @@ def test_a_long_trip_game_grades_whether_the_better_rested_side_covered():
     record_predictions(ledger, [g2], "2026-09-13T18:00Z")
     grade_predictions(ledger, [game("11", "2026-09-13T17:00Z", 0.6, 0.6, completed=True, home_score=20, away_score=10)])
     assert "acclimationCovered" not in ledger["games"]["11"] and summarize(ledger)["acclimation"]["games"] == 1
+
+
+def test_freeze_kicked_off_runs_before_the_forecast_and_keeps_the_closing_line():
+    from scorecard import freeze_kicked_off
+    ledger = {"season": 2026, "games": {}}
+    record_predictions(ledger, [game("9", "2026-09-13T17:00Z", 0.60, 0.61)], "2026-09-13T16:45Z")
+    entry = ledger["games"]["9"]
+    entry["marketHomeMargin"] = 6.5
+    # first pass after kickoff: the freeze must already be in place before the cards are built
+    freeze_kicked_off(ledger, [game("9", "2026-09-13T17:00Z", 0.99, 0.99)], "2026-09-13T18:14Z")
+    assert entry["frozen"] is True and entry["late"] is False
+    assert entry["closingHomeMargin"] == 6.5 and entry["closingHomeWinProbability"] == 0.61
+    # the later record pass in the same run must not touch the frozen numbers
+    record_predictions(ledger, [game("9", "2026-09-13T17:00Z", 0.99, 0.99)], "2026-09-13T18:14Z")
+    assert entry["closingHomeMargin"] == 6.5 and entry["homeWinProbability"] == 0.60
+    # a game never seen before kickoff is recorded late, not frozen with a made-up line
+    freeze_kicked_off(ledger, [game("10", "2026-09-13T17:00Z", 0.55, 0.55)], "2026-09-13T18:14Z")
+    assert ledger["games"]["10"]["late"] is True and "closingHomeMargin" not in ledger["games"]["10"]

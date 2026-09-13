@@ -79,13 +79,39 @@ def grade_outside_picks(entry):
         entry["outsidePicks"][source_key] = graded_pick
 
 
-def record_predictions(ledger, games, now_iso):
-    """Store or refresh the pre-kickoff forecast for every game; freeze at kickoff."""
+def freeze_kicked_off(ledger, games, now_iso):
+    """Freeze every entry whose game has kicked off. Runs before the cards are built, so the
+    very first pass after kickoff already shows the closing line and the frozen forecast
+    instead of the fallback the feed leaves behind. Safe to call more than once."""
     entries = ledger.setdefault("games", {})
     now = _parse(now_iso)
     for game in games:
         game_id = str(game["id"])
-        kickoff = _parse(game["kickoff"])
+        entry = entries.get(game_id)
+        if entry and entry.get("frozen"):
+            continue
+        if now < _parse(game["kickoff"]):
+            continue
+        if entry:
+            entry["frozen"] = True
+            entry["frozenAt"] = now_iso
+            entry["closingHomeMargin"] = entry.get("marketHomeMargin")
+            entry["closingHomeWinProbability"] = entry.get("marketHomeWinProbability")
+            adopt_outside_picks(entry, game)
+        else:
+            entries[game_id] = {
+                "week": game["week"], "kickoff": game["kickoff"],
+                "away": game["away"]["abbreviation"], "home": game["home"]["abbreviation"],
+                "recordedAt": now_iso, "frozen": True, "late": True,
+            }
+
+
+def record_predictions(ledger, games, now_iso):
+    """Store or refresh the pre-kickoff forecast for every game; freeze at kickoff."""
+    freeze_kicked_off(ledger, games, now_iso)
+    entries = ledger["games"]
+    for game in games:
+        game_id = str(game["id"])
         entry = entries.get(game_id)
         if entry and entry.get("frozen"):
             # People's picks reach the public file only once the game has kicked off (the
@@ -93,20 +119,6 @@ def record_predictions(ledger, games, now_iso):
             # kickoff), so they can land at or after the freeze. Take them in; they are graded
             # on the next pass if the game is already scored.
             adopt_outside_picks(entry, game)
-            continue
-        if now >= kickoff:
-            if entry:
-                entry["frozen"] = True
-                entry["frozenAt"] = now_iso
-                entry["closingHomeMargin"] = entry.get("marketHomeMargin")
-                entry["closingHomeWinProbability"] = entry.get("marketHomeWinProbability")
-                adopt_outside_picks(entry, game)
-            else:
-                entries[game_id] = {
-                    "week": game["week"], "kickoff": game["kickoff"],
-                    "away": game["away"]["abbreviation"], "home": game["home"]["abbreviation"],
-                    "recordedAt": now_iso, "frozen": True, "late": True,
-                }
             continue
         fresh = {
             "week": game["week"], "kickoff": game["kickoff"],

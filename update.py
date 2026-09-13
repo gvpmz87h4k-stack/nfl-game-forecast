@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 from urllib.parse import urlencode
 
-from scorecard import grade_predictions, record_predictions, summarize
+from scorecard import freeze_kicked_off, grade_predictions, record_predictions, summarize
 from ratings import rating_view, ESPN_TO_NFLVERSE
 from depth_chart import projected_starters, normalize as normalize_name
 from situations import load_schedule, flags as situation_flags
@@ -1049,6 +1049,9 @@ def main():
     ledger = load_json(LEDGER, {"season": args.season, "games": {}})
     if ledger.get("season") != args.season:
         ledger = {"season": args.season, "games": {}}
+    # freeze first, so a game that kicked off since the last pass is treated as frozen on
+    # this pass too, instead of showing the fallback line until the next one
+    freeze_kicked_off(ledger, games, now.isoformat().replace("+00:00", "Z"))
     restore_frozen_market(games, ledger)
     overrides = load_json(OVERRIDES, {"games": {}}).get("games", {})
     travel_overrides = load_json(TRAVEL_OVERRIDES, {"games": {}}).get("games", {})
