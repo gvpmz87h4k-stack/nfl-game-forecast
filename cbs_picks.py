@@ -127,15 +127,26 @@ def merge(existing, week, sources, started=None):
     return out
 
 
+def current_week(snapshot, now):
+    """The week of the next game to kick off, read from the schedule rather than the snapshot's
+    saved week: this step runs before the refresh, so a snapshot left over from a failed day
+    can name a week already played."""
+    upcoming = [g for g in snapshot.get("games", [])
+                if datetime.fromisoformat(g["kickoff"].replace("Z", "+00:00")) >= now]
+    if upcoming:
+        return min(upcoming, key=lambda g: g["kickoff"])["week"]
+    return snapshot["currentWeek"]
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--week", type=int, help="Defaults to the snapshot's current week")
     args = parser.parse_args()
     week = args.week
     snapshot = json.loads(SNAPSHOT.read_text()) if SNAPSHOT.exists() else {}
-    if week is None:
-        week = snapshot["currentWeek"]
     now = datetime.now(timezone.utc)
+    if week is None:
+        week = current_week(snapshot, now)
     started = {(g["away"]["abbreviation"], g["home"]["abbreviation"]) for g in snapshot.get("games", [])
                if g.get("week") == week and datetime.fromisoformat(g["kickoff"].replace("Z", "+00:00")) <= now}
     tables = {}

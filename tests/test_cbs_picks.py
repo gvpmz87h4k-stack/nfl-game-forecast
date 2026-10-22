@@ -1,4 +1,6 @@
-from cbs_picks import build_entries, consensus, merge, parse_table
+from datetime import datetime, timezone
+
+from cbs_picks import build_entries, consensus, current_week, merge, parse_table
 
 ROW = '''<tr><td class="GameMatchup"><a href="/nfl/gametracker/preview/NFL_20260909_{away}@{home}/">Preview</a></td>{cells}</tr>'''
 CELL = '<td class="TableExpertPicks-pickLayout">{text}</td>'
@@ -63,3 +65,15 @@ def test_merge_leaves_games_that_have_kicked_off_alone():
     by_game = {(p["away"], p["home"]): p for p in merged["sources"]["cbs"]["picks"]}
     assert by_game[("NE", "SEA")]["winner"] == "NE"        # kept as it was before kickoff
     assert by_game[("ATL", "PIT")]["winner"] == "ATL"      # still open, so refreshed
+
+
+def test_current_week_follows_the_schedule_not_a_stale_saved_week():
+    # A snapshot left over from a failed day still says week 5; the next game to kick off is in week 7.
+    snapshot = {"currentWeek": 5, "games": [
+        {"week": 5, "kickoff": "2026-10-13T00:15Z"},
+        {"week": 7, "kickoff": "2026-10-23T00:15Z"},
+        {"week": 7, "kickoff": "2026-10-25T17:00Z"},
+    ]}
+    assert current_week(snapshot, datetime(2026, 10, 22, 23, 0, tzinfo=timezone.utc)) == 7
+    assert current_week(snapshot, datetime(2026, 10, 23, 1, 0, tzinfo=timezone.utc)) == 7
+    assert current_week(snapshot, datetime(2027, 2, 1, tzinfo=timezone.utc)) == 5
