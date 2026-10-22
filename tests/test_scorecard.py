@@ -68,15 +68,24 @@ SNAPSHOT = Path(__file__).resolve().parent.parent / "data" / "snapshot.json"
 
 @pytest.mark.skipif(not SNAPSHOT.exists(), reason="no live snapshot")
 def test_live_snapshot_board_follows_the_market():
-    # Invariant that would have caught the inverted board: the live forecast may differ from
-    # the market-implied wins by a little, never by a lot, and the totals must sum to 272.
+    # Invariant that would have caught the inverted board: over the games still to play, the live
+    # forecast may differ from the market-implied wins by a little, never by a lot, and the totals
+    # must sum to 272. Finished games are left out: they count as results, whatever the market said.
     snapshot = json.loads(SNAPSHOT.read_text())
     teams = snapshot["teams"]
     assert sum(team["projectedWins"] for team in teams) == pytest.approx(272, abs=1.0)
-    for team in teams:
-        if team.get("marketProjectedWins") is None:
+    live, market = {}, {}
+    for game in snapshot["games"]:
+        market_home = game.get("marketHomeWinProbability")
+        if game["completed"] or market_home is None:
             continue
-        assert abs(team["projectedWins"] - team["marketProjectedWins"]) < 2.5, team["name"]
+        for side, live_p, market_p in (("home", game["homeWinProbability"], market_home),
+                                       ("away", 1 - game["homeWinProbability"], 1 - market_home)):
+            abbr = game[side]["abbreviation"]
+            live[abbr] = live.get(abbr, 0) + live_p
+            market[abbr] = market.get(abbr, 0) + market_p
+    for abbr in live:
+        assert abs(live[abbr] - market[abbr]) < 2.5, abbr
     for game in snapshot["games"]:
         if game.get("lineSource") == "Market line" and not game["completed"]:
             favored_home = game["marketHomeMargin"] > 0

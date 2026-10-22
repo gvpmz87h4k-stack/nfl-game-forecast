@@ -152,3 +152,16 @@ def test_parse_odds_reads_espn_opening_line_prices_and_moneyline():
     assert odds["moneylineHomeProbability"] == 0.6164   # -180 -> .643, +150 -> .400, fee removed: .643/1.043
     assert devig("-110", "-110") == 0.5
     assert devig(None, "+150") is None
+
+
+def test_season_table_market_column_counts_finished_games_as_results():
+    # A team that lost a game it was favored in has 0 wins from it in both columns, not the pregame 0.8.
+    played = {"home": {"abbreviation": "LAC", "score": 10}, "away": {"abbreviation": "KC", "score": 20},
+              "completed": True, "homeWinProbability": 0.8, "marketHomeWinProbability": 0.8}
+    upcoming = {"home": {"abbreviation": "KC", "score": 0}, "away": {"abbreviation": "LAC", "score": 0},
+                "completed": False, "homeWinProbability": 0.6, "marketHomeWinProbability": 0.7}
+    meta = {"LAC": {"name": "Chargers"}, "KC": {"name": "Chiefs"}}
+    teams = {t["name"]: t for t in season_table([played, upcoming], meta, {})}
+    assert teams["Chargers"]["projectedWins"] == 0.4
+    assert teams["Chargers"]["marketProjectedWins"] == 0.3
+    assert teams["Chiefs"]["marketProjectedWins"] == 1.7

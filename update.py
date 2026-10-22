@@ -727,7 +727,8 @@ def season_table(games, team_meta, simulations):
             home_prob = game["homeWinProbability"]
         totals[home] = totals.get(home, 0) + home_prob
         totals[away] = totals.get(away, 0) + (1 - home_prob)
-        market_home = game.get("marketHomeWinProbability")
+        # A finished game counts as its result in both columns, so the two differ only on games still to play.
+        market_home = home_prob if game["completed"] else game.get("marketHomeWinProbability")
         if market_home is not None:
             market_totals[home] = market_totals.get(home, 0) + market_home
             market_totals[away] = market_totals.get(away, 0) + (1 - market_home)
