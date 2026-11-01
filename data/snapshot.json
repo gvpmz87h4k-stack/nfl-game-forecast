@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "currentWeek": 8,
-  "updatedAt": "2026-11-01T14:15:29.889626Z",
+  "updatedAt": "2026-11-01T16:15:27.273437Z",
   "games": [
     {
       "id": "401872656",
@@ -86,7 +86,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -943,8 +943,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -1950,6 +1950,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -2020,10 +2028,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -2048,8 +2075,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.92
+          "interactionRisk": 0.85,
+          "totalRisk": 4.7
         },
         "home": {
           "score": 99,
@@ -4395,8 +4422,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -7746,16 +7773,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -7795,7 +7822,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -13554,16 +13581,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -13603,7 +13630,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -18696,6 +18723,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -18825,10 +18860,29 @@
           "totalRisk": 1.57
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -18853,8 +18907,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.61
+          "interactionRisk": 0.76,
+          "totalRisk": 4.2
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -19489,8 +19543,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -23682,7 +23736,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -26177,8 +26231,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -27954,16 +28008,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -28003,7 +28057,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -33906,7 +33960,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -36423,6 +36477,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -36529,10 +36591,29 @@
           "totalRisk": 0.26
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -36557,8 +36638,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.61
+          "interactionRisk": 0.76,
+          "totalRisk": 4.2
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -37268,8 +37349,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -38898,8 +38979,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -42142,16 +42223,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -42191,7 +42272,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -45592,8 +45673,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -46336,6 +46417,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -46538,10 +46627,29 @@
           "totalRisk": 11.19
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -46566,8 +46674,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.61
+          "interactionRisk": 0.76,
+          "totalRisk": 4.2
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -47206,8 +47314,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -51345,7 +51453,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -54002,6 +54110,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -54072,10 +54188,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -54100,8 +54235,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.92
+          "interactionRisk": 0.85,
+          "totalRisk": 4.7
         },
         "home": {
           "score": 96,
@@ -63887,7 +64022,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -64861,8 +64996,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -65692,8 +65827,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -65726,16 +65861,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -65775,7 +65910,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -66633,7 +66768,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -68933,8 +69068,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -72791,6 +72926,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -72935,10 +73078,29 @@
           "totalRisk": 1.91
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -72963,8 +73125,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.61
+          "interactionRisk": 0.76,
+          "totalRisk": 4.2
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -73555,8 +73717,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -75112,16 +75274,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -75161,7 +75323,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -82588,6 +82750,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -82658,10 +82828,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -82686,8 +82875,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.92
+          "interactionRisk": 0.85,
+          "totalRisk": 4.7
         },
         "home": {
           "score": 93,
@@ -83406,8 +83595,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -86871,8 +87060,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -87672,7 +87861,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -90271,16 +90460,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -90320,7 +90509,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -90361,8 +90550,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -90387,20 +90576,20 @@
         "total": 54.5,
         "openingHomeMargin": 2.5,
         "lineMovement": 0.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
-          "home": "-112",
-          "away": "-108",
+          "home": "-115",
+          "away": "-105",
           "homeOpen": "-110",
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-166",
-          "away": "+140",
+          "home": "-162",
+          "away": "+136",
           "homeOpen": "-135",
           "awayOpen": "+114"
         },
-        "moneylineHomeProbability": 0.5996,
+        "moneylineHomeProbability": 0.5934,
         "moneylineOpenHomeProbability": 0.5514
       },
       "lineSource": "Market line",
@@ -90411,8 +90600,8 @@
       "weather": {
         "summary": "Cloudy",
         "temperature": "41-70 F",
-        "precipitation": "4%",
-        "wind": "11 mph",
+        "precipitation": "3%",
+        "wind": "12 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -90717,16 +90906,16 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.5941,
-      "marketHomeWinProbability": 0.5996,
+      "marketHomeWinProbability": 0.5934,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 4.243,
       "appVsMarket": {
-        "marketPct": 60.0,
+        "marketPct": 59.3,
         "spreadOnlyPct": 59.4,
         "appPct": 62.4,
-        "gapPoints": 2.5,
+        "gapPoints": 3.1,
         "nudgeGapPoints": 3.0,
-        "priceGapPoints": 0.6,
+        "priceGapPoints": -0.1,
         "leans": "BUF",
         "nudges": [
           {
@@ -91181,36 +91370,36 @@
         "neutral": false
       },
       "odds": {
-        "detail": "CIN -12.5",
-        "total": 45.5,
+        "detail": "CIN -13.5",
+        "total": 46.5,
         "openingHomeMargin": 6.5,
-        "lineMovement": 6.0,
-        "book": "Draft Kings",
+        "lineMovement": 7.0,
+        "book": "DraftKings",
         "spreadPrice": {
-          "home": "-112",
-          "away": "-108",
+          "home": "-108",
+          "away": "-112",
           "homeOpen": "-110",
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-800",
-          "away": "+550",
+          "home": "-950",
+          "away": "+625",
           "homeOpen": "-270",
           "awayOpen": "+220"
         },
-        "moneylineHomeProbability": 0.8525,
+        "moneylineHomeProbability": 0.8677,
         "moneylineOpenHomeProbability": 0.7002
       },
       "lineSource": "Market line",
-      "marketHomeMargin": 12.5,
-      "homeMargin": 16.173,
-      "homeWinProbability": 0.8872,
+      "marketHomeMargin": 13.5,
+      "homeMargin": 17.438,
+      "homeWinProbability": 0.9059,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Cloudy",
         "temperature": "53-74 F",
-        "precipitation": "11%",
-        "wind": "6 mph",
+        "precipitation": "13%",
+        "wind": "5 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -91491,8 +91680,8 @@
         "coverage": "Official roster status and explicit public practice wording only"
       },
       "lineMovement": {
-        "difference": 6.0,
-        "probabilityShift": 0.0075,
+        "difference": 7.0,
+        "probabilityShift": 0.0088,
         "source": "market line movement",
         "available": true,
         "applied": true
@@ -91504,17 +91693,17 @@
         "uncertaintyMultiplier": 1.0,
         "uncertaintyProbabilityShift": 0.0
       },
-      "marketSpreadHomeWinProbability": 0.873,
-      "marketHomeWinProbability": 0.8525,
+      "marketSpreadHomeWinProbability": 0.8911,
+      "marketHomeWinProbability": 0.8677,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 16.173,
+      "effectiveMargin": 17.438,
       "appVsMarket": {
-        "marketPct": 85.2,
-        "spreadOnlyPct": 87.3,
-        "appPct": 88.7,
-        "gapPoints": 3.5,
-        "nudgeGapPoints": 1.4,
-        "priceGapPoints": -2.0,
+        "marketPct": 86.8,
+        "spreadOnlyPct": 89.1,
+        "appPct": 90.6,
+        "gapPoints": 3.8,
+        "nudgeGapPoints": 1.5,
+        "priceGapPoints": -2.3,
         "leans": "CIN",
         "nudges": [
           {
@@ -91524,7 +91713,7 @@
           },
           {
             "label": "line movement",
-            "points": 0.8,
+            "points": 0.9,
             "toward": "CIN"
           },
           {
@@ -91747,9 +91936,9 @@
       },
       "ratingModel": {
         "modelHomeMargin": 11.5,
-        "blendHomeMargin": 13.8,
-        "ratingHomeWinProbability": 0.8402,
-        "disagreementPoints": 1.3,
+        "blendHomeMargin": 14.67,
+        "ratingHomeWinProbability": 0.8551,
+        "disagreementPoints": 1.17,
         "flagged": false,
         "leans": "CIN",
         "homeStarter": "J.Burrow",
@@ -91831,10 +92020,10 @@
       },
       "readout": [
         "Cincinnati Bengals is expected to win, about 9 times in 10.",
-        "The app moves the line's number 1.4 points toward Cincinnati Bengals, mostly because of line movement.",
-        "The betting market gives Tennessee Titans a 12.5-point head start, moved from 6.5 since the line opened, toward Cincinnati Bengals.",
+        "The app moves the line's number 1.5 points toward Cincinnati Bengals, mostly because of line movement.",
+        "The betting market gives Tennessee Titans a 13.5-point head start, moved from 6.5 since the line opened, toward Cincinnati Bengals.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
-        "Our play-by-play ratings lean Cincinnati Bengals by 1.3 points more than the market does.",
+        "Our play-by-play ratings lean Cincinnati Bengals by 1.2 points more than the market does.",
         "7 of the 7 CBS writers who have picked take Cincinnati Bengals, the favorite."
       ]
     },
@@ -92005,20 +92194,20 @@
         "total": 54.5,
         "openingHomeMargin": 10.5,
         "lineMovement": -3.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
-          "home": "-110",
-          "away": "-110",
+          "home": "-115",
+          "away": "-105",
           "homeOpen": "-110",
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-325",
-          "away": "+260",
+          "home": "-310",
+          "away": "+250",
           "homeOpen": "-500",
           "awayOpen": "+380"
         },
-        "moneylineHomeProbability": 0.7335,
+        "moneylineHomeProbability": 0.7258,
         "moneylineOpenHomeProbability": 0.8
       },
       "lineSource": "Market line",
@@ -92380,16 +92569,16 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.7107,
-      "marketHomeWinProbability": 0.7335,
+      "marketHomeWinProbability": 0.7258,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 7.893,
       "appVsMarket": {
-        "marketPct": 73.4,
+        "marketPct": 72.6,
         "spreadOnlyPct": 71.1,
         "appPct": 71.4,
-        "gapPoints": -1.9,
+        "gapPoints": -1.1,
         "nudgeGapPoints": 0.4,
-        "priceGapPoints": 2.3,
+        "priceGapPoints": 1.5,
         "leans": "DAL",
         "nudges": [
           {
@@ -92811,7 +93000,7 @@
         "total": 46.5,
         "openingHomeMargin": 4.5,
         "lineMovement": -1.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-120",
           "away": "+100",
@@ -93584,10 +93773,10 @@
         "total": 46.5,
         "openingHomeMargin": 1.5,
         "lineMovement": 0.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
-          "home": "-115",
-          "away": "-105",
+          "home": "-112",
+          "away": "-108",
           "homeOpen": "-110",
           "awayOpen": "-110"
         },
@@ -93606,8 +93795,8 @@
       "homeWinProbability": 0.5488,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption",
       "weather": {
-        "summary": "Cloudy",
-        "temperature": "38-62 F",
+        "summary": "Mostly clear",
+        "temperature": "39-61 F",
         "precipitation": "0%",
         "wind": "5 mph",
         "source": "Open-Meteo"
@@ -94375,7 +94564,7 @@
         "total": 38.5,
         "openingHomeMargin": 5.5,
         "lineMovement": -2.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -94398,9 +94587,9 @@
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Cloudy",
-        "temperature": "46-68 F",
+        "temperature": "46-70 F",
         "precipitation": "4%",
-        "wind": "5 mph",
+        "wind": "6 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -95062,6 +95251,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -95198,7 +95395,7 @@
         "total": 43.5,
         "openingHomeMargin": 4.5,
         "lineMovement": -2.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-102",
           "away": "-118",
@@ -95217,13 +95414,13 @@
       "lineSource": "Market line",
       "marketHomeMargin": 2.5,
       "homeMargin": 3.046,
-      "homeWinProbability": 0.5883,
+      "homeWinProbability": 0.5877,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Light rain",
-        "temperature": "70-82 F",
-        "precipitation": "67%",
-        "wind": "14 mph",
+        "temperature": "70-80 F",
+        "precipitation": "63%",
+        "wind": "11 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -95310,10 +95507,29 @@
           "totalRisk": 12.05
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -95338,10 +95554,10 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.82
+          "interactionRisk": 0.82,
+          "totalRisk": 4.54
         },
-        "probabilityShift": 0.0025,
+        "probabilityShift": 0.0019,
         "applied": true
       },
       "preparation": {
@@ -95587,8 +95803,8 @@
         "marketPct": 54.3,
         "spreadOnlyPct": 57.9,
         "appPct": 58.8,
-        "gapPoints": 4.6,
-        "nudgeGapPoints": 1.0,
+        "gapPoints": 4.5,
+        "nudgeGapPoints": 0.9,
         "priceGapPoints": -3.6,
         "leans": "TB",
         "nudges": [
@@ -95915,14 +96131,13 @@
       },
       "readout": [
         "Tampa Bay Buccaneers is expected to win, about 6 times in 10.",
-        "The app moves the line's number 1.0 points toward Tampa Bay Buccaneers, mostly because of rest and team form.",
         "The betting market gives Atlanta Falcons a 2.5-point head start, moved from 4.5 since the line opened, toward Atlanta Falcons.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Tampa Bay Buccaneers starts Baker Mayfield, per the depth chart, not J. Daniels, who took most of last season's snaps.",
         "Our play-by-play ratings agree with the market.",
         "5 of the 7 CBS writers who have picked take Atlanta Falcons, the underdog.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested.",
-        "Weather could matter: Light rain, wind 14 mph."
+        "Weather could matter: Light rain, wind 11 mph."
       ]
     },
     {
@@ -96036,10 +96251,10 @@
         "total": 46.5,
         "openingHomeMargin": 4.5,
         "lineMovement": 5.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
-          "home": "-108",
-          "away": "-112",
+          "home": "-112",
+          "away": "-108",
           "homeOpen": "-110",
           "awayOpen": "-110"
         },
@@ -96059,9 +96274,9 @@
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Heavy rain",
-        "temperature": "71-80 F",
+        "temperature": "71-78 F",
         "precipitation": "20%",
-        "wind": "13 mph",
+        "wind": "12 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -96713,7 +96928,7 @@
         "Our play-by-play ratings agree with the market.",
         "7 of the 7 CBS writers who have picked take Jacksonville Jaguars, the favorite.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested.",
-        "Weather could matter: Heavy rain, wind 13 mph."
+        "Weather could matter: Heavy rain, wind 12 mph."
       ]
     },
     {
@@ -96783,8 +96998,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -96875,20 +97090,20 @@
         "total": 45.5,
         "openingHomeMargin": 3.5,
         "lineMovement": 3.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
-          "home": "-112",
-          "away": "-108",
+          "home": "-118",
+          "away": "-102",
           "homeOpen": "-110",
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-265",
-          "away": "+215",
+          "home": "-270",
+          "away": "+220",
           "homeOpen": "-192",
           "awayOpen": "+160"
         },
-        "moneylineHomeProbability": 0.6958,
+        "moneylineHomeProbability": 0.7002,
         "moneylineOpenHomeProbability": 0.6309
       },
       "lineSource": "Market line",
@@ -96898,9 +97113,9 @@
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Rain",
-        "temperature": "52-67 F",
+        "temperature": "53-69 F",
         "precipitation": "78%",
-        "wind": "17 mph",
+        "wind": "18 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -97202,16 +97417,16 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.697,
-      "marketHomeWinProbability": 0.6958,
+      "marketHomeWinProbability": 0.7002,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 6.719,
       "appVsMarket": {
-        "marketPct": 69.6,
+        "marketPct": 70.0,
         "spreadOnlyPct": 69.7,
         "appPct": 68.9,
-        "gapPoints": -0.7,
+        "gapPoints": -1.1,
         "nudgeGapPoints": -0.8,
-        "priceGapPoints": -0.1,
+        "priceGapPoints": 0.3,
         "leans": "LAC",
         "nudges": [
           {
@@ -97541,7 +97756,7 @@
         "Beyond the line, rest tilts it toward Los Angeles Chargers, a little.",
         "Our play-by-play ratings lean Los Angeles Rams by 2.0 points more than the market does.",
         "7 of the 7 CBS writers who have picked take Los Angeles Rams, the favorite.",
-        "Weather could matter: Rain, wind 17 mph."
+        "Weather could matter: Rain, wind 18 mph."
       ]
     },
     {
@@ -97679,7 +97894,7 @@
         "total": 41.5,
         "openingHomeMargin": 1.5,
         "lineMovement": -3.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-120",
           "away": "+100",
@@ -97701,10 +97916,10 @@
       "homeWinProbability": 0.4521,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
-        "summary": "Heavy drizzle",
-        "temperature": "42-68 F",
-        "precipitation": "26%",
-        "wind": "7 mph",
+        "summary": "Light drizzle",
+        "temperature": "43-70 F",
+        "precipitation": "30%",
+        "wind": "13 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -98489,20 +98704,20 @@
         "total": 41.5,
         "openingHomeMargin": -7.0,
         "lineMovement": 0.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
-          "home": "-110",
-          "away": "-110",
+          "home": "-105",
+          "away": "-115",
           "homeOpen": "-110",
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "+245",
-          "away": "-305",
+          "home": "+275",
+          "away": "-345",
           "homeOpen": "+260",
           "awayOpen": "-325"
         },
-        "moneylineHomeProbability": 0.2779,
+        "moneylineHomeProbability": 0.2559,
         "moneylineOpenHomeProbability": 0.2665
       },
       "lineSource": "Market line",
@@ -98511,9 +98726,9 @@
       "homeWinProbability": 0.2785,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption",
       "weather": {
-        "summary": "Heavy rain",
-        "temperature": "73-80 F",
-        "precipitation": "55%",
+        "summary": "Rain showers",
+        "temperature": "74-81 F",
+        "precipitation": "47%",
         "wind": "14 mph",
         "source": "Open-Meteo"
       },
@@ -98832,16 +99047,16 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.2893,
-      "marketHomeWinProbability": 0.2779,
+      "marketHomeWinProbability": 0.2559,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": -8.125,
       "appVsMarket": {
-        "marketPct": 27.8,
+        "marketPct": 25.6,
         "spreadOnlyPct": 28.9,
         "appPct": 27.9,
-        "gapPoints": 0.1,
+        "gapPoints": 2.3,
         "nudgeGapPoints": -1.1,
-        "priceGapPoints": -1.1,
+        "priceGapPoints": -3.3,
         "leans": "NE",
         "nudges": [
           {
@@ -99172,7 +99387,7 @@
         "Our play-by-play ratings agree with the market.",
         "7 of the 7 CBS writers who have picked take New England Patriots, the favorite.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested.",
-        "Weather could matter: Heavy rain, wind 14 mph."
+        "Weather could matter: Rain showers, wind 14 mph."
       ]
     },
     {
@@ -99338,36 +99553,36 @@
         "neutral": false
       },
       "odds": {
-        "detail": "WSH -6.5",
+        "detail": "WSH -6",
         "total": 40.5,
         "openingHomeMargin": -2.5,
-        "lineMovement": 9.0,
-        "book": "Draft Kings",
+        "lineMovement": 8.5,
+        "book": "DraftKings",
         "spreadPrice": {
-          "home": "-108",
-          "away": "-112",
+          "home": "-112",
+          "away": "-108",
           "homeOpen": "-110",
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-278",
-          "away": "+225",
+          "home": "-270",
+          "away": "+220",
           "homeOpen": "+114",
           "awayOpen": "-135"
         },
-        "moneylineHomeProbability": 0.705,
+        "moneylineHomeProbability": 0.7002,
         "moneylineOpenHomeProbability": 0.4486
       },
       "lineSource": "Market line",
-      "marketHomeMargin": 6.5,
-      "homeMargin": 8.229,
-      "homeWinProbability": 0.7358,
+      "marketHomeMargin": 6.0,
+      "homeMargin": 7.679,
+      "homeWinProbability": 0.7224,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Cloudy",
-        "temperature": "43-63 F",
+        "temperature": "44-65 F",
         "precipitation": "5%",
-        "wind": "5 mph",
+        "wind": "6 mph",
         "source": "Open-Meteo"
       },
       "continuity": {
@@ -99700,7 +99915,7 @@
         "coverage": "Official roster status and explicit public practice wording only"
       },
       "lineMovement": {
-        "difference": 9.0,
+        "difference": 8.5,
         "probabilityShift": 0.01,
         "source": "market line movement",
         "available": true,
@@ -99713,17 +99928,17 @@
         "uncertaintyMultiplier": 1.0,
         "uncertaintyProbabilityShift": 0.0
       },
-      "marketSpreadHomeWinProbability": 0.697,
-      "marketHomeWinProbability": 0.705,
+      "marketSpreadHomeWinProbability": 0.683,
+      "marketHomeWinProbability": 0.7002,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": 8.229,
+      "effectiveMargin": 7.679,
       "appVsMarket": {
-        "marketPct": 70.5,
-        "spreadOnlyPct": 69.7,
-        "appPct": 73.6,
-        "gapPoints": 3.1,
+        "marketPct": 70.0,
+        "spreadOnlyPct": 68.3,
+        "appPct": 72.2,
+        "gapPoints": 2.2,
         "nudgeGapPoints": 3.9,
-        "priceGapPoints": 0.8,
+        "priceGapPoints": 1.7,
         "leans": "WSH",
         "nudges": [
           {
@@ -99961,9 +100176,9 @@
       },
       "ratingModel": {
         "modelHomeMargin": 3.56,
-        "blendHomeMargin": 6.78,
-        "ratingHomeWinProbability": 0.6876,
-        "disagreementPoints": 0.28,
+        "blendHomeMargin": 6.34,
+        "ratingHomeWinProbability": 0.6764,
+        "disagreementPoints": 0.34,
         "flagged": false,
         "leans": "WSH",
         "homeStarter": "J.Daniels",
@@ -100046,7 +100261,7 @@
       "readout": [
         "Washington Commanders is expected to win, about 7 times in 10.",
         "The app moves the line's number 3.9 points toward Washington Commanders, mostly because of rest and team form.",
-        "The betting market gives Philadelphia Eagles a 6.5-point head start, moved from 2.5 since the line opened, toward Washington Commanders.",
+        "The betting market gives Philadelphia Eagles a 6-point head start, moved from 2.5 since the line opened, toward Washington Commanders.",
         "Beyond the line, rest tilts it toward Washington Commanders, a little.",
         "Our play-by-play ratings agree with the market.",
         "7 of the 7 CBS writers who have picked take Washington Commanders, the favorite.",
@@ -100136,7 +100351,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -100204,7 +100419,7 @@
         "total": 46.5,
         "openingHomeMargin": 4.5,
         "lineMovement": -1.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-115",
           "away": "-105",
@@ -100212,12 +100427,12 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-170",
-          "away": "+142",
+          "home": "-166",
+          "away": "+140",
           "homeOpen": "-218",
           "awayOpen": "+180"
         },
-        "moneylineHomeProbability": 0.6038,
+        "moneylineHomeProbability": 0.5996,
         "moneylineOpenHomeProbability": 0.6575
       },
       "lineSource": "Market line",
@@ -100228,7 +100443,7 @@
       "weather": {
         "summary": "Cloudy",
         "temperature": "45-56 F",
-        "precipitation": "4%",
+        "precipitation": "3%",
         "wind": "5 mph",
         "source": "Open-Meteo"
       },
@@ -100564,16 +100779,16 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.5941,
-      "marketHomeWinProbability": 0.6038,
+      "marketHomeWinProbability": 0.5996,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 2.983,
       "appVsMarket": {
-        "marketPct": 60.4,
+        "marketPct": 60.0,
         "spreadOnlyPct": 59.4,
         "appPct": 57.7,
-        "gapPoints": -2.6,
+        "gapPoints": -2.2,
         "nudgeGapPoints": -1.7,
-        "priceGapPoints": 1.0,
+        "priceGapPoints": 0.6,
         "leans": "CHI",
         "nudges": [
           {
@@ -100943,8 +101158,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -101003,7 +101218,7 @@
         "total": 48.5,
         "openingHomeMargin": 4.5,
         "lineMovement": -1.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-105",
           "away": "-115",
@@ -101752,7 +101967,7 @@
         "total": 49.5,
         "openingHomeMargin": -4.5,
         "lineMovement": 1.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "+100",
           "away": "-120",
@@ -102546,7 +102761,7 @@
         "total": 51.5,
         "openingHomeMargin": -1.5,
         "lineMovement": -3.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -103314,7 +103529,7 @@
         "total": 43.5,
         "openingHomeMargin": 9.5,
         "lineMovement": 0.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -104060,7 +104275,7 @@
         "total": 48.5,
         "openingHomeMargin": -6.5,
         "lineMovement": -0.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-105",
           "away": "-115",
@@ -104765,7 +104980,7 @@
         "total": 43.5,
         "openingHomeMargin": 3.5,
         "lineMovement": -1.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -105507,7 +105722,7 @@
         "total": 40.5,
         "openingHomeMargin": 5.5,
         "lineMovement": -7.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -106298,8 +106513,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -106324,7 +106539,7 @@
         "total": 48.5,
         "openingHomeMargin": -4.5,
         "lineMovement": -1.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -107170,7 +107385,7 @@
         "total": 44.5,
         "openingHomeMargin": -3.0,
         "lineMovement": 0.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -107994,7 +108209,7 @@
         "total": 42.5,
         "openingHomeMargin": 1.5,
         "lineMovement": -5.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -108762,7 +108977,7 @@
         "total": 47.5,
         "openingHomeMargin": 1.5,
         "lineMovement": 1.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-102",
           "away": "-118",
@@ -109569,7 +109784,7 @@
         "total": 48.5,
         "openingHomeMargin": 8.5,
         "lineMovement": 1.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -110297,7 +110512,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -110389,7 +110604,7 @@
         "total": 44.5,
         "openingHomeMargin": 13.5,
         "lineMovement": -3.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -111132,6 +111347,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -111178,7 +111401,7 @@
         "total": 47.5,
         "openingHomeMargin": 3.5,
         "lineMovement": 2.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -111202,10 +111425,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -111230,8 +111472,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.92
+          "interactionRisk": 0.85,
+          "totalRisk": 4.7
         },
         "home": {
           "score": 99,
@@ -111838,16 +112080,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -111887,7 +112129,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -111904,7 +112146,7 @@
         "total": 47.5,
         "openingHomeMargin": -3.0,
         "lineMovement": 0.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -118531,16 +118773,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -118580,7 +118822,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -119325,7 +119567,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -120089,8 +120331,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -122271,8 +122513,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -123714,16 +123956,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -123763,7 +124005,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -125911,6 +126153,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -125981,10 +126231,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -126009,8 +126278,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.92
+          "interactionRisk": 0.85,
+          "totalRisk": 4.7
         },
         "home": {
           "score": 99,
@@ -128166,8 +128435,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -132575,8 +132844,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -134803,16 +135072,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -134852,7 +135121,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -139894,8 +140163,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -142225,7 +142494,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -143645,6 +143914,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -143899,10 +144176,29 @@
           "totalRisk": 11.21
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -143927,8 +144223,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.61
+          "interactionRisk": 0.76,
+          "totalRisk": 4.2
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -144494,8 +144790,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -149670,6 +149966,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -149852,10 +150156,29 @@
           "totalRisk": 5.68
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -149880,8 +150203,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.61
+          "interactionRisk": 0.76,
+          "totalRisk": 4.2
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -152706,16 +153029,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -152755,7 +153078,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -154170,7 +154493,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -160912,8 +161235,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -160940,6 +161263,14 @@
             "detail": "Foot",
             "note": "Egbuka (foot) has been ruled out for Sunday's game against the Falcons, Scott Smith of the Bucs' official site reports.",
             "updated": "2026-10-30T16:32Z"
+          },
+          {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
           },
           {
             "player": "Kenny Gainwell",
@@ -161012,10 +161343,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -161040,8 +161390,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.92
+          "interactionRisk": 0.85,
+          "totalRisk": 4.7
         },
         "home": {
           "score": 96,
@@ -163092,8 +163442,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -163827,7 +164177,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -164645,16 +164995,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -164694,7 +165044,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -166918,7 +167268,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -167567,16 +167917,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -167616,7 +167966,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -170563,8 +170913,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -171200,6 +171550,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -171330,10 +171688,29 @@
           "totalRisk": 2.26
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -171358,8 +171735,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.61
+          "interactionRisk": 0.76,
+          "totalRisk": 4.2
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -175808,8 +176185,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -179502,16 +179879,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -179551,7 +179928,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -180253,7 +180630,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -180319,8 +180696,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -181072,6 +181449,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -181142,10 +181527,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -181170,8 +181574,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.92
+          "interactionRisk": 0.85,
+          "totalRisk": 4.7
         },
         "home": {
           "score": 93,
@@ -186234,8 +186638,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -189907,8 +190311,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -192009,6 +192413,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -192103,8 +192515,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -192192,10 +192604,29 @@
           "totalRisk": 4.58
         },
         "home": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -192220,8 +192651,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.61
+          "interactionRisk": 0.76,
+          "totalRisk": 4.2
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -196512,16 +196943,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -196561,7 +196992,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -198031,7 +198462,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -201775,16 +202206,16 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder - AC Joint",
-            "note": "Moore (shoulder) is questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:46Z"
+            "note": "Moore (shoulder) remains listed as questionable for Sunday's game against the Ravens but is expected to play, Adam Schefter of ESPN reports.",
+            "updated": "2026-11-01T14:44Z"
           },
           {
             "player": "Dalton Kincaid",
             "position": "TE",
             "status": "Questionable",
             "detail": "Chest",
-            "note": "Kincaid (chest) is listed as questionable for Sunday's game against the Ravens, Katherine Fitzgerald of The Buffalo News reports.",
-            "updated": "2026-10-30T17:48Z"
+            "note": "The Bills are optimistic that Kincaid (chest), who is listed as questionable for Sunday's game against the Ravens, will be able to play, Jeremy Fowler of ESPN.com reports.",
+            "updated": "2026-11-01T15:00Z"
           },
           {
             "player": "Dee Alford",
@@ -201824,7 +202255,7 @@
             "status": "Suspension",
             "detail": "Suspension",
             "note": "reserve-sus",
-            "updated": "2026-11-01T14:00Z"
+            "updated": "2026-11-01T16:00Z"
           }
         ]
       },
@@ -206143,8 +206574,8 @@
             "position": "DE",
             "status": "Injured Reserve",
             "detail": "Knee",
-            "note": "Head coach Sean McVay said Wednesday that the Rams won't open Garrett's (knee) practice window this week, Greg Beacham of the Associated Press reports.",
-            "updated": "2026-10-28T20:52Z"
+            "note": "The Rams are optimistic that Garrett (knee) will be able to return to practice in Week 9, Ian Rapoport of NFL Network reports.",
+            "updated": "2026-11-01T14:24Z"
           },
           {
             "player": "Terrance Ferguson",
@@ -206233,7 +206664,7 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Chest",
-            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears, but he remains on injured reserve, John Boyle of the Seahawks' official site reports.",
+            "note": "Price (chest) doesn't have a designation for Monday's game against the Bears but remains on injured reserve, John Boyle of the Seahawks' official site reports.",
             "updated": "2026-10-31T20:50Z"
           }
         ]
@@ -208302,6 +208733,14 @@
             "updated": "2026-10-30T16:32Z"
           },
           {
+            "player": "Graham Barton",
+            "position": "C",
+            "status": "Questionable",
+            "detail": "Illness",
+            "note": "Barton is battling through an illness but is expected to be active for Sunday's game against the Falcons, Scott Smith of the Buccaneers' official site reports.",
+            "updated": "2026-11-01T15:17Z"
+          },
+          {
             "player": "Kenny Gainwell",
             "position": "RB",
             "status": "Questionable",
@@ -208372,10 +208811,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 98,
+          "score": 97,
           "level": "Stable",
-          "clusters": [],
-          "clusterMembers": {},
+          "clusters": [
+            "Protection unit: 2 linked flags"
+          ],
+          "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Graham Barton",
+                "position": "C",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Luke Goedeke",
+                "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ]
+          },
           "discounted": [
             {
               "player": "Kenny Gainwell",
@@ -208400,8 +208858,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 0.0,
-          "totalRisk": 2.92
+          "interactionRisk": 0.85,
+          "totalRisk": 4.7
         },
         "home": {
           "score": 99,
@@ -212280,8 +212738,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Neck",
-            "note": "Randall (neck) is questionable for Sunday's game against the Bills.",
-            "updated": "2026-10-30T23:36Z"
+            "note": "Randall (neck) wasn't activated from injured reserve Saturday and won't be available for Sunday's game against the Bills, Jeff Zrebiec of The Athletic reports.",
+            "updated": "2026-11-01T15:14Z"
           },
           {
             "player": "Tavius Robinson",
@@ -213816,7 +214274,7 @@
       "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/bal.png",
       "baselineWins": 11.0,
       "previousRecord": "8-9",
-      "marketProjectedWins": 9.8,
+      "marketProjectedWins": 9.9,
       "projectedWins": 9.8,
       "range": "7-12",
       "simulationMedian": 10,
