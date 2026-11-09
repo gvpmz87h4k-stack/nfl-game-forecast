@@ -34912,6 +34912,7 @@
         "spreadOnlyPct": 33.1
       },
       "away": "HOU",
+      "awayScore": 44,
       "closingHomeMargin": -5.5,
       "closingHomeWinProbability": 0.3364,
       "first": {
@@ -34922,6 +34923,7 @@
       },
       "frozen": true,
       "frozenAt": "2026-11-08T23:15:35.360129Z",
+      "graded": true,
       "history": [
         {
           "at": "2026-09-07T02:58:57.414173Z",
@@ -35105,11 +35107,21 @@
         }
       ],
       "home": "LAC",
+      "homeScore": 22,
       "homeWinProbability": 0.2957,
+      "homeWon": false,
       "kickoff": "2026-11-08T21:05Z",
       "late": false,
+      "marketBrier": 0.1132,
+      "marketCorrect": true,
       "marketHomeMargin": -5.5,
       "marketHomeWinProbability": 0.3364,
+      "marketLogLoss": 0.4101,
+      "marketPick": "HOU",
+      "modelBrier": 0.0874,
+      "modelCorrect": true,
+      "modelLogLoss": 0.3506,
+      "modelPick": "HOU",
       "odds": {
         "book": "DraftKings",
         "detail": "HOU -5.5",
@@ -35132,49 +35144,68 @@
         "cbs": {
           "label": "CBS Sports experts, consensus",
           "spread": "HOU",
-          "winner": "HOU"
+          "spreadCovered": true,
+          "winner": "HOU",
+          "winnerCorrect": true
         },
         "cbs-breech": {
           "label": "CBS Sports, John Breech",
           "spread": "HOU",
-          "winner": "HOU"
+          "spreadCovered": true,
+          "winner": "HOU",
+          "winnerCorrect": true
         },
         "cbs-dubin": {
           "label": "CBS Sports, Jared Dubin",
           "spread": "LAC",
-          "winner": "HOU"
+          "spreadCovered": false,
+          "winner": "HOU",
+          "winnerCorrect": true
         },
         "cbs-eisenberg": {
           "label": "CBS Sports, Jamey Eisenberg",
           "spread": "HOU",
-          "winner": "HOU"
+          "spreadCovered": true,
+          "winner": "HOU",
+          "winnerCorrect": true
         },
         "cbs-prisco": {
           "label": "CBS Sports, Pete Prisco",
           "spread": "LAC",
-          "winner": "HOU"
+          "spreadCovered": false,
+          "winner": "HOU",
+          "winnerCorrect": true
         },
         "cbs-richard": {
           "label": "CBS Sports, Dave Richard",
           "spread": "HOU",
-          "winner": "HOU"
+          "spreadCovered": true,
+          "winner": "HOU",
+          "winnerCorrect": true
         },
         "cbs-sullivan": {
           "label": "CBS Sports, Tyler Sullivan",
           "spread": "LAC",
-          "winner": "LAC"
+          "spreadCovered": false,
+          "winner": "LAC",
+          "winnerCorrect": false
         },
         "cbs-wilson": {
           "label": "CBS Sports, Ryan Wilson",
           "spread": "HOU",
-          "winner": "HOU"
+          "spreadCovered": true,
+          "winner": "HOU",
+          "winnerCorrect": true
         }
       },
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "ratingBlendHomeMargin": -5.42,
+      "ratingBrier": 0.121,
+      "ratingCorrect": true,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.3479,
       "recordedAt": "2026-11-08T20:45:36.605094Z",
+      "tie": false,
       "travelApplied": null,
       "week": 9
     },
@@ -35533,6 +35564,7 @@
         "spreadOnlyPct": 75.0
       },
       "away": "ARI",
+      "awayScore": 3,
       "closingHomeMargin": 8.5,
       "closingHomeWinProbability": 0.7867,
       "first": {
@@ -35543,6 +35575,7 @@
       },
       "frozen": true,
       "frozenAt": "2026-11-08T23:15:35.360129Z",
+      "graded": true,
       "history": [
         {
           "at": "2026-09-07T02:58:57.414173Z",
@@ -35756,11 +35789,21 @@
         }
       ],
       "home": "SEA",
+      "homeScore": 17,
       "homeWinProbability": 0.7343,
+      "homeWon": true,
       "kickoff": "2026-11-08T21:25Z",
       "late": false,
+      "marketBrier": 0.0455,
+      "marketCorrect": true,
       "marketHomeMargin": 8.5,
       "marketHomeWinProbability": 0.7867,
+      "marketLogLoss": 0.2399,
+      "marketPick": "SEA",
+      "modelBrier": 0.0706,
+      "modelCorrect": true,
+      "modelLogLoss": 0.3088,
+      "modelPick": "SEA",
       "odds": {
         "book": "DraftKings",
         "detail": "SEA -8.5",
@@ -35783,49 +35826,68 @@
         "cbs": {
           "label": "CBS Sports experts, consensus",
           "spread": "SEA",
-          "winner": "SEA"
+          "spreadCovered": true,
+          "winner": "SEA",
+          "winnerCorrect": true
         },
         "cbs-breech": {
           "label": "CBS Sports, John Breech",
           "spread": "ARI",
-          "winner": "SEA"
+          "spreadCovered": false,
+          "winner": "SEA",
+          "winnerCorrect": true
         },
         "cbs-dubin": {
           "label": "CBS Sports, Jared Dubin",
           "spread": "SEA",
-          "winner": "SEA"
+          "spreadCovered": true,
+          "winner": "SEA",
+          "winnerCorrect": true
         },
         "cbs-eisenberg": {
           "label": "CBS Sports, Jamey Eisenberg",
           "spread": "SEA",
-          "winner": "SEA"
+          "spreadCovered": true,
+          "winner": "SEA",
+          "winnerCorrect": true
         },
         "cbs-prisco": {
           "label": "CBS Sports, Pete Prisco",
           "spread": "SEA",
-          "winner": "SEA"
+          "spreadCovered": true,
+          "winner": "SEA",
+          "winnerCorrect": true
         },
         "cbs-richard": {
           "label": "CBS Sports, Dave Richard",
           "spread": "SEA",
-          "winner": "SEA"
+          "spreadCovered": true,
+          "winner": "SEA",
+          "winnerCorrect": true
         },
         "cbs-sullivan": {
           "label": "CBS Sports, Tyler Sullivan",
           "spread": "SEA",
-          "winner": "SEA"
+          "spreadCovered": true,
+          "winner": "SEA",
+          "winnerCorrect": true
         },
         "cbs-wilson": {
           "label": "CBS Sports, Ryan Wilson",
           "spread": "ARI",
-          "winner": "SEA"
+          "spreadCovered": false,
+          "winner": "SEA",
+          "winnerCorrect": true
         }
       },
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "ratingBlendHomeMargin": 9.05,
+      "ratingBrier": 0.066,
+      "ratingCorrect": true,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.743,
       "recordedAt": "2026-11-08T20:45:36.605094Z",
+      "tie": false,
       "travelApplied": null,
       "week": 9
     },
@@ -35862,6 +35924,7 @@
         "spreadOnlyPct": 59.4
       },
       "away": "GB",
+      "awayScore": 45,
       "closingHomeMargin": 3.0,
       "closingHomeWinProbability": 0.6164,
       "first": {
@@ -35872,6 +35935,7 @@
       },
       "frozen": true,
       "frozenAt": "2026-11-08T23:15:35.360129Z",
+      "graded": true,
       "history": [
         {
           "at": "2026-09-07T02:58:57.414173Z",
@@ -36115,11 +36179,21 @@
         }
       ],
       "home": "NE",
+      "homeScore": 27,
       "homeWinProbability": 0.5924,
+      "homeWon": false,
       "kickoff": "2026-11-08T21:25Z",
       "late": false,
+      "marketBrier": 0.3799,
+      "marketCorrect": false,
       "marketHomeMargin": 3.0,
       "marketHomeWinProbability": 0.6164,
+      "marketLogLoss": 0.9582,
+      "marketPick": "NE",
+      "modelBrier": 0.3509,
+      "modelCorrect": false,
+      "modelLogLoss": 0.8975,
+      "modelPick": "NE",
       "odds": {
         "book": "DraftKings",
         "detail": "NE -3",
@@ -36142,49 +36216,68 @@
         "cbs": {
           "label": "CBS Sports experts, consensus",
           "spread": "GB",
-          "winner": "GB"
+          "spreadCovered": true,
+          "winner": "GB",
+          "winnerCorrect": true
         },
         "cbs-breech": {
           "label": "CBS Sports, John Breech",
           "spread": "GB",
-          "winner": "GB"
+          "spreadCovered": true,
+          "winner": "GB",
+          "winnerCorrect": true
         },
         "cbs-dubin": {
           "label": "CBS Sports, Jared Dubin",
           "spread": "GB",
-          "winner": "GB"
+          "spreadCovered": true,
+          "winner": "GB",
+          "winnerCorrect": true
         },
         "cbs-eisenberg": {
           "label": "CBS Sports, Jamey Eisenberg",
           "spread": "GB",
-          "winner": "NE"
+          "spreadCovered": true,
+          "winner": "NE",
+          "winnerCorrect": false
         },
         "cbs-prisco": {
           "label": "CBS Sports, Pete Prisco",
           "spread": "GB",
-          "winner": "GB"
+          "spreadCovered": true,
+          "winner": "GB",
+          "winnerCorrect": true
         },
         "cbs-richard": {
           "label": "CBS Sports, Dave Richard",
           "spread": "NE",
-          "winner": "NE"
+          "spreadCovered": false,
+          "winner": "NE",
+          "winnerCorrect": false
         },
         "cbs-sullivan": {
           "label": "CBS Sports, Tyler Sullivan",
           "spread": "GB",
-          "winner": "GB"
+          "spreadCovered": true,
+          "winner": "GB",
+          "winnerCorrect": true
         },
         "cbs-wilson": {
           "label": "CBS Sports, Ryan Wilson",
           "spread": "NE",
-          "winner": "NE"
+          "spreadCovered": false,
+          "winner": "NE",
+          "winnerCorrect": false
         }
       },
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "ratingBlendHomeMargin": 3.74,
+      "ratingBrier": 0.3676,
+      "ratingCorrect": false,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.6063,
       "recordedAt": "2026-11-08T20:45:36.605094Z",
+      "tie": false,
       "travelApplied": null,
       "week": 9
     },
@@ -36211,13 +36304,16 @@
         "spreadOnlyPct": 68.3
       },
       "away": "TB",
+      "closingHomeMargin": 6.0,
+      "closingHomeWinProbability": 0.7002,
       "first": {
         "at": "2026-09-07T02:58:57.414173Z",
         "homeWinProbability": 0.6066,
         "marketHomeMargin": 3.5,
         "marketHomeWinProbability": 0.6094
       },
-      "frozen": false,
+      "frozen": true,
+      "frozenAt": "2026-11-09T01:42:59.353565Z",
       "history": [
         {
           "at": "2026-09-07T02:58:57.414173Z",
@@ -36740,7 +36836,7 @@
       "marketHomeMargin": -3.0,
       "marketHomeWinProbability": 0.3908,
       "odds": {
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "detail": "BUF -3",
         "moneyline": {
           "away": "-175",
@@ -36803,7 +36899,7 @@
       "ratingBlendHomeMargin": -3.6,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.3977,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 9
     },
@@ -36919,7 +37015,7 @@
       "marketHomeMargin": 1.5,
       "marketHomeWinProbability": 0.5325,
       "odds": {
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "detail": "NYG -1.5",
         "moneyline": {
           "away": "+105",
@@ -36941,26 +37037,26 @@
       "ratingBlendHomeMargin": 2.38,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.5683,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
     "401873053": {
       "appVsMarket": {
-        "appPct": 54.6,
-        "gapPoints": 2.4,
-        "leans": "NE",
-        "marketPct": 52.2,
-        "nudgeGapPoints": -0.1,
+        "appPct": 58.7,
+        "gapPoints": 3.6,
+        "leans": "DET",
+        "marketPct": 55.1,
+        "nudgeGapPoints": 0.8,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.1,
-            "toward": "NE"
+            "points": 0.8,
+            "toward": "DET"
           }
         ],
-        "priceGapPoints": -2.6,
-        "spreadOnlyPct": 54.7
+        "priceGapPoints": -2.7,
+        "spreadOnlyPct": 57.9
       },
       "away": "NE",
       "first": {
@@ -37084,38 +37180,44 @@
           "homeWinProbability": 0.5462,
           "marketHomeMargin": 1.5,
           "marketHomeWinProbability": 0.5217
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.587,
+          "marketHomeMargin": 2.5,
+          "marketHomeWinProbability": 0.5514
         }
       ],
       "home": "DET",
-      "homeWinProbability": 0.5462,
+      "homeWinProbability": 0.587,
       "kickoff": "2026-11-15T14:30Z",
       "late": false,
-      "marketHomeMargin": 1.5,
-      "marketHomeWinProbability": 0.5217,
+      "marketHomeMargin": 2.5,
+      "marketHomeWinProbability": 0.5514,
       "odds": {
-        "book": "DraftKings",
-        "detail": "DET -1.5",
+        "book": "Draft Kings",
+        "detail": "DET -2.5",
         "moneyline": {
-          "away": "+100",
+          "away": "+114",
           "awayOpen": "+105",
-          "home": "-120",
+          "home": "-135",
           "homeOpen": "-125"
         },
         "openingHomeMargin": 1.5,
         "spreadPrice": {
-          "away": "-115",
+          "away": "-110",
           "awayOpen": "-110",
-          "home": "-105",
+          "home": "-110",
           "homeOpen": "-110"
         },
         "total": 49.5
       },
       "outsidePicks": {},
       "probabilitySource": "Calibrated market line + rolling team state + rest",
-      "ratingBlendHomeMargin": 1.92,
+      "ratingBlendHomeMargin": 2.8,
       "ratingFlagged": false,
-      "ratingHomeWinProbability": 0.5551,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "ratingHomeWinProbability": 0.58,
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
@@ -37237,7 +37339,7 @@
       "marketHomeMargin": -8.5,
       "marketHomeWinProbability": 0.1918,
       "odds": {
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "detail": "BUF -8.5",
         "moneyline": {
           "away": "-535",
@@ -37259,7 +37361,7 @@
       "ratingBlendHomeMargin": -8.96,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.259,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
@@ -37387,7 +37489,7 @@
       "marketHomeMargin": -1.5,
       "marketHomeWinProbability": 0.4739,
       "odds": {
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "detail": "CAR -1.5",
         "moneyline": {
           "away": "-122",
@@ -37409,24 +37511,18 @@
       "ratingBlendHomeMargin": -1.17,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.4665,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
     "401873056": {
       "appVsMarket": {
-        "appPct": 36.8,
-        "gapPoints": 0.5,
-        "leans": "CLE",
+        "appPct": 36.0,
+        "gapPoints": -0.3,
+        "leans": null,
         "marketPct": 36.3,
-        "nudgeGapPoints": 0.8,
-        "nudges": [
-          {
-            "label": "rest and team form",
-            "points": 0.8,
-            "toward": "CLE"
-          }
-        ],
+        "nudgeGapPoints": -0.0,
+        "nudges": [],
         "priceGapPoints": 0.3,
         "spreadOnlyPct": 36.0
       },
@@ -37534,16 +37630,22 @@
           "homeWinProbability": 0.368,
           "marketHomeMargin": -4.5,
           "marketHomeWinProbability": 0.3631
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.3604,
+          "marketHomeMargin": -4.5,
+          "marketHomeWinProbability": 0.3631
         }
       ],
       "home": "CLE",
-      "homeWinProbability": 0.368,
+      "homeWinProbability": 0.3604,
       "kickoff": "2026-11-15T18:00Z",
       "late": false,
       "marketHomeMargin": -4.5,
       "marketHomeWinProbability": 0.3631,
       "odds": {
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "detail": "HOU -4.5",
         "moneyline": {
           "away": "-198",
@@ -37565,7 +37667,7 @@
       "ratingBlendHomeMargin": -4.43,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.3747,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
@@ -37711,7 +37813,7 @@
       "marketHomeMargin": -10.0,
       "marketHomeWinProbability": 0.1918,
       "odds": {
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "detail": "JAX -10",
         "moneyline": {
           "away": "-535",
@@ -37733,7 +37835,7 @@
       "ratingBlendHomeMargin": -10.75,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.2189,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
@@ -37885,7 +37987,7 @@
       "marketHomeMargin": -3.0,
       "marketHomeWinProbability": 0.3908,
       "odds": {
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "detail": "KC -3",
         "moneyline": {
           "away": "-175",
@@ -37907,7 +38009,7 @@
       "ratingBlendHomeMargin": -3.39,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.4035,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
@@ -38047,7 +38149,7 @@
       "marketHomeMargin": 2.5,
       "marketHomeWinProbability": 0.5514,
       "odds": {
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "detail": "IND -2.5",
         "moneyline": {
           "away": "+114",
@@ -38069,21 +38171,21 @@
       "ratingBlendHomeMargin": 2.75,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.5786,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
     "401873060": {
       "appVsMarket": {
-        "appPct": 59.5,
-        "gapPoints": 0.2,
+        "appPct": 60.3,
+        "gapPoints": 1.0,
         "leans": "GB",
         "marketPct": 59.3,
-        "nudgeGapPoints": 0.1,
+        "nudgeGapPoints": 0.9,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.1,
+            "points": 0.9,
             "toward": "GB"
           }
         ],
@@ -38206,16 +38308,22 @@
           "homeWinProbability": 0.5952,
           "marketHomeMargin": 3.0,
           "marketHomeWinProbability": 0.5934
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.6033,
+          "marketHomeMargin": 3.0,
+          "marketHomeWinProbability": 0.5934
         }
       ],
       "home": "GB",
-      "homeWinProbability": 0.5952,
+      "homeWinProbability": 0.6033,
       "kickoff": "2026-11-15T18:00Z",
       "late": false,
       "marketHomeMargin": 3.0,
       "marketHomeWinProbability": 0.5934,
       "odds": {
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "detail": "GB -3",
         "moneyline": {
           "away": "+136",
@@ -38237,26 +38345,26 @@
       "ratingBlendHomeMargin": 4.18,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.6185,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
     "401873061": {
       "appVsMarket": {
-        "appPct": 24.5,
-        "gapPoints": 1.1,
+        "appPct": 26.9,
+        "gapPoints": 0.2,
         "leans": "LAR",
-        "marketPct": 23.4,
-        "nudgeGapPoints": -0.5,
+        "marketPct": 26.7,
+        "nudgeGapPoints": -0.7,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.5,
+            "points": -0.7,
             "toward": "LAR"
           }
         ],
-        "priceGapPoints": -1.6,
-        "spreadOnlyPct": 25.0
+        "priceGapPoints": -0.9,
+        "spreadOnlyPct": 27.6
       },
       "away": "LAR",
       "first": {
@@ -38404,21 +38512,27 @@
           "homeWinProbability": 0.2447,
           "marketHomeMargin": -8.5,
           "marketHomeWinProbability": 0.2341
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.2687,
+          "marketHomeMargin": -7.5,
+          "marketHomeWinProbability": 0.2665
         }
       ],
       "home": "ARI",
-      "homeWinProbability": 0.2447,
+      "homeWinProbability": 0.2687,
       "kickoff": "2026-11-15T21:05Z",
       "late": false,
-      "marketHomeMargin": -8.5,
-      "marketHomeWinProbability": 0.2341,
+      "marketHomeMargin": -7.5,
+      "marketHomeWinProbability": 0.2665,
       "odds": {
-        "book": "DraftKings",
-        "detail": "LAR -8.5",
+        "book": "Draft Kings",
+        "detail": "LAR -7.5",
         "moneyline": {
-          "away": "-395",
+          "away": "-325",
           "awayOpen": "-535",
-          "home": "+310",
+          "home": "+260",
           "homeOpen": "+400"
         },
         "openingHomeMargin": -10.5,
@@ -38428,33 +38542,33 @@
           "home": "-110",
           "homeOpen": "-110"
         },
-        "total": 47.5
+        "total": 46.5
       },
       "outsidePicks": {},
       "probabilitySource": "Calibrated market line + rolling team state + rest",
-      "ratingBlendHomeMargin": -8.37,
+      "ratingBlendHomeMargin": -7.49,
       "ratingFlagged": false,
-      "ratingHomeWinProbability": 0.273,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "ratingHomeWinProbability": 0.2945,
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
     "401873062": {
       "appVsMarket": {
-        "appPct": 39.1,
-        "gapPoints": 0.0,
-        "leans": "LV",
-        "marketPct": 39.1,
-        "nudgeGapPoints": 0.1,
+        "appPct": 40.3,
+        "gapPoints": -0.3,
+        "leans": "SEA",
+        "marketPct": 40.7,
+        "nudgeGapPoints": -0.3,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.1,
-            "toward": "LV"
+            "points": -0.3,
+            "toward": "SEA"
           }
         ],
-        "priceGapPoints": 0.0,
-        "spreadOnlyPct": 39.1
+        "priceGapPoints": 0.1,
+        "spreadOnlyPct": 40.6
       },
       "away": "SEA",
       "first": {
@@ -38584,38 +38698,44 @@
           "homeWinProbability": 0.3911,
           "marketHomeMargin": -3.5,
           "marketHomeWinProbability": 0.3908
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.4033,
+          "marketHomeMargin": -3.0,
+          "marketHomeWinProbability": 0.4066
         }
       ],
       "home": "LV",
-      "homeWinProbability": 0.3911,
+      "homeWinProbability": 0.4033,
       "kickoff": "2026-11-15T21:05Z",
       "late": false,
-      "marketHomeMargin": -3.5,
-      "marketHomeWinProbability": 0.3908,
+      "marketHomeMargin": -3.0,
+      "marketHomeWinProbability": 0.4066,
       "odds": {
-        "book": "DraftKings",
-        "detail": "SEA -3.5",
+        "book": "Draft Kings",
+        "detail": "SEA -3",
         "moneyline": {
-          "away": "-175",
+          "away": "-162",
           "awayOpen": "-340",
-          "home": "+145",
+          "home": "+136",
           "homeOpen": "+270"
         },
         "openingHomeMargin": -7.0,
         "spreadPrice": {
-          "away": "+100",
+          "away": "-110",
           "awayOpen": "-110",
-          "home": "-120",
+          "home": "-110",
           "homeOpen": "-110"
         },
         "total": 43.5
       },
       "outsidePicks": {},
       "probabilitySource": "Calibrated market line + rolling team state + rest",
-      "ratingBlendHomeMargin": -3.49,
+      "ratingBlendHomeMargin": -3.05,
       "ratingFlagged": false,
-      "ratingHomeWinProbability": 0.4007,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "ratingHomeWinProbability": 0.4129,
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
@@ -38773,7 +38893,7 @@
       "marketHomeMargin": -4.5,
       "marketHomeWinProbability": 0.331,
       "odds": {
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "detail": "SF -4.5",
         "moneyline": {
           "away": "-230",
@@ -38795,7 +38915,7 @@
       "ratingBlendHomeMargin": -4.18,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.3814,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
@@ -38935,7 +39055,7 @@
       "marketHomeMargin": 3.5,
       "marketHomeWinProbability": 0.6309,
       "odds": {
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "detail": "CIN -3.5",
         "moneyline": {
           "away": "+160",
@@ -38957,25 +39077,25 @@
       "ratingBlendHomeMargin": 4.36,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.6236,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
     "401873065": {
       "appVsMarket": {
-        "appPct": 61.1,
-        "gapPoints": 1.1,
+        "appPct": 61.6,
+        "gapPoints": 0.6,
         "leans": "BAL",
-        "marketPct": 60.0,
-        "nudgeGapPoints": 0.1,
+        "marketPct": 60.9,
+        "nudgeGapPoints": 0.6,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.1,
+            "points": 0.6,
             "toward": "BAL"
           }
         ],
-        "priceGapPoints": -1.0,
+        "priceGapPoints": -0.0,
         "spreadOnlyPct": 60.9
       },
       "away": "LAC",
@@ -39124,28 +39244,34 @@
           "homeWinProbability": 0.6108,
           "marketHomeMargin": 3.5,
           "marketHomeWinProbability": 0.5996
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.6156,
+          "marketHomeMargin": 3.5,
+          "marketHomeWinProbability": 0.6092
         }
       ],
       "home": "BAL",
-      "homeWinProbability": 0.6108,
+      "homeWinProbability": 0.6156,
       "kickoff": "2026-11-17T01:15Z",
       "late": false,
       "marketHomeMargin": 3.5,
-      "marketHomeWinProbability": 0.5996,
+      "marketHomeWinProbability": 0.6092,
       "odds": {
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "detail": "BAL -3.5",
         "moneyline": {
-          "away": "+140",
+          "away": "+145",
           "awayOpen": "+120",
-          "home": "-166",
+          "home": "-175",
           "homeOpen": "-142"
         },
         "openingHomeMargin": 2.5,
         "spreadPrice": {
-          "away": "-120",
+          "away": "-110",
           "awayOpen": "-110",
-          "home": "+100",
+          "home": "-110",
           "homeOpen": "-110"
         },
         "total": 38.5
@@ -39155,21 +39281,21 @@
       "ratingBlendHomeMargin": 5.1,
       "ratingFlagged": false,
       "ratingHomeWinProbability": 0.6435,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 10
     },
     "401873066": {
       "appVsMarket": {
-        "appPct": 63.7,
-        "gapPoints": 0.6,
+        "appPct": 64.4,
+        "gapPoints": 1.4,
         "leans": "HOU",
         "marketPct": 63.1,
-        "nudgeGapPoints": 0.6,
+        "nudgeGapPoints": 1.4,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.6,
+            "points": 1.4,
             "toward": "HOU"
           }
         ],
@@ -39262,10 +39388,16 @@
           "homeWinProbability": 0.6368,
           "marketHomeMargin": 4.2,
           "marketHomeWinProbability": 0.6306
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.6443,
+          "marketHomeMargin": 4.2,
+          "marketHomeWinProbability": 0.6306
         }
       ],
       "home": "HOU",
-      "homeWinProbability": 0.6368,
+      "homeWinProbability": 0.6443,
       "kickoff": "2026-11-20T01:15Z",
       "late": false,
       "marketHomeMargin": 4.2,
@@ -39293,21 +39425,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
     "401873067": {
       "appVsMarket": {
-        "appPct": 81.7,
-        "gapPoints": 0.7,
+        "appPct": 81.8,
+        "gapPoints": 0.9,
         "leans": "KC",
         "marketPct": 81.0,
-        "nudgeGapPoints": 0.7,
+        "nudgeGapPoints": 0.9,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.7,
+            "points": 0.9,
             "toward": "KC"
           }
         ],
@@ -39424,10 +39556,16 @@
           "homeWinProbability": 0.8169,
           "marketHomeMargin": 9.6,
           "marketHomeWinProbability": 0.8095
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.8182,
+          "marketHomeMargin": 9.6,
+          "marketHomeWinProbability": 0.8095
         }
       ],
       "home": "KC",
-      "homeWinProbability": 0.8169,
+      "homeWinProbability": 0.8182,
       "kickoff": "2026-11-22T18:00Z",
       "late": false,
       "marketHomeMargin": 9.6,
@@ -39455,7 +39593,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
@@ -39599,7 +39737,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
@@ -39749,7 +39887,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
@@ -39899,7 +40037,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
@@ -40043,7 +40181,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
@@ -40199,7 +40337,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
@@ -40355,21 +40493,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
     "401873074": {
       "appVsMarket": {
-        "appPct": 71.7,
-        "gapPoints": -0.9,
+        "appPct": 71.3,
+        "gapPoints": -1.3,
         "leans": "NYJ",
         "marketPct": 72.6,
-        "nudgeGapPoints": -0.9,
+        "nudgeGapPoints": -1.3,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.9,
+            "points": -1.3,
             "toward": "NYJ"
           }
         ],
@@ -40480,10 +40618,16 @@
           "homeWinProbability": 0.7173,
           "marketHomeMargin": 7.58,
           "marketHomeWinProbability": 0.7263
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.713,
+          "marketHomeMargin": 7.58,
+          "marketHomeWinProbability": 0.7263
         }
       ],
       "home": "LAC",
-      "homeWinProbability": 0.7173,
+      "homeWinProbability": 0.713,
       "kickoff": "2026-11-22T21:05Z",
       "late": false,
       "marketHomeMargin": 7.58,
@@ -40511,7 +40655,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
@@ -40667,7 +40811,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
@@ -40829,7 +40973,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
@@ -40985,7 +41129,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
@@ -41141,21 +41285,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 11
     },
     "401873079": {
       "appVsMarket": {
-        "appPct": 60.7,
-        "gapPoints": -0.3,
+        "appPct": 59.9,
+        "gapPoints": -1.2,
         "leans": "GB",
         "marketPct": 61.0,
-        "nudgeGapPoints": -0.3,
+        "nudgeGapPoints": -1.2,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.3,
+            "points": -1.2,
             "toward": "GB"
           }
         ],
@@ -41266,10 +41410,16 @@
           "homeWinProbability": 0.6068,
           "marketHomeMargin": 3.53,
           "marketHomeWinProbability": 0.6103
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5987,
+          "marketHomeMargin": 3.53,
+          "marketHomeWinProbability": 0.6103
         }
       ],
       "home": "LAR",
-      "homeWinProbability": 0.6068,
+      "homeWinProbability": 0.5987,
       "kickoff": "2026-11-26T01:00Z",
       "late": false,
       "marketHomeMargin": 3.53,
@@ -41297,7 +41447,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
@@ -41447,7 +41597,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
@@ -41609,7 +41759,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
@@ -41753,7 +41903,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
@@ -41921,7 +42071,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
@@ -42065,21 +42215,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
     "401873085": {
       "appVsMarket": {
-        "appPct": 52.6,
-        "gapPoints": 2.1,
+        "appPct": 53.4,
+        "gapPoints": 2.9,
         "leans": "HOU",
         "marketPct": 50.5,
-        "nudgeGapPoints": 2.1,
+        "nudgeGapPoints": 2.9,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 2.1,
+            "points": 2.9,
             "toward": "HOU"
           }
         ],
@@ -42166,10 +42316,16 @@
           "homeWinProbability": 0.5259,
           "marketHomeMargin": 0.15,
           "marketHomeWinProbability": 0.5047
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5339,
+          "marketHomeMargin": 0.15,
+          "marketHomeWinProbability": 0.5047
         }
       ],
       "home": "HOU",
-      "homeWinProbability": 0.5259,
+      "homeWinProbability": 0.5339,
       "kickoff": "2026-11-29T18:00Z",
       "late": false,
       "marketHomeMargin": 0.15,
@@ -42197,7 +42353,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
@@ -42347,7 +42503,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
@@ -42497,7 +42653,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
@@ -42641,7 +42797,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
@@ -42791,7 +42947,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
@@ -42929,21 +43085,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
     "401873091": {
       "appVsMarket": {
-        "appPct": 49.9,
-        "gapPoints": -0.6,
+        "appPct": 49.5,
+        "gapPoints": -0.9,
         "leans": "SEA",
         "marketPct": 50.5,
-        "nudgeGapPoints": -0.6,
+        "nudgeGapPoints": -0.9,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.6,
+            "points": -0.9,
             "toward": "SEA"
           }
         ],
@@ -43066,10 +43222,16 @@
           "homeWinProbability": 0.4985,
           "marketHomeMargin": 0.15,
           "marketHomeWinProbability": 0.5047
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.4953,
+          "marketHomeMargin": 0.15,
+          "marketHomeWinProbability": 0.5047
         }
       ],
       "home": "SF",
-      "homeWinProbability": 0.4985,
+      "homeWinProbability": 0.4953,
       "kickoff": "2026-11-29T21:25Z",
       "late": false,
       "marketHomeMargin": 0.15,
@@ -43097,21 +43259,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
     "401873092": {
       "appVsMarket": {
-        "appPct": 42.2,
-        "gapPoints": 0.3,
+        "appPct": 42.1,
+        "gapPoints": 0.1,
         "leans": "ARI",
         "marketPct": 42.0,
-        "nudgeGapPoints": 0.3,
+        "nudgeGapPoints": 0.1,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.3,
+            "points": 0.1,
             "toward": "ARI"
           }
         ],
@@ -43216,10 +43378,16 @@
           "homeWinProbability": 0.4224,
           "marketHomeMargin": -2.55,
           "marketHomeWinProbability": 0.4198
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.4206,
+          "marketHomeMargin": -2.55,
+          "marketHomeWinProbability": 0.4198
         }
       ],
       "home": "ARI",
-      "homeWinProbability": 0.4224,
+      "homeWinProbability": 0.4206,
       "kickoff": "2026-11-29T21:25Z",
       "late": false,
       "marketHomeMargin": -2.55,
@@ -43247,21 +43415,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
     "401873093": {
       "appVsMarket": {
-        "appPct": 50.9,
-        "gapPoints": -3.8,
+        "appPct": 51.4,
+        "gapPoints": -3.3,
         "leans": "NE",
         "marketPct": 54.7,
-        "nudgeGapPoints": -3.8,
+        "nudgeGapPoints": -3.3,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -3.8,
+            "points": -3.3,
             "toward": "NE"
           }
         ],
@@ -43366,10 +43534,16 @@
           "homeWinProbability": 0.5092,
           "marketHomeMargin": 1.5,
           "marketHomeWinProbability": 0.5474
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5139,
+          "marketHomeMargin": 1.5,
+          "marketHomeWinProbability": 0.5474
         }
       ],
       "home": "LAC",
-      "homeWinProbability": 0.5092,
+      "homeWinProbability": 0.5139,
       "kickoff": "2026-11-30T01:20Z",
       "late": false,
       "marketHomeMargin": 1.5,
@@ -43397,7 +43571,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
@@ -43547,7 +43721,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 12
     },
@@ -43709,7 +43883,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
@@ -43877,7 +44051,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
@@ -44021,7 +44195,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
@@ -44177,21 +44351,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
     "401873099": {
       "appVsMarket": {
-        "appPct": 44.3,
-        "gapPoints": -1.9,
+        "appPct": 43.5,
+        "gapPoints": -2.7,
         "leans": "GB",
         "marketPct": 46.2,
-        "nudgeGapPoints": -1.9,
+        "nudgeGapPoints": -2.7,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -1.9,
+            "points": -2.7,
             "toward": "GB"
           }
         ],
@@ -44296,10 +44470,16 @@
           "homeWinProbability": 0.4433,
           "marketHomeMargin": -1.2,
           "marketHomeWinProbability": 0.4621
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.435,
+          "marketHomeMargin": -1.2,
+          "marketHomeWinProbability": 0.4621
         }
       ],
       "home": "NO",
-      "homeWinProbability": 0.4433,
+      "homeWinProbability": 0.435,
       "kickoff": "2026-12-06T18:00Z",
       "late": false,
       "marketHomeMargin": -1.2,
@@ -44327,7 +44507,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
@@ -44477,21 +44657,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
     "401873101": {
       "appVsMarket": {
-        "appPct": 49.1,
-        "gapPoints": 2.9,
+        "appPct": 49.6,
+        "gapPoints": 3.4,
         "leans": "TB",
         "marketPct": 46.2,
-        "nudgeGapPoints": 2.9,
+        "nudgeGapPoints": 3.4,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 2.9,
+            "points": 3.4,
             "toward": "TB"
           }
         ],
@@ -44608,10 +44788,16 @@
           "homeWinProbability": 0.4911,
           "marketHomeMargin": -1.2,
           "marketHomeWinProbability": 0.4621
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.496,
+          "marketHomeMargin": -1.2,
+          "marketHomeWinProbability": 0.4621
         }
       ],
       "home": "TB",
-      "homeWinProbability": 0.4911,
+      "homeWinProbability": 0.496,
       "kickoff": "2026-12-06T18:00Z",
       "late": false,
       "marketHomeMargin": -1.2,
@@ -44639,7 +44825,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
@@ -44789,7 +44975,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
@@ -44945,21 +45131,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
     "401873104": {
       "appVsMarket": {
-        "appPct": 30.5,
-        "gapPoints": 0.5,
+        "appPct": 30.3,
+        "gapPoints": 0.3,
         "leans": "ARI",
         "marketPct": 30.0,
-        "nudgeGapPoints": 0.5,
+        "nudgeGapPoints": 0.3,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.5,
+            "points": 0.3,
             "toward": "ARI"
           }
         ],
@@ -45070,10 +45256,16 @@
           "homeWinProbability": 0.3049,
           "marketHomeMargin": -6.6,
           "marketHomeWinProbability": 0.3002
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.3032,
+          "marketHomeMargin": -6.6,
+          "marketHomeWinProbability": 0.3002
         }
       ],
       "home": "ARI",
-      "homeWinProbability": 0.3049,
+      "homeWinProbability": 0.3032,
       "kickoff": "2026-12-06T21:05Z",
       "late": false,
       "marketHomeMargin": -6.6,
@@ -45101,21 +45293,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
     "401873105": {
       "appVsMarket": {
-        "appPct": 49.0,
-        "gapPoints": -1.5,
+        "appPct": 48.0,
+        "gapPoints": -2.4,
         "leans": "BUF",
         "marketPct": 50.5,
-        "nudgeGapPoints": -1.5,
+        "nudgeGapPoints": -2.4,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -1.5,
+            "points": -2.4,
             "toward": "BUF"
           }
         ],
@@ -45214,10 +45406,16 @@
           "homeWinProbability": 0.4901,
           "marketHomeMargin": 0.15,
           "marketHomeWinProbability": 0.5047
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.4805,
+          "marketHomeMargin": 0.15,
+          "marketHomeWinProbability": 0.5047
         }
       ],
       "home": "NE",
-      "homeWinProbability": 0.4901,
+      "homeWinProbability": 0.4805,
       "kickoff": "2026-12-06T21:25Z",
       "late": false,
       "marketHomeMargin": 0.15,
@@ -45245,7 +45443,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
@@ -45395,21 +45593,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
     "401873107": {
       "appVsMarket": {
-        "appPct": 48.4,
-        "gapPoints": 2.2,
+        "appPct": 47.6,
+        "gapPoints": 1.4,
         "leans": "PIT",
         "marketPct": 46.2,
-        "nudgeGapPoints": 2.2,
+        "nudgeGapPoints": 1.4,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 2.2,
+            "points": 1.4,
             "toward": "PIT"
           }
         ],
@@ -45496,10 +45694,16 @@
           "homeWinProbability": 0.4841,
           "marketHomeMargin": -1.2,
           "marketHomeWinProbability": 0.4621
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.4761,
+          "marketHomeMargin": -1.2,
+          "marketHomeWinProbability": 0.4621
         }
       ],
       "home": "PIT",
-      "homeWinProbability": 0.4841,
+      "homeWinProbability": 0.4761,
       "kickoff": "2026-12-07T01:20Z",
       "late": false,
       "marketHomeMargin": -1.2,
@@ -45527,21 +45731,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
     "401873108": {
       "appVsMarket": {
-        "appPct": 60.0,
-        "gapPoints": -1.0,
+        "appPct": 60.3,
+        "gapPoints": -0.7,
         "leans": "DAL",
         "marketPct": 61.0,
-        "nudgeGapPoints": -1.0,
+        "nudgeGapPoints": -0.7,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -1.0,
+            "points": -0.7,
             "toward": "DAL"
           }
         ],
@@ -45652,10 +45856,16 @@
           "homeWinProbability": 0.6003,
           "marketHomeMargin": 3.52,
           "marketHomeWinProbability": 0.61
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.6034,
+          "marketHomeMargin": 3.52,
+          "marketHomeWinProbability": 0.61
         }
       ],
       "home": "SEA",
-      "homeWinProbability": 0.6003,
+      "homeWinProbability": 0.6034,
       "kickoff": "2026-12-08T01:15Z",
       "late": false,
       "marketHomeMargin": 3.52,
@@ -45683,21 +45893,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 13
     },
     "401873109": {
       "appVsMarket": {
-        "appPct": 58.7,
-        "gapPoints": -0.2,
+        "appPct": 57.8,
+        "gapPoints": -1.2,
         "leans": "MIN",
         "marketPct": 59.0,
-        "nudgeGapPoints": -0.2,
+        "nudgeGapPoints": -1.2,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.2,
+            "points": -1.2,
             "toward": "MIN"
           }
         ],
@@ -45808,10 +46018,16 @@
           "homeWinProbability": 0.5872,
           "marketHomeMargin": 2.85,
           "marketHomeWinProbability": 0.5895
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5778,
+          "marketHomeMargin": 2.85,
+          "marketHomeWinProbability": 0.5895
         }
       ],
       "home": "NE",
-      "homeWinProbability": 0.5872,
+      "homeWinProbability": 0.5778,
       "kickoff": "2026-12-11T01:15Z",
       "late": false,
       "marketHomeMargin": 2.85,
@@ -45839,7 +46055,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
@@ -45989,7 +46205,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
@@ -46151,7 +46367,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
@@ -46319,21 +46535,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
     "401873113": {
       "appVsMarket": {
-        "appPct": 42.9,
-        "gapPoints": 0.9,
+        "appPct": 42.1,
+        "gapPoints": 0.1,
         "leans": "WSH",
         "marketPct": 42.0,
-        "nudgeGapPoints": 0.9,
+        "nudgeGapPoints": 0.1,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.9,
+            "points": 0.1,
             "toward": "WSH"
           }
         ],
@@ -46432,10 +46648,16 @@
           "homeWinProbability": 0.4286,
           "marketHomeMargin": -2.55,
           "marketHomeWinProbability": 0.4198
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.4207,
+          "marketHomeMargin": -2.55,
+          "marketHomeWinProbability": 0.4198
         }
       ],
       "home": "WSH",
-      "homeWinProbability": 0.4286,
+      "homeWinProbability": 0.4207,
       "kickoff": "2026-12-13T18:00Z",
       "late": false,
       "marketHomeMargin": -2.55,
@@ -46463,7 +46685,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
@@ -46631,7 +46853,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
@@ -46775,7 +46997,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
@@ -46907,7 +47129,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
@@ -47057,21 +47279,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
     "401873118": {
       "appVsMarket": {
-        "appPct": 40.7,
-        "gapPoints": 2.8,
+        "appPct": 41.2,
+        "gapPoints": 3.3,
         "leans": "LV",
         "marketPct": 37.9,
-        "nudgeGapPoints": 2.8,
+        "nudgeGapPoints": 3.3,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 2.8,
+            "points": 3.3,
             "toward": "LV"
           }
         ],
@@ -47170,10 +47392,16 @@
           "homeWinProbability": 0.4068,
           "marketHomeMargin": -3.9,
           "marketHomeWinProbability": 0.3785
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.4117,
+          "marketHomeMargin": -3.9,
+          "marketHomeWinProbability": 0.3785
         }
       ],
       "home": "LV",
-      "homeWinProbability": 0.4068,
+      "homeWinProbability": 0.4117,
       "kickoff": "2026-12-13T21:05Z",
       "late": false,
       "marketHomeMargin": -3.9,
@@ -47201,7 +47429,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
@@ -47351,7 +47579,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
@@ -47519,21 +47747,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
     "401873121": {
       "appVsMarket": {
-        "appPct": 69.0,
-        "gapPoints": -1.8,
+        "appPct": 69.3,
+        "gapPoints": -1.5,
         "leans": "NYG",
         "marketPct": 70.8,
-        "nudgeGapPoints": -1.8,
+        "nudgeGapPoints": -1.5,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -1.8,
+            "points": -1.5,
             "toward": "NYG"
           }
         ],
@@ -47650,10 +47878,16 @@
           "homeWinProbability": 0.6903,
           "marketHomeMargin": 6.9,
           "marketHomeWinProbability": 0.708
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.6931,
+          "marketHomeMargin": 6.9,
+          "marketHomeWinProbability": 0.708
         }
       ],
       "home": "SEA",
-      "homeWinProbability": 0.6903,
+      "homeWinProbability": 0.6931,
       "kickoff": "2026-12-13T21:25Z",
       "late": false,
       "marketHomeMargin": 6.9,
@@ -47681,22 +47915,22 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
     "401873122": {
       "appVsMarket": {
-        "appPct": 49.9,
-        "gapPoints": -0.5,
-        "leans": "BUF",
+        "appPct": 50.8,
+        "gapPoints": 0.3,
+        "leans": "GB",
         "marketPct": 50.5,
-        "nudgeGapPoints": -0.5,
+        "nudgeGapPoints": 0.3,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.5,
-            "toward": "BUF"
+            "points": 0.3,
+            "toward": "GB"
           }
         ],
         "priceGapPoints": 0.0,
@@ -47794,10 +48028,16 @@
           "homeWinProbability": 0.4993,
           "marketHomeMargin": 0.15,
           "marketHomeWinProbability": 0.5047
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5077,
+          "marketHomeMargin": 0.15,
+          "marketHomeWinProbability": 0.5047
         }
       ],
       "home": "GB",
-      "homeWinProbability": 0.4993,
+      "homeWinProbability": 0.5077,
       "kickoff": "2026-12-14T01:20Z",
       "late": false,
       "marketHomeMargin": 0.15,
@@ -47825,7 +48065,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
@@ -47969,21 +48209,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 14
     },
     "401873124": {
       "appVsMarket": {
-        "appPct": 52.5,
-        "gapPoints": -2.3,
+        "appPct": 52.0,
+        "gapPoints": -2.8,
         "leans": "SF",
         "marketPct": 54.7,
-        "nudgeGapPoints": -2.3,
+        "nudgeGapPoints": -2.8,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -2.3,
+            "points": -2.8,
             "toward": "SF"
           }
         ],
@@ -48082,10 +48322,16 @@
           "homeWinProbability": 0.5248,
           "marketHomeMargin": 1.5,
           "marketHomeWinProbability": 0.5474
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5198,
+          "marketHomeMargin": 1.5,
+          "marketHomeWinProbability": 0.5474
         }
       ],
       "home": "LAC",
-      "homeWinProbability": 0.5248,
+      "homeWinProbability": 0.5198,
       "kickoff": "2026-12-18T01:15Z",
       "late": false,
       "marketHomeMargin": 1.5,
@@ -48113,21 +48359,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
     "401873125": {
       "appVsMarket": {
-        "appPct": 49.3,
-        "gapPoints": -1.2,
+        "appPct": 49.0,
+        "gapPoints": -1.5,
         "leans": "SEA",
         "marketPct": 50.5,
-        "nudgeGapPoints": -1.2,
+        "nudgeGapPoints": -1.5,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -1.2,
+            "points": -1.5,
             "toward": "SEA"
           }
         ],
@@ -48256,10 +48502,16 @@
           "homeWinProbability": 0.4932,
           "marketHomeMargin": 0.15,
           "marketHomeWinProbability": 0.5047
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.4901,
+          "marketHomeMargin": 0.15,
+          "marketHomeWinProbability": 0.5047
         }
       ],
       "home": "PHI",
-      "homeWinProbability": 0.4932,
+      "homeWinProbability": 0.4901,
       "kickoff": "2026-12-19T22:00Z",
       "late": false,
       "marketHomeMargin": 0.15,
@@ -48287,7 +48539,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
@@ -48425,7 +48677,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
@@ -48587,7 +48839,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
@@ -48731,7 +48983,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
@@ -48869,7 +49121,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
@@ -49013,7 +49265,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
@@ -49151,21 +49403,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
     "401873132": {
       "appVsMarket": {
-        "appPct": 57.0,
-        "gapPoints": -2.0,
+        "appPct": 57.8,
+        "gapPoints": -1.2,
         "leans": "JAX",
         "marketPct": 59.0,
-        "nudgeGapPoints": -2.0,
+        "nudgeGapPoints": -1.2,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -2.0,
+            "points": -1.2,
             "toward": "JAX"
           }
         ],
@@ -49258,10 +49510,16 @@
           "homeWinProbability": 0.5698,
           "marketHomeMargin": 2.85,
           "marketHomeWinProbability": 0.5895
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5777,
+          "marketHomeMargin": 2.85,
+          "marketHomeWinProbability": 0.5895
         }
       ],
       "home": "HOU",
-      "homeWinProbability": 0.5698,
+      "homeWinProbability": 0.5777,
       "kickoff": "2026-12-20T18:00Z",
       "late": false,
       "marketHomeMargin": 2.85,
@@ -49289,21 +49547,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
     "401873133": {
       "appVsMarket": {
-        "appPct": 81.2,
-        "gapPoints": 0.2,
+        "appPct": 81.7,
+        "gapPoints": 0.8,
         "leans": "GB",
         "marketPct": 81.0,
-        "nudgeGapPoints": 0.2,
+        "nudgeGapPoints": 0.8,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.2,
+            "points": 0.8,
             "toward": "GB"
           }
         ],
@@ -49414,10 +49672,16 @@
           "homeWinProbability": 0.8116,
           "marketHomeMargin": 9.6,
           "marketHomeWinProbability": 0.8095
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.8172,
+          "marketHomeMargin": 9.6,
+          "marketHomeWinProbability": 0.8095
         }
       ],
       "home": "GB",
-      "homeWinProbability": 0.8116,
+      "homeWinProbability": 0.8172,
       "kickoff": "2026-12-20T18:00Z",
       "late": false,
       "marketHomeMargin": 9.6,
@@ -49445,7 +49709,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
@@ -49595,21 +49859,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
     "401873135": {
       "appVsMarket": {
-        "appPct": 51.0,
-        "gapPoints": 2.7,
+        "appPct": 50.8,
+        "gapPoints": 2.5,
         "leans": "ARI",
         "marketPct": 48.4,
-        "nudgeGapPoints": 2.7,
+        "nudgeGapPoints": 2.5,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 2.7,
+            "points": 2.5,
             "toward": "ARI"
           }
         ],
@@ -49738,10 +50002,16 @@
           "homeWinProbability": 0.51,
           "marketHomeMargin": -0.52,
           "marketHomeWinProbability": 0.4835
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5081,
+          "marketHomeMargin": -0.52,
+          "marketHomeWinProbability": 0.4835
         }
       ],
       "home": "ARI",
-      "homeWinProbability": 0.51,
+      "homeWinProbability": 0.5081,
       "kickoff": "2026-12-20T21:05Z",
       "late": false,
       "marketHomeMargin": -0.52,
@@ -49769,7 +50039,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
@@ -49931,7 +50201,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
@@ -50087,7 +50357,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
@@ -50243,22 +50513,22 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
     "401873139": {
       "appVsMarket": {
-        "appPct": 54.0,
-        "gapPoints": -0.7,
-        "leans": "NE",
+        "appPct": 55.0,
+        "gapPoints": 0.2,
+        "leans": "KC",
         "marketPct": 54.7,
-        "nudgeGapPoints": -0.7,
+        "nudgeGapPoints": 0.2,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.7,
-            "toward": "NE"
+            "points": 0.2,
+            "toward": "KC"
           }
         ],
         "priceGapPoints": 0.0,
@@ -50356,10 +50626,16 @@
           "homeWinProbability": 0.54,
           "marketHomeMargin": 1.5,
           "marketHomeWinProbability": 0.5474
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5496,
+          "marketHomeMargin": 1.5,
+          "marketHomeWinProbability": 0.5474
         }
       ],
       "home": "KC",
-      "homeWinProbability": 0.54,
+      "homeWinProbability": 0.5496,
       "kickoff": "2026-12-22T01:15Z",
       "late": false,
       "marketHomeMargin": 1.5,
@@ -50387,21 +50663,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 15
     },
     "401873140": {
       "appVsMarket": {
-        "appPct": 53.9,
-        "gapPoints": -0.8,
+        "appPct": 53.1,
+        "gapPoints": -1.6,
         "leans": "HOU",
         "marketPct": 54.7,
-        "nudgeGapPoints": -0.8,
+        "nudgeGapPoints": -1.6,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.8,
+            "points": -1.6,
             "toward": "HOU"
           }
         ],
@@ -50506,10 +50782,16 @@
           "homeWinProbability": 0.5394,
           "marketHomeMargin": 1.5,
           "marketHomeWinProbability": 0.5474
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5314,
+          "marketHomeMargin": 1.5,
+          "marketHomeWinProbability": 0.5474
         }
       ],
       "home": "PHI",
-      "homeWinProbability": 0.5394,
+      "homeWinProbability": 0.5314,
       "kickoff": "2026-12-25T01:15Z",
       "late": false,
       "marketHomeMargin": 1.5,
@@ -50537,22 +50819,22 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
     "401873141": {
       "appVsMarket": {
-        "appPct": 51.2,
-        "gapPoints": 0.8,
-        "leans": "CHI",
+        "appPct": 50.4,
+        "gapPoints": -0.1,
+        "leans": "GB",
         "marketPct": 50.5,
-        "nudgeGapPoints": 0.8,
+        "nudgeGapPoints": -0.1,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.8,
-            "toward": "CHI"
+            "points": -0.1,
+            "toward": "GB"
           }
         ],
         "priceGapPoints": 0.0,
@@ -50650,10 +50932,16 @@
           "homeWinProbability": 0.5125,
           "marketHomeMargin": 0.15,
           "marketHomeWinProbability": 0.5047
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5041,
+          "marketHomeMargin": 0.15,
+          "marketHomeWinProbability": 0.5047
         }
       ],
       "home": "CHI",
-      "homeWinProbability": 0.5125,
+      "homeWinProbability": 0.5041,
       "kickoff": "2026-12-25T18:00Z",
       "late": false,
       "marketHomeMargin": 0.15,
@@ -50681,7 +50969,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
@@ -50837,24 +51125,18 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
     "401873143": {
       "appVsMarket": {
-        "appPct": 52.3,
-        "gapPoints": -0.3,
-        "leans": "LAR",
+        "appPct": 52.6,
+        "gapPoints": -0.0,
+        "leans": null,
         "marketPct": 52.6,
-        "nudgeGapPoints": -0.3,
-        "nudges": [
-          {
-            "label": "rest and team form",
-            "points": -0.3,
-            "toward": "LAR"
-          }
-        ],
+        "nudgeGapPoints": -0.0,
+        "nudges": [],
         "priceGapPoints": 0.0,
         "spreadOnlyPct": 52.6
       },
@@ -50974,10 +51256,16 @@
           "homeWinProbability": 0.5226,
           "marketHomeMargin": 0.82,
           "marketHomeWinProbability": 0.5259
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5258,
+          "marketHomeMargin": 0.82,
+          "marketHomeWinProbability": 0.5259
         }
       ],
       "home": "SEA",
-      "homeWinProbability": 0.5226,
+      "homeWinProbability": 0.5258,
       "kickoff": "2026-12-26T01:15Z",
       "late": false,
       "marketHomeMargin": 0.82,
@@ -51005,7 +51293,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
@@ -51143,7 +51431,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
@@ -51287,7 +51575,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
@@ -51431,7 +51719,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
@@ -51581,18 +51869,24 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
     "401873148": {
       "appVsMarket": {
-        "appPct": 70.8,
-        "gapPoints": 0.0,
-        "leans": null,
+        "appPct": 71.0,
+        "gapPoints": 0.2,
+        "leans": "NO",
         "marketPct": 70.8,
-        "nudgeGapPoints": 0.0,
-        "nudges": [],
+        "nudgeGapPoints": 0.2,
+        "nudges": [
+          {
+            "label": "rest and team form",
+            "points": 0.2,
+            "toward": "NO"
+          }
+        ],
         "priceGapPoints": 0.0,
         "spreadOnlyPct": 70.8
       },
@@ -51700,10 +51994,16 @@
           "homeWinProbability": 0.7081,
           "marketHomeMargin": 6.9,
           "marketHomeWinProbability": 0.708
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.7097,
+          "marketHomeMargin": 6.9,
+          "marketHomeWinProbability": 0.708
         }
       ],
       "home": "NO",
-      "homeWinProbability": 0.7081,
+      "homeWinProbability": 0.7097,
       "kickoff": "2026-12-27T18:00Z",
       "late": false,
       "marketHomeMargin": 6.9,
@@ -51731,7 +52031,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
@@ -51881,21 +52181,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
     "401873150": {
       "appVsMarket": {
-        "appPct": 30.6,
-        "gapPoints": 0.6,
+        "appPct": 31.1,
+        "gapPoints": 1.1,
         "leans": "MIA",
         "marketPct": 30.0,
-        "nudgeGapPoints": 0.6,
+        "nudgeGapPoints": 1.1,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.6,
+            "points": 1.1,
             "toward": "MIA"
           }
         ],
@@ -51994,10 +52294,16 @@
           "homeWinProbability": 0.3064,
           "marketHomeMargin": -6.6,
           "marketHomeWinProbability": 0.3002
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.3108,
+          "marketHomeMargin": -6.6,
+          "marketHomeWinProbability": 0.3002
         }
       ],
       "home": "MIA",
-      "homeWinProbability": 0.3064,
+      "homeWinProbability": 0.3108,
       "kickoff": "2026-12-27T18:00Z",
       "late": false,
       "marketHomeMargin": -6.6,
@@ -52025,21 +52331,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
     "401873151": {
       "appVsMarket": {
-        "appPct": 34.8,
-        "gapPoints": -1.0,
+        "appPct": 35.8,
+        "gapPoints": -0.1,
         "leans": "NE",
         "marketPct": 35.8,
-        "nudgeGapPoints": -1.0,
+        "nudgeGapPoints": -0.1,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -1.0,
+            "points": -0.1,
             "toward": "NE"
           }
         ],
@@ -52144,10 +52450,16 @@
           "homeWinProbability": 0.3485,
           "marketHomeMargin": -4.58,
           "marketHomeWinProbability": 0.3581
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.3575,
+          "marketHomeMargin": -4.58,
+          "marketHomeWinProbability": 0.3581
         }
       ],
       "home": "NYJ",
-      "homeWinProbability": 0.3485,
+      "homeWinProbability": 0.3575,
       "kickoff": "2026-12-27T18:00Z",
       "late": false,
       "marketHomeMargin": -4.58,
@@ -52175,7 +52487,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
@@ -52325,7 +52637,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
@@ -52487,7 +52799,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
@@ -52643,7 +52955,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
@@ -52799,7 +53111,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 16
     },
@@ -52931,21 +53243,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
     "401873157": {
       "appVsMarket": {
-        "appPct": 54.1,
-        "gapPoints": -0.7,
+        "appPct": 53.1,
+        "gapPoints": -1.6,
         "leans": "DEN",
         "marketPct": 54.7,
-        "nudgeGapPoints": -0.7,
+        "nudgeGapPoints": -1.6,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.7,
+            "points": -1.6,
             "toward": "DEN"
           }
         ],
@@ -53068,10 +53380,16 @@
           "homeWinProbability": 0.5407,
           "marketHomeMargin": 1.5,
           "marketHomeWinProbability": 0.5474
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5311,
+          "marketHomeMargin": 1.5,
+          "marketHomeWinProbability": 0.5474
         }
       ],
       "home": "NE",
-      "homeWinProbability": 0.5407,
+      "homeWinProbability": 0.5311,
       "kickoff": "2027-01-03T05:00Z",
       "late": false,
       "marketHomeMargin": 1.5,
@@ -53099,21 +53417,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
     "401873158": {
       "appVsMarket": {
-        "appPct": 52.8,
-        "gapPoints": -1.9,
+        "appPct": 52.3,
+        "gapPoints": -2.4,
         "leans": "KC",
         "marketPct": 54.7,
-        "nudgeGapPoints": -1.9,
+        "nudgeGapPoints": -2.4,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -1.9,
+            "points": -2.4,
             "toward": "KC"
           }
         ],
@@ -53206,10 +53524,16 @@
           "homeWinProbability": 0.5281,
           "marketHomeMargin": 1.5,
           "marketHomeWinProbability": 0.5474
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5232,
+          "marketHomeMargin": 1.5,
+          "marketHomeWinProbability": 0.5474
         }
       ],
       "home": "LAC",
-      "homeWinProbability": 0.5281,
+      "homeWinProbability": 0.5232,
       "kickoff": "2027-01-03T05:00Z",
       "late": false,
       "marketHomeMargin": 1.5,
@@ -53237,7 +53561,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
@@ -53399,7 +53723,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
@@ -53555,7 +53879,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
@@ -53705,7 +54029,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
@@ -53843,7 +54167,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
@@ -53987,7 +54311,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
@@ -54131,7 +54455,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
@@ -54281,7 +54605,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
@@ -54413,21 +54737,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
     "401873167": {
       "appVsMarket": {
-        "appPct": 37.5,
-        "gapPoints": -0.3,
+        "appPct": 37.2,
+        "gapPoints": -0.7,
         "leans": "SEA",
         "marketPct": 37.9,
-        "nudgeGapPoints": -0.3,
+        "nudgeGapPoints": -0.7,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.3,
+            "points": -0.7,
             "toward": "SEA"
           }
         ],
@@ -54532,10 +54856,16 @@
           "homeWinProbability": 0.3751,
           "marketHomeMargin": -3.9,
           "marketHomeWinProbability": 0.3785
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.372,
+          "marketHomeMargin": -3.9,
+          "marketHomeWinProbability": 0.3785
         }
       ],
       "home": "CAR",
-      "homeWinProbability": 0.3751,
+      "homeWinProbability": 0.372,
       "kickoff": "2027-01-03T18:00Z",
       "late": false,
       "marketHomeMargin": -3.9,
@@ -54563,24 +54893,18 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
     "401873168": {
       "appVsMarket": {
-        "appPct": 46.4,
-        "gapPoints": 0.2,
-        "leans": "ARI",
+        "appPct": 46.2,
+        "gapPoints": 0.0,
+        "leans": null,
         "marketPct": 46.2,
-        "nudgeGapPoints": 0.2,
-        "nudges": [
-          {
-            "label": "rest and team form",
-            "points": 0.2,
-            "toward": "ARI"
-          }
-        ],
+        "nudgeGapPoints": 0.0,
+        "nudges": [],
         "priceGapPoints": 0.0,
         "spreadOnlyPct": 46.2
       },
@@ -54676,10 +55000,16 @@
           "homeWinProbability": 0.464,
           "marketHomeMargin": -1.2,
           "marketHomeWinProbability": 0.4621
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.4621,
+          "marketHomeMargin": -1.2,
+          "marketHomeWinProbability": 0.4621
         }
       ],
       "home": "ARI",
-      "homeWinProbability": 0.464,
+      "homeWinProbability": 0.4621,
       "kickoff": "2027-01-03T21:05Z",
       "late": false,
       "marketHomeMargin": -1.2,
@@ -54707,7 +55037,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
@@ -54869,7 +55199,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
@@ -55037,21 +55367,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
     "401873171": {
       "appVsMarket": {
         "appPct": 55.5,
-        "gapPoints": 0.7,
+        "gapPoints": 0.8,
         "leans": "GB",
         "marketPct": 54.7,
-        "nudgeGapPoints": 0.7,
+        "nudgeGapPoints": 0.8,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.7,
+            "points": 0.8,
             "toward": "GB"
           }
         ],
@@ -55144,10 +55474,16 @@
           "homeWinProbability": 0.5549,
           "marketHomeMargin": 1.5,
           "marketHomeWinProbability": 0.5474
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5553,
+          "marketHomeMargin": 1.5,
+          "marketHomeWinProbability": 0.5474
         }
       ],
       "home": "GB",
-      "homeWinProbability": 0.5549,
+      "homeWinProbability": 0.5553,
       "kickoff": "2027-01-05T01:15Z",
       "late": false,
       "marketHomeMargin": 1.5,
@@ -55175,7 +55511,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 17
     },
@@ -55313,7 +55649,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
@@ -55457,7 +55793,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
@@ -55601,7 +55937,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
@@ -55757,22 +56093,22 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
     "401873176": {
       "appVsMarket": {
-        "appPct": 50.4,
-        "gapPoints": -0.1,
-        "leans": "DET",
+        "appPct": 51.2,
+        "gapPoints": 0.7,
+        "leans": "GB",
         "marketPct": 50.5,
-        "nudgeGapPoints": -0.1,
+        "nudgeGapPoints": 0.7,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.1,
-            "toward": "DET"
+            "points": 0.7,
+            "toward": "GB"
           }
         ],
         "priceGapPoints": 0.0,
@@ -55888,10 +56224,16 @@
           "homeWinProbability": 0.5036,
           "marketHomeMargin": 0.15,
           "marketHomeWinProbability": 0.5047
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.512,
+          "marketHomeMargin": 0.15,
+          "marketHomeWinProbability": 0.5047
         }
       ],
       "home": "GB",
-      "homeWinProbability": 0.5036,
+      "homeWinProbability": 0.512,
       "kickoff": "2027-01-10T05:00Z",
       "late": false,
       "marketHomeMargin": 0.15,
@@ -55919,7 +56261,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
@@ -56069,7 +56411,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
@@ -56225,21 +56567,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
     "401873179": {
       "appVsMarket": {
-        "appPct": 56.6,
-        "gapPoints": 1.9,
+        "appPct": 57.1,
+        "gapPoints": 2.4,
         "leans": "DEN",
         "marketPct": 54.7,
-        "nudgeGapPoints": 1.9,
+        "nudgeGapPoints": 2.4,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 1.9,
+            "points": 2.4,
             "toward": "DEN"
           }
         ],
@@ -56332,10 +56674,16 @@
           "homeWinProbability": 0.5663,
           "marketHomeMargin": 1.5,
           "marketHomeWinProbability": 0.5474
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5712,
+          "marketHomeMargin": 1.5,
+          "marketHomeWinProbability": 0.5474
         }
       ],
       "home": "DEN",
-      "homeWinProbability": 0.5663,
+      "homeWinProbability": 0.5712,
       "kickoff": "2027-01-10T05:00Z",
       "late": false,
       "marketHomeMargin": 1.5,
@@ -56363,22 +56711,22 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
     "401873180": {
       "appVsMarket": {
-        "appPct": 81.5,
-        "gapPoints": 0.6,
-        "leans": "NE",
+        "appPct": 80.8,
+        "gapPoints": -0.1,
+        "leans": "MIA",
         "marketPct": 81.0,
-        "nudgeGapPoints": 0.6,
+        "nudgeGapPoints": -0.1,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.6,
-            "toward": "NE"
+            "points": -0.1,
+            "toward": "MIA"
           }
         ],
         "priceGapPoints": 0.0,
@@ -56488,10 +56836,16 @@
           "homeWinProbability": 0.8151,
           "marketHomeMargin": 9.6,
           "marketHomeWinProbability": 0.8095
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.8085,
+          "marketHomeMargin": 9.6,
+          "marketHomeWinProbability": 0.8095
         }
       ],
       "home": "NE",
-      "homeWinProbability": 0.8151,
+      "homeWinProbability": 0.8085,
       "kickoff": "2027-01-10T05:00Z",
       "late": false,
       "marketHomeMargin": 9.6,
@@ -56519,7 +56873,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
@@ -56651,7 +57005,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
@@ -56807,7 +57161,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
@@ -56951,21 +57305,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
     "401873184": {
       "appVsMarket": {
-        "appPct": 29.0,
-        "gapPoints": -1.0,
+        "appPct": 28.9,
+        "gapPoints": -1.2,
         "leans": "SF",
         "marketPct": 30.0,
-        "nudgeGapPoints": -1.0,
+        "nudgeGapPoints": -1.2,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -1.0,
+            "points": -1.2,
             "toward": "SF"
           }
         ],
@@ -57076,10 +57430,16 @@
           "homeWinProbability": 0.2903,
           "marketHomeMargin": -6.6,
           "marketHomeWinProbability": 0.3002
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.2887,
+          "marketHomeMargin": -6.6,
+          "marketHomeWinProbability": 0.3002
         }
       ],
       "home": "ARI",
-      "homeWinProbability": 0.2903,
+      "homeWinProbability": 0.2887,
       "kickoff": "2027-01-10T05:00Z",
       "late": false,
       "marketHomeMargin": -6.6,
@@ -57107,21 +57467,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
     "401873185": {
       "appVsMarket": {
-        "appPct": 57.8,
-        "gapPoints": 0.9,
+        "appPct": 57.5,
+        "gapPoints": 0.6,
         "leans": "LAR",
         "marketPct": 56.9,
-        "nudgeGapPoints": 0.9,
+        "nudgeGapPoints": 0.6,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": 0.9,
+            "points": 0.6,
             "toward": "LAR"
           }
         ],
@@ -57244,10 +57604,16 @@
           "homeWinProbability": 0.5776,
           "marketHomeMargin": 2.18,
           "marketHomeWinProbability": 0.5687
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.5745,
+          "marketHomeMargin": 2.18,
+          "marketHomeWinProbability": 0.5687
         }
       ],
       "home": "LAR",
-      "homeWinProbability": 0.5776,
+      "homeWinProbability": 0.5745,
       "kickoff": "2027-01-10T05:00Z",
       "late": false,
       "marketHomeMargin": 2.18,
@@ -57275,7 +57641,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
@@ -57425,21 +57791,21 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     },
     "401873187": {
       "appVsMarket": {
-        "appPct": 69.9,
-        "gapPoints": -0.9,
+        "appPct": 70.6,
+        "gapPoints": -0.2,
         "leans": "TEN",
         "marketPct": 70.8,
-        "nudgeGapPoints": -0.9,
+        "nudgeGapPoints": -0.2,
         "nudges": [
           {
             "label": "rest and team form",
-            "points": -0.9,
+            "points": -0.2,
             "toward": "TEN"
           }
         ],
@@ -57514,10 +57880,16 @@
           "homeWinProbability": 0.6993,
           "marketHomeMargin": 6.9,
           "marketHomeWinProbability": 0.708
+        },
+        {
+          "at": "2026-11-09T01:42:59.353565Z",
+          "homeWinProbability": 0.7062,
+          "marketHomeMargin": 6.9,
+          "marketHomeWinProbability": 0.708
         }
       ],
       "home": "HOU",
-      "homeWinProbability": 0.6993,
+      "homeWinProbability": 0.7062,
       "kickoff": "2027-01-10T05:00Z",
       "late": false,
       "marketHomeMargin": 6.9,
@@ -57545,7 +57917,7 @@
       "ratingBlendHomeMargin": null,
       "ratingFlagged": false,
       "ratingHomeWinProbability": null,
-      "recordedAt": "2026-11-09T00:15:28.369154Z",
+      "recordedAt": "2026-11-09T01:42:59.353565Z",
       "travelApplied": null,
       "week": 18
     }
