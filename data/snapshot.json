@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "currentWeek": 10,
-  "updatedAt": "2026-11-15T20:24:09.226756Z",
+  "updatedAt": "2026-11-15T20:45:31.799806Z",
   "games": [
     {
       "id": "401872656",
@@ -978,8 +978,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -1104,14 +1104,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -1174,7 +1166,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 95,
+          "score": 96,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -1238,7 +1230,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 6.93
+          "totalRisk": 6.19
         },
         "home": {
           "score": 94,
@@ -3851,6 +3843,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -3891,12 +3891,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -3938,8 +3955,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.94,
-          "totalRisk": 9.35
+          "interactionRisk": 2.82,
+          "totalRisk": 11.27
         },
         "home": {
           "score": 92,
@@ -4418,7 +4435,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -4630,6 +4647,7 @@
         "This one is close to a coin flip; Tennessee Titans has the slight edge.",
         "The betting market gives New York Jets a 1.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
+        "Geno Smith is listed Questionable on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "4 of the 7 CBS writers who have picked take New York Jets, the underdog.",
         "Narcisa took Tennessee Titans."
@@ -4712,6 +4730,14 @@
             "detail": "Shin",
             "note": "Ward (shin) is questionable to return against the Dolphins on Sunday.",
             "updated": "2026-11-15T20:07Z"
+          },
+          {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
           },
           {
             "player": "Akeem Davis-Gaither",
@@ -4838,7 +4864,8 @@
           "score": 93,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -4852,6 +4879,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -4910,8 +4953,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.31,
-          "totalRisk": 9.44
+          "interactionRisk": 1.94,
+          "totalRisk": 10.7
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -7303,8 +7346,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -8170,20 +8213,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -8384,9 +8427,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -8444,8 +8487,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 2.76,
-          "totalRisk": 10.87
+          "interactionRisk": 3.13,
+          "totalRisk": 12.0
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -9973,8 +10016,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -10640,6 +10683,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -10656,7 +10700,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -11848,8 +11891,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -16515,8 +16558,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -19108,6 +19151,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -19350,12 +19401,29 @@
           "totalRisk": 13.35
         },
         "home": {
-          "score": 94,
+          "score": 93,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -19397,8 +19465,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.73,
-          "totalRisk": 8.35
+          "interactionRisk": 2.52,
+          "totalRisk": 10.06
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -19682,7 +19750,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -19799,6 +19867,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -19815,7 +19884,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -19996,6 +20064,7 @@
         "The app moves the line's number 2.0 points toward New York Jets, mostly because of rest and team form.",
         "The betting market gives New York Jets a 3.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
+        "Geno Smith is listed Questionable on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "6 of the 7 CBS writers who have picked take Green Bay Packers, the favorite."
       ]
@@ -21664,20 +21733,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -21863,9 +21932,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -21923,8 +21992,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 2.76,
-          "totalRisk": 10.87
+          "interactionRisk": 3.13,
+          "totalRisk": 12.0
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -22599,8 +22668,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -25167,8 +25236,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -26122,14 +26191,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -26406,7 +26467,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 6.42
+          "totalRisk": 5.73
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -27171,6 +27232,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -27233,10 +27302,11 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -27250,6 +27320,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -27308,8 +27394,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.47,
-          "totalRisk": 10.57
+          "interactionRisk": 2.18,
+          "totalRisk": 11.99
         },
         "home": {
           "score": 92,
@@ -28014,8 +28100,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -29598,6 +29684,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -29614,7 +29701,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -31901,6 +31987,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -31941,12 +32035,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -31988,8 +32099,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.94,
-          "totalRisk": 9.35
+          "interactionRisk": 2.82,
+          "totalRisk": 11.27
         },
         "home": {
           "score": 94,
@@ -32445,7 +32556,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -32651,6 +32762,7 @@
         "Detroit Lions is expected to win, about 7 times in 10.",
         "The betting market gives New York Jets a 7-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
+        "Geno Smith is listed Questionable on the injury report.",
         "Our play-by-play ratings lean Detroit Lions by 1.4 points more than the market does.",
         "7 of the 7 CBS writers who have picked take Detroit Lions, the favorite."
       ]
@@ -32732,6 +32844,14 @@
             "detail": "Shin",
             "note": "Ward (shin) is questionable to return against the Dolphins on Sunday.",
             "updated": "2026-11-15T20:07Z"
+          },
+          {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
           },
           {
             "player": "Akeem Davis-Gaither",
@@ -32816,20 +32936,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -32896,9 +33016,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -32956,14 +33076,15 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.09,
-          "totalRisk": 12.18
+          "interactionRisk": 3.51,
+          "totalRisk": 13.44
         },
         "home": {
           "score": 93,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -32977,6 +33098,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -33035,8 +33172,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.31,
-          "totalRisk": 9.44
+          "interactionRisk": 1.94,
+          "totalRisk": 10.7
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -37274,8 +37411,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -38214,14 +38351,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -38276,8 +38405,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -38509,7 +38638,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 6.42
+          "totalRisk": 5.73
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -39243,8 +39372,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -41712,8 +41841,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -44339,6 +44468,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -44401,10 +44538,11 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -44418,6 +44556,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -44476,8 +44630,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.42,
-          "totalRisk": 10.19
+          "interactionRisk": 2.1,
+          "totalRisk": 11.56
         },
         "home": {
           "score": 96,
@@ -46183,6 +46337,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -46223,12 +46385,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -46270,8 +46449,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.94,
-          "totalRisk": 9.35
+          "interactionRisk": 2.82,
+          "totalRisk": 11.27
         },
         "home": {
           "score": 98,
@@ -46685,7 +46864,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -46891,6 +47070,7 @@
         "Chicago Bears is expected to win, about 6 times in 10.",
         "The betting market gives New York Jets a 3.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
+        "Geno Smith is listed Questionable on the injury report.",
         "Our play-by-play ratings lean Chicago Bears by 1.8 points more than the market does.",
         "6 of the 7 CBS writers who have picked take Chicago Bears, the favorite."
       ]
@@ -47020,8 +47200,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -47820,8 +48000,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -48759,8 +48939,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -50273,6 +50453,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -50289,7 +50470,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -51394,20 +51574,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -51628,9 +51808,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -51688,8 +51868,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 2.76,
-          "totalRisk": 10.87
+          "interactionRisk": 3.13,
+          "totalRisk": 12.0
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -52372,8 +52552,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -54150,14 +54330,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -54393,7 +54565,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 6.42
+          "totalRisk": 5.73
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -58689,8 +58861,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -60131,6 +60303,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -60147,7 +60320,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -60591,20 +60763,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -60671,9 +60843,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -60731,8 +60903,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.09,
-          "totalRisk": 12.18
+          "interactionRisk": 3.51,
+          "totalRisk": 13.44
         },
         "home": {
           "score": 92,
@@ -63378,8 +63550,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -64180,6 +64352,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -64332,12 +64512,29 @@
           "totalRisk": 7.52
         },
         "home": {
-          "score": 94,
+          "score": 93,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -64379,8 +64576,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.73,
-          "totalRisk": 8.35
+          "interactionRisk": 2.52,
+          "totalRisk": 10.06
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -64669,7 +64866,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -64981,6 +65178,7 @@
         "The app moves the line's number 1.0 points toward Cleveland Browns, mostly because of rest and team form.",
         "The betting market gives Cleveland Browns a 2.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
+        "Geno Smith is listed Questionable on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "4 of the 7 CBS writers who have picked take Cleveland Browns, the underdog."
       ]
@@ -65106,6 +65304,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -65168,10 +65374,11 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -65185,6 +65392,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -65243,8 +65466,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.47,
-          "totalRisk": 10.57
+          "interactionRisk": 2.18,
+          "totalRisk": 11.99
         },
         "home": {
           "score": 99,
@@ -67687,8 +67910,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -68736,14 +68959,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -68806,7 +69021,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 95,
+          "score": 96,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -68870,7 +69085,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 7.19
+          "totalRisk": 6.42
         },
         "home": {
           "score": 89,
@@ -70375,8 +70590,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -72114,8 +72329,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -72184,20 +72399,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -72246,7 +72461,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 92,
+          "score": 91,
           "level": "Stable",
           "clusters": [
             "Protection unit: 2 linked flags",
@@ -72264,9 +72479,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -72324,8 +72539,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 2.98,
-          "totalRisk": 11.74
+          "interactionRisk": 3.38,
+          "totalRisk": 12.96
         },
         "home": {
           "score": 96,
@@ -74491,6 +74706,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -74742,7 +74965,8 @@
           "score": 93,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -74756,6 +74980,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -74814,8 +75054,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.31,
-          "totalRisk": 9.44
+          "interactionRisk": 1.94,
+          "totalRisk": 10.7
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -75510,6 +75750,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -75550,12 +75798,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -75597,8 +75862,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.94,
-          "totalRisk": 9.35
+          "interactionRisk": 2.82,
+          "totalRisk": 11.27
         },
         "home": {
           "score": 93,
@@ -76065,7 +76330,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -76214,6 +76479,7 @@
         "New England Patriots is expected to win, about 7 times in 10.",
         "The betting market gives New York Jets a 7-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
+        "Geno Smith is listed Questionable on the injury report.",
         "Drake Maye is listed Questionable on the injury report.",
         "Our play-by-play ratings lean New England Patriots by 1.4 points more than the market does.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested."
@@ -78666,8 +78932,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -78764,8 +79030,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -81874,6 +82140,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -81890,7 +82157,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -82183,14 +82449,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -82436,7 +82694,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 6.42
+          "totalRisk": 5.73
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -84866,14 +85124,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -84936,7 +85186,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 95,
+          "score": 96,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -85000,7 +85250,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 7.19
+          "totalRisk": 6.42
         },
         "home": {
           "score": 96,
@@ -86685,8 +86935,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -86763,6 +87013,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -86825,10 +87083,11 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -86842,6 +87101,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -86900,8 +87175,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.47,
-          "totalRisk": 10.57
+          "interactionRisk": 2.18,
+          "totalRisk": 11.99
         },
         "home": {
           "score": 95,
@@ -87603,6 +87878,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -87793,12 +88076,29 @@
           "totalRisk": 9.24
         },
         "home": {
-          "score": 94,
+          "score": 93,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -87840,8 +88140,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.73,
-          "totalRisk": 8.35
+          "interactionRisk": 2.52,
+          "totalRisk": 10.06
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -88129,7 +88429,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -88440,6 +88740,7 @@
         "The betting market gives Miami Dolphins a 3.5-point head start, unchanged since the line opened.",
         "Beyond the line, rest tilts it toward Miami Dolphins, a little.",
         "Miami Dolphins starts Kyle McCord, per the depth chart; he has no plays in our ratings yet, so the rating uses last season's passing.",
+        "Geno Smith is listed Questionable on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "7 of the 7 CBS writers who have picked take New York Jets, the favorite.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested."
@@ -90123,20 +90424,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -90344,9 +90645,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -90404,8 +90705,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 2.76,
-          "totalRisk": 10.87
+          "interactionRisk": 3.13,
+          "totalRisk": 12.0
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -91038,8 +91339,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -92712,6 +93013,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -92728,7 +93030,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -93007,8 +93308,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -96386,6 +96687,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -96402,7 +96704,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -98491,8 +98792,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -99503,8 +99804,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -100305,6 +100606,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -100449,12 +100758,29 @@
           "totalRisk": 4.49
         },
         "home": {
-          "score": 94,
+          "score": 93,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -100496,8 +100822,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.73,
-          "totalRisk": 8.35
+          "interactionRisk": 2.52,
+          "totalRisk": 10.06
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -100775,7 +101101,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -101084,6 +101410,7 @@
         "The betting market gives Las Vegas Raiders a 1.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Las Vegas Raiders starts Fernando Mendoza, per the depth chart, not K. Cousins, who took most of last season's snaps.",
+        "Geno Smith is listed Questionable on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "4 of the 7 CBS writers who have picked take Las Vegas Raiders, the underdog."
       ]
@@ -102785,8 +103112,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -102871,6 +103198,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -102933,10 +103268,11 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -102950,6 +103286,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -103008,8 +103360,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.47,
-          "totalRisk": 10.57
+          "interactionRisk": 2.18,
+          "totalRisk": 11.99
         },
         "home": {
           "score": 97,
@@ -103691,8 +104043,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -108299,8 +108651,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -109923,6 +110275,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -110142,7 +110502,8 @@
           "score": 93,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -110156,6 +110517,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -110214,8 +110591,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.31,
-          "totalRisk": 9.44
+          "interactionRisk": 1.94,
+          "totalRisk": 10.7
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -110967,6 +111344,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -111007,12 +111392,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -111054,8 +111456,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.94,
-          "totalRisk": 9.35
+          "interactionRisk": 2.82,
+          "totalRisk": 11.27
         },
         "home": {
           "score": 92,
@@ -111507,7 +111909,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -111713,6 +112115,7 @@
         "Kansas City Chiefs is expected to win, about 8 times in 10.",
         "The betting market gives New York Jets a 9.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
+        "Geno Smith is listed Questionable on the injury report.",
         "Our play-by-play ratings lean Kansas City Chiefs by 1.4 points more than the market does.",
         "7 of the 7 CBS writers who have picked take Kansas City Chiefs, the favorite."
       ]
@@ -114537,8 +114940,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -116446,20 +116849,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -116526,9 +116929,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -116586,8 +116989,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.09,
-          "totalRisk": 12.18
+          "interactionRisk": 3.51,
+          "totalRisk": 13.44
         },
         "home": {
           "score": 96,
@@ -118081,6 +118484,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -118097,7 +118501,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -118345,14 +118748,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -118583,7 +118978,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 6.42
+          "totalRisk": 5.73
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -119282,8 +119677,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -120947,8 +121342,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -123601,7 +123996,7 @@
         "abbreviation": "ATL",
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/atl.png",
         "record": "3-6",
-        "score": 3,
+        "score": 13,
         "injuries": [
           {
             "player": "Andy Dalton",
@@ -123675,7 +124070,7 @@
         "abbreviation": "KC",
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/kc.png",
         "record": "6-2",
-        "score": 21,
+        "score": 28,
         "injuries": [
           {
             "player": "Ben VanSumeren",
@@ -124585,7 +124980,7 @@
         "abbreviation": "HOU",
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/hou.png",
         "record": "3-5",
-        "score": 17,
+        "score": 24,
         "injuries": [
           {
             "player": "Azeez Al-Shaair",
@@ -124636,20 +125031,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -124697,7 +125092,7 @@
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption",
       "weather": {
         "summary": "Cloudy",
-        "temperature": "43-46 F",
+        "temperature": "42-46 F",
         "precipitation": "7%",
         "wind": "20 mph",
         "source": "Open-Meteo"
@@ -124722,9 +125117,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -124782,8 +125177,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.09,
-          "totalRisk": 12.18
+          "interactionRisk": 3.51,
+          "totalRisk": 13.44
         },
         "home": {
           "score": 95,
@@ -124831,7 +125226,7 @@
           "interactionRisk": 0.0,
           "totalRisk": 6.71
         },
-        "probabilityShift": 0.0023,
+        "probabilityShift": 0.0026,
         "applied": true
       },
       "preparation": {
@@ -125527,7 +125922,7 @@
         "abbreviation": "MIN",
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/min.png",
         "record": "6-2",
-        "score": 20,
+        "score": 27,
         "injuries": [
           {
             "player": "Blake Cashman",
@@ -125598,8 +125993,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -126073,6 +126468,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -126089,7 +126485,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -126373,7 +126768,7 @@
         "abbreviation": "TEN",
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/ten.png",
         "record": "1-7",
-        "score": 13,
+        "score": 16,
         "injuries": [
           {
             "player": "Anthony Hill Jr.",
@@ -126463,7 +126858,7 @@
         "abbreviation": "JAX",
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/jax.png",
         "record": "6-2",
-        "score": 23,
+        "score": 30,
         "injuries": [
           {
             "player": "Albert Regis",
@@ -126510,8 +126905,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -127371,6 +127766,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -127402,7 +127805,7 @@
         "abbreviation": "MIA",
         "logo": "https://a.espncdn.com/i/teamlogos/nfl/500/scoreboard/mia.png",
         "record": "1-7",
-        "score": 16,
+        "score": 22,
         "injuries": [
           {
             "player": "Aaron Brewer",
@@ -127586,7 +127989,8 @@
           "score": 93,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -127600,6 +128004,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -127658,10 +128078,10 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.31,
-          "totalRisk": 9.44
+          "interactionRisk": 1.94,
+          "totalRisk": 10.7
         },
-        "probabilityShift": -0.001,
+        "probabilityShift": -0.0015,
         "applied": true
       },
       "preparation": {
@@ -129251,6 +129671,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -129364,7 +129792,7 @@
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption",
       "weather": {
         "summary": "Partly cloudy",
-        "temperature": "35-50 F",
+        "temperature": "35-51 F",
         "precipitation": "2%",
         "wind": "13 mph",
         "source": "Open-Meteo"
@@ -129431,12 +129859,29 @@
           "totalRisk": 5.63
         },
         "home": {
-          "score": 94,
+          "score": 93,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -129478,10 +129923,10 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.73,
-          "totalRisk": 8.35
+          "interactionRisk": 2.52,
+          "totalRisk": 10.06
         },
-        "probabilityShift": -0.0013,
+        "probabilityShift": -0.0019,
         "applied": true
       },
       "preparation": {
@@ -129743,7 +130188,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -130032,6 +130477,7 @@
         "The app moves the line's number 1.8 points toward Buffalo Bills, mostly because of rest and team form.",
         "The betting market gives New York Jets a 8.5-point head start, unchanged since the line opened.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
+        "Geno Smith is listed Questionable on the injury report.",
         "Our play-by-play ratings agree with the market.",
         "7 of the 7 CBS writers who have picked take Buffalo Bills, the favorite.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested."
@@ -130180,7 +130626,7 @@
         "total": 40.5,
         "openingHomeMargin": -7.0,
         "lineMovement": 0.5,
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -130921,8 +131367,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -131003,8 +131449,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -131081,30 +131527,30 @@
         "neutral": false
       },
       "odds": {
-        "detail": "LAR -9.5",
+        "detail": "LAR -10",
         "total": 38.5,
         "openingHomeMargin": -10.5,
-        "lineMovement": 1.0,
-        "book": "DraftKings",
+        "lineMovement": 0.5,
+        "book": "Draft Kings",
         "spreadPrice": {
-          "home": "-105",
-          "away": "-115",
+          "home": "-110",
+          "away": "-110",
           "homeOpen": "-110",
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "+380",
-          "away": "-500",
+          "home": "+410",
+          "away": "-550",
           "homeOpen": "+400",
           "awayOpen": "-535"
         },
-        "moneylineHomeProbability": 0.2,
+        "moneylineHomeProbability": 0.1881,
         "moneylineOpenHomeProbability": 0.1918
       },
       "lineSource": "Market line",
-      "marketHomeMargin": -9.5,
-      "homeMargin": -12.315,
-      "homeWinProbability": 0.1873,
+      "marketHomeMargin": -10.0,
+      "homeMargin": -12.948,
+      "homeWinProbability": 0.1747,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": null,
       "continuity": {
@@ -131485,8 +131931,8 @@
         "coverage": "Official roster status and explicit public practice wording only"
       },
       "lineMovement": {
-        "difference": 1.0,
-        "probabilityShift": 0.0013,
+        "difference": 0.5,
+        "probabilityShift": 0.0006,
         "source": "market line movement",
         "available": true,
         "applied": true
@@ -131498,14 +131944,14 @@
         "uncertaintyMultiplier": 1.0,
         "uncertaintyProbabilityShift": 0.0
       },
-      "marketSpreadHomeWinProbability": 0.193,
-      "marketHomeWinProbability": 0.2,
+      "marketSpreadHomeWinProbability": 0.1807,
+      "marketHomeWinProbability": 0.1881,
       "marketProbabilitySource": "moneyline, fee removed",
-      "effectiveMargin": -12.315,
+      "effectiveMargin": -12.948,
       "appVsMarket": {
-        "marketPct": 20.0,
-        "spreadOnlyPct": 19.3,
-        "appPct": 18.7,
+        "marketPct": 18.8,
+        "spreadOnlyPct": 18.1,
+        "appPct": 17.5,
         "gapPoints": -1.3,
         "nudgeGapPoints": -0.6,
         "priceGapPoints": 0.7,
@@ -131760,9 +132206,9 @@
       },
       "ratingModel": {
         "modelHomeMargin": -4.68,
-        "blendHomeMargin": -9.08,
-        "ratingHomeWinProbability": 0.2562,
-        "disagreementPoints": 0.42,
+        "blendHomeMargin": -9.52,
+        "ratingHomeWinProbability": 0.2461,
+        "disagreementPoints": 0.48,
         "flagged": false,
         "leans": "ARI",
         "homeStarter": "J.Brissett",
@@ -131844,7 +132290,7 @@
       },
       "readout": [
         "Los Angeles Rams is expected to win, about 8 times in 10.",
-        "The betting market gives Arizona Cardinals a 9.5-point head start, moved from 10.5 since the line opened, toward Arizona Cardinals.",
+        "The betting market gives Arizona Cardinals a 10-point head start, moved from 10.5 since the line opened, toward Arizona Cardinals.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Arizona Cardinals starts Carson Beck, per the depth chart; he has no plays in our ratings yet, so the rating uses last season's passing.",
         "Our play-by-play ratings agree with the market.",
@@ -131997,14 +132443,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -132043,7 +132481,7 @@
         "total": 55.5,
         "openingHomeMargin": 1.5,
         "lineMovement": -6.0,
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "spreadPrice": {
           "home": "-112",
           "away": "-108",
@@ -132067,7 +132505,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 95,
+          "score": 96,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -132131,7 +132569,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 7.19
+          "totalRisk": 6.42
         },
         "home": {
           "score": 93,
@@ -132922,7 +133360,7 @@
         "total": 49.5,
         "openingHomeMargin": 3.5,
         "lineMovement": 0.0,
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -132944,8 +133382,8 @@
       "homeWinProbability": 0.5894,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption",
       "weather": {
-        "summary": "Cloudy",
-        "temperature": "33-49 F",
+        "summary": "Partly cloudy",
+        "temperature": "29-49 F",
         "precipitation": "0%",
         "wind": "5 mph",
         "source": "Open-Meteo"
@@ -133704,7 +134142,7 @@
         "total": 38.5,
         "openingHomeMargin": 2.5,
         "lineMovement": 2.0,
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "spreadPrice": {
           "home": "-112",
           "away": "-108",
@@ -134432,20 +134870,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -134530,6 +134968,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -134592,10 +135038,11 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -134609,6 +135056,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -134667,8 +135130,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.47,
-          "totalRisk": 10.57
+          "interactionRisk": 2.18,
+          "totalRisk": 11.99
         },
         "home": {
           "score": 92,
@@ -134689,9 +135152,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -134749,8 +135212,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 2.76,
-          "totalRisk": 10.87
+          "interactionRisk": 3.13,
+          "totalRisk": 12.0
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -138545,8 +139008,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -140950,6 +141413,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -140990,12 +141461,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -141037,8 +141525,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.94,
-          "totalRisk": 9.35
+          "interactionRisk": 2.82,
+          "totalRisk": 11.27
         },
         "home": {
           "score": 96,
@@ -141473,7 +141961,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -141597,7 +142085,8 @@
         "Los Angeles Chargers is expected to win, about 7 times in 10.",
         "The app moves the line's number 1.3 points toward New York Jets, mostly because of rest and team form.",
         "No betting line yet; the number comes from team strength alone.",
-        "Injuries, practice reports, rest, and travel do not change the picture."
+        "Injuries, practice reports, rest, and travel do not change the picture.",
+        "Geno Smith is listed Questionable on the injury report."
       ]
     },
     {
@@ -141735,7 +142224,7 @@
         "total": null,
         "openingHomeMargin": 8.5,
         "lineMovement": 0.0,
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "spreadPrice": {
           "home": "OFF",
           "away": "-110",
@@ -142511,8 +143000,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -143237,14 +143726,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -143347,8 +143828,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -143435,7 +143916,7 @@
           "totalRisk": 8.47
         },
         "home": {
-          "score": 95,
+          "score": 96,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -143499,7 +143980,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 6.93
+          "totalRisk": 6.19
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -144144,7 +144625,7 @@
         "total": 51.5,
         "openingHomeMargin": -1.5,
         "lineMovement": -2.0,
-        "book": "DraftKings",
+        "book": "Draft Kings",
         "spreadPrice": {
           "home": "-105",
           "away": "-115",
@@ -144788,8 +145269,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -145559,6 +146040,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -145575,7 +146057,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -150385,6 +150866,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -150591,7 +151080,8 @@
           "score": 93,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -150605,6 +151095,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -150663,8 +151169,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.31,
-          "totalRisk": 9.44
+          "interactionRisk": 1.94,
+          "totalRisk": 10.7
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -151326,6 +151832,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -151366,12 +151880,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -151413,8 +151944,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.94,
-          "totalRisk": 9.35
+          "interactionRisk": 2.82,
+          "totalRisk": 11.27
         },
         "home": {
           "score": 94,
@@ -151848,7 +152379,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -151973,6 +152504,7 @@
         "The app moves the line's number 1.1 points toward Miami Dolphins, mostly because of rest and team form.",
         "No betting line yet; the number comes from team strength alone.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
+        "Geno Smith is listed Questionable on the injury report.",
         "Miami Dolphins starts Kyle McCord, per the depth chart; he has no plays in our ratings yet, so the rating uses last season's passing.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested."
       ]
@@ -152060,8 +152592,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -152831,20 +153363,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -152970,9 +153502,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -153030,8 +153562,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 2.76,
-          "totalRisk": 10.87
+          "interactionRisk": 3.13,
+          "totalRisk": 12.0
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -153570,8 +154102,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -154386,8 +154918,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -155236,14 +155768,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -155494,7 +156018,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 6.42
+          "totalRisk": 5.73
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -157690,8 +158214,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -159483,8 +160007,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -162441,6 +162965,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -162457,7 +162982,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -162695,14 +163219,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -162765,7 +163281,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 95,
+          "score": 96,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -162829,7 +163345,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 7.19
+          "totalRisk": 6.42
         },
         "home": {
           "score": 97,
@@ -164961,8 +165477,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -165833,8 +166349,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -167539,20 +168055,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -167619,9 +168135,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -167679,8 +168195,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.09,
-          "totalRisk": 12.18
+          "interactionRisk": 3.51,
+          "totalRisk": 13.44
         },
         "home": {
           "score": 99,
@@ -169214,8 +169730,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -172393,6 +172909,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -172542,12 +173066,29 @@
           "totalRisk": 11.57
         },
         "home": {
-          "score": 94,
+          "score": 93,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -172589,8 +173130,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.73,
-          "totalRisk": 8.35
+          "interactionRisk": 2.52,
+          "totalRisk": 10.06
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -172861,7 +173402,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -173087,7 +173628,8 @@
       "readout": [
         "Denver Broncos is expected to win, about 6 times in 10.",
         "No betting line yet; the number comes from team strength alone.",
-        "Beyond the line, rest tilts it toward New York Jets, a little."
+        "Beyond the line, rest tilts it toward New York Jets, a little.",
+        "Geno Smith is listed Questionable on the injury report."
       ]
     },
     {
@@ -173235,6 +173777,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -173297,10 +173847,11 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -173314,6 +173865,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -173372,8 +173939,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.47,
-          "totalRisk": 10.57
+          "interactionRisk": 2.18,
+          "totalRisk": 11.99
         },
         "home": {
           "score": 94,
@@ -174054,20 +174621,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -174134,9 +174701,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -174194,8 +174761,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.09,
-          "totalRisk": 12.18
+          "interactionRisk": 3.51,
+          "totalRisk": 13.44
         },
         "home": {
           "score": 96,
@@ -177867,14 +178434,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -177929,8 +178488,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -178173,7 +178732,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 6.42
+          "totalRisk": 5.73
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -180130,6 +180689,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -180146,7 +180706,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -180403,8 +180962,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -181222,14 +181781,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -181292,7 +181843,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 95,
+          "score": 96,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -181356,7 +181907,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 7.19
+          "totalRisk": 6.42
         },
         "home": {
           "score": 96,
@@ -184113,6 +184664,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -184129,7 +184681,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -184502,6 +185053,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -184564,10 +185123,11 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -184581,6 +185141,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -184639,8 +185215,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.47,
-          "totalRisk": 10.57
+          "interactionRisk": 2.18,
+          "totalRisk": 11.99
         },
         "home": {
           "score": 92,
@@ -189070,20 +189646,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -189148,8 +189724,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -189262,9 +189838,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -189322,8 +189898,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 2.76,
-          "totalRisk": 10.87
+          "interactionRisk": 3.13,
+          "totalRisk": 12.0
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -189863,8 +190439,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -189979,6 +190555,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -190019,12 +190603,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -190066,8 +190667,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.94,
-          "totalRisk": 9.35
+          "interactionRisk": 2.82,
+          "totalRisk": 11.27
         },
         "home": {
           "score": 92,
@@ -190525,7 +191126,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -190650,6 +191251,7 @@
         "The app moves the line's number 2.5 points toward Arizona Cardinals, mostly because of rest and team form.",
         "No betting line yet; the number comes from team strength alone.",
         "Beyond the line, rest tilts it toward Arizona Cardinals, a little.",
+        "Geno Smith is listed Questionable on the injury report.",
         "Arizona Cardinals starts Carson Beck, per the depth chart; he has no plays in our ratings yet, so the rating uses last season's passing."
       ]
     },
@@ -191439,8 +192041,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -192358,8 +192960,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -194099,20 +194701,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -194179,9 +194781,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -194239,8 +194841,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.09,
-          "totalRisk": 12.18
+          "interactionRisk": 3.51,
+          "totalRisk": 13.44
         },
         "home": {
           "score": 94,
@@ -195514,6 +196116,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -195530,7 +196133,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -196483,8 +197085,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -198011,6 +198613,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -198195,7 +198805,8 @@
           "score": 93,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -198209,6 +198820,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -198267,8 +198894,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.31,
-          "totalRisk": 9.44
+          "interactionRisk": 1.94,
+          "totalRisk": 10.7
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -198809,8 +199436,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -201254,8 +201881,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -202058,6 +202685,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -202285,12 +202920,29 @@
           "totalRisk": 10.97
         },
         "home": {
-          "score": 94,
+          "score": 93,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -202332,8 +202984,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.73,
-          "totalRisk": 8.35
+          "interactionRisk": 2.52,
+          "totalRisk": 10.06
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -202604,7 +203256,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -202834,6 +203486,7 @@
         "No betting line yet; the number comes from team strength alone.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Drake Maye is listed Questionable on the injury report.",
+        "Geno Smith is listed Questionable on the injury report.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested."
       ]
     },
@@ -204501,14 +205154,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -204571,7 +205216,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 95,
+          "score": 96,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -204635,7 +205280,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 7.19
+          "totalRisk": 6.42
         },
         "home": {
           "score": 92,
@@ -205359,8 +206004,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -209279,8 +209924,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -210016,8 +210661,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -211686,6 +212331,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -211748,10 +212401,11 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -211765,6 +212419,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -211823,8 +212493,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.47,
-          "totalRisk": 10.57
+          "interactionRisk": 2.18,
+          "totalRisk": 11.99
         },
         "home": {
           "score": 95,
@@ -214875,6 +215545,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -214955,8 +215633,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -215043,12 +215721,29 @@
           "totalRisk": 8.79
         },
         "home": {
-          "score": 94,
+          "score": 93,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -215090,8 +215785,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.73,
-          "totalRisk": 8.35
+          "interactionRisk": 2.52,
+          "totalRisk": 10.06
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -215350,7 +216045,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -215576,7 +216271,8 @@
         "Minnesota Vikings is expected to win, about 6 times in 10.",
         "No betting line yet; the number comes from team strength alone.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
-        "Minnesota Vikings starts Kirk Cousins, per the depth chart, not K. Murray, who took most of last season's snaps."
+        "Minnesota Vikings starts Kirk Cousins, per the depth chart, not K. Murray, who took most of last season's snaps.",
+        "Geno Smith is listed Questionable on the injury report."
       ]
     },
     {
@@ -216472,8 +217168,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -218084,14 +218780,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -218345,7 +219033,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 6.42
+          "totalRisk": 5.73
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -219014,20 +219702,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -219094,9 +219782,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -219154,8 +219842,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 3.09,
-          "totalRisk": 12.18
+          "interactionRisk": 3.51,
+          "totalRisk": 13.44
         },
         "home": {
           "score": 92,
@@ -219535,6 +220223,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -219551,7 +220240,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -219901,6 +220589,14 @@
             "detail": "Knee",
             "note": "Parham (knee) is questionable to return to Sunday's game against the Bills.",
             "updated": "2026-11-15T19:02Z"
+          },
+          {
+            "player": "Geno Smith",
+            "position": "QB",
+            "status": "Questionable",
+            "detail": "Ankle",
+            "note": "Smith headed to the medical tent during Sunday's game against the Bills after injuring his ankle,  Rich Cimini of ESPN.com reports.",
+            "updated": "2026-11-15T20:30Z"
           }
         ]
       },
@@ -219941,12 +220637,29 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 93,
+          "score": 92,
           "level": "Stable",
           "clusters": [
+            "Protection unit: 2 linked flags",
             "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
+            "Protection unit": [
+              {
+                "player": "Dylan Parham",
+                "position": "G",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Geno Smith",
+                "position": "QB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
             "Coverage unit": [
               {
                 "player": "Jarvis Brownlee Jr.",
@@ -219988,8 +220701,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.94,
-          "totalRisk": 9.35
+          "interactionRisk": 2.82,
+          "totalRisk": 11.27
         },
         "home": {
           "score": 96,
@@ -220394,7 +221107,7 @@
           "espnId": "15864",
           "name": "Geno Smith",
           "shortName": "G. Smith",
-          "status": null,
+          "status": "Questionable",
           "ratingName": "G.Smith",
           "source": "ESPN depth chart",
           "lineup": [
@@ -220519,6 +221232,7 @@
         "The app moves the line's number 1.8 points toward Buffalo Bills, mostly because of rest and team form.",
         "No betting line yet; the number comes from team strength alone.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
+        "Geno Smith is listed Questionable on the injury report.",
         "This is a divisional game, and those have run a little closer than the line in every season we tested."
       ]
     },
@@ -222730,6 +223444,7 @@
             "Daniel Whelan",
             "Devonte Wyatt",
             "Evan Williams",
+            "Isaiah McDuffie",
             "Javon Bullard",
             "Jordan Love",
             "Jordan Morgan",
@@ -222746,7 +223461,6 @@
             "Travis Glover",
             "Trey Smack",
             "Tucker Kraft",
-            "Ty'Ron Hopper",
             "Xavier McKinney",
             "Zaire Franklin"
           ],
@@ -223033,6 +223747,14 @@
             "updated": "2026-11-15T20:07Z"
           },
           {
+            "player": "Sauce Gardner",
+            "position": "CB",
+            "status": "Questionable",
+            "detail": "Calf",
+            "note": "questionable",
+            "updated": "2026-11-15T20:30Z"
+          },
+          {
             "player": "Akeem Davis-Gaither",
             "position": "LB",
             "status": "Injured Reserve",
@@ -223111,8 +223833,8 @@
             "position": "C",
             "status": "Questionable",
             "detail": "Knee",
-            "note": "questionable",
-            "updated": "2026-11-15T20:17Z"
+            "note": "Hainsey (knee) is questionable to return to Sunday's game against the Titans.",
+            "updated": "2026-11-15T20:19Z"
           },
           {
             "player": "B.J. Green II",
@@ -223210,7 +223932,8 @@
           "score": 93,
           "level": "Stable",
           "clusters": [
-            "Protection unit: 2 linked flags"
+            "Protection unit: 2 linked flags",
+            "Coverage unit: 2 linked flags"
           ],
           "clusterMembers": {
             "Protection unit": [
@@ -223224,6 +223947,22 @@
               {
                 "player": "Bernhard Raimann",
                 "position": "OT",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              }
+            ],
+            "Coverage unit": [
+              {
+                "player": "Charvarius Ward",
+                "position": "CB",
+                "status": "Questionable",
+                "role": "starter",
+                "weight": 0.35
+              },
+              {
+                "player": "Sauce Gardner",
+                "position": "CB",
                 "status": "Questionable",
                 "role": "starter",
                 "weight": 0.35
@@ -223282,8 +224021,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 1.31,
-          "totalRisk": 9.44
+          "interactionRisk": 1.94,
+          "totalRisk": 10.7
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -224619,8 +225358,8 @@
             "position": "LS",
             "status": "Out",
             "detail": "Ankle",
-            "note": "inactive",
-            "updated": "2026-11-15T19:44Z"
+            "note": "Cardona (ankle) is inactive for Sunday's game against Arizona.",
+            "updated": "2026-11-15T20:29Z"
           },
           {
             "player": "Keagen Trost",
@@ -225508,8 +226247,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Shoulder",
-            "note": "The Vikings elevated Jones from their practice squad to their active roster Saturday.",
-            "updated": "2026-11-15T00:12Z"
+            "note": "Jones (shoulder) is questionable to return to Sunday's game against the Packers.",
+            "updated": "2026-11-15T20:10Z"
           }
         ]
       },
@@ -228606,8 +229345,8 @@
             "position": "OT",
             "status": "Out",
             "detail": "Knee",
-            "note": "inactive",
-            "updated": "2026-11-15T19:37Z"
+            "note": "Williams (knee) has been ruled out for Sunday's game against the Rams, Darren Urban of the Cardinals' official site reports.",
+            "updated": "2026-11-15T20:26Z"
           },
           {
             "player": "Joey Aguilar",
@@ -228716,14 +229455,6 @@
             "updated": "2026-11-15T20:00Z"
           },
           {
-            "player": "Trent Williams",
-            "position": "OT",
-            "status": "Questionable",
-            "detail": "Shoulder",
-            "note": "Williams (shoulder), who is listed as questionable for Sunday's game against the Cowboys, is expected to play, Adam Schefter of ESPN reports.",
-            "updated": "2026-11-15T14:19Z"
-          },
-          {
             "player": "C.J. West",
             "position": "DT",
             "status": "Injured Reserve",
@@ -228786,7 +229517,7 @@
       "weather": null,
       "continuity": {
         "away": {
-          "score": 95,
+          "score": 96,
           "level": "Stable",
           "clusters": [],
           "clusterMembers": {},
@@ -228850,7 +229581,7 @@
           ],
           "lineupRead": true,
           "interactionRisk": 0.0,
-          "totalRisk": 7.19
+          "totalRisk": 6.42
         },
         "home": {
           "score": 92,
@@ -231838,20 +232569,20 @@
             "updated": "2026-11-15T16:37Z"
           },
           {
+            "player": "Woody Marks",
+            "position": "RB",
+            "status": "Out",
+            "detail": "Concussion",
+            "note": "Marks (concussion) has been downgraded to out for the remainder of Sunday's game against the Browns.",
+            "updated": "2026-11-15T20:25Z"
+          },
+          {
             "player": "Wyatt Teller",
             "position": "G",
             "status": "Out",
             "detail": "Illness",
             "note": "Teller (illness) is inactive for Sunday's game against the Browns.",
             "updated": "2026-11-15T17:26Z"
-          },
-          {
-            "player": "Woody Marks",
-            "position": "RB",
-            "status": "Questionable",
-            "detail": "Concussion",
-            "note": "Marks is being evaluated for a possible concussion during Sunday's game at Cleveland.",
-            "updated": "2026-11-15T20:04Z"
           },
           {
             "player": "Jaylin Smith",
@@ -232104,9 +232835,9 @@
               {
                 "player": "Woody Marks",
                 "position": "RB",
-                "status": "Questionable",
+                "status": "Out",
                 "role": "starter",
-                "weight": 0.35
+                "weight": 1.0
               }
             ],
             "Defensive front": [
@@ -232164,8 +232895,8 @@
             }
           ],
           "lineupRead": true,
-          "interactionRisk": 2.76,
-          "totalRisk": 10.87
+          "interactionRisk": 3.13,
+          "totalRisk": 12.0
         },
         "probabilityShift": 0.0,
         "applied": false
@@ -233021,7 +233752,7 @@
       "projectedWins": 5.6,
       "range": "4-8",
       "simulationMedian": 6,
-      "simulationMean": 5.8
+      "simulationMean": 5.7
     },
     {
       "id": "24",
