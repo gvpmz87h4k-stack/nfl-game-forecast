@@ -1,7 +1,7 @@
 {
   "season": 2026,
   "currentWeek": 11,
-  "updatedAt": "2026-11-19T22:40:26.017406Z",
+  "updatedAt": "2026-11-19T23:15:29.902962Z",
   "games": [
     {
       "id": "401872656",
@@ -3748,8 +3748,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -3764,8 +3764,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -3780,8 +3780,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -3975,10 +3975,22 @@
       },
       "preparation": {
         "away": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -3986,10 +3998,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -4050,30 +4074,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -8839,8 +8839,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -9247,10 +9247,22 @@
           ]
         },
         "home": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -9334,22 +9346,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -10534,7 +10534,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -10696,8 +10695,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -10736,8 +10735,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -11024,9 +11023,9 @@
           ]
         },
         "home": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -11039,18 +11038,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -11086,6 +11073,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -11620,8 +11619,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -13448,8 +13447,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -16876,8 +16875,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -16916,8 +16915,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -17112,9 +17111,9 @@
       },
       "preparation": {
         "away": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -17127,18 +17126,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -17174,6 +17161,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -18588,8 +18587,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -18604,8 +18603,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -18620,8 +18619,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -18983,10 +18982,22 @@
           ]
         },
         "home": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -18994,10 +19005,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -19058,30 +19081,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -19342,7 +19341,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -21971,8 +21969,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -22958,8 +22956,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -23146,10 +23144,22 @@
       },
       "preparation": {
         "away": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -23233,22 +23243,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -24619,8 +24617,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -28881,7 +28879,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -30997,8 +30994,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -31013,8 +31010,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -31029,8 +31026,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -31195,10 +31192,22 @@
       },
       "preparation": {
         "away": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -31206,10 +31215,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -31270,30 +31291,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -37265,8 +37262,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -40032,8 +40029,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -40199,10 +40196,22 @@
       },
       "preparation": {
         "away": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -40286,22 +40295,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -40812,8 +40809,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -41662,8 +41659,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -41702,8 +41699,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -41841,9 +41838,9 @@
       },
       "preparation": {
         "away": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -41856,18 +41853,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -41903,6 +41888,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -45058,8 +45055,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -45074,8 +45071,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -45090,8 +45087,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -45228,10 +45225,22 @@
       },
       "preparation": {
         "away": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -45239,10 +45248,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -45303,30 +45324,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -46763,8 +46760,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -47629,8 +47626,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -47669,8 +47666,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -47986,9 +47983,9 @@
           ]
         },
         "home": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -48001,18 +47998,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -48048,6 +48033,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -49201,7 +49198,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -52153,8 +52149,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -52461,10 +52457,22 @@
           ]
         },
         "home": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -52548,22 +52556,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -53076,8 +53072,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -57530,8 +57526,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -57570,8 +57566,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -57763,9 +57759,9 @@
       },
       "preparation": {
         "away": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -57778,18 +57774,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -57825,6 +57809,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -58965,7 +58961,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -61146,8 +61141,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -61313,10 +61308,22 @@
       },
       "preparation": {
         "away": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -61400,22 +61407,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -62874,8 +62869,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -62890,8 +62885,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -62906,8 +62901,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -63163,10 +63158,22 @@
           ]
         },
         "home": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -63174,10 +63181,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -63238,30 +63257,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -65410,8 +65405,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -66214,8 +66209,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -69819,8 +69814,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -73805,8 +73800,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -73821,8 +73816,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -73837,8 +73832,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -74018,10 +74013,22 @@
       },
       "preparation": {
         "away": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -74029,10 +74036,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -74093,30 +74112,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -75334,8 +75329,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -75374,8 +75369,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -75708,9 +75703,9 @@
           ]
         },
         "home": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -75723,18 +75718,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -75770,6 +75753,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -76924,8 +76919,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -78590,8 +78585,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -78976,10 +78971,22 @@
           ]
         },
         "home": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -79063,22 +79070,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -80086,7 +80081,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -85509,8 +85503,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -85525,8 +85519,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -85541,8 +85535,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -85963,10 +85957,22 @@
           ]
         },
         "home": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -85974,10 +85980,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -86038,30 +86056,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -88927,8 +88921,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -89033,8 +89027,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -90606,7 +90600,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -90753,8 +90746,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -91055,10 +91048,22 @@
           ]
         },
         "home": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -91142,22 +91147,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -92427,8 +92420,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -92467,8 +92460,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -92853,9 +92846,9 @@
           ]
         },
         "home": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -92868,18 +92861,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -92915,6 +92896,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -93999,7 +93992,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -96109,8 +96101,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -97956,8 +97948,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -97972,8 +97964,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -97988,8 +97980,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -98022,8 +98014,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -98172,10 +98164,22 @@
       },
       "preparation": {
         "away": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -98259,31 +98263,31 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
         },
         "home": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -98291,10 +98295,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -98355,30 +98371,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -102221,8 +102213,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -104045,8 +104037,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -104085,8 +104077,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -104231,9 +104223,9 @@
       },
       "preparation": {
         "away": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -104246,18 +104238,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -104293,6 +104273,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -108366,8 +108358,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -108382,8 +108374,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -108398,8 +108390,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -108562,10 +108554,22 @@
       },
       "preparation": {
         "away": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -108573,10 +108577,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -108637,30 +108653,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -110945,8 +110937,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -110985,8 +110977,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -111258,9 +111250,9 @@
           ]
         },
         "home": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -111273,18 +111265,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -111320,6 +111300,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -112616,8 +112608,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -115115,7 +115107,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -115367,8 +115358,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -115559,10 +115550,22 @@
       },
       "preparation": {
         "away": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -115646,22 +115649,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -116235,8 +116226,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -122810,7 +122801,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -125933,8 +125923,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -125949,8 +125939,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -125965,8 +125955,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -126365,10 +126355,22 @@
           ]
         },
         "home": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -126376,10 +126378,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -126440,30 +126454,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -126868,8 +126858,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -127209,10 +127199,22 @@
           ]
         },
         "home": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -127296,22 +127298,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -127709,8 +127699,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -131522,7 +131512,7 @@
         "total": 44.5,
         "openingHomeMargin": 5.5,
         "lineMovement": 7.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-106",
           "away": "-114",
@@ -131530,12 +131520,12 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-700",
-          "away": "+504",
+          "home": "-690",
+          "away": "+499",
           "homeOpen": "-238",
           "awayOpen": "+195"
         },
-        "moneylineHomeProbability": 0.8409,
+        "moneylineHomeProbability": 0.8395,
         "moneylineOpenHomeProbability": 0.675
       },
       "lineSource": "Market line",
@@ -131919,16 +131909,16 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.873,
-      "marketHomeWinProbability": 0.8409,
+      "marketHomeWinProbability": 0.8395,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 16.17,
       "appVsMarket": {
-        "marketPct": 84.1,
+        "marketPct": 84.0,
         "spreadOnlyPct": 87.3,
         "appPct": 89.0,
-        "gapPoints": 4.9,
+        "gapPoints": 5.0,
         "nudgeGapPoints": 1.7,
-        "priceGapPoints": -3.2,
+        "priceGapPoints": -3.3,
         "leans": "HOU",
         "nudges": [
           {
@@ -132493,7 +132483,7 @@
         "total": 44.5,
         "openingHomeMargin": 11.5,
         "lineMovement": 5.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-107",
           "away": "-112",
@@ -132514,7 +132504,13 @@
       "homeMargin": 21.455,
       "homeWinProbability": 0.9389,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
-      "weather": null,
+      "weather": {
+        "summary": "Cloudy",
+        "temperature": "44-60 F",
+        "precipitation": "9%",
+        "wind": "10 mph",
+        "source": "Open-Meteo"
+      },
       "continuity": {
         "away": {
           "score": 94,
@@ -133394,7 +133390,7 @@
         "total": 48.5,
         "openingHomeMargin": 6.5,
         "lineMovement": 5.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-107",
           "away": "-112",
@@ -134262,7 +134258,7 @@
         "total": 55.5,
         "openingHomeMargin": 6.5,
         "lineMovement": 2.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-105",
           "away": "-115",
@@ -135166,7 +135162,7 @@
         "total": 45.5,
         "openingHomeMargin": 4.5,
         "lineMovement": 1.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-112",
           "away": "-107",
@@ -135922,8 +135918,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -136020,7 +136016,7 @@
         "total": 40.5,
         "openingHomeMargin": 11.5,
         "lineMovement": 5.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-106",
           "away": "-113",
@@ -136805,8 +136801,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -136845,8 +136841,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -136921,7 +136917,7 @@
         "total": 37.5,
         "openingHomeMargin": 5.5,
         "lineMovement": -10.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-114",
           "away": "-105",
@@ -136929,18 +136925,18 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "+175",
-          "away": "-210",
+          "home": "+172",
+          "away": "-205",
           "homeOpen": "-250",
           "awayOpen": "+205"
         },
-        "moneylineHomeProbability": 0.3493,
+        "moneylineHomeProbability": 0.3536,
         "moneylineOpenHomeProbability": 0.6854
       },
       "lineSource": "Market line",
       "marketHomeMargin": -4.5,
       "homeMargin": -4.897,
-      "homeWinProbability": 0.3491,
+      "homeWinProbability": 0.3494,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Heavy showers",
@@ -137165,9 +137161,9 @@
           ]
         },
         "home": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -137180,18 +137176,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -137227,6 +137211,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -137272,7 +137268,7 @@
             "Defensive front: 2 preparation flags"
           ]
         },
-        "probabilityShift": -0.0019,
+        "probabilityShift": -0.0017,
         "applied": true,
         "coverage": "Official roster status and explicit public practice wording only"
       },
@@ -137291,16 +137287,16 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.3605,
-      "marketHomeWinProbability": 0.3493,
+      "marketHomeWinProbability": 0.3536,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": -4.897,
       "appVsMarket": {
-        "marketPct": 34.9,
+        "marketPct": 35.4,
         "spreadOnlyPct": 36.0,
         "appPct": 34.9,
-        "gapPoints": -0.0,
+        "gapPoints": -0.4,
         "nudgeGapPoints": -1.1,
-        "priceGapPoints": -1.1,
+        "priceGapPoints": -0.7,
         "leans": "PIT",
         "nudges": [
           {
@@ -137320,7 +137316,7 @@
           },
           {
             "label": "rest and team form",
-            "points": 0.1,
+            "points": 0.2,
             "toward": "PHI"
           }
         ]
@@ -137756,7 +137752,7 @@
         "total": 43.5,
         "openingHomeMargin": -4.5,
         "lineMovement": 7.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-104",
           "away": "-115",
@@ -138576,8 +138572,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -138592,8 +138588,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -138608,8 +138604,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -138642,7 +138638,7 @@
         "total": 41.5,
         "openingHomeMargin": 9.5,
         "lineMovement": -6.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-114",
           "away": "-106",
@@ -138650,18 +138646,18 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-169",
+          "home": "-170",
           "away": "+143",
           "homeOpen": "-440",
           "awayOpen": "+340"
         },
-        "moneylineHomeProbability": 0.6042,
+        "moneylineHomeProbability": 0.6047,
         "moneylineOpenHomeProbability": 0.7819
       },
       "lineSource": "Market line",
       "marketHomeMargin": 3.0,
       "homeMargin": 3.076,
-      "homeWinProbability": 0.5798,
+      "homeWinProbability": 0.5811,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Cloudy",
@@ -138816,10 +138812,22 @@
       },
       "preparation": {
         "away": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -138827,10 +138835,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -138891,30 +138911,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -139030,7 +139026,7 @@
             "Defensive front: 4 preparation flags"
           ]
         },
-        "probabilityShift": 0.0003,
+        "probabilityShift": 0.0016,
         "applied": true,
         "coverage": "Official roster status and explicit public practice wording only"
       },
@@ -139049,18 +139045,23 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.5941,
-      "marketHomeWinProbability": 0.6042,
+      "marketHomeWinProbability": 0.6047,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 3.076,
       "appVsMarket": {
-        "marketPct": 60.4,
+        "marketPct": 60.5,
         "spreadOnlyPct": 59.4,
-        "appPct": 58.0,
+        "appPct": 58.1,
         "gapPoints": -2.4,
-        "nudgeGapPoints": -1.4,
-        "priceGapPoints": 1.0,
+        "nudgeGapPoints": -1.3,
+        "priceGapPoints": 1.1,
         "leans": "NYJ",
         "nudges": [
+          {
+            "label": "practice and roster status",
+            "points": 0.2,
+            "toward": "LAC"
+          },
           {
             "label": "line movement",
             "points": -0.8,
@@ -139377,7 +139378,7 @@
       },
       "readout": [
         "Los Angeles Chargers is expected to win, about 6 times in 10.",
-        "The app moves the line's number 1.4 points toward New York Jets, mostly because of line movement.",
+        "The app moves the line's number 1.3 points toward New York Jets, mostly because of line movement.",
         "The betting market gives New York Jets a 3-point head start, moved from 9.5 since the line opened, toward New York Jets.",
         "Injuries, practice reports, rest, and travel do not change the picture.",
         "Geno Smith is listed Questionable on the injury report.",
@@ -139412,8 +139413,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -139454,8 +139455,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -139496,7 +139497,7 @@
         "total": 40.5,
         "openingHomeMargin": 8.5,
         "lineMovement": 1.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-112",
           "away": "-107",
@@ -139504,18 +139505,18 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-588",
-          "away": "+439",
+          "home": "-590",
+          "away": "+441",
           "homeOpen": "-425",
           "awayOpen": "+330"
         },
-        "moneylineHomeProbability": 0.8216,
+        "moneylineHomeProbability": 0.8223,
         "moneylineOpenHomeProbability": 0.7768
       },
       "lineSource": "Market line",
       "marketHomeMargin": 10.0,
       "homeMargin": 13.686,
-      "homeWinProbability": 0.841,
+      "homeWinProbability": 0.8421,
       "probabilitySource": "Calibrated market line + rolling team state + rest + continuity confidence + preparation disruption + line movement",
       "weather": {
         "summary": "Cloudy",
@@ -139603,10 +139604,22 @@
       },
       "preparation": {
         "away": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -139690,22 +139703,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -139805,7 +139806,7 @@
             "Coverage unit: 3 preparation flags"
           ]
         },
-        "probabilityShift": 0.0008,
+        "probabilityShift": 0.0019,
         "applied": true,
         "coverage": "Official roster status and explicit public practice wording only"
       },
@@ -139824,21 +139825,21 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.8193,
-      "marketHomeWinProbability": 0.8216,
+      "marketHomeWinProbability": 0.8223,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 13.686,
       "appVsMarket": {
         "marketPct": 82.2,
         "spreadOnlyPct": 81.9,
-        "appPct": 84.1,
-        "gapPoints": 1.9,
-        "nudgeGapPoints": 2.2,
-        "priceGapPoints": 0.2,
+        "appPct": 84.2,
+        "gapPoints": 2.0,
+        "nudgeGapPoints": 2.3,
+        "priceGapPoints": 0.3,
         "leans": "DEN",
         "nudges": [
           {
             "label": "practice and roster status",
-            "points": 0.1,
+            "points": 0.2,
             "toward": "DEN"
           },
           {
@@ -140152,7 +140153,7 @@
       },
       "readout": [
         "Denver Broncos is expected to win, about 8 times in 10.",
-        "The app moves the line's number 2.2 points toward Denver Broncos, mostly because of rest and team form.",
+        "The app moves the line's number 2.3 points toward Denver Broncos, mostly because of rest and team form.",
         "The betting market gives Las Vegas Raiders a 10-point head start, moved from 8.5 since the line opened, toward Denver Broncos.",
         "Beyond the line, rest tilts it toward Denver Broncos, a little.",
         "Las Vegas Raiders starts Fernando Mendoza, per the depth chart, not K. Cousins, who took most of last season's snaps.",
@@ -140312,7 +140313,7 @@
         "total": 46.5,
         "openingHomeMargin": -1.5,
         "lineMovement": -4.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-109",
@@ -141237,7 +141238,7 @@
         "total": 46.5,
         "openingHomeMargin": 3.5,
         "lineMovement": 0.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-102",
           "away": "-118",
@@ -141245,12 +141246,12 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-174",
+          "home": "-175",
           "away": "+147",
           "homeOpen": "-205",
           "awayOpen": "+170"
         },
-        "moneylineHomeProbability": 0.6107,
+        "moneylineHomeProbability": 0.6112,
         "moneylineOpenHomeProbability": 0.6447
       },
       "lineSource": "Market line",
@@ -141680,16 +141681,16 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.6094,
-      "marketHomeWinProbability": 0.6107,
+      "marketHomeWinProbability": 0.6112,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 3.8,
       "appVsMarket": {
         "marketPct": 61.1,
         "spreadOnlyPct": 60.9,
         "appPct": 60.7,
-        "gapPoints": -0.4,
+        "gapPoints": -0.5,
         "nudgeGapPoints": -0.3,
-        "priceGapPoints": 0.1,
+        "priceGapPoints": 0.2,
         "leans": "MIN",
         "nudges": [
           {
@@ -142137,7 +142138,7 @@
         "total": 53.5,
         "openingHomeMargin": -1.5,
         "lineMovement": -4.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-107",
           "away": "-112",
@@ -142145,12 +142146,12 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "+239",
-          "away": "-292",
+          "home": "+237",
+          "away": "-290",
           "homeOpen": "+105",
           "awayOpen": "-125"
         },
-        "moneylineHomeProbability": 0.2837,
+        "moneylineHomeProbability": 0.2852,
         "moneylineOpenHomeProbability": 0.4675
       },
       "lineSource": "Market line",
@@ -142468,16 +142469,16 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.317,
-      "marketHomeWinProbability": 0.2837,
+      "marketHomeWinProbability": 0.2852,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": -6.667,
       "appVsMarket": {
-        "marketPct": 28.4,
+        "marketPct": 28.5,
         "spreadOnlyPct": 31.7,
         "appPct": 30.8,
-        "gapPoints": 2.4,
+        "gapPoints": 2.2,
         "nudgeGapPoints": -1.0,
-        "priceGapPoints": -3.3,
+        "priceGapPoints": -3.2,
         "leans": "CIN",
         "nudges": [
           {
@@ -142948,7 +142949,7 @@
         "total": 45.5,
         "openingHomeMargin": 3.5,
         "lineMovement": 0.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-115",
           "away": "-104",
@@ -142956,12 +142957,12 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-192",
-          "away": "+161",
+          "home": "-187",
+          "away": "+157",
           "homeOpen": "-198",
           "awayOpen": "+164"
         },
-        "moneylineHomeProbability": 0.6318,
+        "moneylineHomeProbability": 0.6261,
         "moneylineOpenHomeProbability": 0.6369
       },
       "lineSource": "Market line",
@@ -143323,16 +143324,16 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.6094,
-      "marketHomeWinProbability": 0.6318,
+      "marketHomeWinProbability": 0.6261,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 4.101,
       "appVsMarket": {
-        "marketPct": 63.2,
+        "marketPct": 62.6,
         "spreadOnlyPct": 60.9,
         "appPct": 61.6,
-        "gapPoints": -1.6,
+        "gapPoints": -1.0,
         "nudgeGapPoints": 0.7,
-        "priceGapPoints": 2.2,
+        "priceGapPoints": 1.7,
         "leans": "LAR",
         "nudges": [
           {
@@ -143544,7 +143545,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -143747,7 +143747,7 @@
         "total": 55.5,
         "openingHomeMargin": 2.5,
         "lineMovement": -5.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-102",
           "away": "-118",
@@ -144474,8 +144474,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -144514,8 +144514,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -144532,7 +144532,7 @@
         "total": 47.5,
         "openingHomeMargin": 1.5,
         "lineMovement": 7.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -144541,11 +144541,11 @@
         },
         "moneyline": {
           "home": "-398",
-          "away": "+315",
+          "away": "+314",
           "homeOpen": "-120",
           "awayOpen": "+100"
         },
-        "moneylineHomeProbability": 0.7683,
+        "moneylineHomeProbability": 0.7679,
         "moneylineOpenHomeProbability": 0.5217
       },
       "lineSource": "Market line",
@@ -144710,9 +144710,9 @@
       },
       "preparation": {
         "away": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -144725,18 +144725,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -144772,6 +144760,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -144944,7 +144944,7 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.75,
-      "marketHomeWinProbability": 0.7683,
+      "marketHomeWinProbability": 0.7679,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 9.798,
       "appVsMarket": {
@@ -145385,7 +145385,7 @@
         "total": 50.5,
         "openingHomeMargin": 2.5,
         "lineMovement": 0.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-107",
           "away": "-112",
@@ -146151,8 +146151,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -146193,7 +146193,7 @@
         "total": 40.5,
         "openingHomeMargin": -1.5,
         "lineMovement": 0.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-109",
           "away": "-110",
@@ -146956,7 +146956,7 @@
         "total": 52.5,
         "openingHomeMargin": 6.5,
         "lineMovement": 3.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -147732,7 +147732,7 @@
         "total": 44.5,
         "openingHomeMargin": 2.5,
         "lineMovement": -6.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-102",
           "away": "-117",
@@ -148532,8 +148532,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -148548,8 +148548,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -148564,8 +148564,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -148598,7 +148598,7 @@
         "total": 41.5,
         "openingHomeMargin": 1.5,
         "lineMovement": -4.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-109",
           "away": "-110",
@@ -148756,10 +148756,22 @@
       },
       "preparation": {
         "away": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -148767,10 +148779,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -148831,30 +148855,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -149406,7 +149406,7 @@
         "total": 42.5,
         "openingHomeMargin": 4.5,
         "lineMovement": 2.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-115",
           "away": "-105",
@@ -150250,7 +150250,7 @@
         "total": 47.5,
         "openingHomeMargin": 5.5,
         "lineMovement": 9.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -151093,7 +151093,7 @@
         "total": 44.5,
         "openingHomeMargin": 1.5,
         "lineMovement": 4.5,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-109",
@@ -151932,7 +151932,7 @@
         "total": 39.5,
         "openingHomeMargin": 2.5,
         "lineMovement": 2.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-116",
           "away": "-104",
@@ -151940,12 +151940,12 @@
           "awayOpen": "-110"
         },
         "moneyline": {
-          "home": "-228",
-          "away": "+189",
+          "home": "-234",
+          "away": "+194",
           "homeOpen": "-135",
           "awayOpen": "+114"
         },
-        "moneylineHomeProbability": 0.6677,
+        "moneylineHomeProbability": 0.6732,
         "moneylineOpenHomeProbability": 0.5514
       },
       "lineSource": "Market line",
@@ -152349,16 +152349,16 @@
         "uncertaintyProbabilityShift": 0.0
       },
       "marketSpreadHomeWinProbability": 0.6395,
-      "marketHomeWinProbability": 0.6677,
+      "marketHomeWinProbability": 0.6732,
       "marketProbabilitySource": "moneyline, fee removed",
       "effectiveMargin": 4.302,
       "appVsMarket": {
-        "marketPct": 66.8,
+        "marketPct": 67.3,
         "spreadOnlyPct": 63.9,
         "appPct": 62.2,
-        "gapPoints": -4.6,
+        "gapPoints": -5.1,
         "nudgeGapPoints": -1.8,
-        "priceGapPoints": 2.8,
+        "priceGapPoints": 3.4,
         "leans": "NE",
         "nudges": [
           {
@@ -152656,8 +152656,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -152788,7 +152788,7 @@
         "total": 41.5,
         "openingHomeMargin": -4.5,
         "lineMovement": -2.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-110",
           "away": "-110",
@@ -153651,7 +153651,7 @@
         "total": 46.5,
         "openingHomeMargin": 1.5,
         "lineMovement": 1.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-112",
           "away": "-107",
@@ -154410,8 +154410,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -154452,7 +154452,7 @@
         "total": 40.5,
         "openingHomeMargin": 2.5,
         "lineMovement": 2.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-105",
           "away": "-114",
@@ -154519,10 +154519,22 @@
       },
       "preparation": {
         "away": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -154606,22 +154618,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -155172,7 +155172,7 @@
         "total": 43.5,
         "openingHomeMargin": 3.5,
         "lineMovement": -1.0,
-        "book": "Draft Kings",
+        "book": "DraftKings",
         "spreadPrice": {
           "home": "-106",
           "away": "-113",
@@ -160241,7 +160241,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -161916,8 +161915,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -162729,8 +162728,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -162835,8 +162834,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -162875,8 +162874,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -163078,9 +163077,9 @@
       },
       "preparation": {
         "away": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -163093,18 +163092,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -163140,6 +163127,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -169965,8 +169964,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -169981,8 +169980,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -169997,8 +169996,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -170039,8 +170038,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -170299,10 +170298,22 @@
           ]
         },
         "home": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -170310,10 +170321,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -170374,30 +170397,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -170713,8 +170712,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -170753,8 +170752,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -171140,9 +171139,9 @@
           ]
         },
         "home": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -171155,18 +171154,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -171202,6 +171189,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -173775,8 +173774,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -174168,10 +174167,22 @@
           ]
         },
         "home": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -174255,22 +174266,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -177576,7 +177575,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -179493,8 +179491,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -179533,8 +179531,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -179889,9 +179887,9 @@
           ]
         },
         "home": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -179904,18 +179902,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -179951,6 +179937,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -181777,7 +181775,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -187158,8 +187155,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -187264,8 +187261,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -187280,8 +187277,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -187296,8 +187293,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -187498,10 +187495,22 @@
       },
       "preparation": {
         "away": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -187509,10 +187518,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -187573,30 +187594,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -188019,8 +188016,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -188069,8 +188066,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -188307,10 +188304,22 @@
           ]
         },
         "home": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -188394,22 +188403,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -191135,8 +191132,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -191175,8 +191172,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -191531,9 +191528,9 @@
           ]
         },
         "home": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -191546,18 +191543,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -191593,6 +191578,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -192616,7 +192613,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -192686,8 +192682,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -198213,8 +198209,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -199020,8 +199016,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -199036,8 +199032,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -199052,8 +199048,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -199414,10 +199410,22 @@
           ]
         },
         "home": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -199425,10 +199433,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -199489,30 +199509,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -200479,8 +200475,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -200842,10 +200838,22 @@
           ]
         },
         "home": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -200929,22 +200937,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -204499,8 +204495,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -211448,8 +211444,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -211464,8 +211460,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -211480,8 +211476,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -211865,10 +211861,22 @@
           ]
         },
         "home": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -211876,10 +211884,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -211940,30 +211960,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -213055,8 +213051,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -213153,8 +213149,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -213341,10 +213337,22 @@
       },
       "preparation": {
         "away": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -213428,22 +213436,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -214698,8 +214694,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -214738,8 +214734,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -214945,9 +214941,9 @@
       },
       "preparation": {
         "away": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -214960,18 +214956,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -215007,6 +214991,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -216110,7 +216106,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -216376,8 +216371,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Smith (ankle), who was a limited participant in Wednesday's walkthrough practice, said afterward that he intends to play in Sunday's game against the Chargers, Rich Cimini of ESPN.com reports.",
-            "updated": "2026-11-18T22:52Z"
+            "note": "Smith (ankle) was a limited participant in Thursday's practice.",
+            "updated": "2026-11-19T22:48Z"
           },
           {
             "player": "Harrison Phillips",
@@ -216392,8 +216387,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ribs",
-            "note": "Jets head coach Aaron Glenn said that Williams won't practice Wednesday due to a rib injury, Eric Allen of the Jets' official site reports.",
-            "updated": "2026-11-18T17:07Z"
+            "note": "Williams (ribs) was a non-participant in Thursday's practice.",
+            "updated": "2026-11-19T22:43Z"
           },
           {
             "player": "Joseph Ossai",
@@ -216408,8 +216403,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Cooper (ankle) isn't practicing Wednesday, Brian Costello of the New York Post reports.",
-            "updated": "2026-11-18T17:06Z"
+            "note": "Cooper didn't practice Thursday due to ankle and hip injuries.",
+            "updated": "2026-11-19T22:37Z"
           },
           {
             "player": "Trevin Wallace",
@@ -216610,10 +216605,22 @@
       },
       "preparation": {
         "away": {
-          "score": 56,
+          "score": 45,
           "level": "High",
-          "rawRisk": 7.28,
+          "rawRisk": 9.1,
           "items": [
+            {
+              "player": "Omar Cooper Jr.",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 1,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.98
+            },
             {
               "player": "Geno Smith",
               "position": "QB",
@@ -216621,10 +216628,22 @@
                 "Limited practice"
               ],
               "missedPracticeReports": 0,
-              "limitedPracticeReports": 1,
-              "daysSinceFlag": 1,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 0.9
+            },
+            {
+              "player": "Isaiah Williams",
+              "position": "WR",
+              "categories": [
+                "Missed practice"
+              ],
+              "missedPracticeReports": 1,
+              "limitedPracticeReports": 0,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.86
             },
             {
               "player": "Jarvis Brownlee Jr.",
@@ -216685,30 +216704,6 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.36
-            },
-            {
-              "player": "VJ Payne",
-              "position": "SS",
-              "categories": [
-                "Late activation"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 4,
-              "decay": 0.18,
-              "risk": 0.1
-            },
-            {
-              "player": "Harrison Phillips",
-              "position": "DT",
-              "categories": [
-                "Missed practice"
-              ],
-              "missedPracticeReports": 1,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 7,
-              "decay": 0.05,
-              "risk": 0.06
             }
           ],
           "clusters": [
@@ -217798,8 +217793,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Concussion",
-            "note": "Waddle (concussion) was a full participant in Wednesday's practice.",
-            "updated": "2026-11-18T23:05Z"
+            "note": "Waddle (concussion) was a full practice participant Thursday.",
+            "updated": "2026-11-19T22:28Z"
           },
           {
             "player": "Riley Moss",
@@ -219246,7 +219241,6 @@
             "Mekhi Becton",
             "Micah Parsons",
             "Nick Niemann",
-            "Pierre Strong Jr.",
             "Savion Williams",
             "Sean Rhyan",
             "Skyy Moore",
@@ -220357,8 +220351,8 @@
             "position": "TE",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Bowers (ankle) was on the field for the start of Thursday's practice, Ryan McFadden of ESPN.com reports.",
-            "updated": "2026-11-19T19:18Z"
+            "note": "Bowers (ankle/quadriceps) was listed as a limited participant in Thursday's practice, Ryan McFadden of ESPN.com reports.",
+            "updated": "2026-11-19T22:38Z"
           },
           {
             "player": "Folorunso Fatukasi",
@@ -220507,10 +220501,22 @@
       },
       "preparation": {
         "away": {
-          "score": 68,
-          "level": "Watch",
-          "rawRisk": 5.33,
+          "score": 59,
+          "level": "High",
+          "rawRisk": 6.78,
           "items": [
+            {
+              "player": "Brock Bowers",
+              "position": "TE",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 2,
+              "limitedPracticeReports": 5,
+              "daysSinceFlag": 0,
+              "decay": 1.0,
+              "risk": 0.59
+            },
             {
               "player": "Bryce Cabeldue",
               "position": "G",
@@ -220594,22 +220600,10 @@
               "daysSinceFlag": 2,
               "decay": 0.42,
               "risk": 0.32
-            },
-            {
-              "player": "Malik Benson",
-              "position": "WR",
-              "categories": [
-                "Game-day inactive"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 0,
-              "daysSinceFlag": 2,
-              "decay": 0.42,
-              "risk": 0.32
             }
           ],
           "clusters": [
-            "Protection unit: 3 preparation flags",
+            "Protection unit: 4 preparation flags",
             "Coverage unit: 2 preparation flags",
             "Defensive front: 3 preparation flags"
           ]
@@ -224220,8 +224214,8 @@
             "position": "WR",
             "status": "Questionable",
             "detail": "Ankle",
-            "note": "Wicks (ankle) is participating in practice Thursday, Andrew DiCecco of InsideTheBirds.com reports.",
-            "updated": "2026-11-19T19:45Z"
+            "note": "Wicks (ankle) practiced in a limited capacity Thursday.",
+            "updated": "2026-11-19T22:46Z"
           },
           {
             "player": "Jonathan Jones",
@@ -224260,8 +224254,8 @@
             "position": "RB",
             "status": "Injured Reserve",
             "detail": "Foot",
-            "note": "Shipley (foot) was a limited practice participant Wednesday.",
-            "updated": "2026-11-18T23:15Z"
+            "note": "Shipley (foot) remained limited in practice Thursday.",
+            "updated": "2026-11-19T22:51Z"
           }
         ]
       },
@@ -224399,9 +224393,9 @@
       },
       "preparation": {
         "away": {
-          "score": 46,
+          "score": 48,
           "level": "High",
-          "rawRisk": 9.01,
+          "rawRisk": 8.67,
           "items": [
             {
               "player": "Zack Baun",
@@ -224414,18 +224408,6 @@
               "daysSinceFlag": 0,
               "decay": 1.0,
               "risk": 1.49
-            },
-            {
-              "player": "Will Shipley",
-              "position": "RB",
-              "categories": [
-                "Limited practice"
-              ],
-              "missedPracticeReports": 0,
-              "limitedPracticeReports": 2,
-              "daysSinceFlag": 1,
-              "decay": 1.0,
-              "risk": 0.4
             },
             {
               "player": "DeVonta Smith",
@@ -224461,6 +224443,18 @@
               "limitedPracticeReports": 0,
               "daysSinceFlag": 2,
               "decay": 0.42,
+              "risk": 0.26
+            },
+            {
+              "player": "Will Shipley",
+              "position": "RB",
+              "categories": [
+                "Limited practice"
+              ],
+              "missedPracticeReports": 0,
+              "limitedPracticeReports": 2,
+              "daysSinceFlag": 1,
+              "decay": 0.65,
               "risk": 0.26
             },
             {
@@ -224913,8 +224907,8 @@
             "position": "QB",
             "status": "Questionable",
             "detail": "Back",
-            "note": "questionable",
-            "updated": "2026-11-19T22:27Z"
+            "note": "Beck was listed as limited on Thursday's injury report due to a back issue, Dani Sureck of the Cardinals' official site reports.",
+            "updated": "2026-11-19T22:31Z"
           },
           {
             "player": "Hjalte Froholdt",
@@ -230425,7 +230419,5 @@
       }
     ]
   },
-  "warnings": [
-    "Could not load https://api.open-meteo.com/v1/forecast?latitude=42.76756&longitude=-78.74392&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto&start_date=2026-11-22&end_date=2026-11-22: Command '['curl', '-fsSL', '--max-time', '20', 'https://api.open-meteo.com/v1/forecast?latitude=42.76756&longitude=-78.74392&daily=weather_code%2Ctemperature_2m_max%2Ctemperature_2m_min%2Cprecipitation_probability_max%2Cwind_speed_10m_max&temperature_unit=fahrenheit&wind_speed_unit=mph&timezone=auto&start_date=2026-11-22&end_date=2026-11-22']' returned non-zero exit status 28."
-  ]
+  "warnings": []
 }
