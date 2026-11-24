@@ -51,8 +51,12 @@ jobs:
       - name: Refresh ratings from play-by-play
         run: python ratings.py --current 2026
       - name: Commit the data
+        # Each run checks out the commit it was started on, so a second run started in the same
+        # minute (Netlify can fire the kick twice) would find main already moved and its push
+        # rejected. Replaying this commit on top of the newest main fixes that; -X theirs keeps
+        # this run's data on a clash, since it is the fresher refresh, and leaves code alone.
         run: |
           git config user.name "sunday-desk-updater"
           git config user.email "updater@users.noreply.github.com"
           git add picks.json data/snapshot.json data/ledger.json data/ratings-current.json data/location-cache.json data/preparation-history.json data/depth-charts.json data/picks-status.json
-          git diff --cached --quiet && echo "no changes" || (git commit -m "Refresh forecasts $(date -u +'%Y-%m-%d %H:%MZ')" && git push)
+          git diff --cached --quiet && echo "no changes" || (git commit -m "Refresh forecasts $(date -u +'%Y-%m-%d %H:%MZ')" && git pull --rebase --autostash -X theirs origin main && git push)
